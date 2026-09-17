@@ -22,6 +22,22 @@
 <meta name="twitter:description" content="Board envelope, datum references, lead-hole formulas and span tables drawn from Universal Instruments GS-354-02 Rev. D and GS-354-01 — organised into one checklist your PCB designer can actually use.">
 <meta name="twitter:image" content="https://ph.smthelp.com/images/2026/09/14/smthelp-automatic-insertion-axial-radial-line-line-16.md.webp">
 <link rel="icon" href="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png">
+
+<!-- Pre-paint theme: must run before first paint, otherwise a dark-mode visitor
+     sees a white flash and then a jump. Theme only — language is applied later by
+     boot() so that lang/dir never disagree with the (English) static content. -->
+<script>
+(function(){
+  try{
+    var t=localStorage.getItem("smth_theme");
+    if(t!=="light" && t!=="dark"){
+      t=(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light";
+    }
+    document.documentElement.setAttribute("data-theme",t);
+  }catch(e){}
+})();
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1606,7 +1622,11 @@ function applyTheme(mode,persist){
 <script>
 window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Southern Machinery Global Support"};
 (function(d,t) {
-  var BASE_URL="http://chat.smthelp.com";
+  /* Protocol-adaptive BASE_URL.
+     An http:// script src on an https:// page is blocked as active mixed content
+     BEFORE the 301 to https can run, so the launcher would silently never mount.
+     Verified: https -> 200 (text/javascript), http -> 301. */
+  var BASE_URL=(location.protocol==="https:"?"https://":"http://")+"chat.smthelp.com";
   var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
   g.src=BASE_URL+"/packs/js/sdk.js";
   g.async = true;
@@ -1619,5 +1639,15 @@ window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":
   }
 })(document,"script");
 </script>
+<style>
+/* keep the launcher pinned bottom-right regardless of host page styles */
+.woot-widget-holder, .woot--bubble-holder {
+  position: fixed !important; bottom: 20px !important; right: 20px !important;
+  left: auto !important; z-index: 2147483000 !important;
+}
+html[dir="rtl"] .woot-widget-holder, html[dir="rtl"] .woot--bubble-holder {
+  right: auto !important; left: 20px !important;
+}
+</style>
 </body>
 </html>
