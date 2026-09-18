@@ -14,6 +14,7 @@
 | `sme-6300-pcba-inline-cleaning-machine.html` | SME-6300 In-line PCBA Cleaning Machine | 在线 PCBA 清洗机。支持 7 语言 + 明暗主题、8 篇长文、Chatwoot 客服。（由另一会话提交，索引行待补充完整描述） |
 | `ems-pcb-assembly-automation-tht-insertion-machines-feeders-turnkey-solutions.html` | EMS PCB Assembly Automation | THT 插件机、智能供料器、整线 turnkey 方案。 |
 | `sf320at-inline-auto-selective-lead-cutter-measured-result.html` | SF320AT Inline Auto Selective Lead Cutter | 在线自动选择性剪脚机实测结果页。基于客户 demo 报告（**已匿名化**）的三组卡尺读数，含剪脚长度计算器（读者可就地复算减少率）、公差链、14 项规格表、刀头 CAD 剖视图、5 项售后支持、6 组 FAQ、10 支实测视频、下载区。支持 7 语言（EN / ES / PT / FR / AR / RU / ZH）+ 明暗主题。数据分三级标注：`已验证数据` / `概念示意` / `待确认`；机型归属按 SF320AT **标注**，下单前需复核。 |
+| `s430ac-auto-lead-cutter-machine-tht-pcba-lead-trimming.html` | S-430AC Auto Lead Cutter | THT 自动剪脚机（台式 / 离线，与在线式 SF320AT 互补）。基于 **S-430AC 使用说明书 + 自动剪脚机 PPT + 剪脚机关键零件清单** 三份源文件，含 12 项规格表、I/O 映射表（4 剪 / 8 入 / 4 出）、X/Y/Z/R 四轴说明、9 行核心零部件品牌表（上银 HIWIN / 亚德客 AirTAC / 基恩士 KEYENCE / SICK / 雷赛 Leadshine / 三菱 Mitsubishi / 信捷 Xinje / 铭纬 MEAN WELL / 欧姆龙 OMRON / NSK / 日本利莱）、**7 行三文件矛盾与沉默披露表**、剪刀错边剪切 vs 挤压原理图、1 ms 剪切时序、4 项耗材与 4 项日常保养、产能回本计算器、8 篇 Dan Koe 六步法长文（标题不含 hook/diagnosis/framework/vehicle/loop/CTA）、10 条 FAQ、9 支看板校验视频、3 组共 15 份可下载 PDF、Chatwoot 智能客服。数据分三级标注：`已验证资料` / `概念示意` / `待确认`。支持 7 语言 + 明暗主题，偏好本地持久化，阿拉伯语 RTL；已通过 103 项无头语义断言。 |
 
 ## 页面约定
 
