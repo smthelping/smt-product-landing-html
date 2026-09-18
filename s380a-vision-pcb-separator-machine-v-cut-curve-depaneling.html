@@ -3185,7 +3185,7 @@ function applyTheme(mode,persist){
   });
 
   var modal=document.getElementById("vModal"), frame=document.getElementById("vFrame");
-  window.closeVideo=function(){ modal.classList.remove("open"); frame.src=""; };
+  window.closeVideo=function(){ modal.classList.remove("open"); frame.src="about:blank"; };
   document.getElementById("vClose").addEventListener("click",closeVideo);
   modal.addEventListener("click",function(e){ if(e.target===modal) closeVideo(); });
   function openVid(c){

@@ -1126,7 +1126,7 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
 </div></section>
 
 <div class="modal" id="vModal"><div class="inner"><button class="cl" id="vClose" type="button" aria-label="Close video">✕</button><iframe id="vFrame" title="Product video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
-<div class="modal" id="lb"><img loading="lazy" decoding="async" src="" alt="Enlarged view"></div>
+<div class="modal" id="lb"><img loading="lazy" decoding="async" alt="Enlarged view"></div>
 
 <footer>
   <div class="wrap">
@@ -1376,7 +1376,7 @@ function applyTheme(mode,persist){
   });
 
   var modal=document.getElementById("vModal"), frame=document.getElementById("vFrame");
-  window.closeVideo=function(){ modal.classList.remove("open"); frame.src=""; };
+  window.closeVideo=function(){ modal.classList.remove("open"); frame.src="about:blank"; };
   document.getElementById("vClose").addEventListener("click",closeVideo);
   modal.addEventListener("click",function(e){ if(e.target===modal) closeVideo(); });
   var openVid=function(c){
@@ -1394,7 +1394,7 @@ function applyTheme(mode,persist){
 
   /* lightbox */
   var lbx=document.getElementById("lb"), lbimg=lbx.querySelector("img");
-  window.closeLb=function(){ lbx.classList.remove("open"); lbimg.src=""; };
+  window.closeLb=function(){ lbx.classList.remove("open"); lbimg.removeAttribute("src"); };
   lbx.addEventListener("click",function(e){ if(e.target!==lbimg) closeLb(); });
   document.querySelectorAll(".galgrid figure").forEach(function(f){
     f.addEventListener("click",function(){

@@ -1588,7 +1588,7 @@ function applyTheme(mode,persist){
     document.body.style.overflow="hidden";
   }
   function closeVideo(){
-    modal.classList.remove("open"); frame.src=""; document.body.style.overflow="";
+    modal.classList.remove("open"); frame.src="about:blank"; document.body.style.overflow="";
   }
   document.getElementById("vidGrid").addEventListener("click",function(e){
     var c=e.target.closest("[data-vid]"); if(c) openVideo(c.dataset.vid);
