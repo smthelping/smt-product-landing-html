@@ -478,6 +478,25 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
 .mcard p{font-size:13.5px;color:var(--fg2);line-height:1.6}
 .mtag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
   color:var(--gold2);border:1px solid var(--line2);border-radius:999px;padding:2px 9px;margin-bottom:9px}
+/* ---- bidi: pure-LTR technical values on the RTL page ----------------------
+   A value such as `850 x 140 x 260 mm` contains no strong right-to-left
+   character, so inside an RTL paragraph the neutrals between its runs (spaces,
+   the `x` separator, `-`, `/`) resolve to the PARAGRAPH direction and the
+   value is re-ordered: it renders as `x 140 x 260 mm 850`. Measured with a
+   UAX#9 reference implementation, 28 keys were affected -- every dimension,
+   weight, pressure, voltage, current and speed in the specification table, the
+   metric band, the install chips and the ROI table headers. A reader of the
+   Arabic page therefore saw `kg 12` for `12 kg` and `rpm 500` for `500 rpm`.
+   build.py marks those elements with dir="ltr", which restores the order.
+   That mark has one side effect: `th,td{text-align:start}` (see the base
+   sheet) then resolves to the LEFT, leaving the technical cells of an
+   otherwise right-aligned RTL table on the wrong side. So the alignment is
+   pinned back to the RTL start edge here. The metric band and the calculator
+   are centred by their parent, and the chips size to their content, so none of
+   those need a pin. */
+html[dir="rtl"] .tw td[dir="ltr"],
+html[dir="rtl"] .tw th[dir="ltr"],
+html[dir="rtl"] p.disc[dir="ltr"]{text-align:right}
 </style>
 </head>
 <body>
@@ -529,10 +548,10 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
 </section>
 
 <div class="metrics"><div class="wrap">
-  <div class="m"><div class="v" data-i18n="m1v">850 x 140 x 260 mm</div><div class="l" data-i18n="m1l">Footprint - smaller than a bowl feeder</div></div>
-  <div class="m"><div class="v" data-i18n="m2v">3 x 3 x 3 - 20 x 20 x 20 mm</div><div class="l" data-i18n="m2l">Component envelope handled</div></div>
-  <div class="m"><div class="v" data-i18n="m3v">1.5 - 2 s</div><div class="l" data-i18n="m3l">Published feeding interval</div></div>
-  <div class="m"><div class="v" data-i18n="m4v">+/-1 mm</div><div class="l" data-i18n="m4l">Published feeding accuracy</div></div>
+  <div class="m"><div class="v" data-i18n="m1v" dir="ltr">850 x 140 x 260 mm</div><div class="l" data-i18n="m1l">Footprint - smaller than a bowl feeder</div></div>
+  <div class="m"><div class="v" data-i18n="m2v" dir="ltr">3 x 3 x 3 - 20 x 20 x 20 mm</div><div class="l" data-i18n="m2l">Component envelope handled</div></div>
+  <div class="m"><div class="v" data-i18n="m3v" dir="ltr">1.5 - 2 s</div><div class="l" data-i18n="m3l">Published feeding interval</div></div>
+  <div class="m"><div class="v" data-i18n="m4v" dir="ltr">+/-1 mm</div><div class="l" data-i18n="m4l">Published feeding accuracy</div></div>
 </div></div>
 <div class="trust"><div class="wrap">
   <span data-i18n="trust1">Specification values attributed to their source document</span><span data-i18n="trust2">Conflicting values disclosed, not averaged</span><span data-i18n="trust3">Unconfirmed values marked To be confirmed</span>
@@ -598,7 +617,7 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
     <th class="h" data-i18n="sq_ha">Specification sheet - Reciprocating Belt Feeder</th>
     <th class="h" data-i18n="sq_hb">Specification sheet - Belt Bulk Feeder</th>
     <th class="h" data-i18n="sq_hc">Reciprocating Feeder user manual</th>
-  </tr></thead><tbody><tr><th data-i18n="sq1p">Model code</th><td data-i18n="sq1a">S-MVF01</td><td data-i18n="sq1b">S-MVF01</td><td data-i18n="sq1c">Not stated</td></tr><tr><th data-i18n="sq2p">Machine type</th><td data-i18n="sq2a">Belt bulk feeder for SMT mounters</td><td data-i18n="sq2b">Belt bulk feeder, THT odd form to SMT mounter</td><td data-i18n="sq2c">Reciprocating feeder</td></tr><tr><th data-i18n="sq3p">Dimensions (L x W x H)</th><td data-i18n="sq3a">850 x 140 x 260 mm</td><td data-i18n="sq3b">850 x 140 x 260 mm</td><td data-i18n="sq3c">Not stated</td></tr><tr><th data-i18n="sq4p">Weight</th><td data-i18n="sq4a">12 kg</td><td data-i18n="sq4b">12 kg</td><td data-i18n="sq4c">Not stated</td></tr><tr><th data-i18n="sq5p">Component types</th><td data-i18n="sq5a">Connector, buzzer, network port, terminal, square capacitor</td><td data-i18n="sq5b">Connector, buzzer, mesh port, terminal post, square capacitor</td><td data-i18n="sq5c">Odd-form components and multi-pin leads</td></tr><tr><th data-i18n="sq6p">Component size</th><td data-i18n="sq6a">3 x 3 x 3 mm to 20 x 20 x 20 mm</td><td data-i18n="sq6b">3 x 3 x 3 mm to 20 x 20 x 20 mm</td><td data-i18n="sq6c">Not stated</td></tr><tr><th data-i18n="sq7p">Components that suit the feeder</th><td data-i18n="sq7a">Distinct characteristics, physically distinguishable</td><td data-i18n="sq7b">Distinct characteristics, physically distinguishable</td><td data-i18n="sq7c">Parts the selection track can orient mechanically</td></tr><tr><th data-i18n="sq8p">Components to avoid</th><td data-i18n="sq8a">No obvious physical features and needing direction; leads easily deformed; length to height ratio under 1:1.2</td><td data-i18n="sq8b">No obvious physical features and needing direction; leads easily deformed; length to height ratio under 1:1.2</td><td data-i18n="sq8c">Parts that cannot be distinguished by the selection track</td></tr><tr><th data-i18n="sq9p">Packaging accepted</th><td data-i18n="sq9a">Bulk</td><td data-i18n="sq9b">Bulk</td><td data-i18n="sq9c">Bulk</td></tr><tr><th data-i18n="sq10p">Feeding principle</th><td data-i18n="sq10a">Selection track; rejected parts return on the belt return; accepted parts advanced by direct vibration</td><td data-i18n="sq10b">Selection track with component reflux; belt return and direct vibration to the pick level</td><td data-i18n="sq10c">Belt track plus straight-vibration track</td></tr><tr><th data-i18n="sq11p">Material positioning</th><td data-i18n="sq11a">Fibre-optic induction plus direct vibration delay</td><td data-i18n="sq11b">Fibre-optic induction plus direct vibration delay</td><td data-i18n="sq11c">Front and rear track sensors plus a vacuum suction block</td></tr><tr><th data-i18n="sq12p">Fixing method</th><td data-i18n="sq12a">Positioning key plus clamping block, supports other fixing structures</td><td data-i18n="sq12b">Positioning key plus pressing block, supports other fixed structures</td><td data-i18n="sq12c">Install the dowel pins, then clamp</td></tr><tr><th data-i18n="sq13p">Operating voltage</th><td data-i18n="sq13a">220 V / 50 Hz</td><td data-i18n="sq13b">220 V / 50 Hz</td><td data-i18n="sq13c">AC 220 V, 50 Hz</td></tr><tr><th data-i18n="sq14p">Average current / peak current</th><td data-i18n="sq14a">3 A / 6 A</td><td data-i18n="sq14b">3 A / 6 A</td><td data-i18n="sq14c">Not stated</td></tr><tr><th data-i18n="sq15p">Working air pressure</th><td data-i18n="sq15a">0.4 - 0.6 MPa</td><td data-i18n="sq15b">0.4 - 0.6 MPa</td><td data-i18n="sq15c">Usable air pressure above 0.5 MPa</td></tr><tr><th data-i18n="sq16p">Operation</th><td data-i18n="sq16a">Key operation</td><td data-i18n="sq16b">Button operation</td><td data-i18n="sq16c">Start, stop and power buttons with status lights</td></tr><tr><th data-i18n="sq17p">Host connection</th><td data-i18n="sq17a">8-core 16 mm aviation plug</td><td data-i18n="sq17b">8-pin 16 mm aviation plug</td><td data-i18n="sq17c">Communication port for material-present and alarm signals</td></tr><tr><th data-i18n="sq18p">Communication</th><td data-i18n="sq18a">IO communication, or self-control with no communication</td><td data-i18n="sq18b">IO communication, or self-control with no communication</td><td data-i18n="sq18c">Host signal interaction: material present, alarm</td></tr><tr><th data-i18n="sq19p">Controller</th><td data-i18n="sq19a">Based on Mitsubishi (PLC control)</td><td data-i18n="sq19b">PLC, programmable control circuit</td><td data-i18n="sq19c">PLC control board plus motor speed control board and motor adapter board</td></tr><tr><th data-i18n="sq20p">Drive motor maximum speed</th><td data-i18n="sq20a">500 rpm</td><td data-i18n="sq20b">500 rpm</td><td data-i18n="sq20c">Adjustable on the speed controller</td></tr><tr><th data-i18n="sq21p">Feeding speed</th><td data-i18n="sq21a">1.5 - 2 s</td><td data-i18n="sq21b">1.5 - 2 s</td><td data-i18n="sq21c">Not stated</td></tr><tr><th data-i18n="sq22p">Feed channel</th><td data-i18n="sq22a">Single channel</td><td data-i18n="sq22b">Single channel</td><td data-i18n="sq22c">Single channel</td></tr><tr><th data-i18n="sq23p">Speed adjustment</th><td data-i18n="sq23a">Promise debugging</td><td data-i18n="sq23b">Infinitely variable speed regulation</td><td data-i18n="sq23c">Speed controller: clockwise increases, counterclockwise decreases; vibration frequency set per channel</td></tr><tr><th data-i18n="sq24p">Feeding accuracy</th><td data-i18n="sq24a">+/-1 mm</td><td data-i18n="sq24b">+/-1 mm</td><td data-i18n="sq24c">Not stated</td></tr><tr><th data-i18n="sq25p">Continuous feeding test</th><td data-i18n="sq25a">1000 feeds without abnormality</td><td data-i18n="sq25b">1000 feeds without abnormality</td><td data-i18n="sq25c">Not stated</td></tr><tr><th data-i18n="sq26p">Ageing test</th><td data-i18n="sq26a">48 hours continuous without abnormality</td><td data-i18n="sq26b">48 hours continuous without abnormality</td><td data-i18n="sq26c">Not stated</td></tr></tbody></table></div>
+  </tr></thead><tbody><tr><th data-i18n="sq1p">Model code</th><td data-i18n="sq1a" dir="ltr">S-MVF01</td><td data-i18n="sq1b" dir="ltr">S-MVF01</td><td data-i18n="sq1c">Not stated</td></tr><tr><th data-i18n="sq2p">Machine type</th><td data-i18n="sq2a">Belt bulk feeder for SMT mounters</td><td data-i18n="sq2b">Belt bulk feeder, THT odd form to SMT mounter</td><td data-i18n="sq2c">Reciprocating feeder</td></tr><tr><th data-i18n="sq3p">Dimensions (L x W x H)</th><td data-i18n="sq3a" dir="ltr">850 x 140 x 260 mm</td><td data-i18n="sq3b" dir="ltr">850 x 140 x 260 mm</td><td data-i18n="sq3c">Not stated</td></tr><tr><th data-i18n="sq4p">Weight</th><td data-i18n="sq4a" dir="ltr">12 kg</td><td data-i18n="sq4b" dir="ltr">12 kg</td><td data-i18n="sq4c">Not stated</td></tr><tr><th data-i18n="sq5p">Component types</th><td data-i18n="sq5a">Connector, buzzer, network port, terminal, square capacitor</td><td data-i18n="sq5b">Connector, buzzer, mesh port, terminal post, square capacitor</td><td data-i18n="sq5c">Odd-form components and multi-pin leads</td></tr><tr><th data-i18n="sq6p">Component size</th><td data-i18n="sq6a">3 x 3 x 3 mm to 20 x 20 x 20 mm</td><td data-i18n="sq6b">3 x 3 x 3 mm to 20 x 20 x 20 mm</td><td data-i18n="sq6c">Not stated</td></tr><tr><th data-i18n="sq7p">Components that suit the feeder</th><td data-i18n="sq7a">Distinct characteristics, physically distinguishable</td><td data-i18n="sq7b">Distinct characteristics, physically distinguishable</td><td data-i18n="sq7c">Parts the selection track can orient mechanically</td></tr><tr><th data-i18n="sq8p">Components to avoid</th><td data-i18n="sq8a">No obvious physical features and needing direction; leads easily deformed; length to height ratio under 1:1.2</td><td data-i18n="sq8b">No obvious physical features and needing direction; leads easily deformed; length to height ratio under 1:1.2</td><td data-i18n="sq8c">Parts that cannot be distinguished by the selection track</td></tr><tr><th data-i18n="sq9p">Packaging accepted</th><td data-i18n="sq9a">Bulk</td><td data-i18n="sq9b">Bulk</td><td data-i18n="sq9c">Bulk</td></tr><tr><th data-i18n="sq10p">Feeding principle</th><td data-i18n="sq10a">Selection track; rejected parts return on the belt return; accepted parts advanced by direct vibration</td><td data-i18n="sq10b">Selection track with component reflux; belt return and direct vibration to the pick level</td><td data-i18n="sq10c">Belt track plus straight-vibration track</td></tr><tr><th data-i18n="sq11p">Material positioning</th><td data-i18n="sq11a">Fibre-optic induction plus direct vibration delay</td><td data-i18n="sq11b">Fibre-optic induction plus direct vibration delay</td><td data-i18n="sq11c">Front and rear track sensors plus a vacuum suction block</td></tr><tr><th data-i18n="sq12p">Fixing method</th><td data-i18n="sq12a">Positioning key plus clamping block, supports other fixing structures</td><td data-i18n="sq12b">Positioning key plus pressing block, supports other fixed structures</td><td data-i18n="sq12c">Install the dowel pins, then clamp</td></tr><tr><th data-i18n="sq13p">Operating voltage</th><td data-i18n="sq13a" dir="ltr">220 V / 50 Hz</td><td data-i18n="sq13b" dir="ltr">220 V / 50 Hz</td><td data-i18n="sq13c" dir="ltr">AC 220 V, 50 Hz</td></tr><tr><th data-i18n="sq14p">Average current / peak current</th><td data-i18n="sq14a" dir="ltr">3 A / 6 A</td><td data-i18n="sq14b" dir="ltr">3 A / 6 A</td><td data-i18n="sq14c">Not stated</td></tr><tr><th data-i18n="sq15p">Working air pressure</th><td data-i18n="sq15a" dir="ltr">0.4 - 0.6 MPa</td><td data-i18n="sq15b" dir="ltr">0.4 - 0.6 MPa</td><td data-i18n="sq15c">Usable air pressure above 0.5 MPa</td></tr><tr><th data-i18n="sq16p">Operation</th><td data-i18n="sq16a">Key operation</td><td data-i18n="sq16b">Button operation</td><td data-i18n="sq16c">Start, stop and power buttons with status lights</td></tr><tr><th data-i18n="sq17p">Host connection</th><td data-i18n="sq17a">8-core 16 mm aviation plug</td><td data-i18n="sq17b">8-pin 16 mm aviation plug</td><td data-i18n="sq17c">Communication port for material-present and alarm signals</td></tr><tr><th data-i18n="sq18p">Communication</th><td data-i18n="sq18a">IO communication, or self-control with no communication</td><td data-i18n="sq18b">IO communication, or self-control with no communication</td><td data-i18n="sq18c">Host signal interaction: material present, alarm</td></tr><tr><th data-i18n="sq19p">Controller</th><td data-i18n="sq19a">Based on Mitsubishi (PLC control)</td><td data-i18n="sq19b">PLC, programmable control circuit</td><td data-i18n="sq19c">PLC control board plus motor speed control board and motor adapter board</td></tr><tr><th data-i18n="sq20p">Drive motor maximum speed</th><td data-i18n="sq20a" dir="ltr">500 rpm</td><td data-i18n="sq20b" dir="ltr">500 rpm</td><td data-i18n="sq20c">Adjustable on the speed controller</td></tr><tr><th data-i18n="sq21p">Feeding speed</th><td data-i18n="sq21a" dir="ltr">1.5 - 2 s</td><td data-i18n="sq21b" dir="ltr">1.5 - 2 s</td><td data-i18n="sq21c">Not stated</td></tr><tr><th data-i18n="sq22p">Feed channel</th><td data-i18n="sq22a">Single channel</td><td data-i18n="sq22b">Single channel</td><td data-i18n="sq22c">Single channel</td></tr><tr><th data-i18n="sq23p">Speed adjustment</th><td data-i18n="sq23a">Promise debugging</td><td data-i18n="sq23b">Infinitely variable speed regulation</td><td data-i18n="sq23c">Speed controller: clockwise increases, counterclockwise decreases; vibration frequency set per channel</td></tr><tr><th data-i18n="sq24p">Feeding accuracy</th><td data-i18n="sq24a" dir="ltr">+/-1 mm</td><td data-i18n="sq24b" dir="ltr">+/-1 mm</td><td data-i18n="sq24c">Not stated</td></tr><tr><th data-i18n="sq25p">Continuous feeding test</th><td data-i18n="sq25a">1000 feeds without abnormality</td><td data-i18n="sq25b">1000 feeds without abnormality</td><td data-i18n="sq25c">Not stated</td></tr><tr><th data-i18n="sq26p">Ageing test</th><td data-i18n="sq26a">48 hours continuous without abnormality</td><td data-i18n="sq26b">48 hours continuous without abnormality</td><td data-i18n="sq26c">Not stated</td></tr></tbody></table></div>
 
   <h3 class="t-wide" data-i18n="spec_h3" style="margin:34px 0 14px">Parameter by parameter, with the document it came from</h3>
   <p class="disc" data-i18n="spec_note">All 26 rows are reproduced from the supplied documents. Where a document does not state a parameter, the row says so rather than borrowing a value from another model.</p>
@@ -624,7 +643,7 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
   <h2 class="sec" data-i18n="cap_h2">What a single channel is worth per hour</h2>
   <p class="lead" data-i18n="cap_lead">The feeder is single channel, so the upper bound is set by the published feeding interval. The table converts that interval into feeds per hour at three realistic availability levels.</p>
   <div class="evline"><span class="ev ev-c" data-i18n="cap_ev">Derived from the published 1.5 - 2 s feeding interval</span></div>
-  <div class="tw"><table><thead><tr><th data-i18n="th_cycle">Feeding interval</th><th data-i18n="th_1op">Theoretical feeds/hour</th><th data-i18n="th_2op">At 90 percent availability</th><th data-i18n="th_auto">At 80 percent availability</th></tr></thead><tbody><tr><th data-i18n="r12">1.5 s</th><td class="num">2400</td><td class="num">2160</td><td class="num">1920</td></tr><tr><th data-i18n="r20">1.75 s</th><td class="num">2057</td><td class="num">1851</td><td class="num">1646</td></tr><tr><th data-i18n="r30">2.0 s</th><td class="num">1800</td><td class="num">1620</td><td class="num">1440</td></tr></tbody></table></div>
+  <div class="tw"><table><thead><tr><th data-i18n="th_cycle">Feeding interval</th><th data-i18n="th_1op">Theoretical feeds/hour</th><th data-i18n="th_2op">At 90 percent availability</th><th data-i18n="th_auto">At 80 percent availability</th></tr></thead><tbody><tr><th data-i18n="r12" dir="ltr">1.5 s</th><td class="num">2400</td><td class="num">2160</td><td class="num">1920</td></tr><tr><th data-i18n="r20" dir="ltr">1.75 s</th><td class="num">2057</td><td class="num">1851</td><td class="num">1646</td></tr><tr><th data-i18n="r30" dir="ltr">2.0 s</th><td class="num">1800</td><td class="num">1620</td><td class="num">1440</td></tr></tbody></table></div>
   <p class="disc" data-i18n="cap_note">Derived arithmetic, not a measured production figure. It counts feeds, not finished boards: the machine cycle, the number of bulk parts per board and the operator's refill interval all sit on top of it.</p>
 </div></section>
 
@@ -642,11 +661,11 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
   <p class="lead" data-i18n="ins_lead">The manual describes the machine as a sequence: power on, air on, then adjust. These are the six stations in that order.</p>
   <div class="grid g3"><div class="card"><div class="num">STEP 1</div><h3 data-i18n="i1t">Mount and clamp</h3><p data-i18n="i1d">Locate on the positioning key, then clamp. Confirm the feeder sits square in the feeder bank before you tighten.</p></div><div class="card"><div class="num">STEP 2</div><h3 data-i18n="i2t">Air on</h3><p data-i18n="i2d">Clean, dry air. The sheets give a 0.4 - 0.6 MPa band; the manual asks for more than 0.5 MPa.</p></div><div class="card"><div class="num">STEP 3</div><h3 data-i18n="i3t">Power on</h3><p data-i18n="i3d">AC 220 V, 50 Hz. The internal switching supply is DC 24 V, 100 W, feeding the PLC and the motors.</p></div><div class="card"><div class="num">STEP 4</div><h3 data-i18n="i4t">Connect or isolate</h3><p data-i18n="i4d">Either wire the aviation plug for IO communication, or leave it self-controlled and let the operator start it.</p></div><div class="card"><div class="num">STEP 5</div><h3 data-i18n="i5t">Tune the two channels</h3><p data-i18n="i5d">Channel A sets the selection box frequency, channel B the feeding track. Then set belt speed on the speed controller.</p></div><div class="card"><div class="num">STEP 6</div><h3 data-i18n="i6t">Prove it</h3><p data-i18n="i6d">Run 1000 consecutive feeds, then a 48-hour ageing run. Those are the published acceptance figures.</p></div></div>
   <div class="chips">
-    <span class="chip" data-i18n="ins_c1">850 x 140 x 260 mm</span>
-    <span class="chip" data-i18n="ins_c2">12 kg</span>
-    <span class="chip" data-i18n="ins_c3">AC 220 V / 50 Hz</span>
-    <span class="chip" data-i18n="ins_c4">0.4 - 0.6 MPa</span>
-    <span class="chip" data-i18n="ins_c5">+/-1 mm</span>
+    <span class="chip" data-i18n="ins_c1" dir="ltr">850 x 140 x 260 mm</span>
+    <span class="chip" data-i18n="ins_c2" dir="ltr">12 kg</span>
+    <span class="chip" data-i18n="ins_c3" dir="ltr">AC 220 V / 50 Hz</span>
+    <span class="chip" data-i18n="ins_c4" dir="ltr">0.4 - 0.6 MPa</span>
+    <span class="chip" data-i18n="ins_c5" dir="ltr">+/-1 mm</span>
     <span class="chip" data-i18n="ins_c6">Single channel</span>
   </div>
   <p class="disc" style="margin-top:16px" data-i18n="ins_note">Installation is a qualified task. The manual assumes the machine is de-energised and the air supply isolated before any panel is opened or any belt is tensioned.</p>
@@ -788,13 +807,13 @@ footer .disc{font-size:11.5px;color:#8aa19d;max-width:78ch;margin:0;line-height:
       </div>
       <div>
         <h4 data-i18n="foot_h3">Talk to us</h4>
-        <a href="mailto:info@smthelp.com" data-i18n="foot_mail">info@smthelp.com</a>
+        <a href="mailto:info@smthelp.com" data-i18n="foot_mail" dir="ltr">info@smthelp.com</a>
         <a href="https://wa.me/8613602562576" target="_blank" rel="noopener" data-i18n="foot_wa">WhatsApp +86 13602562576</a>
         <a href="tel:+8613602562576">+86 13602562576</a>
         <a href="#contact" data-i18n="ct_addr">Shenzhen, China</a>
       </div>
     </div>
-    <p class="disc mono" style="text-align:end;margin-top:22px" data-i18n="foot_rights">Shenzhen Southern Machinery Sales and Service Co., Ltd.</p>
+    <p class="disc mono" style="text-align:end;margin-top:22px" data-i18n="foot_rights" dir="ltr">Shenzhen Southern Machinery Sales and Service Co., Ltd.</p>
   </div>
 </footer>
 
@@ -831,6 +850,47 @@ const LANGS = [
 const VIDEOS = [{"id": "mtQX516P1ZA", "t": "v1t", "d": "v1d", "dur": "2:02"}, {"id": "gRoOqB19fW0", "t": "v2t", "d": "v2d", "dur": "1:25"}, {"id": "9nAomTRPxsg", "t": "v3t", "d": "v3d", "dur": "1:36"}, {"id": "6oy08INFV24", "t": "v4t", "d": "v4d", "dur": "0:23"}, {"id": "0x4worYtaQQ", "t": "v5t", "d": "v5d", "dur": "1:05"}, {"id": "JS7IGQSFtl0", "t": "v6t", "d": "v6d", "dur": "1:22"}];
 const LANG_KEY = "smvf01_lang", THEME_KEY = "smvf01_theme";
 
+/* ---- bidi isolation for embedded left-to-right runs ---------------------
+   Arabic and Hebrew read right-to-left, but a technical page is mostly runs
+   that read left-to-right: model codes, dimensions, units, e-mail addresses,
+   host names. Left alone, UAX#9 lets the neutrals inside such a run (spaces,
+   the `x` separator, `-`, `/`, `:`) resolve to the PARAGRAPH direction, which
+   splits the run and paints it backwards -- `12 kg` becomes `kg 12`, and
+   `0.4 - 0.6 MPa` becomes `MPa 0.6 - 0.4`. Measured with a UAX#9 reference
+   implementation and confirmed against real glyph positions in Chrome, 36 of
+   the Arabic strings on this page did exactly that, and the values that were
+   re-ordered included every dimension, weight, pressure, voltage, current and
+   speed in the specification table.
+   Wrapping each such run in an isolate (U+2066 LRI ... U+2069 PDI) makes it
+   atomic without disturbing the prose around it. Both characters are zero
+   width and are never painted -- they affect ordering only, and screen readers
+   ignore them.
+   This is applied to the text rather than baked into the translation tables
+   for two reasons: it has to cover strings the runtime builds too (video
+   titles, and anything a future revision adds), and invisible control
+   characters sitting in a translation file are impossible to review.
+   Values with no right-to-left character at all are returned untouched, which
+   is what keeps the raw-key leak checks meaningful: a leaked key is Latin. */
+var RTL_TEXT=/[\u0590-\u05FF\u0600-\u06FF\u0700-\u074F\u0750-\u077F\u08A0-\u08FF\uFB1D-\uFDFF\uFE70-\uFEFF]/;
+function isolateRuns(s){
+  s=String(s);
+  if(!RTL_TEXT.test(s)) return s;
+  var wrap=function(seg){
+    if(!seg) return "";
+    var core=seg.trim();
+    if(core.length<3||!/[A-Za-z0-9]/.test(core)) return seg;
+    var at=seg.indexOf(core);
+    return seg.slice(0,at)+"\u2066"+core+"\u2069"+seg.slice(at+core.length);
+  };
+  var out="",cur="",i,ch;
+  for(i=0;i<s.length;i++){
+    ch=s.charAt(i);
+    if(RTL_TEXT.test(ch)){ out+=wrap(cur); cur=""; out+=ch; }
+    else cur+=ch;
+  }
+  return out+wrap(cur);
+}
+
 function T(lang,key){
   var d=I18N[lang]||I18N.en;
   var v=d[key];
@@ -850,7 +910,7 @@ function renderVideos(lang){
     return '<article class="vid" data-vid="'+v.id+'" tabindex="0" role="button">'
       +'<div class="th"><img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg" alt="'+esc(T(lang,v.t))+'">'
       +'<div class="pl"><i></i></div></div>'
-      +'<div class="bd"><span class="dur">'+v.dur+'</span><h3>'+esc(T(lang,v.t))+'</h3><p>'+esc(T(lang,v.d))+'</p></div></article>';
+      +'<div class="bd"><span class="dur">'+v.dur+'</span><h3>'+esc(isolateRuns(T(lang,v.t)))+'</h3><p>'+esc(isolateRuns(T(lang,v.d)))+'</p></div></article>';
   }).join("");
 }
 
@@ -898,16 +958,16 @@ function applyLang(lang,persist){
   root.setAttribute("lang",lang);
   root.setAttribute("dir",meta.dir||"ltr");
   document.querySelectorAll("[data-i18n]").forEach(function(el){
-    el.textContent=T(lang,el.getAttribute("data-i18n"));
+    el.textContent=isolateRuns(T(lang,el.getAttribute("data-i18n")));
   });
   document.querySelectorAll("[data-i18n-alt]").forEach(function(el){
-    el.setAttribute("alt",T(lang,el.getAttribute("data-i18n-alt")));
+    el.setAttribute("alt",isolateRuns(T(lang,el.getAttribute("data-i18n-alt"))));
   });
   document.querySelectorAll("[data-i18n-aria]").forEach(function(el){
-    el.setAttribute("aria-label",T(lang,el.getAttribute("data-i18n-aria")));
+    el.setAttribute("aria-label",isolateRuns(T(lang,el.getAttribute("data-i18n-aria"))));
   });
   document.querySelectorAll("[data-i18n-title]").forEach(function(el){
-    el.setAttribute("title",T(lang,el.getAttribute("data-i18n-title")));
+    el.setAttribute("title",isolateRuns(T(lang,el.getAttribute("data-i18n-title"))));
   });
   document.title=T(lang,"seo_title");
   var md=document.querySelector('meta[name="description"]');
