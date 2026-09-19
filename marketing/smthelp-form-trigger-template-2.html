@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Machinery - SMT & THT Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Light Mode (Default) */
+        :root {
+            /* Typography - Preserved from original */
+            --font-family: 'Open Sans', sans-serif;
+            --font-weight-normal: 400;
+            --font-weight-bold: 600;
+            --font-size-body: 12px;
+            --font-size-label: 14px;
+            --font-size-test-notice: 12px;
+            --font-size-input: 14px;
+            --font-size-header: 20px;
+            --font-size-paragraph: 14px;
+            --font-size-link: 12px;
+            --font-size-error: 12px;
+            --font-size-html-h1: 28px;
+            --font-size-html-h2: 20px;
+            --font-size-html-h3: 16px;
+            --font-size-html-h4: 14px;
+            --font-size-html-h5: 12px;
+            --font-size-html-h6: 10px;
+            --font-size-subheader: 14px;
+
+            /* Colors - Updated for Southern Machinery branding */
+            --color-background: #fbfcfe;
+            --color-test-notice-text: #e6a23d;
+            --color-test-notice-bg: #fefaf6;
+            --color-test-notice-border: #f6dcb7;
+            --color-card-bg: #ffffff;
+            --color-card-border: #dbdfe7;
+            --color-card-shadow: rgba(0, 51, 102, 0.08);
+            --color-link: #003366;
+            --color-header: #003366;
+            --color-label: #555555;
+            --color-input-border: #dbdfe7;
+            --color-input-text: #71747A;
+            --color-focus-border: #0066cc;
+            --color-submit-btn-bg: #ff6d5a;
+            --color-submit-btn-text: #ffffff;
+            --color-error: #ea1f30;
+            --color-required: #ff6d5a;
+            --color-clear-button-bg: #7e8186;
+            --color-html-text: #555;
+            --color-html-link: #ff6d5a;
+            --color-header-subtext: #7e8186;
+            
+            /* New colors for header/footer */
+            --color-header-bg: #f8f9fa;
+            --color-footer-bg: #003366;
+            --color-footer-text: #ffffff;
+            --color-social-icon: #0066cc;
+            --color-social-icon-hover: #ff6d5a;
+
+            /* Border Radii - Preserved from original */
+            --border-radius-card: 8px;
+            --border-radius-input: 6px;
+            --border-radius-clear-btn: 50%;
+            --card-border-radius: 8px;
+
+            /* Spacing - Preserved from original */
+            --padding-container-top: 24px;
+            --padding-card: 24px;
+            --padding-test-notice-vertical: 12px;
+            --padding-test-notice-horizontal: 24px;
+            --margin-bottom-card: 16px;
+            --padding-form-input: 12px;
+            --card-padding: 24px;
+            --card-margin-bottom: 16px;
+
+            /* Dimensions - Preserved from original */
+            --container-width: 448px;
+            --submit-btn-height: 48px;
+            --checkbox-size: 18px;
+
+            /* Others */
+            --box-shadow-card: 0px 4px 16px 0px var(--color-card-shadow);
+            --opacity-placeholder: 0.5;
+            --transition-speed: 0.3s;
+        }
+
+        /* Dark Mode */
+        [data-theme="dark"] {
+            --color-background: #1a1a1a;
+            --color-test-notice-text: #f4a460;
+            --color-test-notice-bg: #2a2a2a;
+            --color-test-notice-border: #444;
+            --color-card-bg: #2d2d2d;
+            --color-card-border: #444;
+            --color-card-shadow: rgba(0, 0, 0, 0.3);
+            --color-link: #66b3ff;
+            --color-header: #e0e0e0;
+            --color-label: #cccccc;
+            --color-input-border: #444;
+            --color-input-text: #e0e0e0;
+            --color-focus-border: #66b3ff;
+            --color-submit-btn-bg: #ff6d5a;
+            --color-submit-btn-text: #ffffff;
+            --color-error: #ff6b6b;
+            --color-required: #ff6d5a;
+            --color-clear-button-bg: #666;
+            --color-html-text: #ccc;
+            --color-html-link: #ff8a80;
+            --color-header-subtext: #999;
+            --color-header-bg: #2d2d2d;
+            --color-footer-bg: #1a1a1a;
+            --color-footer-text: #e0e0e0;
+            --color-social-icon: #66b3ff;
+            --color-social-icon-hover: #ff8a80;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: var(--font-size-body);
+            font-weight: var(--font-weight-normal);
+            background-color: var(--color-background);
+            color: var(--color-html-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--color-header-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .company-tagline {
+            font-size: var(--font-size-subheader);
+            color: var(--color-header-subtext);
+            font-style: italic;
+        }
+
+        .theme-toggle {
+            background-color: var(--color-submit-btn-bg);
+            color: var(--color-submit-btn-text);
+            border: none;
+            padding: 8px 16px;
+            border-radius: var(--border-radius-input);
+            cursor: pointer;
+            font-size: var(--font-size-link);
+            font-family: var(--font-family);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 109, 90, 0.3);
+        }
+
+        /* Main Container */
+        .main-container {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--padding-container-top) 24px;
+        }
+
+        /* Company Info Section */
+        .company-info-section {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: var(--padding-card);
+            background-color: var(--color-card-bg);
+            border-radius: var(--border-radius-card);
+            box-shadow: var(--box-shadow-card);
+        }
+
+        .company-info-section h1 {
+            font-size: var(--font-size-html-h1);
+            color: var(--color-header);
+            margin-bottom: 16px;
+            font-weight: var(--font-weight-bold);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--color-social-icon);
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid var(--color-social-icon);
+            border-radius: var(--border-radius-input);
+            transition: all var(--transition-speed) ease;
+            font-size: var(--font-size-link);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-links a:hover {
+            background-color: var(--color-social-icon-hover);
+            border-color: var(--color-social-icon-hover);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Form Container */
+        .form-container {
+            width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--box-shadow-card);
+            padding: var(--card-padding);
+            margin-bottom: var(--card-margin-bottom);
+            transition: all var(--transition-speed) ease;
+        }
+
+        /* Test Notice */
+        .test-notice {
+            background-color: var(--color-test-notice-bg);
+            border: 1px solid var(--color-test-notice-border);
+            color: var(--color-test-notice-text);
+            padding: var(--padding-test-notice-vertical) var(--padding-test-notice-horizontal);
+            border-radius: var(--border-radius-input);
+            font-size: var(--font-size-test-notice);
+            margin-bottom: var(--margin-bottom-card);
+            text-align: center;
+        }
+
+        /* Form Styles */
+        .form-header {
+            font-size: var(--font-size-header);
+            color: var(--color-header);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: var(--color-label);
+            font-size: var(--font-size-label);
+            font-weight: var(--font-weight-normal);
+            margin-bottom: 8px;
+        }
+
+        .required-star {
+            color: var(--color-required);
+            margin-left: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: var(--padding-form-input);
+            border: 1px solid var(--color-input-border);
+            border-radius: var(--border-radius-input);
+            background-color: var(--color-card-bg);
+            color: var(--color-input-text);
+            font-size: var(--font-size-input);
+            font-family: var(--font-family);
+            transition: border-color var(--transition-speed) ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--color-focus-border);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .submit-button {
+            width: 100%;
+            height: var(--submit-btn-height);
+            background-color: var(--color-submit-btn-bg);
+            color: var(--color-submit-btn-text);
+            border: none;
+            border-radius: var(--border-radius-input);
+            font-size: var(--font-size-input);
+            font-weight: var(--font-weight-bold);
+            font-family: var(--font-family);
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+        }
+
+        .submit-button:hover {
+            background-color: #ff5744;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 109, 90, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-footer-bg);
+            color: var(--color-footer-text);
+            padding: 48px 24px 24px;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h3 {
+            font-size: var(--font-size-html-h3);
+            margin-bottom: 16px;
+            font-weight: var(--font-weight-bold);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-info a {
+            color: var(--color-footer-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: var(--font-size-paragraph);
+            transition: color var(--transition-speed) ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--color-social-icon-hover);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            color: var(--color-footer-text);
+            font-size: 20px;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .footer-social a:hover {
+            color: var(--color-social-icon-hover);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: var(--font-size-link);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .logo-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .form-container {
+                width: 100%;
+                padding: 0 16px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        /* Tech Style Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-card {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" 
+                     alt="Southern Machinery Logo" 
+                     class="logo">
+                <div class="company-tagline">Your Trusted Partner for SMT & THT Solutions</div>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon" id="theme-icon"></i>
+                <span id="theme-text">Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Company Info Section -->
+        <div class="company-info-section">
+            <h1>Connect with Southern Machinery</h1>
+            <p style="font-size: var(--font-size-paragraph); color: var(--color-header-subtext); margin-bottom: 16px;">
+                Follow our journey and stay updated on our latest innovations through our social media channels:
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/smtmachine" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn Company
+                </a>
+                <a href="https://cn.linkedin.com/in/smtsupplier" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn Profile
+                </a>
+                <a href="https://twitter.com/smtspecialist" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://www.facebook.com/autoinsertion" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://www.youtube.com/c/Smthelping" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube Channel
+                </a>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <!-- Test Notice (if needed) -->
+            <div class="test-notice">
+                <i class="fas fa-info-circle"></i> This is a test form. Submissions will be processed through n8n workflow.
+            </div>
+
+            <!-- Form Card -->
+            <div class="form-card">
+                <h2 class="form-header">Contact Southern Machinery</h2>
+                
+                <!-- Place your n8n form code here -->
+                <form id="southern-machinery-form">
+                    <div class="form-group">
+                        <label for="name">
+                            Full Name
+                            <span class="required-star">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email Address
+                            <span class="required-star">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-type">
+                            Inquiry Type
+                            <span class="required-star">*</span>
+                        </label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">Select an option</option>
+                            <option value="smt-equipment">SMT Equipment</option>
+                            <option value="tht-solutions">THT Solutions</option>
+                            <option value="technical-support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            Message
+                            <span class="required-star">*</span>
+                        </label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        <span id="submit-text">Submit Inquiry</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <a href="tel:+8613602562576">
+                            <i class="fas fa-phone"></i> Phone/WhatsApp: +8613602562576
+                        </a>
+                        <a href="mailto:info@SMThelp.com">
+                            <i class="fas fa-envelope"></i> Email: info@SMThelp.com
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/smtmachine" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/smtspecialist" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/autoinsertion" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/Smthelping" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>About Southern Machinery</h3>
+                    <p style="font-size: var(--font-size-paragraph); line-height: 1.6;">
+                        Southern Machinery – Shaping the Future of Electronics Manufacturing.
+                        Your trusted partner for innovative SMT & THT solutions.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Southern Machinery. All rights reserved. | Shaping the Future of Electronics Manufacturing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon';
+                themeText.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                themeText.textContent = 'Light Mode';
+            }
+        });
+
+        // Form submission handler
+        document.getElementById('southern-machinery-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = this.querySelector('.submit-button');
+            const submitText = document.getElementById('submit-text');
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitText.innerHTML = '<span class="loading"></span> Processing...';
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would integrate with your n8n webhook
+            // Example:
+            // fetch('YOUR_N8N_WEBHOOK_URL', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(data)
+            // })
+            // .then(response => response.json())
+            // .then(result => {
+            //     // Handle success
+            //     submitText.textContent = 'Thank you! We\'ll contact you soon.';
+            //     this.reset();
+            // })
+            // .catch(error => {
+            //     // Handle error
+            //     submitText.textContent = 'Error! Please try again.';
+            // })
+            // .finally(() => {
+            //     submitButton.disabled = false;
+            //     setTimeout(() => {
+            //         submitText.textContent = 'Submit Inquiry';
+            //     }, 3000);
+            // });
+            
+            // Demo response
+            setTimeout(() => {
+                submitText.textContent = 'Thank you! We\'ll contact you soon.';
+                this.reset();
+                submitButton.disabled = false;
+                
+                setTimeout(() => {
+                    submitText.textContent = 'Submit Inquiry';
+                }, 3000);
+            }, 2000);
+        });
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

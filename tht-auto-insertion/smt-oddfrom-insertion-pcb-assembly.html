@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $('AI Agent').item.json.output.topic }} Newsletter</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background-color: #f4f7f6;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #f4f7f6;">
+        <tr>
+            <td align="center">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" style="width: 600px; margin: 20px auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <!-- Cover Image -->
+                    <tr>
+                        <td style="padding: 0;">
+                            <img src="{{ $json.choices[0].message.images[0].image_url.url }}" 
+                                 alt="Newsletter Cover Image" 
+                                 style="display: block; width: 100%; max-width: 600px; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 40px 30px 20px 30px; text-align: center; border-bottom: 1px solid #eeeeee;">
+                            <h1 style="margin: 0; color: #1a202c; font-size: 28px;">{{ $('AI Agent').item.json.output.topic }}</h1>
+                            <p style="margin: 5px 0 15px; color: #718096; font-size: 14px;">{{$now.format('dd/MM/yyyy')}}</p>
+                            <p style="margin: 0; color: #4a5568; line-height: 1.6; font-size: 16px;">
+                               {{ $('AI Agent').item.json.output.summary }}
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- News Section -->
+                    <tr>
+                        <td style="padding: 30px;">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <!-- News Item 1 -->
+                                <tr>
+                                    <td style="padding-bottom: 25px;">
+                                        <h2 style="margin-top: 0; margin-bottom: 10px; color: #2d3748; font-size: 20px;">{{ $('AI Agent').item.json.output.news[0].title }}</h2>
+                                        <p style="margin: 0 0 15px; color: #4a5568; line-height: 1.6;">{{ $('AI Agent').item.json.output.news[0].summary }}</p>
+                                        <a href="{{ $('AI Agent').item.json.output.news[0].url }}" target="_blank" style="background-color: #3182ce; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Read More</a>
+                                    </td>
+                                </tr>
+                                <!-- News Item 2 -->
+                                <tr>
+                                    <td style="padding-bottom: 25px;">
+                                        <h2 style="margin-top: 0; margin-bottom: 10px; color: #2d3748; font-size: 20px;">{{ $('AI Agent').item.json.output.news[1].title }}</h2>
+                                        <p style="margin: 0 0 15px; color: #4a5568; line-height: 1.6;">{{ $('AI Agent').item.json.output.news[1].summary }}</p>
+                                        <a href="{{ $('AI Agent').item.json.output.news[1].url }}" target="_blank" style="background-color: #3182ce; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Read More</a>
+                                    </td>
+                                </tr>
+                                <!-- News Item 3 -->
+                                <tr>
+                                    <td style="padding-bottom: 0;">
+                                        <h2 style="margin-top: 0; margin-bottom: 10px; color: #2d3748; font-size: 20px;">{{ $('AI Agent').item.json.output.news[2].title }}</h2>
+                                        <p style="margin: 0 0 15px; color: #4a5568; line-height: 1.6;">{{ $('AI Agent').item.json.output.news[2].summary }}</p>
+                                        <a href="{{ $('AI Agent').item.json.output.news[2].url }}" target="_blank" style="background-color: #3182ce; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Read More</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 20px 30px; text-align: center; color: #a0aec0; font-size: 12px; background-color: #f7fafc; border-top: 1px solid #eeeeee;">
+                            <p style="margin: 0;">© RAKIN JAKARIA AI Newsletter. All rights reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="How China made Auto Insertion machine for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/0k4U5NLKq4k" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">How China made Auto Insertion machine for Smart EMS factory PCB assembly</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x cost saving Southern Machinery made Auto Insertion machine" src="https://www.youtube-nocookie.com/embed/KtJF9zqHnXw" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x cost saving Southern Machinery made Auto Insertion machine</figcaption></figure></div><h2 style="font-size:26px;margin:34px 0 6px;font-weight:700;">Product documentation</h2><p style="margin:0 0 14px;color:#5b6775;font-size:15px;">Catalogues, manuals and ROI sheets from the product catalog board.</p><ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px;"><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Product%20landing%20Page/THT-Auto-Insertion-Machine-Solution-Landing.html" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT Auto Insertion Machine Solution (HTML) &#8595;</a></li></ul><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

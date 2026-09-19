@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent ESD Turnstile Gates for SMT Factories | Southern Machinery</title>
+    <meta name="description" content="Protect your sensitive electronic components with Southern Machinery's intelligent ESD access control turnstile gates. Ensure compliance, enhance security, and boost productivity in your SMT factory.">
+    <meta name="keywords" content="ESD Turnstile, Access Control, SMT Factory, ESD Protection, Southern Machinery, PCB Assembly, Anti-static Gate">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1C64F2;
+            --secondary-color: #0E2A57;
+            --background-light: #f9fafb;
+            --background-dark: #111827;
+            --text-light: #1f2937;
+            --text-dark: #f3f4f6;
+            --border-light: #e5e7eb;
+            --border-dark: #374151;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+        .light {
+            background-color: var(--background-light);
+            color: var(--text-light);
+        }
+        .bg-primary { background-color: var(--primary-color); }
+        .text-primary { color: var(--primary-color); }
+        .border-primary { border-color: var(--primary-color); }
+        .bg-secondary { background-color: var(--secondary-color); }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .accordion-button.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .feature-card {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 shadow-md transition-colors duration-300 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-12">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="hover:text-primary transition-colors">Features</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#how-it-works" class="hover:text-primary transition-colors">How It Works</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-switcher" class="text-xl">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="https://www.linkedin.com/company/smtmachine" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/smtspecialist" target="_blank" class="hover:text-primary"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/autoinsertion" target="_blank" class="hover:text-primary"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/c/Smthelping" target="_blank" class="hover:text-primary"><i class="fab fa-youtube"></i></a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#features" class="block py-2 hover:text-primary">Features</a>
+            <a href="#faq" class="block py-2 hover:text-primary">FAQ</a>
+            <a href="#how-it-works" class="block py-2 hover:text-primary">How It Works</a>
+            <a href="#contact" class="block py-2 hover:text-primary">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 bg-cover bg-center text-white" style="background-image: url('https://ph.smthelp.com/images/2025/06/06/SMT-line-Single-Lane-Layout-1.png');">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Intelligent ESD Access Control Systems</h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto">Secure your SMT production line, eliminate electrostatic discharge threats, and ensure compliance with our state-of-the-art turnstile gates.</p>
+            <a href="#contact" class="bg-primary hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Core Features & Benefits</h2>
+                <p class="text-lg mt-2 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">Engineered for reliability, security, and seamless integration.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-primary text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Prevent ESD Damage</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Protect sensitive components from both immediate and latent ESD damage, significantly reducing product failures and rework costs.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-primary text-4xl mb-4"><i class="fas fa-cogs"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Enhanced Security</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Integrate with biometric, RFID, and facial recognition systems to ensure only authorized, compliant personnel enter restricted EPAs.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-primary text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Boost Productivity</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Automate entry processes, minimize queues with high throughput (up to 40 people/min), and streamline workforce management.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-primary text-4xl mb-4"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Ensure Compliance</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Meet and exceed industry standards like ANSI/ESD S20.20 & IEC 61340 with robust data logging and automated audit trails.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-primary text-4xl mb-4"><i class="fas fa-database"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Intelligent Data Logging</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Capture detailed test results, resistance values, and personnel access logs for comprehensive reporting and operational insights.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-primary text-4xl mb-4"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Customizable & Scalable</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Tailor test modes and permissions for different roles. Easily scale the system across multiple entry points and facilities as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Simple, Secure, and Swift Operation</h2>
+                <p class="text-lg mt-2 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">A seamless four-step process to ensure total ESD protection at every entry point.</p>
+            </div>
+            <div class="relative">
+                <!-- The connecting line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 dark:bg-gray-600 -translate-y-1/2"></div>
+                <div class="grid md:grid-cols-4 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="text-center">
+                        <div class="relative mb-4">
+                            <div class="w-24 h-24 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-4xl shadow-lg">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">1. Identification</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Employee verifies identity via card, fingerprint, or facial scan.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="text-center">
+                        <div class="relative mb-4">
+                            <div class="w-24 h-24 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-4xl shadow-lg">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">2. ESD Testing</h3>
+                        <p class="text-gray-600 dark:text-gray-400">System simultaneously tests wrist strap and footwear on the dual footplate.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="text-center">
+                        <div class="relative mb-4">
+                            <div class="w-24 h-24 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-4xl shadow-lg">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">3. Verification</h3>
+                        <p class="text-gray-600 dark:text-gray-400">Instant Pass/Fail result is displayed with clear visual and audible indicators.</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="text-center">
+                        <div class="relative mb-4">
+                            <div class="w-24 h-24 mx-auto rounded-full bg-primary text-white flex items-center justify-center text-4xl shadow-lg">
+                                <i class="fas fa-door-open"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">4. Access Granted</h3>
+                        <p class="text-gray-600 dark:text-gray-400">On 'Pass', the gate unlocks. On 'Fail', access is denied, ensuring EPA integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
+                <p class="text-lg mt-2 max-w-2xl mx-auto text-gray-600 dark:text-gray-400">Your top questions about our Intelligent ESD Access Control Systems, answered.</p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <!-- Accordion Item 1 -->
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <button class="accordion-button w-full text-left py-6 px-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">What is the core purpose of this system in an SMT factory?</span>
+                        <i class="accordion-icon fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>The system's primary goal is to prevent electrostatic discharge (ESD) damage by ensuring all personnel are properly grounded before entering an Electrostatic Protection Area (EPA). It acts as a gatekeeper, verifying anti-static gear is functional, which protects sensitive electronic components, enhances security, improves productivity, and ensures compliance with industry standards like ANSI/ESD S20.20.</p>
+                    </div>
+                </div>
+                <!-- Accordion Item 2 -->
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <button class="accordion-button w-full text-left py-6 px-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">How robust and accurate is the ESD testing mechanism?</span>
+                        <i class="accordion-icon fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Our systems are designed for high accuracy and reliability. They use a 100V test voltage to avoid false results caused by contamination on shoe soles. The testing process is extremely fast—checking both feet and a wrist strap in under 2 seconds—and the hardware features solid-state buttons for longevity. Annual calibration is recommended to maintain peak accuracy.</p>
+                    </div>
+                </div>
+                <!-- Accordion Item 3 -->
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <button class="accordion-button w-full text-left py-6 px-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">What kind of data does the system collect and how can we use it?</span>
+                        <i class="accordion-icon fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>The system collects comprehensive data, including detailed test results (Pass/Fail, resistance values), personnel information (ID, name, department), and access logs (entry/exit times). This data is invaluable for creating paperless audit trails, monitoring compliance in real-time, generating automated reports for operational insights, and integrating with HR or ERP systems for streamlined workforce management.</p>
+                    </div>
+                </div>
+                 <!-- Accordion Item 4 -->
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <button class="accordion-button w-full text-left py-6 px-4 flex justify-between items-center">
+                        <span class="text-lg font-semibold">Can the system be customized for our factory's specific needs?</span>
+                        <i class="accordion-icon fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-4 pb-4 text-gray-600 dark:text-gray-400">
+                        <p>Absolutely. The system is highly customizable and scalable. You can configure flexible test modes for different roles (e.g., test-free for management), set granular access permissions, and choose from various gate types. The networked architecture allows you to easily add more turnstiles and manage numerous entry points across one or multiple facilities from a central software platform as your operations grow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-secondary text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Secure Your Production Line?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Contact us today for a personalized quote or to discuss how our ESD solutions can be tailored to your factory's unique requirements.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-xl">
+                <div class="flex items-center">
+                    <i class="fas fa-phone-alt mr-3"></i>
+                    <a href="tel:+8613602562576" class="hover:underline">Phone/WhatsApp: +86 136 0256 2576</a>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-envelope mr-3"></i>
+                    <a href="mailto:info@SMThelp.com" class="hover:underline">Email: info@SMThelp.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2">
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-12 mb-4">
+                    <h4 class="font-bold text-lg mb-2">Your Trusted Partner for SMT & THT Solutions</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Established in Shenzhen in 2011, Southern Machinery specializes in state-of-the-art SMT and THT machinery. We deliver low-cost, high-efficiency PCB assembly automation solutions, integrating Shenzhen's rich manufacturing experience to serve clients worldwide.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="http://www.smthelp.com" target="_blank" class="hover:text-primary">Main Website</a></li>
+                        <li><a href="http://file.autoinsertion.com" target="_blank" class="hover:text-primary">Machine Catalog</a></li>
+                        <li><a href="http://ph.smthelp.com" target="_blank" class="hover:text-primary">Photo Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="https://www.linkedin.com/company/smtmachine" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" class="hover:text-primary"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/smtspecialist" target="_blank" class="hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/autoinsertion" target="_blank" class="hover:text-primary"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/c/Smthelping" target="_blank" class="hover:text-primary"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Southern Machinery. All Rights Reserved.</p>
+                <p>Southern Machinery – Shaping the Future of Electronics Manufacturing.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dify Chatbot -->
+    <script>
+        window.difyChatbotConfig = {
+            token: 'j4mQvbGSBSlvQcv5',
+            baseUrl: 'https://ai.smthelp.com'
+        }
+    </script>
+    <script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer></script>
+    <style>
+        #dify-chatbot-bubble-button {
+            background-color: #1C64F2 !important;
+        }
+        #dify-chatbot-bubble-window {
+            width: 24rem !important;
+            height: 40rem !important;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Theme switcher
+            const themeSwitcher = document.getElementById('theme-switcher');
+            const html = document.documentElement;
+            const sunIcon = '<i class="fas fa-sun"></i>';
+            const moonIcon = '<i class="fas fa-moon"></i>';
+
+            // Check for saved theme in localStorage
+            if (localStorage.getItem('theme') === 'dark') {
+                html.classList.add('dark');
+                html.classList.remove('light');
+                themeSwitcher.innerHTML = sunIcon;
+            } else {
+                html.classList.add('light');
+                html.classList.remove('dark');
+                themeSwitcher.innerHTML = moonIcon;
+            }
+
+            themeSwitcher.addEventListener('click', () => {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    themeSwitcher.innerHTML = moonIcon;
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    html.classList.add('dark');
+                    html.classList.remove('light');
+                    themeSwitcher.innerHTML = sunIcon;
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+
+            // Accordion
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    button.classList.toggle('active');
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Mobile menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="How China made SFY03 AGV SMT Safety Guardian" src="https://www.youtube-nocookie.com/embed/MRNrZrMpHO4" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">How China made SFY03 AGV SMT Safety Guardian</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Systemic Synergy Architecting the Zero-Lag SMT Line" src="https://www.youtube-nocookie.com/embed/gChOlz5eOxY" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Systemic Synergy Architecting the Zero-Lag SMT Line</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="How Build Your Lights-Out THT Line?" src="https://www.youtube-nocookie.com/embed/omxIkpIkxS4" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">How Build Your Lights-Out THT Line?</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

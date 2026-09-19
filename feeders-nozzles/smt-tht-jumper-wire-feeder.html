@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMT THT Jumper Wire Feeder | Southern Machinery</title>
+    <meta name="description" content="Discover the high-efficiency SMT THT Jumper Wire Feeder by Southern Machinery. Automate your PCB assembly, reduce costs, and increase precision with our universally compatible feeder for any SMT mounter.">
+    <meta name="keywords" content="SMT Jumper Wire Feeder, THT Jumper Wire Feeder, PCB Assembly Automation, Jumper Wire Inserter, SMT Mounter Feeder, Southern Machinery">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            /* Light Mode Colors - Derived from Logo */
+            --primary-color-light: #0d47a1; /* Dark Blue from logo */
+            --secondary-color-light: #1565c0; /* Lighter Blue from logo */
+            --accent-color-light: #42a5f5; /* Lightest Blue */
+            --background-color-light: #f4f7f9;
+            --surface-color-light: #ffffff;
+            --text-primary-light: #212121;
+            --text-secondary-light: #5f6368;
+            --border-color-light: #e0e0e0;
+
+            /* Dark Mode Colors */
+            --primary-color-dark: #42a5f5; /* Light Blue for Dark Mode */
+            --secondary-color-dark: #1e88e5;
+            --accent-color-dark: #0d47a1;
+            --background-color-dark: #121212;
+            --surface-color-dark: #1e1e1e;
+            --text-primary-dark: #e8eaed;
+            --text-secondary-dark: #9e9e9e;
+            --border-color-dark: #424242;
+        }
+
+        /* Set initial theme to light */
+        body {
+            --primary-color: var(--primary-color-light);
+            --secondary-color: var(--secondary-color-light);
+            --accent-color: var(--accent-color-light);
+            --background-color: var(--background-color-light);
+            --surface-color: var(--surface-color-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+            --border-color: var(--border-color-light);
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            --primary-color: var(--primary-color-dark);
+            --secondary-color: var(--secondary-color-dark);
+            --accent-color: var(--accent-color-dark);
+            --background-color: var(--background-color-dark);
+            --surface-color: var(--surface-color-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+            --border-color: var(--border-color-dark);
+        }
+
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--surface-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Theme Toggle */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .theme-switcher .fa-sun, .theme-switcher .fa-moon {
+            font-size: 22px;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+        .theme-switcher .fa-moon { display: none; }
+        body.dark-mode .theme-switcher .fa-sun { display: none; }
+        body.dark-mode .theme-switcher .fa-moon { display: block; }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://ph.smthelp.com/images/2025/06/29/Jumper-Wire-Feeder-for-any-Brand-of-SMT-Mounter-4.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--surface-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+        }
+        
+        /* Gallery & Specs Section */
+        .gallery-specs-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .product-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .main-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .thumbnail-images {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .thumbnail-images img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail-images img:hover, .thumbnail-images img.active {
+            border-color: var(--primary-color);
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .specs-table th {
+            background-color: var(--background-color);
+            font-weight: 700;
+            width: 40%;
+        }
+
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Company Profile Section */
+        .profile-section {
+            background-color: var(--surface-color);
+        }
+        
+        .profile-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .profile-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+        }
+        .contact-section .section-title, .contact-section .section-subtitle {
+            color: #fff;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--surface-color);
+            color: var(--text-secondary);
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer .logo img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .footer p {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .gallery-specs-container {
+                grid-template-columns: 1fr;
+            }
+            .profile-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .profile-content img {
+                margin: 0 auto 30px;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simple responsive, could be replaced by a hamburger menu */
+             .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-title { font-size: 2rem; }
+            .contact-info { flex-direction: column; gap: 15px;}
+        }
+
+    </style>
+    
+    <script>
+        window.difyChatbotConfig = { 
+            token: 'j4mQvbGSBSlvQcv5', 
+            baseUrl: 'https://ai.smthelp.com' 
+        }
+    </script>
+    <script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer></script>
+    <style>
+        #dify-chatbot-bubble-button { 
+            background-color: #1C64F2 !important; 
+        }
+        #dify-chatbot-bubble-window { 
+            width: 24rem !important; 
+            height: 40rem !important; 
+        }
+    </style>
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo">
+            </a>
+            <nav class="nav-menu">
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#gallery">Product Details</a>
+                    <a href="#profile">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="theme-switcher" id="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Automated SMT & THT Jumper Wire Feeder</h1>
+                <p>Revolutionize your PCB assembly with unparalleled precision, speed, and compatibility. Southern Machinery's Jumper Wire Feeder is the ultimate low-cost, high-efficiency solution for any SMT mounter brand.</p>
+                <a href="#contact" class="cta-button">Get a Quote Today</a>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">Engineered for Excellence</h2>
+                <p class="section-subtitle">Our Jumper Wire Feeder is built to solve the most critical challenges in PCB assembly, delivering tangible benefits to your production line.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon"><i class="fas fa-shipping-fast"></i></div>
+                        <h3>High-Speed Automation</h3>
+                        <p>Achieve feeding speeds of ≤1.5 seconds per piece, eliminating manual bottlenecks and dramatically increasing your production throughput.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Universal Compatibility</h3>
+                        <p>Designed for seamless integration with any brand of SMT mounter, providing a versatile, plug-and-play solution for diverse production environments.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Zero Material Waste</h3>
+                        <p>Our intelligent design for cutting, molding, and feeding ensures optimal use of coiled copper wire, significantly reducing material costs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fas fa-crosshairs"></i></div>
+                        <h3>Unmatched Precision</h3>
+                        <p>A sophisticated motor, ratchet, and photoelectric sensor system guarantees high positioning accuracy for consistent quality and reduced rework.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="gallery" class="section" style="background-color: var(--surface-color);">
+            <div class="container">
+                 <h2 class="section-title">Product in Detail</h2>
+                 <p class="section-subtitle">Explore the robust design and technical specifications of the SMT THT Jumper Wire Feeder.</p>
+                <div class="gallery-specs-container">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img src="https://ph.smthelp.com/images/2025/06/30/SMT-THT-Jumper-Wire-Feeder-7.jpg" alt="Main view of SMT THT Jumper Wire Feeder" id="main-product-image">
+                        </div>
+                        <div class="thumbnail-images">
+                            <img src="https://ph.smthelp.com/images/2025/06/30/SMT-THT-Jumper-Wire-Feeder-7.jpg" alt="Thumbnail 1" class="active" onclick="changeImage(this)">
+                            <img src="https://ph.smthelp.com/images/2025/06/30/SMT-THT-Jumper-Wire-Feeder-1.png" alt="Thumbnail 2" onclick="changeImage(this)">
+                            <img src="https://ph.smthelp.com/images/2025/06/30/SMT-THT-Jumper-Wire-Feeder-3.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
+                            <img src="https://ph.smthelp.com/images/2025/06/30/SMT-THT-Jumper-Wire-Feeder-5.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+                        </div>
+                    </div>
+                    <div class="product-specs">
+                        <table class="specs-table">
+                            <tr>
+                                <th>Model</th>
+                                <td>SM-JWF-01</td>
+                            </tr>
+                            <tr>
+                                <th>Function</th>
+                                <td>Automated Jumper Wire Cutting, Forming & Feeding</td>
+                            </tr>
+                            <tr>
+                                <th>Compatibility</th>
+                                <td>Universal for any SMT Mounter Brand</td>
+                            </tr>
+                            <tr>
+                                <th>Speed</th>
+                                <td>≤1.5 Seconds / Piece</td>
+                            </tr>
+                            <tr>
+                                <th>Wire Diameter</th>
+                                <td>$ \phi $0.5mm - 1.2mm (Tinned Copper Wire)</td>
+                            </tr>
+                             <tr>
+                                <th>Jumper Span</th>
+                                <td>6mm - 40mm (Customizable via mold change)</td>
+                            </tr>
+                             <tr>
+                                <th>Lead Length</th>
+                                <td>3mm - 5mm</td>
+                            </tr>
+                             <tr>
+                                <th>Control System</th>
+                                <td>Single-Chip Microcomputer Program Control</td>
+                            </tr>
+                            <tr>
+                                <th>Power Supply</th>
+                                <td>24V DC / 50HZ, 150W</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensions (L x W x H)</th>
+                                <td>580mm x 50mm x 180mm</td>
+                            </tr>
+                             <tr>
+                                <th>Maintenance</th>
+                                <td>Easy operation, ~5 min mold replacement</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="section profile-section">
+            <div class="container">
+                <h2 class="section-title">Your Trusted Partner for SMT & THT Solutions</h2>
+                 <p class="section-subtitle">Shaping the Future of Electronics Manufacturing since 2011.</p>
+                <div class="profile-content">
+                    <div class="profile-image">
+                        <img src="https://ph.smthelp.com/images/2025/06/29/Jumper-Wire-Feeder-for-any-Brand-of-SMT-Mounter-3.jpg" alt="Advanced electronics manufacturing facility">
+                    </div>
+                    <div class="profile-text">
+                        <p>Established in the bustling tech hub of Shenzhen in 2011, Southern Machinery stands as a testament to innovation, quality, and efficiency in the electronics manufacturing industry. With a keen focus on the Surface Mount Technology (SMT) and Through-Hole Technology (THT) sectors, our company specializes in the design and manufacture of state-of-the-art machinery aimed at revolutionizing PCB assembly automation processes.</p>
+                        <p>At Southern Machinery, we understand the intricacies of modern electronics production. Our machines are crafted to ensure precision, durability, and ease of use, providing low-cost, high-efficiency solutions that are second to none. We are pioneers in incorporating the rich manufacturing experience of Shenzhen into our products, offering not just top-tier equipment but also a wealth of knowledge to our clients worldwide.</p>
+                        <p>Experience the Southern Machinery difference today. Join our global network of satisfied customers who have elevated their production capabilities with our cutting-edge solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                 <h2 class="section-title">Elevate Your Production Line Today</h2>
+                 <p class="section-subtitle">Contact us now for a personalized quote, technical specifications, or to discuss how we can solve your manufacturing challenges.</p>
+                 <a href="mailto:info@SMThelp.com?subject=Inquiry about SMT THT Jumper Wire Feeder" class="cta-button">Request Information</a>
+                 <div class="contact-info">
+                    <a href="tel:+8613602562576"><i class="fas fa-phone"></i> Phone: +86 136 0256 2576</a>
+                    <a href="https://wa.me/8613602562576"><i class="fab fa-whatsapp"></i> WhatsApp: +86 136 0256 2576</a>
+                    <a href="mailto:info@SMThelp.com"><i class="fas fa-envelope"></i> Email: info@SMThelp.com</a>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo">
+            </a>
+            <p>Southern Machinery – Shaping the Future of Electronics Manufacturing.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/smtmachine" target="_blank" aria-label="LinkedIn Company"><i class="fab fa-linkedin"></i></a>
+                <a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com/smtspecialist" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/autoinsertion" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/channel/UC1-8A_1b1f_ubG33bA5A3gA" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.smthelp.com" target="_blank">Main Website</a>
+                <a href="https://file.autoinsertion.com" target="_blank">Machine Catalog</a>
+                <a href="https://ph.smthelp.com" target="_blank">Photo Gallery</a>
+            </div>
+            <div class="copyright">
+                &copy; 2011-2024 Southern Machinery. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            // Optional: Save theme preference to local storage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Optional: Check for saved theme preference on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+            }
+        });
+
+        // Product Gallery Image Changer
+        function changeImage(element) {
+            const mainImage = document.getElementById('main-product-image');
+            mainImage.src = element.src;
+
+            // Update active class for thumbnails
+            const thumbnails = document.querySelectorAll('.thumbnail-images img');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x cost saving SMT Jumper Wire Feeder for EMS PCB assembly" src="https://www.youtube-nocookie.com/embed/g_wi1xyq5VA" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x cost saving SMT Jumper Wire Feeder for EMS PCB assembly</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Systemic Synergy Architecting the Zero-Lag SMT Line" src="https://www.youtube-nocookie.com/embed/gChOlz5eOxY" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Systemic Synergy Architecting the Zero-Lag SMT Line</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="How Build Your Lights-Out THT Line?" src="https://www.youtube-nocookie.com/embed/omxIkpIkxS4" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">How Build Your Lights-Out THT Line?</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

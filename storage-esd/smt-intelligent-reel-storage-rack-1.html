@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Machinery | SMT Intelligent Reel Storage Rack</title>
+<style>
+:root {
+--primary-color: #1C64F2;
+--text-color-light: #1a1a1a;
+--bg-color-light: #f8f9fa;
+--text-color-dark: #ffffff;
+--bg-color-dark: #1a1a1a;
+}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+        background-color: var(--bg-color-light);
+        color: var(--text-color-light);
+        transition: all 0.3s ease;
+    }
+
+    body.dark-mode {
+        background-color: var(--bg-color-dark);
+        color: var(--text-color-dark);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+        padding: 20px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+    }
+
+    .contact-social {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .contact-info {
+        display: flex;
+        gap: 20px;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-links a {
+        color: var(--text-color-light);
+        transition: color 0.3s;
+    }
+
+    .dark-mode.dark-mode .social-links a {
+        color: var(--text-color-dark);
+    }
+
+    .mode-switch {
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Features Section */
+    .features {
+        padding: 60px 0;
+        background-color: var(--bg-color-light);
+    }
+
+    .dark-mode .features {
+        background-color: #2d2d2d;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-card {
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+    }
+
+    .dark-mode .feature-card {
+        background: #3d3d3d;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+        margin: 15px 0;
+        color: var(--primary-color);
+    }
+
+    .feature-card p {
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 15px 35px;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #1552d6;
+    }
+
+    /* Footer */
+    footer {
+        padding: 40px 0;
+        background-color: #f0f4ff;
+    }
+
+    .dark-mode footer {
+        background-color: #2d2d2d;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .company-profile p {
+        line-height: 1.6;
+        margin: 15px 0;
+    }
+
+    .footer-links h4 {
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    .footer-links ul {
+        list-style: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: var(--text-color-light);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .dark-mode .footer-links ul li a {
+        color: var(--text-color-dark);
+    }
+
+    .footer-links ul li a:hover {
+        color: var(--primary-color);
+    }
+
+    .copyright {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+</head>
+<body>
+<!-- Chatbot Script -->
+<script>
+window.difyChatbotConfig = { token: 'j4mQvbGSBSlvQcv5', baseUrl: 'https://ai.smthelp.com' }
+</script>
+<script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer></script>
+<style>
+#dify-chatbot-bubble-button { background-color: #1C64F2!important; }
+#dify-chatbot-bubble-window { width: 24rem !important; height: 40rem !important; }
+</style>
+<!-- Header -->
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo">
+        </div>
+        <div class="contact-social">
+            <div class="contact-info">
+                <p>Phone/WhatsApp: +8613602562576</p>
+                <p>Email: info@SMThelp.com</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="mode-switch" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <h1>SMT Intelligent Reel Storage Rack</h1>
+            <p>Revolutionize your material management with Southern Machinery’s next-gen solution. Achieve real-time inventory control, lightning-fast retrieval, and unmatched accuracy for your SMT production line.</p>
+            <a href="#cta" class="cta-button">Explore Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://ph.smthelp.com/images/2024/03/18/SMT-Intelligent-Reel-Storage-System-2024_10.jpg" alt="SMT Intelligent Reel Storage Rack">
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Core Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Lightning-Fast Retrieval</h3>
+                <p>Retrieve reels in under 4 seconds with our automated robotic system, reducing kitting time from hours to seconds.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real-Time Inventory Control</h3>
+                <p>99.9% accuracy with RFID/barcode tracking and LED Pick-to-Light guidance for error-free operations.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Space Optimization</h3>
+                <p>Vertical high-density design reduces storage footprint by up to 75%, freeing valuable floor space.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Seamless Integration</h3>
+                <p>Connects with MES/ERP systems for real-time data exchange, enabling Industry 4.0-ready workflows.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Component Protection</h3>
+                <p>ESD-compliant design with optional humidity control to safeguard sensitive components.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Rapid ROI</h3>
+                <p>Typical 3-6 month ROI through reduced labor costs, minimized errors, and increased OEE.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta" id="cta">
+    <div class="container">
+        <h2>Transform Your Production Line Today</h2>
+        <p>Experience smarter manufacturing with Southern Machinery’s SMT Intelligent Reel Storage Rack.</p>
+        <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Intelligent%20SMT%20Reel%20System%20-%20storage%20rack-SIS%20series%20.pdf" class="cta-button" target="_blank">Download Catalog</a>
+        <a href="https://youtube.com/shorts/TJVTcMrobyo?si=ElInKsfYRjDd47qx" class="cta-button" target="_blank">Watch Demo Video</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container footer-content">
+        <div class="company-profile">
+            <h4>About Southern Machinery</h4>
+            <p>Established in 2011 in Shenzhen’s tech hub, we specialize in SMT/THT solutions, delivering precision, durability, and innovation to PCB assembly automation. Our products blend Shenzhen’s manufacturing expertise with cutting-edge technology to optimize your production.</p>
+            <p>Connect with us: LinkedIn, Twitter, Facebook, YouTube</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="https://www.smthelp.com">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#cta">Contact</a></li>
+                <li><a href="https://ph.smthelp.com">Machine Photos</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Technical Support</a></li>
+                <li><a href="#">Warranty</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Southern Machinery. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        const moonIcon = document.querySelector('.mode-switch i');
+        moonIcon.classList.toggle('fa-sun');
+        moonIcon.classList.toggle('fa-moon');
+    }
+</script>
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Smart Material Management System: SMT Intelligent Reel Rack (Series V1.0)" src="https://www.youtube-nocookie.com/embed/re5ABLWF5H4" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Smart Material Management System: SMT Intelligent Reel Rack (Series V1.0)</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SMT inductive intelligent warehousing solves material management" src="https://www.youtube-nocookie.com/embed/iJ0uKTt2mrc" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SMT inductive intelligent warehousing solves material management</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SIS7000A Intelligent SMT Reel Rack: Cut Kitting Time to 15 Mins" src="https://www.youtube-nocookie.com/embed/-1-m3fO_g94" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SIS7000A Intelligent SMT Reel Rack: Cut Kitting Time to 15 Mins</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

@@ -1,0 +1,843 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="S-4000 Axial Insertion Machine by Southern Machinery — Automate axial THT insertion to remove manual bottlenecks, stabilize quality, and improve ROI in smart EMS factories." />
+  <title>S-4000 Axial Insertion Machine | Southern Machinery</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            smGreen: "#90C641",
+            smTeal: "#0AA5A5",
+            smDark: "#333333",
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,.10)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Responsive iframe wrapper (16:9) */
+    .ratio-16x9 { position: relative; width: 100%; padding-top: 56.25%; }
+    .ratio-16x9 > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    /* 3D viewer: fixed height but responsive width */
+    .ratio-3d { position: relative; width: 100%; height: 600px; }
+    @media (max-width: 768px){ .ratio-3d { height: 420px; } }
+    .ratio-3d > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    /* Subtle industrial background */
+    .grid-bg {
+      background:
+        radial-gradient(circle at 1px 1px, rgba(10,165,165,.10) 1px, transparent 0) 0 0/18px 18px,
+        linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,255,255,.98));
+    }
+  </style>
+</head>
+
+<body class="text-smDark bg-white antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+          <img
+            src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png"
+            alt="Southern Machinery"
+            class="h-8 w-auto"
+            loading="eager"
+          />
+          <span class="hidden sm:inline text-sm font-semibold text-gray-700">
+            Smart THT Automation
+          </span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+          <a class="hover:text-smTeal" href="#home">Home</a>
+          <a class="hover:text-smTeal" href="#view3d">3D View</a>
+          <a class="hover:text-smTeal" href="#videos">Video Gallery</a>
+          <a class="hover:text-smTeal" href="#specs">Tech Specs</a>
+          <a class="hover:text-smTeal" href="#contact">Contact</a>
+          <a class="inline-flex items-center gap-2 rounded-lg bg-smTeal px-4 py-2 text-white hover:opacity-90 shadow-sm"
+             href="#contact">
+            <i class="fa-solid fa-pen-to-square"></i>
+            Get Line Configuration Quote
+          </a>
+        </nav>
+
+        <button id="mobileBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-gray-200 hover:bg-gray-50" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm font-medium text-gray-700">
+        <a class="py-2 hover:text-smTeal" href="#home">Home</a>
+        <a class="py-2 hover:text-smTeal" href="#view3d">3D View</a>
+        <a class="py-2 hover:text-smTeal" href="#videos">Video Gallery</a>
+        <a class="py-2 hover:text-smTeal" href="#specs">Tech Specs</a>
+        <a class="py-2 hover:text-smTeal" href="#contact">Contact</a>
+        <a class="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-smTeal px-4 py-2 text-white hover:opacity-90"
+           href="#contact">
+          <i class="fa-solid fa-pen-to-square"></i>
+          Get Line Configuration Quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden grid-bg">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-28 -right-28 h-72 w-72 rounded-full blur-3xl opacity-30" style="background:#0AA5A5;"></div>
+      <div class="absolute -bottom-28 -left-28 h-72 w-72 rounded-full blur-3xl opacity-30" style="background:#90C641;"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase text-gray-600">
+            <span class="h-2 w-2 rounded-full bg-smGreen"></span>
+            S-4000 Axial Insertion Machine
+          </p>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-bold leading-tight text-smDark">
+            The S-4000: Redefining THT Efficiency for the Smart Factory
+          </h1>
+          <p class="mt-4 text-lg text-gray-700 max-w-xl">
+            High-Speed Axial Insertion. Zero Human Error. Maximum ROI.
+          </p>
+
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <a class="inline-flex items-center justify-center gap-2 rounded-xl bg-smTeal px-6 py-3 text-white font-semibold hover:opacity-90 shadow-soft"
+               href="#contact">
+              <i class="fa-solid fa-diagram-project"></i>
+              Get Line Configuration Quote
+            </a>
+            <a class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 px-6 py-3 text-gray-800 font-semibold hover:bg-white"
+               href="#view3d">
+              <i class="fa-solid fa-cube"></i>
+              View 3D Model
+            </a>
+          </div>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-4">
+            <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+              <p class="text-xs font-semibold text-gray-500 uppercase">Replace manual workcells</p>
+              <p class="mt-1 text-sm text-gray-800">Typical impact: output equivalent to 4–6 operators depending on mix.</p>
+            </div>
+            <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+              <p class="text-xs font-semibold text-gray-500 uppercase">Clinching consistency</p>
+              <p class="mt-1 text-sm text-gray-800">Uniform lead forming supports IPC-aligned solder quality downstream.</p>
+            </div>
+            <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+              <p class="text-xs font-semibold text-gray-500 uppercase">Inline-ready</p>
+              <p class="mt-1 text-sm text-gray-800">Loader integration keeps boards moving and improves OEE.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-3xl blur-2xl opacity-30" style="background: linear-gradient(120deg, #0AA5A5, #90C641);"></div>
+          <figure class="relative rounded-3xl border border-gray-200 bg-white shadow-soft overflow-hidden">
+            <img
+              src="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader--F.png"
+              alt="S-4000 Axial Insertion machine with loader"
+              class="w-full h-auto object-cover"
+              loading="eager"
+            />
+            <figcaption class="px-5 py-4 text-sm text-gray-600 border-t border-gray-200">
+              Built to eliminate the axial insertion bottleneck (resistors/diodes) and keep your THT line paced with SMT.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Showcase -->
+  <section id="view3d" class="py-14 lg:py-18 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-smDark">Explore the Engineering: S-4000 Interactive 3D Model</h2>
+          <p class="mt-2 text-gray-700 max-w-3xl">
+            Rotate, Zoom, and Inspect the Feeder &amp; Insertion Head Mechanisms.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 font-semibold hover:bg-gray-50"
+             href="https://file.autoinsertion.com/Southern%20Machinery%20Product/S4000%20Axial%20Insertion%20machine%202024.pdf"
+             target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-pdf"></i> Catalog PDF
+          </a>
+          <a class="inline-flex items-center gap-2 rounded-lg bg-smGreen px-4 py-2 font-semibold text-gray-900 hover:opacity-90"
+             href="#videos">
+            <i class="fa-solid fa-film"></i> Watch Videos
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-3xl border border-gray-200 bg-white shadow-soft overflow-hidden">
+        <div class="ratio-3d">
+          <iframe
+            src="https://file.autoinsertion.com/public/SMT%20machine%203D%20Drawing%20in%20Html/S4020A%20Axial%20Insertion%20Machine.html"
+            title="S-4000 Axial Insertion Machine 3D Interactive Viewer"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="fullscreen; xr-spatial-tracking"
+            style="border:1px solid #ddd;"
+          ></iframe>
+        </div>
+        <div class="px-5 py-4 border-t border-gray-200 text-sm text-gray-600">
+          Focus areas: axial feeding stability, insertion head motion control, and clinching mechanism alignment—key drivers for uptime and uniform solder results.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Wall -->
+  <section id="videos" class="py-14 lg:py-18 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-smDark">Video Wall: Real Production Performance</h2>
+        <p class="mt-2 text-gray-700 max-w-3xl">
+          See how automated axial insertion replaces slow, error-prone manual processes and stabilizes output shift after shift.
+        </p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <!-- 1 -->
+        <div class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/Wu72kY13NEo"
+                    title="High-Speed Axial Insertion Overview"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">High-Speed Axial Insertion Overview</p>
+            <p class="mt-1 text-sm text-gray-600">Throughput designed to keep THT aligned with SMT takt time.</p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/rd9l_StYfW8"
+                    title="Precision Mechanical Operation"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Precision Mechanical Operation</p>
+            <p class="mt-1 text-sm text-gray-600">Stable feeding + controlled insertion for repeatable lead placement.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/ME4DPx-UGsU"
+                    title="PCB Loader Integration"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">PCB Loader Integration</p>
+            <p class="mt-1 text-sm text-gray-600">Inline flow reduces handling time and prevents WIP accumulation.</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+          <div class="ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/TG1IQ7cdnK4"
+                    title="Continuous Production Run"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Continuous Production Run</p>
+            <p class="mt-1 text-sm text-gray-600">Designed for uptime: fewer stops, more predictable output per shift.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition Grid -->
+  <section id="specs" class="py-14 lg:py-18 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-smDark">Why Smart EMS Factories Automate Axial Insertion</h2>
+          <p class="mt-2 text-gray-700 max-w-3xl">
+            Manual insertion of resistors and diodes is slow and inconsistent. The S-4000 turns it into a controlled process that scales.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-smTeal/10 text-smTeal flex items-center justify-center">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">Speed that converts directly to ROI</h3>
+          </div>
+          <p class="mt-3 text-gray-700">
+            High-speed insertion and stable cycle times reduce manual staffing pressure. Many factories use automation to
+            replace the output of <span class="font-semibold text-gray-900">4–6 operators</span> (dependent on component mix and takt time).
+          </p>
+          <p class="mt-3 text-sm text-gray-600">
+            Business impact: more boards/day, lower labor cost per board, and fewer overtime-driven surprises.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-smGreen/15 text-gray-900 flex items-center justify-center">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">Clinching consistency for IPC-aligned quality</h3>
+          </div>
+          <p class="mt-3 text-gray-700">
+            Robust clinching and controlled insertion help standardize lead forming and retention—supporting
+            stable soldering outcomes aligned with <span class="font-semibold text-gray-900">IPC-A-610 expectations</span>.
+          </p>
+          <p class="mt-3 text-sm text-gray-600">
+            Business impact: fewer escapes, lower rework, and cleaner QA reporting.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-soft transition">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-xl bg-gray-100 text-gray-900 flex items-center justify-center">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="font-bold text-gray-900">MES / smart line readiness</h3>
+          </div>
+          <p class="mt-3 text-gray-700">
+            Recipe-driven programs and integration-ready design make it easier to connect axial insertion into an inline cell
+            with loaders, conveyors, and tracking workflows.
+          </p>
+          <p class="mt-3 text-sm text-gray-600">
+            Business impact: faster changeovers, fewer setup errors, and better planning based on predictable cycle time.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech Specs Table (supporting section) -->
+      <div class="mt-10 rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <div class="px-6 py-5 border-b border-gray-200">
+          <h3 class="text-lg font-bold text-gray-900">Technical Specs Snapshot (Typical)</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Share your PCB drawing + axial BOM for a confirmed configuration.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm">
+            <thead class="bg-gray-50 text-left">
+              <tr>
+                <th class="px-6 py-3 font-semibold text-gray-700">Item</th>
+                <th class="px-6 py-3 font-semibold text-gray-700">Typical Range / Capability</th>
+                <th class="px-6 py-3 font-semibold text-gray-700">Production value</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-gray-900">Insertion throughput</td>
+                <td class="px-6 py-4 text-gray-700">Up to ~20,000 components/hour (program &amp; part dependent)</td>
+                <td class="px-6 py-4 text-gray-700">Moves axial insertion from manual bottleneck to predictable takt time.</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Component format</td>
+                <td class="px-6 py-4 text-gray-700">Axial taped components (resistors, diodes, similar)</td>
+                <td class="px-6 py-4 text-gray-700">Standardized feeding reduces missed insertions and handling damage.</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-gray-900">Lead forming / clinching</td>
+                <td class="px-6 py-4 text-gray-700">Automatic lead cut &amp; clinch (config dependent)</td>
+                <td class="px-6 py-4 text-gray-700">Improves retention for wave/selective solder stability.</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">PCB size support</td>
+                <td class="px-6 py-4 text-gray-700">Approx. up to ~450×350 mm (confirm per configuration)</td>
+                <td class="px-6 py-4 text-gray-700">Supports typical EMS panels while staying inline-ready.</td>
+              </tr>
+              <tr class="bg-white">
+                <td class="px-6 py-4 font-semibold text-gray-900">Inline integration</td>
+                <td class="px-6 py-4 text-gray-700">Loader/inloader options, conveyor-ready interfaces</td>
+                <td class="px-6 py-4 text-gray-700">Reduces handling time and WIP—higher OEE.</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Utilities</td>
+                <td class="px-6 py-4 text-gray-700">AC 220V (typical), compressed air ~0.5–0.7 MPa (typical)</td>
+                <td class="px-6 py-4 text-gray-700">Easy to deploy in standard EMS factory environments.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="px-6 py-4 bg-white border-t border-gray-200 text-xs text-gray-600">
+          Note: Values shown are typical and may vary by part format, programming, PCB handling, and options. Ask for a verified spec sheet for your BOM.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section id="gallery" class="py-14 lg:py-18 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-smDark">Photo Gallery</h2>
+          <p class="mt-2 text-gray-700 max-w-3xl">
+            Review machine configurations and line concepts for axial + radial automation cells.
+          </p>
+        </div>
+        <a class="hidden sm:inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 font-semibold hover:bg-gray-50"
+           href="https://ph.smthelp.com" target="_blank" rel="noopener">
+          <i class="fa-regular fa-images"></i> Product Gallery
+        </a>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- 1 -->
+        <button class="group rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm text-left"
+                data-lightbox="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader--B.png"
+                aria-label="Open image: S-4000 with loader (B)">
+          <div class="overflow-hidden">
+            <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                 src="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader--B.png"
+                 alt="S-4000 Axial Insertion machine with loader (B)"
+                 loading="lazy">
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Inline Loader Configuration</p>
+            <p class="mt-1 text-sm text-gray-600">Designed for stable flow and fewer handling touches.</p>
+          </div>
+        </button>
+
+        <!-- 2 -->
+        <button class="group rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm text-left"
+                data-lightbox="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader--S.png"
+                aria-label="Open image: S-4000 with loader (S)">
+          <div class="overflow-hidden">
+            <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                 src="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader--S.png"
+                 alt="S-4000 Axial Insertion machine with loader (S)"
+                 loading="lazy">
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Compact Footprint</p>
+            <p class="mt-1 text-sm text-gray-600">Fits common EMS lines while preserving maintainability.</p>
+          </div>
+        </button>
+
+        <!-- 3 -->
+        <button class="group rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm text-left"
+                data-lightbox="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine.png"
+                aria-label="Open image: S-4000 Axial Insertion Machine">
+          <div class="overflow-hidden">
+            <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                 src="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine.png"
+                 alt="S-4000 Axial Insertion Machine"
+                 loading="lazy">
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Core Axial Platform</p>
+            <p class="mt-1 text-sm text-gray-600">Stable feeder alignment and controlled insertion path.</p>
+          </div>
+        </button>
+
+        <!-- 4 -->
+        <button class="group rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm text-left"
+                data-lightbox="https://ph.smthelp.com/images/2025/12/06/Axial-Radial-Insertion.png"
+                aria-label="Open image: Axial & Radial Insertion concept">
+          <div class="overflow-hidden">
+            <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                 src="https://ph.smthelp.com/images/2025/12/06/Axial-Radial-Insertion.png"
+                 alt="Axial and Radial Insertion"
+                 loading="lazy">
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Axial + Radial Strategy</p>
+            <p class="mt-1 text-sm text-gray-600">A practical path to remove THT bottlenecks step-by-step.</p>
+          </div>
+        </button>
+
+        <!-- 5 -->
+        <button class="group rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm text-left"
+                data-lightbox="https://ph.smthelp.com/images/2025/12/06/Auto-Insertion-Line1.png"
+                aria-label="Open image: Auto insertion line concept">
+          <div class="overflow-hidden">
+            <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                 src="https://ph.smthelp.com/images/2025/12/06/Auto-Insertion-Line1.png"
+                 alt="Auto insertion line concept"
+                 loading="lazy">
+          </div>
+          <div class="p-4">
+            <p class="font-semibold text-gray-900">Smart Line Concept</p>
+            <p class="mt-1 text-sm text-gray-600">Inline flow that supports planning, tracking, and stable output.</p>
+          </div>
+        </button>
+
+        <!-- 6 (CTA tile) -->
+        <a href="#contact" class="group rounded-2xl border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 shadow-sm hover:shadow-soft transition flex flex-col justify-between">
+          <div>
+            <div class="h-11 w-11 rounded-xl bg-smTeal/10 text-smTeal flex items-center justify-center">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <p class="mt-4 font-bold text-gray-900 text-lg">Need the right configuration?</p>
+            <p class="mt-2 text-gray-700">
+              Share your PCB size + axial BOM. We’ll recommend feeders, loader/inloader, and an upgrade path from manual insertion.
+            </p>
+          </div>
+          <span class="mt-6 inline-flex items-center gap-2 font-semibold text-smTeal">
+            Get a line quote <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resource Center -->
+  <section id="resources" class="py-14 lg:py-18 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-smDark">Resource Center</h2>
+          <p class="mt-2 text-gray-700 max-w-3xl">
+            Download technical documents to speed up internal evaluation and purchasing decisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <a class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-soft transition"
+           href="https://file.autoinsertion.com/Southern%20Machinery%20Product/S4000%20Axial%20Insertion%20machine%202024.pdf"
+           target="_blank" rel="noopener">
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-xl bg-smTeal/10 text-smTeal flex items-center justify-center">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900">Download S-4000 Machine Catalog</p>
+              <p class="text-sm text-gray-600">Configuration options, capabilities, and line integration.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm font-semibold text-smTeal">Open PDF <i class="fa-solid fa-arrow-right ml-1"></i></p>
+        </a>
+
+        <a class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-soft transition"
+           href="https://file.autoinsertion.com/Southern%20Machinery%20Manual/S4000+Operation+Instruction+Manual.pdf"
+           target="_blank" rel="noopener">
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-xl bg-smGreen/15 text-gray-900 flex items-center justify-center">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900">Operation Manual</p>
+              <p class="text-sm text-gray-600">Setup guidance, operation flow, and maintenance overview.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm font-semibold text-smTeal">Open PDF <i class="fa-solid fa-arrow-right ml-1"></i></p>
+        </a>
+
+        <a class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-soft transition"
+           href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Manual%20to%20Auto%20insertion%20benefit.pdf"
+           target="_blank" rel="noopener">
+          <div class="flex items-center gap-3">
+            <div class="h-11 w-11 rounded-xl bg-gray-100 text-gray-900 flex items-center justify-center">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div>
+              <p class="font-bold text-gray-900">ROI Analysis: Manual vs Auto</p>
+              <p class="text-sm text-gray-600">A practical framework to justify automation investment.</p>
+            </div>
+          </div>
+          <p class="mt-4 text-sm font-semibold text-smTeal">Open PDF <i class="fa-solid fa-arrow-right ml-1"></i></p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-14 lg:py-18 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-smDark">Get a Line Configuration Quote</h2>
+          <p class="mt-3 text-gray-700">
+            Send your PCB size range, axial component list (resistors/diodes), and output target. We’ll recommend a practical
+            configuration for feeders, clinching setup, and loader integration to eliminate the THT bottleneck.
+          </p>
+
+          <div class="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-6">
+            <p class="font-semibold text-gray-900">Fastest evaluation checklist</p>
+            <ul class="mt-3 space-y-2 text-gray-700">
+              <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-smTeal"></span>PCB drawing (panel size) + thickness</li>
+              <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-smTeal"></span>Axial BOM: pitch, body size, tape spec</li>
+              <li class="flex gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-smTeal"></span>Daily output + shift pattern + current bottlenecks</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-gray-200 bg-white shadow-soft overflow-hidden">
+          <div class="p-6 border-b border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900">Contact Southern Machinery</h3>
+            <p class="mt-2 text-sm text-gray-600">
+              This form will open your email client with pre-filled details (mailto).
+            </p>
+          </div>
+
+          <form id="contactForm" class="p-6 grid gap-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs font-semibold text-gray-700 uppercase">Name</label>
+                <input id="name" type="text" required
+                       class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-smTeal/30"
+                       placeholder="Your name" />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-gray-700 uppercase">Company</label>
+                <input id="company" type="text"
+                       class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-smTeal/30"
+                       placeholder="EMS / Factory name" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs font-semibold text-gray-700 uppercase">Email</label>
+                <input id="email" type="email" required
+                       class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-smTeal/30"
+                       placeholder="you@company.com" />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-gray-700 uppercase">Phone / WhatsApp (optional)</label>
+                <input id="phone" type="text"
+                       class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-smTeal/30"
+                       placeholder="+1 / +63 / +86 ..." />
+              </div>
+            </div>
+
+            <div>
+              <label class="text-xs font-semibold text-gray-700 uppercase">Project details</label>
+              <textarea id="message" rows="5" required
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-smTeal/30"
+                        placeholder="PCB size range, axial component list, daily output, and current issues (labor, defects, takt time)."></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button type="submit"
+                      class="inline-flex items-center justify-center gap-2 rounded-xl bg-smTeal px-6 py-3 text-white font-semibold hover:opacity-90">
+                <i class="fa-solid fa-paper-plane"></i> Send Inquiry
+              </button>
+              <a class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 font-semibold hover:bg-gray-50"
+                 href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Manual%20to%20Auto%20insertion%20benefit.pdf"
+                 target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-arrow-down"></i> Download ROI PDF
+              </a>
+            </div>
+
+            <p class="text-xs text-gray-500">
+              Replace the destination email in code with your preferred sales address if needed.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <img
+            src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png"
+            alt="Southern Machinery"
+            class="h-8 w-auto brightness-0 invert opacity-90"
+            loading="lazy"
+          />
+          <p class="mt-4 text-sm text-gray-300">
+            Reliable, Efficient, Smart Manufacturing.
+          </p>
+          <p class="mt-3 text-xs text-gray-400">
+            S-4000 Axial Insertion Machine — Automating the THT bottleneck for Smart EMS factories.
+          </p>
+        </div>
+
+        <div>
+          <p class="font-semibold text-white">Quick Links</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li>
+              <a class="text-gray-300 hover:text-white" href="https://file.autoinsertion.com" target="_blank" rel="noopener">
+                Machine Catalog <span class="text-gray-500">(file.autoinsertion.com)</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-white" href="https://ph.smthelp.com" target="_blank" rel="noopener">
+                Product Gallery <span class="text-gray-500">(ph.smthelp.com)</span>
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-white" href="https://file.autoinsertion.com/Southern%20Machinery%20Product/S4000%20Axial%20Insertion%20machine%202024.pdf" target="_blank" rel="noopener">
+                S-4000 Catalog PDF
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-white" href="https://file.autoinsertion.com/Southern%20Machinery%20Manual/S4000+Operation+Instruction+Manual.pdf" target="_blank" rel="noopener">
+                Operation Manual PDF
+              </a>
+            </li>
+            <li>
+              <a class="text-gray-300 hover:text-white" href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Manual%20to%20Auto%20insertion%20benefit.pdf" target="_blank" rel="noopener">
+                ROI Analysis PDF
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-semibold text-white">Social Media</p>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <a class="inline-flex items-center gap-2 text-gray-300 hover:text-white" href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn Company
+            </a>
+            <a class="inline-flex items-center gap-2 text-gray-300 hover:text-white" href="https://cn.linkedin.com/in/smtsupplier" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+            </a>
+            <a class="inline-flex items-center gap-2 text-gray-300 hover:text-white" href="https://twitter.com/smtspecialist" target="_blank" rel="noopener">
+              <i class="fa-brands fa-x-twitter"></i> Twitter/X
+            </a>
+            <a class="inline-flex items-center gap-2 text-gray-300 hover:text-white" href="https://www.facebook.com/autoinsertion" target="_blank" rel="noopener">
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a class="inline-flex items-center gap-2 text-gray-300 hover:text-white col-span-2" href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener">
+              <i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <p class="text-xs text-gray-400">© 2025 Southern Machinery. All rights reserved.</p>
+        <p class="text-xs text-gray-500">Designed for high-end B2B automation evaluation (EMS / SMT / THT).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-[60]" aria-hidden="true">
+    <div class="max-w-5xl w-full">
+      <div class="flex justify-end mb-3">
+        <button id="lightboxClose" class="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 font-semibold hover:bg-gray-100">
+          <i class="fa-solid fa-xmark"></i> Close
+        </button>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-white/10 shadow-soft bg-black">
+        <img id="lightboxImg" src="" alt="Expanded machine photo" class="w-full h-auto object-contain bg-black">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('[data-lightbox]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-lightbox');
+        lightboxImg.src = src;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function closeLightbox(){
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox(); });
+
+    // Contact form -> mailto
+    const contactForm = document.getElementById('contactForm');
+    contactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const vName = document.getElementById('name').value.trim();
+      const vCompany = document.getElementById('company').value.trim();
+      const vEmail = document.getElementById('email').value.trim();
+      const vPhone = document.getElementById('phone').value.trim();
+      const vMsg = document.getElementById('message').value.trim();
+
+      if (!vName || !vEmail || !vMsg) return;
+
+      const subject = encodeURIComponent("Inquiry: S-4000 Axial Insertion Machine (Line Configuration Quote)");
+      const body = encodeURIComponent(
+`Hello Southern Machinery Team,
+
+I’m requesting a line configuration quote for the S-4000 Axial Insertion Machine.
+
+Name: ${vName}
+Company: ${vCompany || "-"}
+Email: ${vEmail}
+Phone/WhatsApp: ${vPhone || "-"}
+
+Project details:
+${vMsg}
+
+Please advise the recommended configuration (feeders, clinching setup, PCB loader/inloader, inline integration) and lead time.
+
+Thank you,
+${vName}`
+      );
+
+      // Replace with your preferred destination email if needed
+      const to = "sales@smthelp.com";
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
+```

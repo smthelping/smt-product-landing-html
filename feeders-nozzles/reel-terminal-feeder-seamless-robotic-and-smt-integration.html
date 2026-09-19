@@ -1,0 +1,332 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRT7001 Reel Terminal Feeder - Technical Introduction</title>
+    <style>
+        :root {
+            --primary-color: #0056b3; /* Industrial Blue */
+            --secondary-color: #333333; /* Dark Grey */
+            --accent-color: #f8f9fa; /* Light Grey */
+            --border-color: #dee2e6;
+            --text-color: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Header Styles */
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .header-meta {
+            text-align: right;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Visual Directive Box Styles */
+        .visual-directive {
+            background-color: #eef7ff;
+            border: 1px solid #b8daff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .visual-directive strong {
+            color: var(--primary-color);
+        }
+
+        .caption-text {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95em;
+            font-family: sans-serif;
+            min-width: 400px;
+        }
+
+        table thead tr {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        table tbody tr:nth-of-type(even) {
+            background-color: var(--accent-color);
+        }
+
+        table tbody tr:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Footer Styles */
+        footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #ccc;
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-links a {
+            color: white;
+            text-decoration: none;
+            background-color: #555;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+            font-size: 0.9em;
+        }
+
+        .cta-links a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .resource-links {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .resource-links a {
+            color: #4da3ff;
+            text-decoration: none;
+        }
+        
+        .resource-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Memo Block */
+        .memo-block {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header with Logo -->
+        <header>
+            <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo">
+            <div class="header-meta">
+                <strong>Division:</strong> EMS Automation Sales<br>
+                <strong>Date:</strong> January 2026
+            </div>
+        </header>
+
+        <!-- Title Section -->
+        <h1>Product Introduction & Technical Breakdown: SRT7001 Reel Terminal Feeder</h1>
+        
+        <div class="memo-block">
+            <p><strong>To:</strong> Technical Procurement Teams, Automation Integrators, and Process Engineers</p>
+            <p><strong>Subject:</strong> Bridging the Gap: The SRT7001 as the Unified Standard for SMT & Robotic Assembly</p>
+        </div>
+
+        <!-- Section 1 -->
+        <section>
+            <h2>1. Engineering Overview: The Bridge Between SMT and Robotics</h2>
+            <p>In the landscape of modern electronics assembly, a critical inefficiency persists: the "Odd-Form Gap." While standard chip shooters handle 0402 resistors at lightning speeds, bulky connectors and reel-fed terminals often force lines to slow down, relying on unstable pneumatic feeders or expensive custom bowl feeding solutions.</p>
+            <p>The <strong>SRT7001 Reel Terminal Feeder</strong> is engineered to close this gap. It is not merely a feeder; it is a high-torque, electro-mechanical interface designed to handle continuous strip terminals with the precision of an SMT instrument and the robustness required for robotic insertion forces. By replacing pneumatic actuation with closed-loop stepper motor control, the SRT7001 offers a singular platform that integrates seamlessly into high-speed SMT mounters (Panasonic/Yamaha/Juki interfaces) and standalone robotic cells (SCARA/6-Axis).</p>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+            <h2>2. Mechanical Anatomy & Visual Tour</h2>
+            <p><em>Note to Reader: To fully appreciate the engineering nuances of the SRT7001, please open the 3D HTML drawing provided. The following directives will guide you to the critical mechanical sub-systems.</em></p>
+
+            <!-- Shot A -->
+            <div class="visual-directive">
+                <h3>[INSERT SCREENSHOT: Shot A - The Pilot-Hole Indexing Mechanism]</h3>
+                <p><strong>Visual Directive:</strong> Rotate the model to a <strong>Top-Down ISO view</strong>, zoomed in on the track where the terminal strip enters the feeder unit. Remove the "Top Cover" layer if possible to expose the sprocket wheel.</p>
+                <span class="caption-text"><strong>Technical Caption: Precision Drive Interface.</strong> Unlike friction-fed systems, the SRT7001 utilizes a hardened steel sprocket wheel that engages directly with the terminal strip’s pilot holes. This ensures positive mechanical engagement, eliminating slippage even with heavy-gauge phosphor-bronze terminals. Note the adjustable guide rails (highlighted) which constrain lateral movement to < 0.05mm.</span>
+            </div>
+
+            <!-- Shot B -->
+            <div class="visual-directive">
+                <h3>[INSERT SCREENSHOT: Shot B - The "Floating" Pick-Up Interface]</h3>
+                <p><strong>Visual Directive:</strong> Position the camera at a <strong>low-angle Front View</strong> (looking directly into the nozzle/gripper approach path). Focus on the presentation plate where the part is exposed.</p>
+                <span class="caption-text"><strong>Technical Caption: High-Clearance Presentation Zone.</strong> The pick-up window is designed with a chamfered low-profile chassis. This maximizes Z-axis accessibility, allowing standard SMT nozzles or bulky pneumatic robot grippers to grasp the component without collision. The anvil block beneath the terminal provides the necessary rigidity to withstand insertion forces up to 15N during pick-and-place operations.</span>
+            </div>
+
+            <!-- Shot C -->
+            <div class="visual-directive">
+                <h3>[INSERT SCREENSHOT: Shot C - The Dual-Motor Drive System]</h3>
+                <p><strong>Visual Directive:</strong> Switch to a <strong>Right-Side X-Ray/Wireframe view</strong>. Focus on the internal motor housing at the rear of the unit.</p>
+                <span class="caption-text"><strong>Technical Caption: Electro-Mechanical Synchronization.</strong> The SRT7001 abandons pneumatics for a dual-stepper configuration. Motor 1 (Primary) drives the pitch indexing with 0.02mm resolution. Motor 2 (Secondary, rear-mounted) manages the interleaf paper/cover tape tension. This separation of torque ensures that drag from the waste tape never affects the positional accuracy of the component being picked.</span>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+            <h2>3. FAB Analysis: Why SRT7001 Redefines Efficiency</h2>
+            <p>We have moved beyond "does it work?" to "how effectively does it scale?" The SRT7001 answers this through a strict engineering-to-value architecture.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th width="30%">Feature (Engineering Spec)</th>
+                        <th width="35%">Advantage (Operational Edge)</th>
+                        <th width="35%">Benefit (Business ROI)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Closed-Loop Stepper Drive</strong></td>
+                        <td>Provides active feedback on tape pitch; immediately detects jams or reel tension issues before a miss-pick occurs.</td>
+                        <td><strong>Zero Defect Production:</strong> Eliminates the "phantom picks" common with pneumatic feeders, protecting expensive PCBs from rework.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Universal PLC & SMT I/O</strong></td>
+                        <td>The unit supports standard 24V I/O handshaking (Robot) and mimics standard feeder signals (SMT).</td>
+                        <td><strong>Deployment Flexibility & Liquidity:</strong> Buy one asset class that serves both your SMT lines and offline robot cells. No capital waste.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tool-Less Pitch Adjustment</strong></td>
+                        <td>Users can adjust feed pitch (4mm to 32mm) via digital onboard interface, not mechanical gears.</td>
+                        <td><strong>High Mix/Low Volume Viability:</strong> Rapid changeovers (seconds, not minutes) make automating short-run "odd-form" jobs financially viable.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Active Paper/Waste Management</strong></td>
+                        <td>Dedicated motorized spool for collecting interleaf paper and waste strip.</td>
+                        <td><strong>Cleanroom Compliance:</strong> Prevents loose paper scraps from contaminating solder paste. Reduces maintenance intervals.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+            <h2>4. The Integration Edge: Seamless Robotic & SMT Workflow</h2>
+            <p>The true genius of the SRT7001 lies in its <strong>"Logic-First" architecture</strong>. Standard feeders are "dumb"—they advance when a mechanical lever is struck. The SRT7001 is an intelligent node in your factory network.</p>
+            
+            <h3>For the SMT Manager:</h3>
+            <p>It looks and acts like a standard tape feeder. It fits into your existing feeder trolley slots (reducing footprint) and communicates with the mounter to optimize pickup height and speed based on the component mass.</p>
+
+            <h3>For the Robotic Automation Engineer:</h3>
+            <p>This is where the SRT7001 shines. Integrating odd-form parts usually requires complex vision systems to compensate for poor feeder repeatability.</p>
+            <ul>
+                <li><strong>The SRT Solution:</strong> Because the SRT7001 mechanically locks the terminal position with <strong>±0.03mm repeatability</strong>, you can often <strong>bypass the secondary vision inspection</strong>.</li>
+                <li><strong>The Protocol:</strong> The feeder sends a "Ready-to-Pick" signal only when the internal sensors confirm the part is seated correctly. The robot moves to a fixed coordinate, grips, and moves. This reduces cycle time by 15-30% per insertion.</li>
+            </ul>
+
+            <p><em><strong>Conclusion:</strong> The SRT7001 isn't just feeding parts; it is feeding reliability into your automation strategy. It transforms the most volatile variable in assembly—the stamped terminal—into your most predictable constant.</em></p>
+        </section>
+
+    </div>
+
+    <!-- Footer with Call to Action -->
+    <footer>
+        <div class="container" style="background: transparent; color: white; box-shadow: none; padding: 10px;">
+            <h3>Connect With Our Engineering Team</h3>
+            
+            <ul class="cta-links">
+                <li><a href="https://www.linkedin.com/company/smtmachine" target="_blank">LinkedIn Company Page</a></li>
+                <li><a href="https://cn.linkedin.com/in/smtsupplier" target="_blank">LinkedIn Profile</a></li>
+                <li><a href="https://twitter.com/smtspecialist" target="_blank">Twitter</a></li>
+                <li><a href="https://www.facebook.com/autoinsertion" target="_blank">Facebook</a></li>
+                <li><a href="https://www.youtube.com/c/Smthelping" target="_blank">YouTube Channel</a></li>
+            </ul>
+
+            <div class="resource-links">
+                <p>
+                    Browse our machine catalog at <a href="https://file.autoinsertion.com" target="_blank">file.autoinsertion.com</a><br>
+                    Find machine photos at <a href="https://ph.smthelp.com" target="_blank">ph.smthelp.com</a>
+                </p>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.8em; color: #aaa;">&copy; 2026 Southern Machinery. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Terminal Reel Feeder A Proven Way to Reduce PCB Assembly Costs" src="https://www.youtube-nocookie.com/embed/bRkxtrJbtz0" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Terminal Reel Feeder A Proven Way to Reduce PCB Assembly Costs</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x cost saving How China made Reel Terminal Feeder" src="https://www.youtube-nocookie.com/embed/U7J6Y_KrgL8" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x cost saving How China made Reel Terminal Feeder</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/P0rfpkHpPxg" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>
+```

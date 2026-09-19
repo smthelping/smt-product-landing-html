@@ -1,0 +1,872 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRT7001 Reel Terminal Feeder | Southern Machinery</title>
+  <meta name="description" content="SRT7001 Reel Terminal Feeder — Seamless Robotic & SMT Integration for Smart EMS Factories. Automate odd-form insertion with consistent, repeatable tape-to-pick performance." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1220;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --card:#ffffff;
+      --panel:#f7f9fc;
+
+      --brand:#0b3a83;       /* corporate blue */
+      --brand2:#1d4ed8;      /* accent blue */
+      --cta:#0ea5e9;         /* bright CTA */
+      --dark:#0a0f1a;        /* industrial footer */
+      --dark2:#101827;
+
+      --radius:14px;
+      --shadow: 0 10px 30px rgba(2, 8, 23, .10);
+      --max: 1120px;
+
+      --navH: 76px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    img{ max-width:100%; height:auto; display:block; }
+    a{ color:var(--brand2); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Fixed Header / Nav */
+    header{
+      position:fixed;
+      inset:0 0 auto 0;
+      height:var(--navH);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(229,231,235,.8);
+      z-index: 50;
+    }
+    .nav{
+      height:var(--navH);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width: 260px;
+    }
+    .brand img{
+      height:44px;
+      width:auto;
+      object-fit:contain;
+    }
+    .brand .title{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      line-height:1.15;
+    }
+    .brand .title b{
+      font-size:13px;
+      letter-spacing:.2px;
+      color:var(--ink);
+    }
+    .brand .title span{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin:0;
+      padding:0;
+    }
+    nav a{
+      color:var(--ink);
+      font-weight:600;
+      font-size:13px;
+      letter-spacing:.2px;
+      text-decoration:none;
+      padding:10px 10px;
+      border-radius:10px;
+    }
+    nav a:hover{
+      background: rgba(29,78,216,.08);
+      text-decoration:none;
+    }
+
+    .nav-cta{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 14px;
+      border-radius:12px;
+      font-weight:700;
+      letter-spacing:.2px;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition: transform .08s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+      text-decoration:none !important;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--cta), var(--brand2));
+      color:#fff;
+      box-shadow: 0 10px 20px rgba(29,78,216,.20);
+    }
+    .btn-primary:hover{ box-shadow: 0 14px 26px rgba(29,78,216,.28); }
+    .btn-ghost{
+      background: transparent;
+      border-color: rgba(2, 8, 23, .12);
+      color: var(--ink);
+    }
+    .btn-ghost:hover{
+      border-color: rgba(29,78,216,.35);
+      background: rgba(29,78,216,.06);
+    }
+
+    /* Page spacing under fixed nav */
+    main{ padding-top: var(--navH); }
+
+    /* Sections */
+    section{
+      padding: 64px 0;
+      scroll-margin-top: calc(var(--navH) + 14px);
+    }
+    .section-head{
+      margin-bottom: 18px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color: rgba(11,58,131,.9);
+    }
+    h1,h2{ margin: 0; }
+    h1{
+      font-size: clamp(28px, 4vw, 46px);
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    h2{
+      font-size: clamp(22px, 2.4vw, 30px);
+      letter-spacing:-.01em;
+    }
+    p{ margin: 10px 0; color: var(--ink); }
+    .muted{ color: var(--muted); }
+
+    /* Hero */
+    .hero{
+      position:relative;
+      padding: 84px 0 56px;
+      color:#fff;
+      overflow:hidden;
+      background:
+        radial-gradient(1200px 600px at 10% 20%, rgba(14,165,233,.40), transparent 55%),
+        radial-gradient(1200px 700px at 85% 30%, rgba(29,78,216,.35), transparent 60%),
+        linear-gradient(135deg, rgba(10,15,26,.92), rgba(11,58,131,.82)),
+        url("https://ph.smthelp.com/images/2025/12/06/Reel-Terminal-Feeder.png");
+      background-size: cover;
+      background-position: center;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55));
+      pointer-events:none;
+    }
+    .hero .wrap{
+      position:relative;
+      z-index:1;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items:center;
+    }
+    .hero p{
+      color: rgba(255,255,255,.88);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    .hero-badges{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 18px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.90);
+      font-size: 12px;
+      font-weight:700;
+    }
+
+    /* Panels / Cards */
+    .panel{
+      background: var(--panel);
+      border:1px solid rgba(229,231,235,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel-pad{ padding: 18px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .hero-grid{ grid-template-columns: 1.15fr .85fr; }
+      .grid-3{ grid-template-columns: repeat(3, 1fr); }
+      .grid-2{ grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .card{
+      background: var(--card);
+      border:1px solid rgba(229,231,235,.92);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 26px rgba(2, 8, 23, .06);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      min-height: 100%;
+    }
+    .card .img{
+      aspect-ratio: 16/10;
+      background: #0b1220;
+      overflow:hidden;
+    }
+    .card .img img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      transform: scale(1.01);
+    }
+    .card .body{
+      padding: 16px;
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      font-size: 16px;
+      letter-spacing:-.01em;
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Iframes responsive */
+    .frame{
+      position:relative;
+      width:100%;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(229,231,235,.9);
+      box-shadow: 0 12px 30px rgba(2, 8, 23, .08);
+      background:#0b1220;
+    }
+    .frame iframe{
+      width:100%;
+      height: 620px; /* per requirement: >= 600px */
+      border:0;
+      display:block;
+      background:#0b1220;
+    }
+    @media (max-width: 540px){
+      .frame iframe{ height: 520px; }
+    }
+
+    /* Video embed with aspect ratio */
+    .video{
+      position:relative;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(229,231,235,.9);
+      box-shadow: 0 12px 30px rgba(2, 8, 23, .08);
+      background:#0b1220;
+      aspect-ratio: 16/9;
+    }
+    .video iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+    .caption{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Contact block */
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items:start;
+    }
+    @media (min-width: 900px){
+      .contact{ grid-template-columns: 1.1fr .9fr; }
+    }
+    .contact .mini{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .contact .mini b{ color: var(--ink); }
+    .list{
+      margin:10px 0 0;
+      padding-left:18px;
+      color: var(--muted);
+    }
+    .list li{ margin: 8px 0; }
+
+    /* Footer */
+    footer{
+      background: linear-gradient(180deg, var(--dark2), var(--dark));
+      color: rgba(255,255,255,.88);
+      padding: 46px 0 26px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    footer a{ color: rgba(147,197,253,.95); }
+    footer a:hover{ color:#fff; }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    @media (min-width: 900px){
+      .footer-grid{ grid-template-columns: 1.1fr .9fr .9fr; }
+    }
+    .footer-title{
+      font-weight:900;
+      letter-spacing:.02em;
+      margin:0 0 8px 0;
+      color:#fff;
+    }
+    .footer-links{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      color: rgba(255,255,255,.78);
+      font-size:14px;
+    }
+    .copyright{
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.66);
+      font-size: 12px;
+    }
+
+    /* Mobile menu (simple) */
+    .menu-btn{
+      display:none;
+      border:1px solid rgba(2,8,23,.14);
+      background:#fff;
+      color: var(--ink);
+      border-radius:12px;
+      padding:10px 12px;
+      font-weight:800;
+      font-size:13px;
+    }
+    @media (max-width: 920px){
+      nav{ display:none; }
+      .menu-btn{ display:inline-flex; }
+      .nav-cta .btn-ghost{ display:none; }
+    }
+    .mobile-drawer{
+      display:none;
+      position:fixed;
+      top: var(--navH);
+      left:0;
+      right:0;
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(2, 8, 23, .10);
+      z-index:49;
+    }
+    .mobile-drawer.open{ display:block; }
+    .mobile-drawer a{
+      display:block;
+      padding:14px 20px;
+      font-weight:800;
+      color: var(--ink);
+      border-top:1px solid rgba(229,231,235,.8);
+      text-decoration:none;
+    }
+    .mobile-drawer a:hover{ background: rgba(29,78,216,.06); }
+  </style>
+</head>
+
+<body>
+  <!-- Fixed Header -->
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand" aria-label="Southern Machinery brand">
+          <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery logo" />
+          <div class="title">
+            <b>SRT7001 Reel Terminal Feeder</b>
+            <span>Seamless Robotic &amp; SMT Integration</span>
+          </div>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" aria-controls="mobileMenu" aria-expanded="false">Menu</button>
+
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-ghost" href="#showcase">View 3D Model</a>
+          <a class="btn btn-primary" href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">
+            Download Catalog
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#contact">Contact</a>
+      <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">Download Catalog (PDF)</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2) HERO -->
+    <section class="hero" id="home" aria-label="Hero section">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <div class="kicker">Smart EMS Factory Ready</div>
+            <h1>Seamless Robotic &amp; SMT Integration for Your Smart EMS Factory.</h1>
+            <p>
+              Automate odd-form component handling and terminal insertion with the <b>SRT7001 Reel Terminal Feeder</b>.
+              Keep a stable pickup coordinate, reduce operator dependency, and synchronize feeding with SCARA/6-axis robots
+              and SMT mounters—without turning your line into an integration project.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">
+                Download Catalog
+              </a>
+              <a class="btn btn-ghost" href="#video">See Demo Video</a>
+            </div>
+
+            <div class="hero-badges" aria-label="Key outcomes">
+              <div class="badge">Consistent tape-to-pick presentation</div>
+              <div class="badge">Designed for robotic cell clearance</div>
+              <div class="badge">Built for high-mix EMS changeovers</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-pad">
+              <div class="kicker" style="letter-spacing:.18em;color:rgba(11,58,131,.95)">Engineering Buyers Care About</div>
+              <p class="muted" style="margin-top:10px;">
+                You’re not buying “a feeder.” You’re buying <b>repeatability</b>—the ability to hold a pickup pose and pitch timing
+                stable enough that robotics and SMT can share a common process definition.
+              </p>
+              <ul class="list">
+                <li><b>Less manual handling</b> → reduced operator variability</li>
+                <li><b>Stable pickup access</b> → fewer collisions and re-teaches</li>
+                <li><b>Predictable feeding</b> → fewer micro-stops, higher OEE</li>
+              </ul>
+              <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn btn-ghost" href="#showcase">Interactive 3D</a>
+                <a class="btn btn-ghost" href="#products">Product Images</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) INTERACTIVE 3D SHOWCASE -->
+    <section id="showcase" aria-label="Interactive 3D showcase">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Interactive</div>
+            <h2>Experience Precision Engineering.</h2>
+            <p class="muted">
+              Rotate, zoom, and inspect the mechanical layout to evaluate approach clearance, drive placement, and the presentation zone
+              that matters most: the pick interface where robots and SMT heads need repeatable access.
+            </p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="https://file.autoinsertion.com/public/SMT%20machine%203D%20Drawing%20in%20Html/SRT7001%20Reel%20Terminal%20Feeder.html" target="_blank" rel="noopener noreferrer">
+              Open 3D Model in New Tab
+            </a>
+          </div>
+        </div>
+
+        <div class="frame" aria-label="SRT7001 interactive 3D model iframe">
+          <iframe
+            title="SRT7001 Reel Terminal Feeder - Interactive 3D Model"
+            src="https://file.autoinsertion.com/public/SMT%20machine%203D%20Drawing%20in%20Html/SRT7001%20Reel%20Terminal%20Feeder.html"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allow="fullscreen"
+          ></iframe>
+        </div>
+
+        <p class="caption">
+          Tip for engineering review: validate the <b>pickup window clearance</b> for your end-effector envelope (nozzle or gripper), then trace the
+          tape path backward to confirm disturbance isolation and guide constraint near the index zone.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4) VIDEO SECTION -->
+    <section id="video" aria-label="Video demo section" style="background: linear-gradient(180deg, #ffffff, #f6f9ff); border-top:1px solid rgba(229,231,235,.7); border-bottom:1px solid rgba(229,231,235,.7);">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Demo</div>
+            <h2>See the SRT7001 in Action.</h2>
+            <p class="muted">
+              Watch the demo to understand the real production value: stable presentation, predictable pick timing, and a workflow that scales
+              without relying on “expert operators.”
+            </p>
+          </div>
+          <div>
+            <a class="btn btn-ghost" href="https://youtu.be/bRkxtrJbtz0?si=5o7E4AFiVEbX5kQT" target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="video" aria-label="YouTube video embed">
+          <iframe
+            title="SRT7001 Reel Terminal Feeder Demo"
+            src="https://www.youtube.com/embed/bRkxtrJbtz0?rel=0&modestbranding=1"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="caption">Caption: <b>See the SRT7001 in Action.</b></div>
+      </div>
+    </section>
+
+    <!-- 5) VALUE PROP GRID (Products + Narrative) -->
+    <section id="products" aria-label="Value proposition grid">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Product Value</div>
+            <h2>Convert Manual Handling into Repeatable Automation.</h2>
+            <p class="muted">
+              In hybrid SMT + odd-form workflows, the hidden cost is variability: inconsistent pickup pose, re-teach time, micro-stops,
+              and operator-dependent threading. The SRT7001 is engineered to reduce those failure modes and standardize your cell behavior.
+            </p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">
+              Download Catalog
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-3" role="list" aria-label="Product value cards">
+          <article class="card" role="listitem">
+            <div class="img">
+              <img src="https://ph.smthelp.com/images/2025/12/06/Terminal-reel-feeder-1.png" alt="SRT7001 terminal reel feeder — product photo" loading="lazy" />
+            </div>
+            <div class="body">
+              <h3>Stabilize Your Pick Point to Protect Throughput</h3>
+              <p>
+                A consistent pickup coordinate means the nozzle/gripper approaches the same pose every cycle—reducing mis-picks,
+                re-picks, and the time lost to “small stops” that quietly degrade OEE.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="img">
+              <img src="https://ph.smthelp.com/images/2025/12/06/Reel-Terminal-Feeder.png" alt="SRT7001 reel terminal feeder — full assembly view" loading="lazy" />
+            </div>
+            <div class="body">
+              <h3>Drop-In Fit for Robotic Cells and SMT Stations</h3>
+              <p>
+                The mechanical layout is designed for automation access—supporting robotic reach envelopes while keeping the feeder footprint
+                practical for line-side deployment and fast changeovers.
+              </p>
+            </div>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="img">
+              <img src="https://ph.smthelp.com/images/2025/12/06/Panasonic-Solder-tin-forming-feeder.png" alt="Automation feeder example — Panasonic solder/tin forming feeder (reference image)" loading="lazy" />
+            </div>
+            <div class="body">
+              <h3>Bring Smart Factory Discipline to Odd-Form Work</h3>
+              <p>
+                Replace manual preparation steps with a repeatable feeder-driven workflow: consistent presentation, easier offline kitting,
+                and more predictable synchronization with your robot and line control logic.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="panel" style="margin-top:18px;">
+          <div class="panel-pad">
+            <div class="kicker">What This Enables</div>
+            <div class="grid grid-2" style="margin-top:10px;">
+              <div>
+                <h3 style="margin:0 0 8px 0;">Faster NPI without “hero operators”</h3>
+                <p class="muted" style="margin:0;">
+                  Standardize setup into a repeatable threading + verification routine, reducing reliance on tribal knowledge and making
+                  multi-shift production more stable.
+                </p>
+              </div>
+              <div>
+                <h3 style="margin:0 0 8px 0;">Consistent output for insertion success</h3>
+                <p class="muted" style="margin:0;">
+                  When the feeder delivers stable presentation, your robot insertion logic becomes simpler: less correction, fewer exceptions,
+                  and higher confidence during continuous runs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOLUTIONS (use as navigation anchor) -->
+    <section id="solutions" aria-label="Solutions section" style="background: linear-gradient(180deg, #ffffff, #f7fbff); border-top:1px solid rgba(229,231,235,.7);">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Solutions</div>
+            <h2>One Workflow Across SMT and Robotics — Without Bottlenecks.</h2>
+            <p class="muted">
+              When SMT and robotic stations run different assumptions, changeovers and debugging explode. SRT7001 is designed to help you run a unified
+              workflow: deterministic presentation for SMT-style picking, plus clearance and robustness for robotic handling and insertion.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="body">
+              <h3>Reduce Labor Dependence, Increase Consistency</h3>
+              <p>
+                Converting manual odd-form handling into a feeder-driven process reduces the variability that causes scrap, rework,
+                and unpredictable cycle times—especially in high-mix EMS environments.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="body">
+              <h3>Make Integration Predictable (Controls + Mechanics)</h3>
+              <p>
+                The fastest automation projects are the ones that behave deterministically. When presentation is stable, you spend less time tuning
+                vision compensation, less time dealing with exceptions, and more time producing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">
+            Download Catalog
+          </a>
+          <a class="btn btn-ghost" href="#showcase">Inspect 3D Design</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Contact section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Contact</div>
+            <h2>Specification-Driven Conversations. Fast Answers.</h2>
+            <p class="muted">
+              For engineering buyers, the fastest path is aligning on your component format, end-effector type (nozzle vs gripper),
+              and the mechanical access constraints of your cell. We’ll help you map the feeder into a stable, repeatable production workflow.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="panel">
+            <div class="panel-pad">
+              <h3 style="margin:0 0 8px 0;">What to Prepare for a High-Confidence Evaluation</h3>
+              <ul class="list">
+                <li>Component/tape format + pitch requirements (and any pocket/lead retention concerns)</li>
+                <li>Target takt time and cycle synchronization needs (SMT or robot)</li>
+                <li>End-effector type and approach envelope constraints</li>
+                <li>Changeover expectations (high-mix kitting vs dedicated line)</li>
+              </ul>
+              <p class="muted" style="margin-top:12px;">
+                Prefer self-service first? Download the catalog and shortlist the feeder/nozzle configuration that matches your application.
+              </p>
+              <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn btn-primary" href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">Download Catalog</a>
+                <a class="btn btn-ghost" href="https://file.autoinsertion.com" target="_blank" rel="noopener noreferrer">Browse Machine Catalog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mini">
+            <div class="panel">
+              <div class="panel-pad">
+                <h3 style="margin:0 0 8px 0;">Media &amp; References</h3>
+                <ul class="list" style="margin-top:8px;">
+                  <li><a href="https://youtu.be/bRkxtrJbtz0?si=5o7E4AFiVEbX5kQT" target="_blank" rel="noopener noreferrer">Video Demo</a></li>
+                  <li><a href="https://file.autoinsertion.com/public/SMT%20machine%203D%20Drawing%20in%20Html/SRT7001%20Reel%20Terminal%20Feeder.html" target="_blank" rel="noopener noreferrer">Interactive 3D Model</a></li>
+                  <li><a href="https://ph.smthelp.com" target="_blank" rel="noopener noreferrer">Photo Gallery</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-pad">
+                <h3 style="margin:0 0 8px 0;">Navigation</h3>
+                <p class="muted" style="margin:0;">
+                  Use the fixed menu to jump between the 3D model, the demo video, and the product value grid—built for fast engineering review.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6) FOOTER -->
+  <footer aria-label="Footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Southern Machinery</p>
+          <p style="margin:0; color:rgba(255,255,255,.74);">
+            SRT7001 Reel Terminal Feeder — built to unify SMT discipline with robotic flexibility for smart EMS production.
+          </p>
+        </div>
+
+        <div>
+          <p class="footer-title">Connect</p>
+          <ul class="footer-links">
+            <li><a href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener noreferrer">LinkedIn Company</a></li>
+            <li><a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+            <li><a href="https://twitter.com/smtspecialist" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.facebook.com/autoinsertion" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Resources</p>
+          <ul class="footer-links">
+            <li><a href="https://file.autoinsertion.com" target="_blank" rel="noopener noreferrer">Machine Catalog</a></li>
+            <li><a href="https://ph.smthelp.com" target="_blank" rel="noopener noreferrer">Photo Gallery</a></li>
+            <li><a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener noreferrer">Download Catalog (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2025 Southern Machinery. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile nav toggle (single-file, dependency-free)
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    function closeMenu(){
+      menu.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+
+    btn?.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    // Close drawer on link click
+    menu?.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    // Close drawer on scroll (prevents overlay lingering)
+    window.addEventListener("scroll", () => { if (menu.classList.contains("open")) closeMenu(); }, { passive: true });
+  </script>
+</body>
+</html>
+```

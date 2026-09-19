@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S380A PCB Separator Router Machine - Southern Machinery</title>
+    <meta name="description" content="Discover the S380A Full Vision Curve Splitter by Southern Machinery: an intelligent, automatic PCB separator router machine for high-precision, low-stress depaneling of complex PCB shapes.">
+    <meta name="keywords" content="PCB separator, PCB router, S380A, Southern Machinery, depaneling machine, automated PCB cutting, full vision system, smart factory, SMT equipment, electronic manufacturing">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght:400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Root Variables for Theme */
+        :root {
+            --primary-blue: #1C64F2;
+            --secondary-blue: #007bff; /* A slightly lighter blue for accents */
+            --text-light: #333;
+            --background-light: #f8f8f8;
+            --card-bg-light: #ffffff;
+            --border-light: #e0e0e0;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+
+            --text-dark: #e0e0e0;
+            --background-dark: #1a1a2e; /* Dark blue/purple for techy feel */
+            --card-bg-dark: #2a2a4a;
+            --border-dark: #3a3a5a;
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--background-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            color: var(--text-dark);
+            background-color: var(--background-dark);
+        }
+
+        body.dark-mode header {
+            background-color: var(--card-bg-dark);
+            border-bottom-color: var(--border-dark);
+        }
+
+        body.dark-mode .header-content .contact-info span,
+        body.dark-mode nav a {
+            color: var(--text-dark);
+        }
+
+        body.dark-mode nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        body.dark-mode .btn.secondary-btn {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        body.dark-mode .btn.secondary-btn:hover {
+            background-color: var(--primary-blue);
+            color: var(--background-dark);
+        }
+
+        body.dark-mode .section-padded.bg-light-alt {
+            background-color: var(--card-bg-dark);
+        }
+
+        body.dark-mode .feature-item,
+        body.dark-mode .spec-item,
+        body.dark-mode .benefit-item,
+        body.dark-mode .why-item {
+            background-color: var(--card-bg-dark);
+            border-color: var(--border-dark);
+            box-shadow: 0 4px 15px var(--shadow-dark);
+        }
+
+        body.dark-mode .section-padded.bg-dark-alt {
+            background-color: var(--background-dark);
+        }
+
+        body.dark-mode footer {
+            background-color: var(--card-bg-dark);
+            border-top-color: var(--border-dark);
+        }
+
+        body.dark-mode footer a {
+            color: var(--text-dark);
+        }
+
+        body.dark-mode footer a:hover {
+            color: var(--primary-blue);
+        }
+
+        body.dark-mode .social-icons img {
+            filter: invert(1); /* Invert social icons for dark mode */
+        }
+
+        /* General Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        h1 { font-size: 2.8em; }
+        h2 { font-size: 2.2em; text-align: center; margin-bottom: 1.5em; }
+        h3 { font-size: 1.6em; }
+        h4 { font-size: 1.2em; }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--secondary-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padded {
+            padding: 80px 0;
+        }
+
+        .bg-light-alt {
+            background-color: var(--background-light); /* Slightly different background for contrast */
+        }
+        body.dark-mode .bg-light-alt {
+            background-color: var(--card-bg-dark);
+        }
+
+        .bg-dark-alt {
+            background-color: var(--card-bg-light);
+        }
+        body.dark-mode .bg-dark-alt {
+            background-color: var(--background-dark);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn.primary-btn {
+            background-color: var(--primary-blue);
+            color: #fff;
+            border: 2px solid var(--primary-blue);
+        }
+        .btn.primary-btn:hover {
+            background-color: var(--secondary-blue);
+            border-color: var(--secondary-blue);
+            text-decoration: none;
+        }
+
+        .btn.secondary-btn {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        .btn.secondary-btn:hover {
+            background-color: var(--primary-blue);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg-light);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow-light);
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo img {
+            height: 50px; /* Adjust logo size */
+            width: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        .mode-toggle {
+            margin-left: 20px;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: var(--primary-blue);
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        #theme-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        body.dark-mode #theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .icon-light, .icon-dark {
+            display: none;
+        }
+        body:not(.dark-mode) .icon-light {
+            display: inline-block;
+        }
+        body.dark-mode .icon-dark {
+            display: inline-block;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://ph.smthelp.com/images/2025/08/01/S380A-PCB-router-machine.png') no-repeat center center/cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            min-height: 600px;
+            position: relative;
+        }
+        .hero-section .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            text-align: left;
+        }
+        .hero-text {
+            flex: 1;
+            max-width: 60%;
+        }
+        .hero-text h1 {
+            color: #fff;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero-text p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .hero-image {
+            flex: 1;
+            max-width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Video Intro Section */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-light);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        body.dark-mode .video-container {
+            box-shadow: 0 5px 15px var(--shadow-dark);
+        }
+        .video-description {
+            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .video-links {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Features Grid */
+        .features-grid, .benefits-grid, .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item, .benefit-item, .why-item {
+            background-color: var(--card-bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .feature-item:hover, .benefit-item:hover, .why-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow-light);
+        }
+        body.dark-mode .feature-item:hover,
+        body.dark-mode .benefit-item:hover,
+        body.dark-mode .why-item:hover {
+            box-shadow: 0 8px 25px var(--shadow-dark);
+        }
+
+        .feature-item .feature-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: grayscale(100%); /* Make icons neutral */
+            transition: filter 0.3s ease;
+        }
+        .feature-item:hover .feature-icon {
+            filter: grayscale(0%); /* Colorize on hover */
+        }
+
+        /* Specifications Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .spec-item {
+            background-color: var(--card-bg-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border: 1px solid var(--border-light);
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .spec-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .spec-item li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .spec-item li::before {
+            content: '•';
+            color: var(--primary-blue);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            color: var(--text-light); /* Default for light mode */
+        }
+        body.dark-mode .contact-content {
+            color: var(--text-dark); /* For dark mode */
+        }
+        .contact-content h2 {
+            color: var(--primary-blue);
+        }
+        .contact-details {
+            margin: 30px 0;
+            font-size: 1.2em;
+        }
+        .contact-details p {
+            margin: 10px 0;
+        }
+        .contact-details a {
+            color: var(--primary-blue);
+        }
+        body.dark-mode .contact-details a {
+            color: var(--primary-blue); /* Keep blue in dark mode */
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg-light);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            border-top: 1px solid var(--border-light);
+            font-size: 0.9em;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-about, .footer-links, .footer-social {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        footer h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            margin-top: 20px;
+        }
+        body.dark-mode .footer-bottom {
+            border-top-color: var(--border-dark);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .hero-image {
+                max-width: 80%;
+                margin-top: 40px;
+            }
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 1.8em; }
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .logo-contact {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .mode-toggle {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-about, .footer-links, .footer-social {
+                min-width: unset;
+                width: 100%;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-padded {
+                padding: 50px 0;
+            }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+            .hero-text p {
+                font-size: 1.1em;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            .feature-item, .spec-item, .benefit-item, .why-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-contact">
+                <a href="https://www.smthelp.com" class="logo">
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo">
+                </a>
+                <div class="contact-info">
+                    <span>Phone/WhatsApp: +8613602562576</span>
+                    <span>Email: info@SMThelp.com</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#specifications">Specifications</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mode-toggle">
+                <button id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <span class="icon-light">☀️</span>
+                    <span class="icon-dark">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>S380A PCB Depaneling: Revolutionize Your Production with Automated Precision</h1>
+                    <p>Experience next-generation PCB depaneling with the S380A Full Vision Curve Splitter – an intelligent, automatic solution designed for continuous, high-precision PCB board cutting.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn primary-btn">Get a Quote</a>
+                        <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/S380A%20visual%20multifunction%20smart%20curved%20%26%20V-cut%20PCB%20%20Separator%20machine.pdf" target="_blank" class="btn secondary-btn">Download Catalog</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://ph.smthelp.com/images/2025/08/01/S380A-PCB-router-machine.png" alt="S380A PCB Separator Router Machine">
+                </div>
+            </div>
+        </section>
+
+        <section id="video-intro" class="section-padded">
+            <div class="container">
+                <h2>See the S380A in Action</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/gofvt5J6YhI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">Tired of slow, error-prone PCB depaneling? Imagine a world where complex designs are cut flawlessly, programming is intuitive, and component damage is a thing of the past. Introducing the S380A Full Vision Curve Splitter from Southern Machinery! This intelligent, automatic machine is designed for continuous PCB board cutting and aims to revolutionize your PCB production. With its revolutionary CCD whole board visual programming system, technicians simply draw straight lines and arcs directly on a picture of the PCB. This approach completely subverts traditional programming, greatly reducing editing and debugging time. It's true easy programming! The S380A delivers zero damage and unmatched precision. Its high-speed spindle (20,000-60,000 RPM) ensures low cutting stress and high precision, safeguarding delicate components and preventing solder joint cracking. Achieve phenomenal cutting accuracy of ±0.02mm and machine repetition accuracy of ±0.01mm. Boost your efficiency with its double Y-axis table work system, allowing simultaneous split board cutting and PCB board placement, or even processing two different products at once. Plus, automatic tool change (on Q380A configuration) and broken tool detection minimize downtime and ensure tool integrity. Ready to transform your PCB depaneling? Learn more about the S380A!</p>
+                <div class="video-links">
+                    <a href="https://youtu.be/gofvt5J6YhI?si=BwzfPxZeqlofNY2_" target="_blank" class="btn secondary-btn">Watch Video 1</a>
+                    <a href="https://youtu.be/PInmLFR27q4?si=5vU7Xl_bWxJydhaN" target="_blank" class="btn secondary-btn">Watch Video 2</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-padded bg-light-alt">
+            <div class="container">
+                <h2>Core Capabilities & Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="https://ph.smthelp.com/images/2025/08/01/PCB-router-machine-1.png" alt="Full Vision System" class="feature-icon">
+                        <h3>Full Vision System & Simplified Programming</h3>
+                        <p>Equipped with a "Full vision curve splitter" and CCD visual programming, allowing technicians to "draw straight lines and arcs on the picture" for programming, significantly reducing editing and debugging time. Supports diverse shapes including straight lines, arcs, circles, L-shaped, U-shaped, stamp-hole, and V-slot models.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://ph.smthelp.com/images/2025/08/01/PCB-router-machine-2.png" alt="High-Speed Spindle" class="feature-icon">
+                        <h3>High-Speed Spindle & Precision</h3>
+                        <p>Utilizes a high-speed spindle (20,000 to 60,000 rpm) ensuring low cutting stress and high precision for PCB boards of any shape. Achieves machine repetition accuracy of ±0.01mm and cutting accuracy of ±0.02mm.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://ph.smthelp.com/images/2025/08/01/S380A-PCB-router-machine-1.png" alt="Dual Y-axis Table Work" class="feature-icon">
+                        <h3>Dual Y-axis Table Work (Double Table)</h3>
+                        <p>Features two independent Y-axes (Y1 and Y2) enabling simultaneous split board cutting and PCB board placement, or cutting two different products concurrently, significantly enhancing operational efficiency.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://ph.smthelp.com/images/2025/08/01/S380A-PCB-Separator-machine.jpg" alt="Automated Tool Management" class="feature-icon">
+                        <h3>Automated Tool Management</h3>
+                        <p>Includes Automatic Tool Change Function (Q380A configuration) to save downtime and reduce operator stress, and Broken Tool Detection to monitor tool state in real-time, preventing faulty products.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://ph.smthelp.com/images/2025/08/01/S380A-PCB-router-machine.png" alt="Automatic Tool Height Correction" class="feature-icon">
+                        <h3>Automatic Tool Height Correction</h3>
+                        <p>Independently developed function to automatically adjust the Z-axis height of the cutting tool after a tool change, ensuring consistent Z-axis tool drop position and preventing damage to PCBs or components.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://ph.smthelp.com/images/2025/08/01/Q330-Series-PCB-Router-Machine.png" alt="Safety & Reliability" class="feature-icon">
+                        <h3>Safety & Reliability</h3>
+                        <p>Equipped with a safety grating and an emergency button. Powered by Panasonic A6 series AC servo motors for X, Y1, Z, and Y2 axes, ensuring safe and stable operation. Software compatible with Windows 7 and 10.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specifications" class="section-padded">
+            <div class="container">
+                <h2>Key Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <h4>Performance</h4>
+                        <ul>
+                            <li><strong>Machine Repetition Accuracy:</strong> ±0.01mm</li>
+                            <li><strong>Cutting Accuracy:</strong> ±0.02mm</li>
+                            <li><strong>Cutting Speed:</strong> 5-100mm/s (adjustable)</li>
+                            <li><strong>Effective Cutting Size:</strong> 350*550MM</li>
+                            <li><strong>Working Size (Machinable Stroke):</strong> L350*W330mm</li>
+                            <li><strong>PCB Thickness Range:</strong> 0.3-3mm</li>
+                            <li><strong>Applicable Milling Cutter Size:</strong> 0.8-3.0MM</li>
+                        </ul>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Power & Dimensions</h4>
+                        <ul>
+                            <li><strong>Power Supply (Separator):</strong> AC220V 50/60Hz, 1 HP (5KW)</li>
+                            <li><strong>Power Supply (Dust Collector):</strong> AC380V 50/60Hz, 3 HP (3KW)</li>
+                            <li><strong>Host Size/Weight:</strong> L1230W1180H1350mm / 800kg</li>
+                            <li><strong>Dust Collector Size/Weight:</strong> 665mm635mm1610mm / 155kg</li>
+                            <li><strong>Gas Supply Requirement:</strong> > 4.5kg/cm²</li>
+                        </ul>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Environment & Support</h4>
+                        <ul>
+                            <li><strong>Recommended Ambient Temperature:</strong> 10-30℃</li>
+                            <li><strong>Relative Humidity:</strong> 35-80%</li>
+                            <li><strong>Minimum Site Dimensions:</strong> L2500W2500H2500mm</li>
+                            <li><strong>Dust Collection Mode:</strong> Lower (standard), Top (optional)</li>
+                            <li><strong>Global Support:</strong> 7x24 Worldwide Support, Free Installation/Training, 1-day lead-time for spare parts, 5-day customized design.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section-padded bg-light-alt">
+            <div class="container">
+                <h2>Benefits for Your Production</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h3>Increased Production Throughput</h3>
+                        <p>By combining automatic tool changes, dual work tables, and simplified programming, the S380A significantly reduces bottlenecks and accelerates your production cycles.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Higher Yield & Reduced Rework</h3>
+                        <p>The high precision and low-stress cutting minimize component damage, solder joint cracking, and other defects, leading to higher overall product yield and less costly rework.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Significant Cost Savings</h3>
+                        <p>Lower scrap rates, reduced manual labor due to automation, and minimized downtime all contribute to significant cost savings in your PCB manufacturing process.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Unmatched Design Flexibility</h3>
+                        <p>The ability to cut virtually any complex PCB shape (arcs, circles, L-shaped, U-shaped, stamp-hole, V-slot) allows engineers to design more compact and intricate products without depaneling limitations.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Enhanced Reliability for Critical Applications</h3>
+                        <p>Precision and stress-free cutting ensure boards for industries like automotive, aerospace, and medical equipment meet stringent reliability demands.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Ease of Use & Scalability</h3>
+                        <p>Intuitive visual programming makes the machine easier to operate and integrate into automated production lines, offering easier scalability when ramping up production.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="section-padded">
+            <div class="container">
+                <h2>Why Choose Southern Machinery?</h2>
+                <p class="intro-text">At Southern Machinery, we are committed to providing cutting-edge solutions that drive efficiency and quality in electronics manufacturing. The S380A is a testament to our dedication.</p>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <h3>Proven Precision</h3>
+                        <p>Our machines consistently deliver ±0.02mm cutting accuracy and ±0.01mm repetition accuracy, backed by Panasonic A6 series servo motors for ultimate control.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Innovative Automation</h3>
+                        <p>From the revolutionary visual programming to automatic tool management and dual work tables, the S380A is built for maximum uptime and minimal human intervention.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Global Support & Expertise</h3>
+                        <p>Benefit from our 7x24 Worldwide Support, free installation and training, and a 1-day lead-time for spare parts. We bring the rich manufacturing experience of Shenzhen to your operations.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Future-Proof Your Production</h3>
+                        <p>The S380A aligns with emerging trends in PCB depaneling, including AI-driven solutions and automated visual inspection systems, ensuring your factory is ready for tomorrow's demands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padded bg-dark-alt">
+            <div class="container contact-content">
+                <h2>Ready to Revolutionize Your PCB Depaneling?</h2>
+                <p>Contact us today to learn more about the S380A PCB Separator Router Machine and how it can transform your production line.</p>
+                <div class="contact-details">
+                    <p><strong>Phone/WhatsApp:</strong> +8613602562576</p>
+                    <p><strong>Email:</strong> info@SMThelp.com</p>
+                    <p><strong>Website:</strong> <a href="https://www.smthelp.com" target="_blank">www.smthelp.com</a></p>
+                </div>
+                <a href="mailto:info@SMThelp.com" class="btn primary-btn">Send Us an Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-about">
+                <h3>About Southern Machinery</h3>
+                <p>Your Trusted Partner for SMT & THT Solutions</p>
+                <p>Established in the bustling tech hub of Shenzhen in 2011, Southern Machinery stands as a testament to innovation, quality, and efficiency in the electronics manufacturing industry. With a keen focus on the Surface Mount Technology (SMT) and Through-Hole Technology (THT) sectors, our company specializes in the design and manufacture of state-of-the-art machinery and equipment aimed at revolutionizing PCB assembly automation processes.</p>
+                <p>At Southern Machinery, we understand the intricacies of electronic component placement and soldering. Our machines are crafted to cater to the intricate needs of modern electronics production, ensuring precision, durability, and ease of use. Whether you require high-speed assembly or the delicate precision for small batch production, our product lineup is equipped to handle your demands, providing low-cost, high-efficiency solutions that are second to none.</p>
+                <p>Our commitment to enhancing assembly automation extends beyond our machinery. We are pioneers in incorporating the rich manufacturing experience of Shenzhen—a city renowned for its electronics production prowess—into our operations, products, and services. By doing so, we not only offer top-tier equipment but also a wealth of knowledge and best practices to our clients worldwide.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#specifications">Specifications</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="https://www.smthelp.com" target="_blank">Our Website</a></li>
+                    <li><a href="https://file.autoinsertion.com" target="_blank">Machine Catalog</a></li>
+                    <li><a href="https://ph.smthelp.com" target="_blank">Machine Photos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/smtmachine" target="_blank" aria-label="LinkedIn Company"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" aria-label="LinkedIn Profile"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://twitter.com/smtspecialist" target="_blank" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="Twitter"></a>
+                    <a href="https://www.facebook.com/autoinsertion" target="_blank" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/c/Smthelping" target="_blank" aria-label="YouTube"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube.png" alt="YouTube"></a>
+                </div>
+                <p>Experience the Southern Machinery difference today - your trusted partner in delivering excellence and efficiency to your PCB assembly line. Join our global network of satisfied customers who have elevated their production capabilities with our cutting-edge solutions.</p>
+                <p>Southern Machinery – Shaping the Future of Electronics Manufacturing.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Southern Machinery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script> window.difyChatbotConfig = { token: 'j4mQvbGSBSlvQcv5', baseUrl: 'https://ai.smthelp.com' } </script>
+    <script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer> </script>
+    <style>
+        #dify-chatbot-bubble-button { background-color: #1C64F2 !important; }
+        #dify-chatbot-bubble-window { width: 24rem !important; height: 40rem !important; }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                body.classList.add(savedTheme);
+            } else {
+                // Default to light mode if no preference
+                body.classList.add('light-mode');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                if (body.classList.contains('dark-mode')) {
+                    body.classList.remove('dark-mode');
+                    body.classList.add('light-mode');
+                    localStorage.setItem('theme', 'light-mode');
+                } else {
+                    body.classList.remove('light-mode');
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark-mode');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

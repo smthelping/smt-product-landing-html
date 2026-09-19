@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMT Intelligent Reel Storage Rack | Southern Machinery</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles & Theme Configuration -->
+    <style>
+        :root {
+            --color-primary: #1C64F2;
+            --color-primary-dark: #1A56CC;
+            --color-secondary: #0E7490;
+            
+            /* Light Mode */
+            --bg-light: #F9FAFB;
+            --bg-secondary-light: #FFFFFF;
+            --text-light: #111827;
+            --text-secondary-light: #4B5563;
+            --border-light: #E5E7EB;
+
+            /* Dark Mode */
+            --bg-dark: #0D1117; /* A darker gray */
+            --bg-secondary-dark: #161B22; /* A slightly lighter dark gray */
+            --text-dark: #E6EDF3; /* Off-white for text */
+            --text-secondary-dark: #8B949E; /* Muted gray for secondary text */
+            --border-dark: #30363D; /* Border color */
+        }
+
+        html.light {
+            --bg-main: var(--bg-light);
+            --bg-card: var(--bg-secondary-light);
+            --text-main: var(--text-light);
+            --text-muted: var(--text-secondary-light);
+            --border-color: var(--border-light);
+        }
+
+        html.dark {
+            --bg-main: var(--bg-dark);
+            --bg-card: var(--bg-secondary-dark);
+            --text-main: var(--text-dark);
+            --text-muted: var(--text-secondary-dark);
+            --border-color: var(--border-dark);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero-glow {
+            background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(28, 100, 242, 0.15), rgba(255, 255, 255, 0));
+        }
+        html.dark .hero-glow {
+             background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(28, 100, 242, 0.2), rgba(13, 17, 23, 0));
+        }
+
+        /* Dify Chatbot Custom Styles */
+        #dify-chatbot-bubble-button {
+            background-color: #1C64F2 !important;
+        }
+        #dify-chatbot-bubble-window {
+            width: 24rem !important;
+            height: 40rem !important;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-10 w-auto">
+            </a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Features</a>
+                <a href="#benefits" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Benefits</a>
+                <a href="#video" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Video</a>
+                <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <i data-lucide="sun" class="h-5 w-5 block dark:hidden"></i>
+                    <i data-lucide="moon" class="h-5 w-5 hidden dark:block"></i>
+                </button>
+                 <a href="#contact" class="hidden sm:inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Request a Quote</a>
+                 <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i data-lucide="menu" class="h-6 w-6"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+            <a href="#features" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Features</a>
+            <a href="#benefits" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Benefits</a>
+            <a href="#video" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Video</a>
+            <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+            <a href="#contact" class="block mt-2 w-full text-center bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">Request a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-white dark:bg-gray-900 overflow-hidden">
+            <div class="hero-glow absolute inset-0"></div>
+            <div class="relative container mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <span class="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-sm font-semibold px-4 py-1 rounded-full mb-4">Industry 4.0 Ready</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white tracking-tighter">
+                        The Future of SMT Material Storage is Here.
+                    </h1>
+                    <p class="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-gray-600 dark:text-gray-300">
+                        Eliminate bottlenecks and achieve flawless inventory accuracy with Southern Machinery's SMT Intelligent Reel Storage Rack.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Schedule a Demo
+                        </a>
+                        <a href="#features" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                            Explore Features
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://ph.smthelp.com/images/2024/03/14/SMT-Intelligent-Reel-Storage-System-2024.png" alt="SMT Intelligent Reel Storage Rack" class="rounded-2xl shadow-2xl w-full h-auto object-contain transform lg:scale-110">
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section id="how-it-works" class="py-20 sm:py-24 bg-gray-50 dark:bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">A Smarter Workflow in 3 Simple Steps</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">
+                        Our system simplifies complex material handling into an intuitive, error-proof process.
+                    </p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white shadow-lg">
+                            <span class="text-3xl font-bold">1</span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-900 dark:text-white">Scan & Store</h3>
+                        <p class="mt-2 text-base text-gray-600 dark:text-gray-400">Effortlessly register new reels with a quick barcode or RFID scan. The system automatically finds the optimal storage location.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white shadow-lg">
+                             <span class="text-3xl font-bold">2</span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-900 dark:text-white">Automated Management</h3>
+                        <p class="mt-2 text-base text-gray-600 dark:text-gray-400">The system tracks every reel in real-time. It manages FIFO/FEFO, monitors MSD floor life, and integrates with your MES/ERP.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-blue-600 text-white shadow-lg">
+                             <span class="text-3xl font-bold">3</span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-900 dark:text-white">Pick & Go</h3>
+                        <p class="mt-2 text-base text-gray-600 dark:text-gray-400">Request a reel via the interface, and Pick-to-Light guides you to the exact location. Retrieval takes less than 4 seconds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (Alternating) -->
+        <section id="features" class="py-20 sm:py-24 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-base font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Advanced Capabilities</h2>
+                    <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">Technology That Drives Your Success</p>
+                </div>
+                <!-- Feature 1 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div class="order-2 lg:order-1">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Unmatched Speed and Precision</h3>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Minimize wait times and maximize throughput. Our system's robotic automation and intelligent guidance ensure that the right component is delivered in seconds, every single time.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 mr-3 text-green-500 flex-shrink-0"></i><span><strong class="text-gray-800 dark:text-white">Sub-4-Second Retrieval:</strong> Eliminate time wasted searching for materials.</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 mr-3 text-green-500 flex-shrink-0"></i><span><strong class="text-gray-800 dark:text-white">Error-Proof Picking:</strong> Pick-to-Light system makes mistakes virtually impossible.</span></li>
+                        </ul>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <img src="https://ph.smthelp.com/images/2024/03/18/SMT-Intelligent-Reel-Storage-System-2024_04.jpg" alt="Fast Retrieval" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://ph.smthelp.com/images/2024/03/14/SMT-Reel-Storage-Sensor-Shelf-1.png" alt="Seamless Integration" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Total Factory Integration</h3>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Our system is the central nervous system for your material flow, connecting seamlessly with your existing infrastructure to create a truly smart factory environment.</p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 mr-3 text-green-500 flex-shrink-0"></i><span><strong class="text-gray-800 dark:text-white">MES/ERP Connectivity:</strong> Real-time data sync for perfect production planning.</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="h-6 w-6 mr-3 text-green-500 flex-shrink-0"></i><span><strong class="text-gray-800 dark:text-white">Flexible & Scalable:</strong> Modular design grows with you, from a single unit to a full factory solution.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits / ROI Section -->
+        <section id="benefits" class="py-20 sm:py-24 bg-gray-50 dark:bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">Expect Extraordinary Results</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">
+                        The numbers speak for themselves. See the quantifiable impact on your operations.
+                    </p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-5xl font-black text-blue-600 dark:text-blue-400">3-6</h3>
+                        <p class="mt-2 text-lg font-semibold text-gray-800 dark:text-white">Months to ROI</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Experience a rapid return on investment through dramatic cost savings.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-5xl font-black text-blue-600 dark:text-blue-400">99.9%</h3>
+                        <p class="mt-2 text-lg font-semibold text-gray-800 dark:text-white">Inventory Accuracy</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Eliminate stock discrepancies and the costs associated with them.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-5xl font-black text-blue-600 dark:text-blue-400">75%</h3>
+                        <p class="mt-2 text-lg font-semibold text-gray-800 dark:text-white">Less Floor Space</p>
+                        <p class="mt-2 text-gray-600 dark:text-gray-400">Reclaim valuable factory space with our high-density vertical storage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Section -->
+        <section id="video" class="py-20 sm:py-24 bg-white dark:bg-gray-900">
+             <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">See It In Action</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">
+                        A one-minute look at how the SMT Intelligent Reel Storage Rack transforms the factory floor.
+                    </p>
+                </div>
+                <div class="mt-12 max-w-3xl mx-auto">
+                    <div class="aspect-w-9 aspect-h-16 rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-200 dark:border-gray-700">
+                        <iframe 
+                            src="https://www.youtube.com/embed/h1YHrcRyFcg" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Image Gallery -->
+        <section id="gallery" class="py-20 sm:py-24 bg-gray-50 dark:bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">Product Gallery</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">
+                        Explore the different configurations and details of our intelligent storage solutions.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/03/18/SMT-Intelligent-Reel-Storage-System-2024_05.jpg" alt="SMT Rack Detail"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/03/14/SMT-Reel-Storage-Sensor-Trolley-1.png" alt="Mobile SMT Trolley"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/03/18/SMT-Intelligent-Reel-Storage-System-2024_04.jpg" alt="SMT Rack System"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/03/14/SMT-Intelligent-Reel-Storage-System-2024.png" alt="Intelligent Storage System"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/09/23/smt-reel-storage-cart-stainless--1.png" alt="Stainless Steel Cart"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/09/23/smt-reel-storage-cart-stainless--7.png" alt="Reel Storage Cart"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/09/23/smt-reel-storage-cart-stainless--5.png" alt="Empty Storage Cart"></div>
+                        <div><img class="h-auto max-w-full rounded-lg shadow-md hover:scale-105 transition-transform duration-300" src="https://ph.smthelp.com/images/2024/03/14/SMT-Reel-Storage-Sensor-Shelf-1.png" alt="Sensor Shelf"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 dark:bg-black text-gray-300">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Company Profile -->
+                <div class="lg:col-span-1">
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-12 mb-4">
+                    <h3 class="text-lg font-semibold text-white mb-2">Your Trusted Partner for SMT & THT Solutions</h3>
+                    <p class="text-sm text-gray-400">
+                        Established in Shenzhen in 2011, Southern Machinery specializes in state-of-the-art machinery for PCB assembly automation. We integrate rich manufacturing experience to offer low-cost, high-efficiency solutions, ensuring precision, durability, and ease of use for our clients worldwide.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-base font-semibold text-white tracking-wider uppercase">Contact Us</h3>
+                    <ul class="mt-4 space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="phone" class="h-5 w-5 mr-3 mt-1 flex-shrink-0 text-blue-400"></i>
+                            <div>
+                                <span class="font-semibold text-white">Phone / WhatsApp:</span><br>
+                                <a href="tel:+8613602562576" class="hover:text-blue-300 transition">+86 136 0256 2576</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                           <i data-lucide="mail" class="h-5 w-5 mr-3 mt-1 flex-shrink-0 text-blue-400"></i>
+                            <div>
+                                <span class="font-semibold text-white">Email:</span><br>
+                                <a href="mailto:info@SMThelp.com" class="hover:text-blue-300 transition">info@SMThelp.com</a>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                           <i data-lucide="globe" class="h-5 w-5 mr-3 mt-1 flex-shrink-0 text-blue-400"></i>
+                            <div>
+                                <span class="font-semibold text-white">Website:</span><br>
+                                <a href="https://www.smthelp.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition">www.smthelp.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social & Quick Links -->
+                <div>
+                    <h3 class="text-base font-semibold text-white tracking-wider uppercase">Connect With Us</h3>
+                    <div class="flex space-x-5 mt-4">
+                        <a href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><span class="sr-only">LinkedIn Company</span><i data-lucide="linkedin" class="h-6 w-6"></i></a>
+                        <a href="https://twitter.com/smtspecialist" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><span class="sr-only">Twitter</span><i data-lucide="twitter" class="h-6 w-6"></i></a>
+                        <a href="https://www.facebook.com/autoinsertion" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><span class="sr-only">Facebook</span><i data-lucide="facebook" class="h-6 w-6"></i></a>
+                        <a href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white"><span class="sr-only">YouTube</span><i data-lucide="youtube" class="h-6 w-6"></i></a>
+                    </div>
+                    <h3 class="text-base font-semibold text-white tracking-wider uppercase mt-8">Resources</h3>
+                     <ul class="mt-4 space-y-2 text-sm">
+                        <li><a href="https://file.autoinsertion.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition">Machine Catalog</a></li>
+                        <li><a href="https://ph.smthelp.com" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition">Machine Photos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+                <p>&copy; <span id="current-year"></span> Southern Machinery. All Rights Reserved.</p>
+                <p class="mt-1">Shaping the Future of Electronics Manufacturing.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Dify Chatbot -->
+    <script> window.difyChatbotConfig = { token: 'j4mQvbGSBSlvQcv5', baseUrl: 'https://ai.smthelp.com' } </script> 
+    <script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer> </script>
+
+    <!-- Page Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Dark/Light Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // On page load, check for saved theme in localStorage
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

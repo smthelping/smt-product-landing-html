@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUKI RS-1 Vibration Stick Feeder</title>
+    <!-- Loading Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple scrollbar styling for the text content */
+        .content-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .content-scroll::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 3px;
+        }
+        .content-scroll::-webkit-scrollbar-track {
+            background-color: #f1f5f9;
+        }
+    </style>
+    <!-- Preloading Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto max-w-screen-2xl p-4 md:p-8">
+        
+        <!-- Page Header -->
+        <header class="mb-6 md:mb-8 p-4 bg-white shadow-lg rounded-xl">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <!-- Logo and Company Info -->
+                <div class="flex items-center gap-5">
+                    <a href="https://www.SMThelp.com" target="_blank" rel="noopener noreferrer" class="shrink-0">
+                        <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" 
+                             alt="Southern Machinery Logo" 
+                             class="h-14 md:h-16 w-auto"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        >
+                        <!-- Fallback text if image fails -->
+                        <div class="hidden text-lg font-bold text-gray-800">Southern Machinery</div>
+                    </a>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-gray-900">Southern Machinery</h1>
+                        <a href="https://www.SMThelp.com" target="_blank" rel="noopener noreferrer" class="text-md md:text-lg font-medium text-blue-700 hover:underline">
+                            www.SMThelp.com
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Page Title -->
+                <div class="text-left md:text-right w-full md:w-auto mt-4 md:mt-0">
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-800">Automated Electronic Manufacturing</h2>
+                    <h3 class="text-lg md:text-xl font-semibold text-blue-600">JUKI RS-1 Vibration Stick Feeder</h3>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid: 55% for 3D model, 45% for text on desktop -->
+        <div class="grid grid-cols-1 lg:grid-cols-11 gap-6 md:gap-8">
+
+            <!-- Left Column: 3D Model Viewer -->
+            <div class="lg:col-span-6 bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col">
+                <div class="p-4 md:p-6 border-b border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800">Interactive 3D Model</h3>
+                    <p class="text-sm text-gray-500">Click & drag to rotate, scroll to zoom, right-click for more options.</p>
+                </div>
+                <!-- Iframe to embed the 3D drawing HTML file -->
+                <div class="flex-grow min-h-[60vh] md:min-h-[75vh] bg-gray-50">
+                    <iframe
+                        src="https://file.autoinsertion.com/public/SMT%20machine%203D%20Drawing%20in%20Html/RS-1_Vibration_tube_FEEDER_BANK.html"
+                        frameborder="0"
+                        width="100%"
+                        height="100%"
+                        class="w-full h-full"
+                        title="Interactive 3D Model of JUKI RS-1 Vibration Stick Feeder"
+                    >
+                        <!-- Fallback content if iframe fails to load -->
+                        <div class="p-8 text-center text-gray-600">
+                            <p class="font-semibold">Error loading 3D model.</p>
+                            <p>There was an issue loading the interactive model from the external source.</p>
+                        </div>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Right Column: Description -->
+            <div class="lg:col-span-5 bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col">
+                <div class="p-4 md:p-6 border-b border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800">Feeder Details & Operation</h3>
+                </div>
+                <!-- Scrollable content area for the description -->
+                <div class="flex-grow p-4 md:p-6 space-y-6 overflow-y-auto content-scroll max-h-[75vh]">
+                    
+                    <!-- Section 1: Core Function -->
+                    <section>
+                        <h4 class="text-lg font-semibold text-blue-700 mb-3">Core Function & Mechanism</h4>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            The primary function of a stick feeder is to reliably deliver electronic components packaged in tubes (sticks) to a repeatable pick point for the SMT placement head.
+                        </p>
+                        <div class="space-y-3">
+                            <div>
+                                <strong class="text-gray-700">Packaging:</strong>
+                                <p class="text-gray-600">Components suitable for this feeder are typically multi-pin parts, such as DIP (Dual Inline Package) parts, SOICs, PLCCs, or other components that are not available in tape or tray formats.</p>
+                            </div>
+                            <div>
+                                <strong class="text-gray-700">Vibratory Advance:</strong>
+                                <p class="text-gray-600">The system uses a vibrating feeder to ensure that components contained within the tube (stick) continuously move forward and enter the required absorption position for the placement head. This vibration mechanism or a belt drive shuttles the components one at a time to the pickup point.</p>
+                            </div>
+                            <div>
+                                <strong class="text-gray-700">Pick Presentation:</strong>
+                                <p class="text-gray-600">The vibration or mechanical drive indexes the component to the fixed pickup coordinates, allowing the machine's nozzle to retrieve the part.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 2: Operation & Structure -->
+                    <section>
+                        <h4 class="text-lg font-semibold text-blue-700 mb-3 mt-4">Operation & Structure (S-JVF02 Example)</h4>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            The S-JVF02 model, compatible with the JUKI RS-1, illustrates the typical structure and input method of this technology.
+                        </p>
+                        <div class="space-y-3">
+                            <div>
+                                <strong class="text-gray-700">Component Input:</strong>
+                                <p class="text-gray-600">The components are packaged in tubes (sticks). The feeder is designed to handle components ranging in size from 3x3mm up to 30x10mm.</p>
+                            </div>
+                            <div>
+                                <strong class="text-gray-700">Loading the Tube:</strong>
+                                <p class="text-gray-600 mb-2">When loading the feeder, the component tube must be positioned and fixed carefully:</p>
+                                <ul class="list-disc list-outside pl-6 text-gray-600 space-y-1">
+                                    <li>The tube end should be placed above the support frame and secured by a locating ring.</li>
+                                    <li>The middle section of the tube is held under a leaf spring and kept under pressure.</li>
+                                    <li>The front end of the tube is fixed by a locating piece.</li>
+                                    <li>The top face of the tube, over the nozzle picking area, must be cut off to expose the components for the placement head.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong class="text-gray-700">Channels and Power:</strong>
+                                <p class="text-gray-600">The S-JVF02 model has 4 input channels and operates using 24V DC power.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 3: Context -->
+                    <section>
+                        <h4 class="text-lg font-semibold text-blue-700 mb-3 mt-4">Context within JUKI Systems</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            The JUKI RS-1 is a pick-and-place machine. JUKI's machines (including the KE, FX, and RS-1/RS-1R series) use intelligent feeders that offer optimization capabilities via systems like IFS/NM.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mt-2">
+                            Compared to tape feeders (the most common SMT feeder type), stick feeders are less common, often providing a solution for legacy components or those with less standardized packaging.
+                        </p>
+                    </section>
+
+                    <!-- Section 4: Analogy -->
+                    <section>
+                        <h4 class="text-lg font-semibold text-blue-700 mb-3 mt-4">Analogy</h4>
+                        <blockquote class="border-l-4 border-blue-300 pl-4 italic text-gray-600">
+                            "If a high-speed tape feeder is like a machine gun belt, automatically peeling back layers to reveal ammunition in rapid sequence, a vibration stick feeder is more like a coin dispenser attached to a soda machine. The components (coins) are pre-loaded in an organized column (the tube/stick), and vibration is applied to ensure gravity and friction continuously push the next item to the exact final output slot, ready for immediate robotic pickup."
+                        </blockquote>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-200 mt-12 py-8">
+        <div class="container mx-auto max-w-screen-2xl p-4 md:p-8">
+            <h3 class="text-2xl font-bold text-white mb-6 text-center md:text-left">Get in Touch & Explore More</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Social Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-blue-300">Connect with Us</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">LinkedIn Company Page</a></li>
+                        <li><a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">LinkedIn Profile</a></li>
+                        <li><a href="https://twitter.com/smtspecialist" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/autoinsertion" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">YouTube Channel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resource Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-blue-300">Our Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://file.autoinsertion.com" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">Machine Catalog</a></li>
+                        <li><a href="https://ph.smthelp.com" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">Machine Photos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-blue-300">Company</h4>
+                    <p class="font-bold text-lg text-white">Southern Machinery</p>
+                    <a href="https://www.SMThelp.com" target="_blank" rel="noopener noreferrer" class="inline-block hover:text-white hover:underline">www.SMThelp.com</a>
+                </div>
+
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                &copy; 2024 Southern Machinery. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SMT customized gripper nozzle design and manufacturing for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/cbvWhqnld2M" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SMT customized gripper nozzle design and manufacturing for Smart EMS factory PCB assembly</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="You Won't Believe How Tiny Chips Are Placed on a Phone Motherboard" src="https://www.youtube-nocookie.com/embed/3s6KiD2_pBA" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">You Won't Believe How Tiny Chips Are Placed on a Phone Motherboard</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Southern Machinery S-JVF02 Vibe Feeder: Low-Maintenance Solution" src="https://www.youtube-nocookie.com/embed/T_Y1T2eM630" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Southern Machinery S-JVF02 Vibe Feeder: Low-Maintenance Solution</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

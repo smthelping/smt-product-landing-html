@@ -1,0 +1,525 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRT7001 Reel Terminal Feeder — Technical Introduction & Breakdown</title>
+  <style>
+    :root{
+      --ink:#111827;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+      --panel:#f9fafb;
+      --accent:#0f766e;
+      --accent2:#1d4ed8;
+      --max: 980px;
+      --radius: 12px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--ink);
+      background:#ffffff;
+      line-height:1.5;
+    }
+    header{
+      border-bottom:1px solid var(--line);
+      background:#fff;
+    }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:24px 20px;
+    }
+    .header-row{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      min-width: 260px;
+    }
+    .brand img{
+      display:block;
+      height:44px;
+      width:auto;
+      object-fit:contain;
+    }
+    .doc-title{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .doc-title h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:.2px;
+    }
+    .doc-title .subtitle{
+      color:var(--muted);
+      font-size:13px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:12px;
+      color:var(--muted);
+      background:var(--panel);
+      white-space:nowrap;
+    }
+    main .wrap{
+      padding-top:28px;
+      padding-bottom:28px;
+    }
+    h2{
+      margin:28px 0 10px;
+      font-size:18px;
+      padding-top:10px;
+      border-top:1px solid var(--line);
+    }
+    h3{
+      margin:18px 0 8px;
+      font-size:15px;
+    }
+    p{margin:10px 0;color:var(--ink)}
+    ul{margin:10px 0 10px 22px}
+    li{margin:6px 0}
+    .summary{
+      background:linear-gradient(180deg, rgba(15,118,110,.06), rgba(29,78,216,.04));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px 16px;
+      margin-bottom:18px;
+    }
+    .summary strong{color:var(--accent)}
+    .note{
+      background:var(--panel);
+      border:1px dashed #cbd5e1;
+      border-radius:var(--radius);
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:13px;
+      margin:12px 0 18px;
+    }
+    .callout{
+      border-left:4px solid var(--accent);
+      background:#ffffff;
+      border-radius:10px;
+      padding:12px 14px;
+      margin:14px 0;
+      border-top:1px solid var(--line);
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .screenshot{
+      margin:14px 0 18px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      border-radius:var(--radius);
+      padding:14px;
+      color:var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:13px;
+    }
+    .fab{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:14px;
+      background:#fff;
+      margin:12px 0 14px;
+    }
+    .fab .row{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+    }
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:999px;
+      background:rgba(15,118,110,.10);
+      color:var(--accent);
+      margin-bottom:6px;
+      border:1px solid rgba(15,118,110,.20);
+    }
+    .fab b{color:var(--ink)}
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media(min-width: 860px){
+      .two-col{grid-template-columns: 1fr 1fr;}
+      .fab .row{grid-template-columns: 1fr 1fr 1fr;}
+    }
+    footer{
+      border-top:1px solid var(--line);
+      background:#fff;
+    }
+    .footer-cta{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+      align-items:start;
+    }
+    .footer-cta h3{
+      margin:0 0 6px 0;
+      font-size:14px;
+    }
+    .social{
+      margin:0;
+      padding-left:18px;
+    }
+    .social a{color:var(--accent2); text-decoration:none}
+    .social a:hover{text-decoration:underline}
+    .fineprint{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="header-row">
+        <div class="brand">
+          <!-- 1) Southern Machinery Logo (upper-left) -->
+          <img
+            src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png"
+            alt="Southern Machinery Logo"
+            loading="eager"
+          />
+          <div class="doc-title">
+            <h1>SRT7001 Reel Terminal Feeder</h1>
+            <div class="subtitle">Comprehensive B2B Product Introduction & Technical Breakdown (SMT + Robotic Integration)</div>
+          </div>
+        </div>
+        <div class="pill">Core Value Proposition: <b>Seamless Robotic and SMT Integration</b></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section class="summary" id="executive-summary">
+        <p>
+          <strong>Executive Summary:</strong> <b>SRT7001 Reel Terminal Feeder</b> is positioned as a mechanically deterministic
+          tape-to-pick system that lets you run reel-fed terminal/odd-form parts with SMT-grade discipline—repeatable pitch
+          indexing, stable presentation geometry, and automation-ready interfacing. The design intent is to bridge
+          <b>SMT deterministic feeding</b> (index-by-pitch, pick-at-fixed-point) with <b>robotic handling/insertion</b>
+          (larger approach envelopes, higher interaction forces, and higher sensitivity to presentation variation).
+        </p>
+      </section>
+
+      <div class="note">
+        <b>Note on model access:</b> This document is written as a guided “tour” for the SRT7001 3D HTML model.
+        Where you see screenshot placeholders, rotate/zoom the model as instructed and capture images directly in your viewer.
+      </div>
+
+      <!-- SECTION 1 -->
+      <section id="section-1">
+        <h2>1) Engineering Overview: The Bridge Between SMT and Robotics</h2>
+        <p>
+          Hybrid assembly lines fail in predictable places: <b>SMT expects repeatability</b> (fixed pitch, fixed pick point,
+          stable tape geometry), while <b>robotic/odd-form cells introduce variability</b> (larger/heavier parts, snag-prone lead
+          forms, and more collision modes). SRT7001 targets that gap with a mechanical promise:
+          <b>stable part pose at a repeatable pickup coordinate</b>.
+        </p>
+
+        <div class="callout">
+          <b>Integration-first engineering logic:</b> If the feeder outputs a stable part pose (XYZ + θ) at a repeatable pickup
+          coordinate, you can deploy the same feeder strategy under (a) an SMT mounter vacuum nozzle or (b) a SCARA/6-axis robot
+          gripper—without rebuilding your process discipline each time the platform changes.
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>SMT context (Surface Mount)</h3>
+            <ul>
+              <li><b>Goal:</b> deterministic pitch advance + stable presentation → consistent pick timing.</li>
+              <li><b>Critical engineering control:</b> geometry-based indexing and tight tape constraint near the pickup zone.</li>
+            </ul>
+            <p>
+              <b>FAB:</b> <b>Feature</b>: repeatable pitch indexing → <b>Advantage</b>: predictable pick timing →
+              <b>Benefit</b>: higher sustained UPH with fewer micro-stops and less vision “over-correction.”
+            </p>
+          </div>
+          <div>
+            <h3>Robotic insertion/handling context (Odd-form / terminals)</h3>
+            <ul>
+              <li><b>Goal:</b> clear approach, stable grasp point, and robust extraction/presentation under higher interaction forces.</li>
+              <li><b>Critical engineering control:</b> low-obstruction pickup window + disturbance isolation from reel inertia.</li>
+            </ul>
+            <p>
+              <b>FAB:</b> <b>Feature</b>: accessible pickup interface → <b>Advantage</b>: fewer collision constraints and grasp anomalies →
+              <b>Benefit</b>: faster commissioning and fewer “mystery” insertion defects caused by unstable part presentation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section id="section-2">
+        <h2>2) Mechanical Anatomy &amp; Visual Tour</h2>
+        <p>
+          The tour below is structured around a feeder’s real capability drivers: <b>datum chain integrity</b>, <b>disturbance isolation</b>,
+          <b>wear interfaces</b>, and <b>jam-energy management</b>. Use the screenshot directives to capture high-value visual proof from the 3D model.
+        </p>
+
+        <h3>Mechanical Anatomy (what to call out as you orbit the model)</h3>
+        <ul>
+          <li>
+            <b>Reel Mount + Payoff Control (disturbance isolation):</b>
+            Reel hub/spindle and payoff path that prevents reel inertia from back-driving the indexing zone.
+            <br />
+            <b>FAB:</b> <b>Feature</b>: controlled payoff path → <b>Advantage</b>: decoupled inertia → <b>Benefit</b>: consistent pitch presentation at speed.
+          </li>
+          <li>
+            <b>Tape Path Guides + Straightening (pose stability):</b>
+            Entry guides → constraint channel → peel edge/presentation.
+            <br />
+            <b>FAB:</b> <b>Feature</b>: constrained tape near pickup → <b>Advantage</b>: reduced yaw/camber amplification → <b>Benefit</b>: fewer mis-picks and less re-teach.
+          </li>
+          <li>
+            <b>Pick Window / Presentation Interface (access + collision immunity):</b>
+            The final approach envelope where nozzle/gripper interacts.
+            <br />
+            <b>FAB:</b> <b>Feature</b>: low-profile window → <b>Advantage</b>: multi-end-effector access → <b>Benefit</b>: one feeder strategy across SMT + robotics.
+          </li>
+          <li>
+            <b>Index Drive (accuracy engine):</b>
+            Positive engagement drive elements (e.g., sprocket/drive wheel) converting motor input into deterministic pitch motion.
+            <br />
+            <b>FAB:</b> <b>Feature</b>: positive indexing → <b>Advantage</b>: pitch truth by geometry (not friction) → <b>Benefit</b>: predictable timing and lower mis-picks.
+          </li>
+        </ul>
+
+        <h3>Required Shots (capture from the 3D drawing)</h3>
+
+        <!-- Shot A -->
+        <div class="screenshot">[INSERT SCREENSHOT: Shot A — Reel hub + payoff + entry guide path]</div>
+        <h3>Shot A: The Reel Feeding Mechanism (Tape Handling Stability)</h3>
+        <p><span class="tag">Camera Direction</span></p>
+        <ol>
+          <li>Rotate to a <b>rear 3/4 view</b> (stand behind the feeder, offset ~45° to the left).</li>
+          <li>Tilt downward ~20–30° to show <b>top surfaces</b> and the <b>reel plane</b> in one frame.</li>
+          <li>Zoom so the reel hub, guide elements, and the first constrained tape channel occupy ~70% of the image.</li>
+        </ol>
+        <p>
+          <b>Technical caption:</b> “Reel payoff is mechanically decoupled from the indexing zone to prevent inertia-driven pitch error.
+          Controlled tape guidance maintains a stable datum chain from reel → guide → index, reducing camber/yaw that causes mis-picks in SMT nozzles
+          and inconsistent grasp points for robots.”
+        </p>
+
+        <!-- Shot B -->
+        <div class="screenshot">[INSERT SCREENSHOT: Shot B — Pickup window + presentation nest + approach clearance]</div>
+        <h3>Shot B: The Pick-up Point/Interface (Nozzle/Gripper Accessibility)</h3>
+        <p><span class="tag">Camera Direction</span></p>
+        <ol>
+          <li>Rotate to a <b>front-facing view</b> of the pickup zone.</li>
+          <li>Tilt upward (~10°) so you can visually “see into” the pick window.</li>
+          <li>Center the pickup point and include surrounding structure to prove <b>clearance</b>.</li>
+        </ol>
+        <p>
+          <b>Technical caption:</b> “Fixed pickup coordinate with a low-profile approach envelope supports both vacuum nozzle picks (SMT mounters)
+          and parallel-jaw / form-fit gripper picks (SCARA/6-axis). The minimized obstruction geometry reduces collision risk and preserves end-effector
+          path flexibility.”
+        </p>
+
+        <!-- Shot C -->
+        <div class="screenshot">[INSERT SCREENSHOT: Shot C — Drive wheel/sprocket + motor mount + sensor flags (if present)]</div>
+        <h3>Shot C: The Drive System (Precision Indexing)</h3>
+        <p><span class="tag">Camera Direction</span></p>
+        <ol>
+          <li>Rotate to a <b>side orthographic view</b> so the tape path reads like a mechanism diagram.</li>
+          <li>Frame the drive wheel/sprocket, adjacent constraints, and the tape path through the drive.</li>
+          <li>If the viewer supports it: enable transparency or angle slightly to reveal engagement geometry.</li>
+        </ol>
+        <p>
+          <b>Technical caption:</b> “Positive engagement indexing converts motor steps into deterministic pitch motion—critical for maintaining
+          presentation repeatability. This directly supports stable SMT pick timing and synchronized robot pick cycles.”
+        </p>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section id="section-3">
+        <h2>3) FAB Analysis: Why SRT7001 Redefines Efficiency</h2>
+        <p>
+          The statements below are written in strict <b>FAB</b> format (Feature → Advantage → Benefit), with every point tied back to the core value:
+          <b>Seamless Robotic and SMT Integration</b>.
+        </p>
+
+        <h3>Theme 1 — Universal Compatibility (SCARA / 6-Axis / SMT Mounters)</h3>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Single defined pickup coordinate (repeatable pose at presentation).</div>
+            <div><b>Advantage:</b> Robots and SMT heads share the same pick definition with minimal transformation logic.</div>
+            <div><b>Benefit:</b> Faster deployment across platforms; reduced engineering hours during NPI and line conversion.</div>
+          </div>
+        </div>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Tape-based feeding aligned to packaging datum concepts (pitch-driven, constrained near pickup).</div>
+            <div><b>Advantage:</b> Presentation error becomes controlled by geometry and setup rules, not operator feel.</div>
+            <div><b>Benefit:</b> Predictable qualification path and more stable performance under mixed product loads.</div>
+          </div>
+        </div>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Integration-ready I/O and control interface (cell handshake compatible with modern automation architectures).</div>
+            <div><b>Advantage:</b> The feeder does not become the “odd protocol out” during line upgrades.</div>
+            <div><b>Benefit:</b> Lower commissioning risk and easier multi-site standardization.</div>
+          </div>
+        </div>
+
+        <h3>Theme 2 — Jam-Free Feeding Logic (Mechanical + Process Control)</h3>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Constrained tape span near the pick point (short free length, guided channel).</div>
+            <div><b>Advantage:</b> Less yaw/camber amplification where pick sensitivity is highest.</div>
+            <div><b>Benefit:</b> Fewer mis-picks, fewer re-picks, fewer downstream defects from partial engagement.</div>
+          </div>
+        </div>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Peel / retention geometry designed to manage drag transitions and disturbance energy.</div>
+            <div><b>Advantage:</b> Fewer intermittent “hidden jams” that only appear at production speed.</div>
+            <div><b>Benefit:</b> Higher OEE by reducing micro-stops and unpredictable stoppages.</div>
+          </div>
+        </div>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Positive engagement indexing architecture (geometry-based pitch control).</div>
+            <div><b>Advantage:</b> Eliminates friction drift as a primary accuracy variable.</div>
+            <div><b>Benefit:</b> Stable timing for SMT placement and synchronized robot pick cycles—even under higher extraction forces.</div>
+          </div>
+        </div>
+
+        <h3>Theme 3 — Quick-Changeover Capability</h3>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Reel-based supply and repeatable threading path (setup reduced to mechanical checks).</div>
+            <div><b>Advantage:</b> Verification can be standardized: correct pitch engagement, guide width, and pickup alignment.</div>
+            <div><b>Benefit:</b> Faster changeovers with less tribal knowledge; scalable staffing across shifts and sites.</div>
+          </div>
+        </div>
+
+        <div class="fab">
+          <div class="row">
+            <div><b>Feature:</b> Supports an offline kitting workflow (load/verify away from the critical path).</div>
+            <div><b>Advantage:</b> Changeover work moves off the machine.</div>
+            <div><b>Benefit:</b> Higher utilization for both SMT assets and robotic cells; reduced line starvation and waiting.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section id="section-4">
+        <h2>4) The Integration Edge: Seamless Robotic &amp; SMT Workflow</h2>
+        <p>
+          A feeder only “integrates” when it removes real bottlenecks: unstable presentation, collision-limited access, pitch drift,
+          and control-interface friction. SRT7001’s integration edge is the conversion of packaging into a <b>deterministic pick event</b>
+          that both SMT and robotics can trust.
+        </p>
+
+        <h3>4.1 One feeder, two execution modes (SMT place vs robotic handling/insertion)</h3>
+        <div class="two-col">
+          <div class="callout">
+            <b>SMT mode:</b> The mounter wins by assuming fixed pitch, fixed pick point, and stable tape geometry.
+            <br /><br />
+            <b>FAB:</b> <b>Feature</b>: deterministic index-by-pitch → <b>Advantage</b>: predictable pick timing →
+            <b>Benefit</b>: higher sustained throughput with fewer feeder-related pauses.
+          </div>
+          <div class="callout">
+            <b>Robotic mode:</b> The robot wins by having clearance, stable grasp points, and predictable extraction behavior.
+            <br /><br />
+            <b>FAB:</b> <b>Feature</b>: accessible pickup interface + disturbance isolation → <b>Advantage</b>: fewer grasp anomalies/collisions →
+            <b>Benefit</b>: faster commissioning, fewer intermittent insertion defects, and higher uptime.
+          </div>
+        </div>
+
+        <h3>4.2 Avoiding the “island of automation” trap (line-level interoperability)</h3>
+        <p>
+          In high-mix EMS environments, the cost is rarely the feeder hardware—it is the integration cost: recipes, changeover orchestration,
+          and handshaking into conveyors/lines. The right framing in a proposal is simple:
+        </p>
+        <ul>
+          <li><b>Feature:</b> Feeder interface designed for modern automation handshakes and cell orchestration.</li>
+          <li><b>Advantage:</b> Reduces controls rework when you upgrade upstream/downstream line equipment.</li>
+          <li><b>Benefit:</b> Lower integration risk and faster time-to-production for hybrid lines.</li>
+        </ul>
+
+        <h3>4.3 What buyers misunderstand (and how you anchor credibility)</h3>
+        <p>
+          <b>Misconception:</b> “Robots can vision-correct bad feeding.”<br />
+          <b>Reality:</b> Vision can correct pose, but it cannot reliably correct unstable presentation dynamics (bounce, drag-induced pitch slip,
+          partial retention). The feeder must deliver a deterministic pick event first; then vision becomes validation rather than a crutch.
+        </p>
+
+        <h3>Visual Placement Recommendations (brochure layout)</h3>
+        <ul>
+          <li><b>Section 1 (Overview):</b> <span class="screenshot">[INSERT SCREENSHOT: Hero 3/4 view of full feeder assembly, neutral background]</span></li>
+          <li><b>Section 2 Shot A:</b> Place under “Mechanical Anatomy &amp; Visual Tour” as the first technical image.</li>
+          <li><b>Section 2 Shot B:</b> Place beside a simple overlay diagram: nozzle approach vector vs gripper approach vector.</li>
+          <li><b>Section 2 Shot C:</b> Place with the callout “Pitch truth lives here.”</li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-cta">
+        <div>
+          <h3>Call to Action</h3>
+          <ul class="social">
+            <li><a href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener noreferrer">LinkedIn Company Page</a></li>
+            <li><a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+            <li><a href="https://twitter.com/smtspecialist" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://www.facebook.com/autoinsertion" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
+            <li>
+              Browse our machine catalog at
+              <a href="https://file.autoinsertion.com" target="_blank" rel="noopener noreferrer">file.autoinsertion.com</a>
+              and find machine photos at
+              <a href="https://ph.smthelp.com" target="_blank" rel="noopener noreferrer">ph.smthelp.com</a>.
+            </li>
+          </ul>
+
+          <div class="fineprint">
+            © <span id="year"></span> Southern Machinery. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year stamp
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Terminal Reel Feeder A Proven Way to Reduce PCB Assembly Costs" src="https://www.youtube-nocookie.com/embed/bRkxtrJbtz0" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Terminal Reel Feeder A Proven Way to Reduce PCB Assembly Costs</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x cost saving How China made Reel Terminal Feeder" src="https://www.youtube-nocookie.com/embed/U7J6Y_KrgL8" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x cost saving How China made Reel Terminal Feeder</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/P0rfpkHpPxg" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>
+```

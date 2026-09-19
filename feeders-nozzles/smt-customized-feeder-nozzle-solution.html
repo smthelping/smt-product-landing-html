@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Machinery - SMT & THT Feeder Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1C64F2',
+                        secondary: '#0F172A',
+                        accent: '#3B82F6',
+                        light: '#F8FAFC',
+                        dark: '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-bg {
+                transition: background-color 0.3s ease;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark transition-bg">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-dark/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-10">
+                <span class="text-xl font-bold text-primary dark:text-accent">Southern Machinery</span>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#products" class="font-medium hover:text-primary dark:hover:text-accent transition-colors">Products</a>
+                <a href="#solutions" class="font-medium hover:text-primary dark:hover:text-accent transition-colors">Solutions</a>
+                <a href="#case-studies" class="font-medium hover:text-primary dark:hover:text-accent transition-colors">Case Studies</a>
+                <a href="#about" class="font-medium hover:text-primary dark:hover:text-accent transition-colors">About Us</a>
+            </nav>
+            
+            <!-- Contact & Theme Toggle -->
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fa fa-moon-o dark:hidden text-xl"></i>
+                    <i class="fa fa-sun-o hidden dark:block text-xl"></i>
+                </button>
+                <div class="hidden md:flex items-center space-x-2 text-sm">
+                    <i class="fa fa-phone text-primary dark:text-accent"></i>
+                    <span>+8613602562576</span>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 dark:opacity-5">
+            <div class="absolute inset-0 bg-[url('https://ph.smthelp.com/images/2025/06/06/SMT-line-Single-Lane-Layout-1.png')] bg-repeat"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow text-gray-900 dark:text-white">
+                    Southern Machinery Feeder Solutions for SMT & THT
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
+                    Enhancing efficiency and precision in electronics manufacturing with customized feeder solutions for smart factories
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#products" class="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-medium shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                        Explore Products
+                    </a>
+                    <a href="#contact" class="px-8 py-3 bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-primary dark:text-accent rounded-lg font-medium shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Product Overview Section -->
+    <section id="products" class="py-16 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Our Feeder Solutions</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Comprehensive range of automated feeding systems designed for precision, efficiency, and seamless integration with SMT & THT machines
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <img src="https://ph.smthelp.com/images/2025/06/03/S4000-Axial-Insertion--10-feeder.png" alt="SAF1001 Axial Tape Feeder" class="h-32 object-contain p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">SAF1001 Axial Tape Feeder</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Integrates with SMT machines for auto insertion, supporting various non-standard equipment with precise U-shaping and lead trimming capabilities.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-primary dark:text-accent">Feeding Speed: 0.8S</span>
+                            <a href="#" class="text-primary hover:text-primary/80 dark:text-accent dark:hover:text-accent/80 font-medium flex items-center">
+                                Details <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <img src="https://ph.smthelp.com/images/2026/07/22/RTF-1001-RADIAL-FEEDER.md.png" alt="SRF1001 Radial Tape Feeder" class="h-32 object-contain p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">SRF1001 Radial Tape Feeder</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Automates feeding, shaping, cutting, and bending of radial components with customizable options for odd-form and non-standard equipment.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-primary dark:text-accent">Feeding Accuracy: ±0.2mm</span>
+                            <a href="#" class="text-primary hover:text-primary/80 dark:text-accent dark:hover:text-accent/80 font-medium flex items-center">
+                                Details <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <img src="https://ph.smthelp.com/images/2026/07/22/BF-2002D-BOWL-FEEDER.md.png" alt="SBF1001 Bowl Feeder" class="h-32 object-contain p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">SBF1001 Bowl Feeder</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Automates bulk component feeding with sorting, screening, cutting, and shaping capabilities for SMT THT machines and equipment.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-primary dark:text-accent">Material Size: 3×3mm-50×50mm</span>
+                            <a href="#" class="text-primary hover:text-primary/80 dark:text-accent dark:hover:text-accent/80 font-medium flex items-center">
+                                Details <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <img src="https://ph.smthelp.com/images/2025/12/06/Tube-Feeder.md.png" alt="STF1003 Tube Feeder" class="h-32 object-contain p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">STF1003 Tube Feeder</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Automates feeding of tube-mounted components including DIPs and transistors for SMT machines and robotic arm integration.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-primary dark:text-accent">Feeding Speed: 0.8S</span>
+                            <a href="#" class="text-primary hover:text-primary/80 dark:text-accent dark:hover:text-accent/80 font-medium flex items-center">
+                                Details <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <img src="https://ph.smthelp.com/images/2026/08/09/southern-machinery-belt-feeder-mvf-belt-feeder-with-juki-jm-50-0011.md.webp" alt="SBF2002 Belt Feeder" class="h-32 object-contain p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">SBF2002 Belt Feeder</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Automates bulk material feeding with compact design, quiet operation, and quick replacement for multi-pin components.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-primary dark:text-accent">Feeding Accuracy: ±1mm</span>
+                            <a href="#" class="text-primary hover:text-primary/80 dark:text-accent dark:hover:text-accent/80 font-medium flex items-center">
+                                Details <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 6 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                        <img src="https://ph.smthelp.com/images/2026/09/14/smthelp-feeder-tray-feeder-product.md.webp" alt="STP1001 Tray Feeder" class="h-32 object-contain p-4">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">STP1001 Tray Feeder</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Automates diverse tray material supply for SMT and auxiliary machines with robotic arm integration capabilities.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-primary dark:text-accent">Feeding Speed: 3S per material</span>
+                            <a href="#" class="text-primary hover:text-primary/80 dark:text-accent dark:hover:text-accent/80 font-medium flex items-center">
+                                Details <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg font-medium transition-colors">
+                    View All Products <i class="fa fa-long-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Key Features Section -->
+    <section id="solutions" class="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Key Features & Benefits</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Our feeder solutions deliver exceptional performance and value to modern electronics manufacturing facilities
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-cogs text-2xl text-primary dark:text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Automation Integration</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Seamless integration with robotic arms and SMT machines for fully automated production lines
+                    </p>
+                </div>
+                
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-cog text-2xl text-primary dark:text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Precision Feeding</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Tape, tube, tray and bowl formats hold component position and polarity through the full feed stroke
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-refresh text-2xl text-primary dark:text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Fast Changeover</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Tool-free rail and magazine swaps keep high-mix, low-volume changeover measured in minutes
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa fa-check-circle text-2xl text-primary dark:text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Verified Reliability</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Every feeder is factory tested against the mounter interface it will run on before shipment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case studies -->
+    <section id="case-studies" class="py-16 bg-white dark:bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Documented Lines</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Feeder and insertion projects published with measured cycle times, component counts and line layout
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="../case-studies/tht-odd-form-insertion-case-studies.html" class="block bg-gray-50 dark:bg-gray-800/50 p-6 rounded-xl card-hover">
+                    <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white">THT Odd Form Insertion Case Studies</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Four documented lines, from single cell to full vision gantry.</p>
+                </a>
+                <a href="../case-studies/tht-odd-form-insertion-case-study-smart-ems-pcb-assembly.html" class="block bg-gray-50 dark:bg-gray-800/50 p-6 rounded-xl card-hover">
+                    <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white">16 Component Types, 5 Inserters</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">High-mix EMS line running 800 boards per hour.</p>
+                </a>
+                <a href="../case-studies/tht-odd-form-insertion-case-study-terminal-insertion-cell.html" class="block bg-gray-50 dark:bg-gray-800/50 p-6 rounded-xl card-hover">
+                    <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white">Terminal Insertion Cell</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">0.25 s per insert on a 4.65 m line.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 bg-gray-50 dark:bg-gray-800/50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">About Southern Machinery</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Shenzhen Southern Machinery Sales and Service Co., Ltd. designs and manufactures SMT and THT equipment for
+                smart EMS factories: odd-form insertion machines, tape / tube / tray / bowl feeders, custom nozzles and
+                grippers, board handling and turnkey lines.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+                Feeders are engineered against the mounter they will run on. Where a standard format does not fit the
+                component, the tooling is designed to the component instead.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-primary dark:bg-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Tell us the component and the mounter</h2>
+            <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+                Send the component drawing or a photo and the mounter model. We will confirm whether a standard feeder
+                covers it or whether the tooling has to be designed.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:info@smthelp.com" class="bg-white text-primary font-semibold px-6 py-3 rounded-lg card-hover">info@smthelp.com</a>
+                <a href="https://wa.me/8613602562576" target="_blank" rel="noopener" class="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-lg card-hover">WhatsApp +86 136 0256 2576</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery" class="h-10 mb-4">
+                    <p class="text-sm text-gray-400">
+                        SMT and THT machine design and manufacturing for smart EMS factories.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white" href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener">Product catalog board</a></li>
+                        <li><a class="hover:text-white" href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener">Machine video board</a></li>
+                        <li><a class="hover:text-white" href="https://ph.smthelp.com" target="_blank" rel="noopener">Machine photo library</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a class="hover:text-white" href="https://www.smthelp.com" target="_blank" rel="noopener">www.smthelp.com</a></li>
+                        <li><a class="hover:text-white" href="mailto:info@smthelp.com">info@smthelp.com</a></li>
+                        <li><a class="hover:text-white" href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener">YouTube channel</a></li>
+                        <li><a class="hover:text-white" href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-xs text-gray-500">
+                &copy; Southern Machinery. Specifications are subject to change; figures quoted come from published product documents.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var btn = document.getElementById('theme-toggle');
+            var root = document.documentElement;
+            var saved = null;
+            try { saved = localStorage.getItem('smth_feeder_theme'); } catch (e) {}
+            if (saved === 'dark') root.classList.add('dark');
+            if (btn) btn.addEventListener('click', function () {
+                root.classList.toggle('dark');
+                try { localStorage.setItem('smth_feeder_theme', root.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
+            });
+        })();
+    </script>
+    <script>
+      (function(d,t) {
+        var BASE_URL=(location.protocol==="https:"?"https://":"http://")+"chat.smthelp.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({ websiteToken: 'saMcpgSupcmd1VQwytgPLfbK', baseUrl: BASE_URL })
+        }
+      })(document,"script");
+    </script>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/P0rfpkHpPxg" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SMT THT Odd Form Insertion machine Design and manufacturing" src="https://www.youtube-nocookie.com/embed/xQ0d-dM00RQ" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SMT THT Odd Form Insertion machine Design and manufacturing</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Odd Form Feeder Design by SMThelp.com for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/moGjmJ-mWQg" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Odd Form Feeder Design by SMThelp.com for Smart EMS factory PCB assembly</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

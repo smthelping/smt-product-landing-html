@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Analysis: THT Axial Tape Feeders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals with Indigo Accent -->
+    <!-- Application Structure Plan: A thematic, single-page dashboard design is used to transform the linear report into an exploratory experience. A sticky top navigation allows users to jump to key themes: an Overview with top-level stats, a Technology section for mechanics and standards, a Market Landscape for competitive analysis, a Future Tech section for emerging trends, and an Operations area with practical tools like a troubleshooting guide and ROI calculator. This structure prioritizes user-driven discovery over passive reading, allowing technical, business, and operational users to quickly find the information most relevant to them. -->
+    <!-- Visualization & Content Choices: 
+        - Market Growth Projection (Report Info) -> Goal: Show Change -> Viz: Line Chart (Chart.js) -> Interaction: Hover tooltips for yearly data. Justification: Best method to visualize trends over time.
+        - Regional Market Share (Report Info) -> Goal: Compare Proportions -> Viz: Doughnut Chart (Chart.js) -> Interaction: Hover tooltips for percentages. Justification: Clearly shows regional dominance.
+        - Manufacturer Specs (Report Info) -> Goal: Compare -> Viz: Horizontal Bar Chart (Chart.js) + Dynamic Text -> Interaction: Click buttons to filter chart and update detailed text. Justification: Allows direct, interactive comparison of competitors on key metrics.
+        - Process Flow (Report Info) -> Goal: Organize/Inform -> Viz: HTML/CSS Diagram -> Interaction: Hover to highlight stages and reveal details. Justification: Makes a complex process easy to understand step-by-step.
+        - ROI Calculation (Report Info) -> Goal: Engage/Inform -> Viz: Interactive Form -> Interaction: User input dynamically calculates results. Justification: Turns a static methodology into a personalized tool.
+        - Troubleshooting Guide (Report Info) -> Goal: Organize/Inform -> Viz: HTML/JS Accordion -> Interaction: Click to expand/collapse solutions. Justification: Provides quick, accessible answers to common problems.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .chart-container { position: relative; width: 100%; max-width: 700px; margin-left: auto; margin-right: auto; height: 300px; max-height: 40vh; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .nav-link { transition: all 0.3s ease; }
+        .nav-link.active { color: #4F46E5; border-bottom-color: #4F46E5; }
+        .nav-link:not(.active) { border-bottom-color: transparent; }
+        .manufacturer-btn.active { background-color: #4F46E5; color: white; }
+        .manufacturer-btn:not(.active) { background-color: #E5E7EB; color: #374151; }
+        .process-step { transition: all 0.3s ease; cursor: pointer; }
+        .process-step:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-stone-900">THT Axial Feeder Analysis</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium border-b-2">Overview</a>
+                        <a href="#technology" class="nav-link px-3 py-2 text-sm font-medium border-b-2">Technology</a>
+                        <a href="#market" class="nav-link px-3 py-2 text-sm font-medium border-b-2">Market Landscape</a>
+                        <a href="#future" class="nav-link px-3 py-2 text-sm font-medium border-b-2">Future Tech</a>
+                        <a href="#operations" class="nav-link px-3 py-2 text-sm font-medium border-b-2">Operations</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <section id="overview" class="scroll-mt-20 mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-stone-900">Executive Summary & Market Outlook</h2>
+            <p class="mb-8 text-stone-600">While Surface Mount Technology (SMT) dominates electronics, Through-Hole Technology (THT) remains vital in high-reliability sectors like automotive, aerospace, and industrial automation. This interactive report analyzes THT Axial Tape Feeders, critical for automating the assembly of resistors, diodes, and capacitors. We explore the technology, market landscape, and future trends, highlighting a market driven by intelligence and connectivity, not just mechanical speed.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold text-stone-500">Projected Market CAGR</h3>
+                    <p class="text-4xl font-bold text-indigo-600">6.5-7.0%</p>
+                    <p class="text-sm text-stone-500">(2025-2029 Forecast)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold text-stone-500">THT Components Market</h3>
+                    <p class="text-4xl font-bold text-indigo-600">>$53B</p>
+                    <p class="text-sm text-stone-500">(Projected by 2029)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold text-stone-500">Max Feeder Speed</h3>
+                    <p class="text-4xl font-bold text-indigo-600">5,000</p>
+                    <p class="text-sm text-stone-500">Components Per Hour (CPH)</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-4 text-center">THT Automated Equipment Market Growth (2025-2029)</h3>
+                <div class="chart-container">
+                    <canvas id="marketGrowthChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="scroll-mt-20 mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-stone-900">Core Technology & Standards</h2>
+            <p class="mb-8 text-stone-600">Modern THT axial feeders are complex mechatronic systems that perform a sequence of precise operations. Explore the interactive diagram below to understand the process flow, from component supply to presentation for pick-up. This section also details the key performance metrics and industry standards that govern the design and operation of this critical equipment.</p>
+            
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2 text-center">Interactive Feeder Process Flow</h3>
+                <p class="text-center text-sm text-stone-500 mb-6">Hover over each step to see details.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                    <div class="process-step bg-stone-50 p-4 rounded-lg border" data-info="Components are supplied on reels or in 'ammopack' boxes. The feeder de-reels the tape holding the components by their leads.">
+                        <div class="text-3xl mb-2">📥</div><h4 class="font-semibold">1. Supply</h4>
+                    </div>
+                    <div class="text-2xl font-light self-center hidden lg:block">→</div>
+                    <div class="process-step bg-stone-50 p-4 rounded-lg border" data-info="Advanced friction-drive systems provide smooth, continuous tape motion, minimizing mechanical shock to components, a key requirement for IPC quality standards.">
+                        <div class="text-3xl mb-2">⚙️</div><h4 class="font-semibold">2. Transport</h4>
+                    </div>
+                    <div class="text-2xl font-light self-center hidden lg:block">→</div>
+                    <div class="process-step bg-stone-50 p-4 rounded-lg border" data-info="Optical sensors verify component presence before processing. Optional vision systems can check for polarity on components like diodes.">
+                        <div class="text-3xl mb-2">👁️</div><h4 class="font-semibold">3. Sensing</h4>
+                    </div>
+                </div>
+                <div class="flex justify-center my-4"><div class="text-2xl font-light">↓</div></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                     <div class="process-step bg-stone-50 p-4 rounded-lg border" data-info="The prepared component is presented at a precise, repeatable pick-up location (e.g., ±50μm tolerance) for the placement machine's robotic head.">
+                        <div class="text-3xl mb-2">🎯</div><h4 class="font-semibold">5. Presentation</h4>
+                    </div>
+                    <div class="text-2xl font-light self-center hidden lg:block">←</div>
+                    <div class="process-step bg-stone-50 p-4 rounded-lg border" data-info="Pneumatic or electromechanical tooling cuts leads to a precise length and forms them to the required angle (e.g., 90° bend) for insertion.">
+                        <div class="text-3xl mb-2">✂️</div><h4 class="font-semibold">4. Cut & Form</h4>
+                    </div>
+                </div>
+                <div id="process-info-box" class="mt-6 p-4 bg-indigo-50 text-indigo-800 rounded-lg text-center font-medium hidden"></div>
+            </div>
+        </section>
+
+        <section id="market" class="scroll-mt-20 mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-stone-900">Market Landscape</h2>
+             <p class="mb-8 text-stone-600">The THT feeder market features established pioneers, specialized European firms, and agile Asian manufacturers. This section provides a comparative analysis of leading players, their key differentiators, and an overview of market trends by region and industry driver. Use the interactive controls to explore the data.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Regional Market Share</h3>
+                    <div class="chart-container h-64 md:h-72">
+                        <canvas id="regionalMarketChart"></canvas>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4 text-center">Key Industry Drivers</h3>
+                     <div class="chart-container h-64 md:h-72">
+                        <canvas id="industryDriversChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow mt-8">
+                <h3 class="text-xl font-semibold mb-4 text-center">Manufacturer Comparison</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-6">
+                    <button class="manufacturer-btn px-4 py-2 rounded-md font-semibold transition-all duration-200" data-manufacturer="uic">Universal Instruments</button>
+                    <button class="manufacturer-btn px-4 py-2 rounded-md font-semibold transition-all duration-200" data-manufacturer="ipte">IPTE</button>
+                    <button class="manufacturer-btn px-4 py-2 rounded-md font-semibold transition-all duration-200" data-manufacturer="adoptsmt">AdoptSMT</button>
+                    <button class="manufacturer-btn px-4 py-2 rounded-md font-semibold transition-all duration-200" data-manufacturer="jhims">JHIMS</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 id="manufacturer-name" class="text-2xl font-bold text-indigo-600 mb-2"></h4>
+                        <p id="manufacturer-desc" class="text-stone-600 mb-4"></p>
+                        <div class="border-t pt-4">
+                            <h5 class="font-semibold mb-2">Key Differentiator:</h5>
+                            <p id="manufacturer-differentiator" class="text-stone-700 font-medium"></p>
+                        </div>
+                    </div>
+                    <div class="chart-container h-80 md:h-96">
+                        <canvas id="manufacturerSpecChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="scroll-mt-20 mb-16">
+            <h2 class="text-3xl font-bold mb-4 text-stone-900">The Next Generation: Future Technologies</h2>
+            <p class="mb-8 text-stone-600">Innovation is shifting from mechanical speed to software, data, and connectivity. The feeder is evolving from a simple peripheral into an intelligent, data-generating node in the smart factory. Below are the key technologies shaping the future of THT automation.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-3xl mb-3">🧠</div>
+                    <h3 class="text-xl font-semibold mb-2">Smart Feeders</h3>
+                    <p class="text-stone-600">Feeders with unique electronic IDs, onboard component counting, and barcode integration. This automates setup, eliminates loading errors, and enables real-time inventory tracking at the machine level.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-3xl mb-3">🌐</div>
+                    <h3 class="text-xl font-semibold mb-2">IoT & IPC-HERMES-9852</h3>
+                    <p class="text-stone-600">A modern M2M communication protocol that allows feeders to communicate status to the entire factory MES. This enables full traceability, line-level optimization, and data-driven predictive maintenance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="text-3xl mb-3">🤖</div>
+                    <h3 class="text-xl font-semibold mb-2">Robotics Integration</h3>
+                    <p class="text-stone-600">Feeders are increasingly used in flexible automation cells with robotic arms to handle odd-form components. Standardized interfaces allow easy integration for complex, custom assembly tasks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="operations" class="scroll-mt-20">
+            <h2 class="text-3xl font-bold mb-4 text-stone-900">Operational Excellence</h2>
+            <p class="mb-8 text-stone-600">Maximizing uptime and performance requires a disciplined approach to maintenance and a clear understanding of investment returns. Use the tools below to troubleshoot common issues and calculate the potential ROI for THT automation.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4">Interactive Troubleshooting Guide</h3>
+                    <div class="space-y-2">
+                        <div class="accordion-item">
+                            <button class="accordion-header w-full text-left font-semibold p-3 bg-stone-100 rounded-md flex justify-between items-center">
+                                Frequent Component Mis-picks
+                                <span class="transform transition-transform duration-300">▼</span>
+                            </button>
+                            <div class="accordion-content px-3 pt-2 text-stone-600">
+                                <p><strong>Possible Causes:</strong> 1. Feeder misalignment. 2. Pick-up position out of calibration. 3. Worn or incorrect placement nozzle.</p>
+                                <p><strong>Solutions:</strong> 1. Reseat the feeder securely. 2. Run the feeder's position calibration routine. 3. Inspect and replace the nozzle.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header w-full text-left font-semibold p-3 bg-stone-100 rounded-md flex justify-between items-center">
+                                Tape Fails to Advance or Jams
+                                <span class="transform transition-transform duration-300">▼</span>
+                            </button>
+                            <div class="accordion-content px-3 pt-2 text-stone-600">
+                                <p><strong>Possible Causes:</strong> 1. Incorrect tape loading. 2. Debris in the tape path. 3. Out-of-spec component tape.</p>
+                                <p><strong>Solutions:</strong> 1. Carefully reload the tape. 2. Power down and clean the tape guide path. 3. Try a new reel from a verified supplier.</p>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <button class="accordion-header w-full text-left font-semibold p-3 bg-stone-100 rounded-md flex justify-between items-center">
+                                Feeder is Inoperative
+                                <span class="transform transition-transform duration-300">▼</span>
+                            </button>
+                            <div class="accordion-content px-3 pt-2 text-stone-600">
+                                <p><strong>Possible Causes:</strong> 1. Loose power/data cable. 2. Blown fuse. 3. No compressed air supply.</p>
+                                <p><strong>Solutions:</strong> 1. Check all cable connections. 2. Check and replace the fuse. 3. Verify air line connection and pressure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4">ROI Calculator</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="investment" class="block text-sm font-medium text-stone-700">Total Investment ($)</label>
+                            <input type="number" id="investment" class="mt-1 block w-full rounded-md border-stone-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="50000">
+                        </div>
+                        <div>
+                            <label for="laborRate" class="block text-sm font-medium text-stone-700">Burdened Labor Rate ($/hr)</label>
+                            <input type="number" id="laborRate" class="mt-1 block w-full rounded-md border-stone-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="25">
+                        </div>
+                         <div>
+                            <label for="annualVolume" class="block text-sm font-medium text-stone-700">Annual PCB Volume</label>
+                            <input type="number" id="annualVolume" class="mt-1 block w-full rounded-md border-stone-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="500000">
+                        </div>
+                        <button id="calculateRoi" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors">Calculate ROI</button>
+                    </div>
+                    <div id="roiResult" class="mt-6 text-center hidden">
+                        <h4 class="text-lg font-semibold text-stone-500">Estimated Payback Period</h4>
+                        <p id="paybackPeriod" class="text-4xl font-bold text-indigo-600"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-16 border-t">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-stone-500">
+            <p>&copy; 2025 THT Automation Market Analysis. All data derived from industry reports for illustrative purposes.</p>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const marketGrowthData = {
+        labels: ['2025', '2026', '2027', '2028', '2029'],
+        datasets: [{
+            label: 'Market Value (Indexed)',
+            data: [100, 106.8, 114.1, 121.9, 130.2],
+            fill: true,
+            backgroundColor: 'rgba(79, 70, 229, 0.2)',
+            borderColor: 'rgba(79, 70, 229, 1)',
+            tension: 0.4
+        }]
+    };
+    new Chart(document.getElementById('marketGrowthChart'), {
+        type: 'line',
+        data: marketGrowthData,
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+    });
+
+    const regionalMarketData = {
+        labels: ['Asia-Pacific (APAC)', 'North America', 'Europe'],
+        datasets: [{
+            data: [55, 25, 20],
+            backgroundColor: ['#4F46E5', '#6366F1', '#A5B4FC'],
+        }]
+    };
+    new Chart(document.getElementById('regionalMarketChart'), {
+        type: 'doughnut',
+        data: regionalMarketData,
+        options: { responsive: true, maintainAspectRatio: false }
+    });
+    
+    const industryDriversData = {
+        labels: ['Automotive (EVs, ADAS)', 'Industrial Automation', '5G & Telecom'],
+        datasets: [{
+            label: 'Impact Score',
+            data: [90, 75, 65],
+            backgroundColor: ['#4338CA', '#6366F1', '#818CF8'],
+            borderRadius: 4
+        }]
+    };
+    new Chart(document.getElementById('industryDriversChart'), {
+        type: 'bar',
+        data: industryDriversData,
+        options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } } }
+    });
+
+    const manufacturerData = {
+        uic: { name: 'Universal Instruments', desc: 'A dominant market leader with a long history in THT automation, providing high-performance, integrated line solutions for high-volume production.', differentiator: 'Legacy Reliability & Full Line Integration', specs: { speed: 4.8, accuracy: 4.9, range: 4.0 } },
+        ipte: { name: 'IPTE Factory Automation', desc: 'A European provider of turnkey automation, known for high-precision, flexible feeders compatible with a wide range of third-party placement systems.', differentiator: 'High-Precision Customization & Flexibility', specs: { speed: 4.2, accuracy: 5.0, range: 4.2 } },
+        adoptsmt: { name: 'AdoptSMT', desc: 'Occupies a niche by developing cost-effective feeders that enhance major OEM platforms, specifically designed for plug-and-play integration.', differentiator: 'Cost-Effective OEM Ecosystem Integration', specs: { speed: 4.0, accuracy: 4.0, range: 4.5 } },
+        jhims: { name: 'JHIMS', desc: 'A Chinese manufacturer competing on performance-to-cost ratio, offering versatile feeders with broad compatibility across many machine brands.', differentiator: 'High Versatility & Performance-to-Cost Ratio', specs: { speed: 4.0, accuracy: 3.5, range: 4.8 } }
+    };
+    
+    let specChart;
+    const specChartCanvas = document.getElementById('manufacturerSpecChart');
+    const manufacturerBtns = document.querySelectorAll('.manufacturer-btn');
+    
+    function updateManufacturerInfo(manufacturerKey) {
+        const data = manufacturerData[manufacturerKey];
+        document.getElementById('manufacturer-name').textContent = data.name;
+        document.getElementById('manufacturer-desc').textContent = data.desc;
+        document.getElementById('manufacturer-differentiator').textContent = data.differentiator;
+
+        manufacturerBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.manufacturer === manufacturerKey);
+        });
+
+        const chartData = {
+            labels: ['Speed (CPH)', 'Accuracy (Repeatability)', 'Component Range'],
+            datasets: [{
+                label: data.name,
+                data: Object.values(data.specs),
+                backgroundColor: '#4F46E5',
+                borderColor: '#4338CA',
+                borderWidth: 1,
+                borderRadius: 4,
+            }]
+        };
+
+        if (specChart) {
+            specChart.data = chartData;
+            specChart.update();
+        } else {
+            specChart = new Chart(specChartCanvas, {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: { x: { beginAtZero: true, max: 5 } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+    }
+
+    manufacturerBtns.forEach(btn => {
+        btn.addEventListener('click', () => updateManufacturerInfo(btn.dataset.manufacturer));
+    });
+    updateManufacturerInfo('uic');
+
+    const processSteps = document.querySelectorAll('.process-step');
+    const infoBox = document.getElementById('process-info-box');
+    processSteps.forEach(step => {
+        step.addEventListener('mouseenter', () => {
+            infoBox.textContent = step.dataset.info;
+            infoBox.classList.remove('hidden');
+        });
+    });
+
+    const accordions = document.querySelectorAll('.accordion-item');
+    accordions.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+        const icon = header.querySelector('span');
+        header.addEventListener('click', () => {
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+            accordions.forEach(i => {
+                i.querySelector('.accordion-content').style.maxHeight = '0px';
+                i.querySelector('.accordion-header span').style.transform = 'rotate(0deg)';
+            });
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+
+    document.getElementById('calculateRoi').addEventListener('click', () => {
+        const investment = parseFloat(document.getElementById('investment').value) || 0;
+        const laborRate = parseFloat(document.getElementById('laborRate').value) || 0;
+        const annualVolume = parseFloat(document.getElementById('annualVolume').value) || 0;
+        
+        const manualTimePerPcb = (6 / 3600) * 4;
+        const autoTimePerPcb = (0.8 / 3600) * 4;
+        const laborSavings = (manualTimePerPcb - autoTimePerPcb) * annualVolume * laborRate;
+        
+        const reworkSavings = (0.02 - 0.001) * annualVolume * (5/60) * laborRate;
+        const throughputGain = annualVolume * 0.15 * 2.00;
+        const annualMaint = investment * 0.02;
+
+        const totalAnnualSavings = (laborSavings + reworkSavings + throughputGain) - annualMaint;
+
+        if (totalAnnualSavings > 0) {
+            const paybackYears = investment / totalAnnualSavings;
+            const paybackMonths = paybackYears * 12;
+            document.getElementById('paybackPeriod').textContent = `${paybackMonths.toFixed(1)} Months`;
+        } else {
+            document.getElementById('paybackPeriod').textContent = 'N/A';
+        }
+        document.getElementById('roiResult').classList.remove('hidden');
+    });
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 80) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="This SMT Feeder Passed Factory Testing — Fast Setup, Stable Feeding" src="https://www.youtube-nocookie.com/embed/ynzSdVSD2FE" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">This SMT Feeder Passed Factory Testing — Fast Setup, Stable Feeding</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SMT THT Radial Feeder Automate Radial Component Insertion" src="https://www.youtube-nocookie.com/embed/pzNoUquFH30" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SMT THT Radial Feeder Automate Radial Component Insertion</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/P0rfpkHpPxg" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly</figcaption></figure></div><h2 style="font-size:26px;margin:34px 0 6px;font-weight:700;">Product documentation</h2><p style="margin:0 0 14px;color:#5b6775;font-size:15px;">Catalogues, manuals and ROI sheets from the product catalog board.</p><ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px;"><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Product%20landing%20Page/S7900-Odd-Form-Insertion-Machine-Landing.html" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">S7900 Odd Form Insertion Machine Landing (HTML) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Product%20landing%20Page/THT-Auto-Insertion-Machine-Solution-Landing.html" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT Auto Insertion Machine Solution (HTML) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/SMThelp%20Machine%20Presentation/Belt%20feeder.pdf" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">Belt Feeder (PDF) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/SMThelp%20Machine%20Presentation/Southern_Machinery_Brand_Book_2026.pdf" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">Southern Machinery Brand Book 2026 (PDF) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Blog%20file/tht-staffing-audit-calculator.xlsx" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT Staffing Audit Calculator (XLSX) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Blog%20file/THT-Insertion-ROI-Calculator.xlsx" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT-Insertion ROI Calculator (XLSX) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Blog%20file/auto-insertion-readiness-checklist.pdf" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">Auto Insertion Readiness Checklist (PDF) &#8595;</a></li></ul><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

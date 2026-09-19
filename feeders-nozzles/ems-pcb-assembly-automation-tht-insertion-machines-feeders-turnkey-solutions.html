@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS PCB Assembly Automation Solutions | THT Auto Insertion Machines, Smart Feeders and Turnkey Lines | Southern Machinery</title>
+    <meta name="description" content="Turnkey PCB assembly automation for EMS factories: radial and axial auto insertion machines (S3010A, S4000), terminal and odd-form inserters (S7020T, S7900), 9-mode smart feeders and wave soldering lines. 237+ EMS partners, under 500 PPM, ROI under 12 months.">
+    <meta name="keywords" content="EMS PCB assembly automation, THT auto insertion machine, radial insertion machine, axial inserter, terminal insertion, odd-form placement, smart feeder, turnkey SMT THT line, wave soldering solution, Southern Machinery">
+    <meta property="og:title" content="EMS PCB Assembly Automation Solutions | Southern Machinery">
+    <meta property="og:description" content="High-mix EMS factories automate through-hole assembly with Southern Machinery insertion machines, smart feeders and turnkey lines. 237+ EMS partners worldwide.">
+    <meta property="og:image" content="https://ph.smthelp.com/images/2024/12/20/S4020A-Axial-InserterS3010A-Radial--S7020T-Terminal--S7900-Odd-Form-x2-Insertion-Machine-w-PCB-nozzle-Loading-1.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        i4: {
+                            dark: '#060b14',
+                            card: '#0f172a',
+                            border: 'rgba(56, 189, 248, 0.18)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #060b14; color: #e2e8f0; }
+        .i4-gradient-text { background: linear-gradient(135deg, #ffffff 10%, #38bdf8 45%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .i4-glow { background: radial-gradient(circle at 50% 15%, rgba(6, 182, 212, 0.18) 0%, rgba(16, 185, 129, 0.12) 35%, rgba(6, 11, 20, 0) 70%); }
+        .glass-panel { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.14); }
+        .glass-card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card-hover:hover { transform: translateY(-4px); border-color: rgba(52, 211, 153, 0.45); box-shadow: 0 16px 36px -10px rgba(6, 182, 212, 0.22); }
+        .grid-pattern { background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px); background-size: 28px 28px; }
+        .carousel-slide { transition: opacity 0.6s ease-in-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #060b14; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0d9488; }
+        details.blog-article summary { cursor: pointer; list-style: none; }
+        details.blog-article summary::-webkit-details-marker { display: none; }
+        details.blog-article[open] .blog-chevron { transform: rotate(180deg); }
+        @media print { .no-print { display: none !important; } }
+    </style>
+</head>
+<body class="bg-[#060b14] text-slate-200 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-emerald-950 via-slate-900 to-cyan-950 border-b border-emerald-500/20 text-xs py-2 px-4 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-3 text-emerald-200">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 font-mono">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping mr-1.5"></span> THT + SMT TURNKEY
+                </span>
+                <span class="hidden sm:inline">Radial &amp; Axial Insertion | Terminal &amp; Odd-Form | 9-Mode Smart Feeders | Wave Soldering Lines</span>
+            </div>
+            <div class="flex items-center space-x-4 text-slate-300 text-xs font-mono">
+                <a href="tel:+8613602562576" class="hover:text-emerald-400 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-emerald-400"></i> +86 136 0256 2576
+                </a>
+                <a href="mailto:info@smthelp.com" class="hover:text-cyan-400 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-cyan-400"></i> info@smthelp.com
+                </a>
+                <span class="text-slate-600 hidden sm:inline">|</span>
+                <span class="text-cyan-300 hidden sm:flex items-center gap-1"><i class="fa-solid fa-network-wired"></i> 237+ EMS Partners Worldwide</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800/80 bg-slate-950/85 sticky top-8 z-40 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Company Logo (upper left corner) -->
+            <a href="#overview" class="flex items-center space-x-3 group">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png"
+                     alt="Southern Machinery Official Logo"
+                     class="h-10 sm:h-12 w-auto object-contain transition group-hover:opacity-95"
+                     onerror="this.onerror=null; this.src='https://placehold.co/220x55/060b14/10b981?text=SOUTHERN+MACHINERY';">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden xl:flex items-center space-x-5 text-xs font-medium text-slate-300">
+                <a href="#overview" class="hover:text-emerald-400 transition">Line Architecture</a>
+                <a href="#machines" class="hover:text-cyan-400 transition">Insertion Machines</a>
+                <a href="#feeders" class="hover:text-emerald-400 transition">Smart Feeders</a>
+                <a href="#turnkey" class="hover:text-cyan-400 transition">Turnkey Lines</a>
+                <a href="#video-hub" class="hover:text-emerald-400 transition">Videos</a>
+                <a href="#specifications" class="hover:text-cyan-400 transition">Specs</a>
+                <a href="#resources" class="hover:text-emerald-400 transition">Catalogs</a>
+                <a href="#insights" class="hover:text-cyan-400 transition">Field Notes</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="#consultation" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 shadow-lg shadow-emerald-500/25 transition transform active:scale-95">
+                    <i class="fa-solid fa-headset mr-1.5 text-xs"></i> Free Line Consultation
+                </a>
+                <button id="mobileMenuBtn" class="xl:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden xl:hidden border-t border-slate-800 bg-slate-900/95 px-4 py-4 space-y-3 font-medium text-sm">
+            <a href="#overview" class="block py-2 text-slate-300 hover:text-emerald-400">Line Architecture</a>
+            <a href="#machines" class="block py-2 text-slate-300 hover:text-emerald-400">Insertion Machines</a>
+            <a href="#feeders" class="block py-2 text-slate-300 hover:text-emerald-400">Smart Feeders</a>
+            <a href="#turnkey" class="block py-2 text-slate-300 hover:text-emerald-400">Turnkey Lines</a>
+            <a href="#video-hub" class="block py-2 text-slate-300 hover:text-emerald-400">Videos</a>
+            <a href="#specifications" class="block py-2 text-slate-300 hover:text-emerald-400">Specs</a>
+            <a href="#resources" class="block py-2 text-slate-300 hover:text-emerald-400">Catalogs</a>
+            <a href="#insights" class="block py-2 text-slate-300 hover:text-emerald-400">Field Notes</a>
+            <a href="#consultation" class="block w-full text-center py-2.5 rounded-lg bg-emerald-600 text-white font-bold">Get a Free Line Consultation</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview" class="relative pt-10 pb-20 overflow-hidden i4-glow grid-pattern border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/40 text-emerald-300 text-xs font-mono shadow-sm">
+                        <i class="fa-solid fa-microchip-gear text-emerald-400"></i>
+                        <span>PCB Assembly Automation for High-Mix EMS Factories &mdash; From Single Inserter to Full Turnkey Line</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.14]">
+                        <span class="text-white">Your SMT Line Runs at 50K CPH.</span><br>
+                        <span class="i4-gradient-text">Stop Hand-Placing Through-Hole Parts.</span><br>
+                        <span class="text-slate-300 text-3xl sm:text-4xl lg:text-5xl font-bold">Radial, Axial, Terminal &amp; Odd-Form &mdash; Fully Automated</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+                        Southern Machinery builds the <strong class="text-white">THT automation backbone for EMS factories</strong>: radial &amp; axial auto inserters (S3010A / S4000), terminal &amp; odd-form cells (S7020T / S7900), 9 feeding modes that mount on <strong class="text-emerald-400">any brand of SMT machine</strong>, and complete insertion-plus-wave-soldering turnkey lines &mdash; at typically <strong class="text-emerald-400">one third of OEM machine pricing</strong>.
+                    </p>
+
+                    <!-- Core Metric Badges -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                        <div class="glass-panel p-3.5 rounded-xl border border-emerald-500/30">
+                            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight">12,000</div>
+                            <div class="text-xs text-slate-400 font-semibold">Terminal CPH (S7020T)</div>
+                            <div class="text-[10px] text-emerald-300 font-mono mt-0.5">0.55s / Point Dual Head</div>
+                        </div>
+                        <div class="glass-panel p-3.5 rounded-xl border border-slate-700/80">
+                            <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono tracking-tight">&lt; 500 PPM</div>
+                            <div class="text-xs text-slate-400 font-semibold">Insertion Defect Rate</div>
+                            <div class="text-[10px] text-cyan-300 font-mono mt-0.5">Vision-Corrected Placement</div>
+                        </div>
+                        <div class="glass-panel p-3.5 rounded-xl border border-slate-700/80">
+                            <div class="text-2xl sm:text-3xl font-black text-teal-400 font-mono tracking-tight">&plusmn;0.05 mm</div>
+                            <div class="text-xs text-slate-400 font-semibold">Odd-Form Accuracy</div>
+                            <div class="text-[10px] text-teal-300 font-mono mt-0.5">CCD Mark Correction</div>
+                        </div>
+                        <div class="glass-panel p-3.5 rounded-xl border border-slate-700/80">
+                            <div class="text-2xl sm:text-3xl font-black text-purple-400 font-mono tracking-tight">237+</div>
+                            <div class="text-xs text-slate-400 font-semibold">Global EMS Partners</div>
+                            <div class="text-[10px] text-purple-300 font-mono mt-0.5">GE &middot; Bosch &middot; Philips &middot; Flex &middot; Jabil</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#consultation" class="inline-flex items-center justify-center px-6 py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 hover:opacity-95 shadow-xl shadow-emerald-500/30 transition transform active:scale-95">
+                            <i class="fa-solid fa-headset mr-2"></i> Book a Free Line Consultation
+                        </a>
+                        <button onclick="openVideoModal('0ivNvJMlJrQ', 'S7020T Odd Form Insertion Machine - Reel Terminal and Radial Taped')" class="inline-flex items-center justify-center px-6 py-4 rounded-xl text-base font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 shadow-md transition">
+                            <i class="fa-solid fa-circle-play text-red-500 mr-2 text-lg"></i> Watch the Machines Run
+                        </button>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="pt-2 flex flex-wrap items-center gap-5 text-xs text-slate-400 font-mono">
+                        <span class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> 7&times;24 Global Support</span>
+                        <span class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> Free 24h Sampling &middot; Live Machine Verification</span>
+                        <span class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> 1-Day Spares Delivery</span>
+                        <span class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> Machinery Directive 2006/42/EC</span>
+                    </div>
+                </div>
+
+                <!-- Right Hero Carousel -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl glass-panel p-4 border border-emerald-500/40 shadow-2xl shadow-emerald-950/60">
+                        <div class="flex items-center justify-between mb-3 px-1">
+                            <a href="https://ph.smthelp.com" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-300 hover:text-emerald-200 transition bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800">
+                                <i class="fa-solid fa-images text-emerald-400"></i> Real Machine Photos &middot; ph.smthelp.com <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                            </a>
+                            <div class="bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 font-mono text-[11px] px-3 py-0.5 rounded-full shadow font-extrabold flex items-center gap-1">
+                                <i class="fa-solid fa-network-wired"></i> Production Proven
+                            </div>
+                        </div>
+
+                        <!-- 5-Image Slideshow -->
+                        <div id="heroCarousel" class="relative rounded-xl overflow-hidden bg-slate-950 aspect-[16/10] group border border-slate-700/80 select-none" onmouseenter="pauseHeroCarousel()" onmouseleave="resumeHeroCarousel()">
+
+                            <!-- Slide 1: Full line-up -->
+                            <div class="carousel-slide absolute inset-0 opacity-100 z-10" data-slide-index="0">
+                                <img src="https://ph.smthelp.com/images/2024/12/20/S4020A-Axial-InserterS3010A-Radial--S7020T-Terminal--S7900-Odd-Form-x2-Insertion-Machine-w-PCB-nozzle-Loading-1.png"
+                                     alt="S4020A Axial, S3010A Radial, S7020T Terminal and S7900 Odd-Form Insertion Machine Line-up"
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/800x500/060b14/10b981?text=THT+Insertion+Line-up';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-slate-900/90 backdrop-blur-md px-3 py-2 rounded-lg border border-slate-700/70 text-slate-200">
+                                    <span class="font-medium"><i class="fa-solid fa-layer-group text-emerald-400 mr-1.5"></i> 1. Full THT Inserter Family on One Platform</span>
+                                    <span class="text-emerald-300 font-mono font-bold">Radial &middot; Axial &middot; Terminal &middot; Odd</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: S3010A Radial -->
+                            <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide-index="1">
+                                <img src="https://ph.smthelp.com/images/2026/07/22/S3010A-Radial-Insertion-Machine.png"
+                                     alt="S3010A Radial Insertion Machine"
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/800x500/060b14/06b6d4?text=S3010A+Radial+Inserter';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-slate-900/90 backdrop-blur-md px-3 py-2 rounded-lg border border-slate-700/70 text-slate-200">
+                                    <span class="font-medium"><i class="fa-solid fa-bolt text-cyan-400 mr-1.5"></i> 2. S3010A Radial Auto Insertion</span>
+                                    <span class="text-cyan-300 font-mono font-bold">22,000 CPH Class</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: S4000 Axial -->
+                            <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide-index="2">
+                                <img src="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader.png"
+                                     alt="S4000 Axial Insertion Machine with Auto Loader"
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/800x500/060b14/3b82f6?text=S4000+Axial+Inserter';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-slate-900/90 backdrop-blur-md px-3 py-2 rounded-lg border border-slate-700/70 text-slate-200">
+                                    <span class="font-medium"><i class="fa-solid fa-arrows-left-right text-blue-400 mr-1.5"></i> 3. S4000 Axial Inserter + Auto Loader</span>
+                                    <span class="text-blue-300 font-mono font-bold">EtherCAT &middot; MES Ready</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: S7900 Odd Form -->
+                            <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide-index="3">
+                                <img src="https://ph.smthelp.com/images/2025/12/06/S7900-Odd-Form-Insertion-machine.png"
+                                     alt="S7900 Odd Form Insertion Machine"
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/800x500/060b14/f59e0b?text=S7900+Odd+Form+Inserter';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-slate-900/90 backdrop-blur-md px-3 py-2 rounded-lg border border-slate-700/70 text-slate-200">
+                                    <span class="font-medium"><i class="fa-solid fa-shapes text-amber-400 mr-1.5"></i> 4. S7900 Odd-Form Inserter</span>
+                                    <span class="text-amber-300 font-mono font-bold">Auto Lead-Clinch</span>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5: Mobile charger turnkey line -->
+                            <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide-index="4">
+                                <img src="https://ph.smthelp.com/images/2025/10/20/Mobile-Charger-THT-auto-insertion--Wave-Soldering-line.png"
+                                     alt="Mobile Charger THT Auto Insertion and Wave Soldering Turnkey Line"
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/800x500/060b14/a855f7?text=Charger+PCBA+Turnkey+Line';">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
+                                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs bg-slate-900/90 backdrop-blur-md px-3 py-2 rounded-lg border border-slate-700/70 text-slate-200">
+                                    <span class="font-medium"><i class="fa-solid fa-diagram-project text-purple-400 mr-1.5"></i> 5. Charger PCBA Insertion + Wave Soldering Line</span>
+                                    <span class="text-purple-300 font-mono font-bold">450 Boards / Hour</span>
+                                </div>
+                            </div>
+
+                            <!-- Video Trigger -->
+                            <div class="absolute top-3 right-3 z-20">
+                                <button onclick="openVideoModal('0ivNvJMlJrQ', 'S7020T Odd Form Insertion Machine - Reel Terminal and Radial Taped')" class="px-2.5 py-1 rounded-lg bg-black/75 hover:bg-emerald-600 text-white text-[11px] font-mono border border-slate-600 transition flex items-center gap-1 shadow">
+                                    <i class="fa-brands fa-youtube text-red-400"></i> Line Video
+                                </button>
+                            </div>
+
+                            <button onclick="prevHeroSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-slate-900/80 hover:bg-emerald-600 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition border border-slate-700 shadow" aria-label="Previous Slide">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="nextHeroSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-slate-900/80 hover:bg-emerald-600 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition border border-slate-700 shadow" aria-label="Next Slide">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+
+                            <!-- Dot Indicators -->
+                            <div class="absolute top-3 left-3 z-20 flex space-x-1.5 bg-slate-950/75 backdrop-blur-sm px-2.5 py-1 rounded-full border border-slate-700/60">
+                                <button onclick="goToHeroSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-emerald-400 transition" aria-label="Slide 1"></button>
+                                <button onclick="goToHeroSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition" aria-label="Slide 2"></button>
+                                <button onclick="goToHeroSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition" aria-label="Slide 3"></button>
+                                <button onclick="goToHeroSlide(3)" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition" aria-label="Slide 4"></button>
+                                <button onclick="goToHeroSlide(4)" class="carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition" aria-label="Slide 5"></button>
+                            </div>
+                        </div>
+
+                        <!-- Mini Dashboard -->
+                        <div class="mt-4 grid grid-cols-2 gap-2 text-xs font-mono">
+                            <div class="bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-400 block text-[10px]">Through-Hole Coverage:</span>
+                                <span class="text-emerald-300 font-bold text-xs flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Jumper &rarr; DIP &rarr; Axial &rarr; Radial &rarr; Terminal &rarr; Odd
+                                </span>
+                            </div>
+                            <div class="bg-slate-900/90 p-2.5 rounded-lg border border-slate-800">
+                                <span class="text-slate-400 block text-[10px]">Feeder Platform:</span>
+                                <span class="text-cyan-300 font-bold text-xs flex items-center gap-1">
+                                    <i class="fa-solid fa-plug-circle-bolt text-cyan-400 text-[10px]"></i> 1 Interface &middot; 9 Feeding Modes
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Direct Links -->
+                        <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                            <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-folder-open"></i> Full Catalog Board <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                            <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                                <i class="fa-brands fa-youtube"></i> 1,200+ Video Board <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Machine Lineup Section -->
+    <section id="machines" class="py-20 bg-slate-900/70 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-semibold px-3 py-1 bg-cyan-950/80 rounded-full border border-cyan-800">
+                    Auto Insertion Machines
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">
+                    One Platform for Every Through-Hole Component
+                </h2>
+                <p class="text-slate-400 mt-3 text-sm sm:text-base">
+                    Universal-spares-compatible mechanics, Windows-based software on every model, and one operating logic across the whole family &mdash; an operator trained on one machine runs them all.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- S3010A Radial -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 glass-card-hover flex flex-col">
+                    <img src="https://ph.smthelp.com/images/2026/07/22/S3010A-Radial-Insertion-Machine.png" alt="S3010A Radial Insertion Machine" class="w-full h-48 object-cover border-b border-slate-800" onerror="this.onerror=null; this.src='https://placehold.co/600x338/060b14/06b6d4?text=S3010A+Radial';">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-white">S3010A / S3000 Radial Insertion</h3>
+                            <span class="text-[10px] font-mono text-cyan-300 bg-cyan-950/70 px-2 py-0.5 rounded border border-cyan-800">22,000 CPH CLASS</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed flex-1">
+                            Vertical taped components &mdash; capacitors, resistors, LEDs, transistors. 100% compatibility with Universal-class wear parts keeps monthly spares under $100; $10 converts a feeder to 90&deg; bending.
+                        </p>
+                        <ul class="mt-3 text-[11px] text-slate-300 font-mono space-y-1">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>&lt; 500 PPM defect rate &middot; polarity check</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Spans 2.5 / 3.5 / 5 / 7.5 / 10 mm + multi-span</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>ROI typically under 12 months</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S4000 Axial -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 glass-card-hover flex flex-col">
+                    <img src="https://ph.smthelp.com/images/2025/12/06/S4000-Axial-Insertion-machine-with-loader.png" alt="S4000 Axial Insertion Machine with Loader" class="w-full h-48 object-cover border-b border-slate-800" onerror="this.onerror=null; this.src='https://placehold.co/600x338/060b14/3b82f6?text=S4000+Axial';">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-white">S4000 Axial Insertion</h3>
+                            <span class="text-[10px] font-mono text-blue-300 bg-blue-950/70 px-2 py-0.5 rounded border border-blue-800">ETHERCAT + MES</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed flex-1">
+                            Horizontal taped resistors, diodes and jumper wires. Dual jumper feeders insert different wire gauges simultaneously; modular stations scale 5 &rarr; 60 as your product mix grows.
+                        </p>
+                        <ul class="mt-3 text-[11px] text-slate-300 font-mono space-y-1">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Wire &Oslash; 0.3&ndash;0.8 mm &middot; spans 5&ndash;20 mm</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>1 operator runs 3&ndash;5 machines</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>~80% acquisition cost saving vs peers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S7020T Terminal -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-emerald-500/40 bg-gradient-to-b from-emerald-950/30 to-slate-900 glass-card-hover flex flex-col">
+                    <img src="https://ph.smthelp.com/images/2024/12/20/S4020A-Axial-InserterS3010A-Radial--S7020T-Terminal--S7900-Odd-Form-x2-Insertion-Machine-w-PCB-nozzle-Loading-1.png" alt="S7020T Terminal Insertion Machine" class="w-full h-48 object-cover border-b border-slate-800" onerror="this.onerror=null; this.src='https://placehold.co/600x338/060b14/10b981?text=S7020T+Terminal';">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-white">S7020T Terminal Insertion</h3>
+                            <span class="text-[10px] font-mono text-emerald-300 bg-emerald-950/70 px-2 py-0.5 rounded border border-emerald-800">12,000 CPH</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed flex-1">
+                            Reel &amp; bulk terminals at 0.55s per point. SMEMA + SEMI SMT-ELS interlock, QR material error-proofing, auto track-width change and miss-insertion detect with auto patch.
+                        </p>
+                        <ul class="mt-3 text-[11px] text-slate-300 font-mono space-y-1">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>360&deg; insertion &middot; 1&deg; step &middot; 0.001 mm motion resolution</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>One base swaps to Eyelet / PIN / Switch / Odd-Form</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Priced at ~1/3 of Universal-class machines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S7900 Odd Form -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 glass-card-hover flex flex-col">
+                    <img src="https://ph.smthelp.com/images/2025/12/06/S7900-Odd-Form-Insertion-machine.png" alt="S7900 Odd Form Insertion Machine" class="w-full h-48 object-cover border-b border-slate-800" onerror="this.onerror=null; this.src='https://placehold.co/600x338/060b14/f59e0b?text=S7900+Odd+Form';">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-white">S7900 Odd-Form Insertion</h3>
+                            <span class="text-[10px] font-mono text-amber-300 bg-amber-950/70 px-2 py-0.5 rounded border border-amber-800">AUTO CLINCH</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed flex-1">
+                            Connectors, transformers, relays and everything between. Four clinch modes &mdash; outward, inward, loop and double-loop &mdash; prevent post-wave floating while keeping boards flux-clean.
+                        </p>
+                        <ul class="mt-3 text-[11px] text-slate-300 font-mono space-y-1">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Standard tape feeders fit JUKI / Panasonic / FUJI / SIPLACE</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Tray, tube &amp; vibration-bowl feeding options</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Long-board &amp; tall-component solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S-2000 Jumper -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 glass-card-hover flex flex-col">
+                    <img src="https://ph.smthelp.com/images/2025/12/06/S3000-Radial-Insertion-Machine-with-loader.png" alt="S-2000 Jumper Wire Auto Insertion" class="w-full h-48 object-cover border-b border-slate-800" onerror="this.onerror=null; this.src='https://placehold.co/600x338/060b14/84cc16?text=S-2000+Jumper+Wire';">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-white">S-2000 Jumper Wire Insertion</h3>
+                            <span class="text-[10px] font-mono text-lime-300 bg-lime-950/70 px-2 py-0.5 rounded border border-lime-800">22,000 CPH</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed flex-1">
+                            Bare wire jumpers replace zero-ohm resistors on dense boards &mdash; cut BOM cost and free SMT feeder slots. Four-direction insertion from USB/Excel coordinate files.
+                        </p>
+                        <ul class="mt-3 text-[11px] text-slate-300 font-mono space-y-1">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Wire &Oslash; 0.5&ndash;0.7 mm &middot; span 5&ndash;20 mm</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>UPS rides through 15-min power cuts</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>SM-500 offline former: 100% wire use, zero scrap</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- S-70LD LED Driver -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 glass-card-hover flex flex-col">
+                    <img src="https://ph.smthelp.com/images/2023/05/12/S70LD-odd-form-insertion-w-4-feeders-4-heads.png" alt="S-70LD LED Driver Odd Form Auto Insertion with 4 feeders 4 heads" class="w-full h-48 object-cover border-b border-slate-800" onerror="this.onerror=null; this.src='https://placehold.co/600x338/060b14/a855f7?text=S-70LD+LED+Driver';">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-white">S-70LD Power / LED-Driver Odd-Form</h3>
+                            <span class="text-[10px] font-mono text-purple-300 bg-purple-950/70 px-2 py-0.5 rounded border border-purple-800">&plusmn;0.05 mm</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed flex-1">
+                            Purpose-built for LED-driver and power boards: E-caps, transformers, inductors up to 30&times;30 mm on 0.8&ndash;5.0 mm thick PCBs. 4 heads + 4 feeders, tape or vibratory.
+                        </p>
+                        <ul class="mt-3 text-[11px] text-slate-300 font-mono space-y-1">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>4,000 CPH &middot; components 3&times;3 to 30&times;30 mm</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Only 0.8 KVA &middot; 75 dB low-noise operation</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Per-product recipe configs included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Smart Feeders Section -->
+<section id="feeders" class="py-20 bg-[#060b14] relative border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold px-3 py-1 bg-emerald-950/80 rounded-full border border-emerald-800">
+                One Supplier, Seven Feeding Modes
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">
+                Automate THT Without Buying a New Inserter
+            </h2>
+            <p class="text-slate-400 mt-3 text-sm sm:text-base">
+                Mount a $5&ndash;8K smart feeder on the SMT machine you already own instead of a $50&ndash;70K dedicated inserter &mdash; feed radial, axial, tube, bowl, bulk, label and tray parts straight into your placement process.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            <!-- Feeder table -->
+            <div class="lg:col-span-7 glass-panel rounded-2xl overflow-hidden border border-slate-800">
+                <div class="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+                    <span class="font-bold text-white text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-table-list text-emerald-400"></i> 2025 Feeder Platform Matrix
+                    </span>
+                    <span class="text-xs font-mono text-emerald-300 bg-emerald-950/70 px-2.5 py-1 rounded border border-emerald-800">Unified Interface</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-mono">
+                        <thead>
+                            <tr class="text-slate-400 bg-slate-900/60 border-b border-slate-800">
+                                <th class="py-3 px-4 font-semibold">Feeder</th>
+                                <th class="py-3 px-4 font-semibold">Feeding Mode</th>
+                                <th class="py-3 px-4 font-semibold">Cycle</th>
+                                <th class="py-3 px-4 font-semibold">Precision</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 text-slate-300">
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SRT1001</td><td class="py-2.5 px-4">Horizontal tape (axial)</td><td class="py-2.5 px-4 text-emerald-300">0.8 s</td><td class="py-2.5 px-4">&plusmn;0.3 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SRF1001</td><td class="py-2.5 px-4">Radial tape &middot; 90&deg; bend option</td><td class="py-2.5 px-4 text-emerald-300">1.0 s</td><td class="py-2.5 px-4">&plusmn;0.2 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">STF1001</td><td class="py-2.5 px-4">Tube (ICs, relays)</td><td class="py-2.5 px-4 text-emerald-300">0.8 s</td><td class="py-2.5 px-4">&plusmn;0.5 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SBF1001</td><td class="py-2.5 px-4">Vibration bowl (up to 50&times;50 mm)</td><td class="py-2.5 px-4 text-emerald-300">0.8 s</td><td class="py-2.5 px-4">&plusmn;0.5 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SBP1001</td><td class="py-2.5 px-4">Belt bulk (no taping cost)</td><td class="py-2.5 px-4 text-emerald-300">1.5&ndash;2 s</td><td class="py-2.5 px-4">&plusmn;1.0 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SLF1001</td><td class="py-2.5 px-4">Label / polarity marker</td><td class="py-2.5 px-4 text-emerald-300">&mdash;</td><td class="py-2.5 px-4">&plusmn;0.2 mm XY</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">STP1001</td><td class="py-2.5 px-4">Tray (40 trays, servo)</td><td class="py-2.5 px-4 text-emerald-300">3.0 s</td><td class="py-2.5 px-4">&plusmn;1.0 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SSPC101</td><td class="py-2.5 px-4">Solder wire / chip 1&ndash;16 mm</td><td class="py-2.5 px-4 text-emerald-300">1.2 s</td><td class="py-2.5 px-4">&plusmn;0.5 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-2.5 px-4 text-white font-bold">SRT7001</td><td class="py-2.5 px-4">Reel terminal 6.35&times;0.81 mm</td><td class="py-2.5 px-4 text-emerald-300">0.8 s</td><td class="py-2.5 px-4">&plusmn;0.5 mm</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Unified interface + smart racks -->
+            <div class="lg:col-span-5 space-y-5">
+                <div class="glass-panel p-6 rounded-2xl border border-cyan-500/40">
+                    <h4 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-plug-circle-bolt text-cyan-400"></i> One Electrical Interface &mdash; Every Mode
+                    </h4>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>8-core &Phi;16 mm aviation connector</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>IO communication or full self-control</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>24V / 220V power &middot; 0.4&ndash;0.6 MPa air</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Cutter life 5,000,000 cycles &middot; 48 h burn-in tested</li>
+                    </ul>
+                    <p class="text-[11px] text-slate-500 mt-3 leading-relaxed font-sans">
+                        Swap feeding modes in minutes instead of integrating a new vendor every time &mdash; proven on Panasonic, JUKI, YAMAHA, Mirae, FUJI and SIPLACE platforms.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                    <h4 class="text-base font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-database text-purple-400"></i> Smart Material Flow (Optional)
+                    </h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        SIS7000A (1,400 reels) and SIS4000A (400 reels) smart racks connect to your MES / ERP via EMQX messaging &mdash; kitting time drops to ~15 minutes and every reel is traceable from stores to placement.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                    <div class="grid grid-cols-2 gap-3">
+                        <img src="https://ph.smthelp.com/images/2026/08/09/southern-machinery-radial-tape-feeder-s3010a-radial-insertion-machine-0035.webp" alt="Southern Machinery radial tape feeder on S3010A insertion machine" class="w-full h-28 object-cover rounded-lg border border-slate-700" onerror="this.onerror=null; this.src='https://placehold.co/300x170/060b14/06b6d4?text=Radial+Tape+Feeder';">
+                        <img src="https://ph.smthelp.com/images/2026/08/09/southern-machinery-axial-tape-feeder-s4000-axial-insertion-machine-0050.webp" alt="Southern Machinery axial tape feeder on S4000 insertion machine" class="w-full h-28 object-cover rounded-lg border border-slate-700" onerror="this.onerror=null; this.src='https://placehold.co/300x170/060b14/3b82f6?text=Axial+Tape+Feeder';">
+                    </div>
+                    <p class="text-[11px] text-slate-500 mt-3 font-mono">Radial &amp; axial tape feeders mounted on S3010A / S4000 &mdash; photo bank: ph.smthelp.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Turnkey Line Section -->
+<section id="turnkey" class="py-20 bg-slate-900/70 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold px-3 py-1 bg-emerald-950/80 rounded-full border border-emerald-800">Complete Turnkey Architecture</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">
+                Reference Line: Charger PCBA &mdash; 450 Boards / Hour
+            </h2>
+            <p class="text-slate-400 mt-3 text-sm sm:text-base">
+                The exact configuration we run for mobile-charger and adapter manufacturers: insertion island + dual-wave soldering with 4-zone preheat, SMEMA interlocked end to end.
+            </p>
+        </div>
+
+        <!-- Line Flow -->
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-slate-800 mb-10 overflow-hidden relative">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 text-center text-xs font-mono relative z-10">
+                <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center font-bold mb-2">01</div>
+                    <div class="font-bold text-white">SLD390 Loader</div>
+                    <div class="text-[10px] text-slate-400 mt-1">SMEMA Upstream</div>
+                </div>
+                <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 mx-auto flex items-center justify-center font-bold mb-2">02</div>
+                    <div class="font-bold text-white">S3010A Radial</div>
+                    <div class="text-[10px] text-slate-400 mt-1">10 radial points / board</div>
+                </div>
+                <div class="bg-gradient-to-b from-emerald-950/60 to-slate-950 p-3 rounded-xl border-2 border-emerald-400/80 shadow-lg transform scale-105">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500 text-slate-950 mx-auto flex items-center justify-center font-bold mb-2 shadow"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="font-black text-emerald-300">S7020T Terminal</div>
+                    <div class="text-[10px] text-slate-200 mt-1">2 terminal points &middot; 12,000 CPH</div>
+                </div>
+                <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-400 mx-auto flex items-center justify-center font-bold mb-2">04</div>
+                    <div class="font-bold text-white">S7040 Odd-Form</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Transformer + USB &middot; &plusmn;0.05 mm</div>
+                </div>
+                <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 mx-auto flex items-center justify-center font-bold mb-2">05</div>
+                    <div class="font-bold text-white">SWS350 Wave</div>
+                    <div class="text-[10px] text-slate-400 mt-1">1,500&ndash;1,800 mm/min</div>
+                </div>
+                <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 mx-auto flex items-center justify-center font-bold mb-2">06</div>
+                    <div class="font-bold text-white">4-Zone Preheat</div>
+                    <div class="text-[10px] text-slate-400 mt-1">Up to 250&deg;C &middot; &plusmn;1&ndash;2&deg;C</div>
+                </div>
+                <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 mx-auto flex items-center justify-center font-bold mb-2">07</div>
+                    <div class="font-bold text-white">Unloader</div>
+                    <div class="text-[10px] text-slate-400 mt-1">~450 boards / hour</div>
+                </div>
+            </div>
+            <div class="hidden lg:block absolute top-[52px] left-8 right-8 h-0.5 bg-gradient-to-r from-emerald-500 via-cyan-400 to-purple-500 z-0 opacity-40"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass-panel p-6 rounded-xl border border-slate-800 glass-card-hover">
+                <div class="text-emerald-400 text-xl mb-3"><i class="fa-solid fa-arrows-left-right-to-line"></i></div>
+                <h3 class="text-base font-bold text-white mb-2">Lead-Cutting &amp; Forming, Closed Loop</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    Offline S-430AC 4-axis cutter (7,200 CPH) or inline SF320AT selective cutter &mdash; the $18K cell that replaces 6&ndash;8 hand-trimmers with a 6&ndash;17 month payback depending on load.
+                </p>
+            </div>
+            <div class="glass-panel p-6 rounded-xl border border-slate-800 glass-card-hover">
+                <div class="text-cyan-400 text-xl mb-3"><i class="fa-solid fa-handshake"></i></div>
+                <h3 class="text-base font-bold text-white mb-2">Interlocks With Your Existing SMT</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    SMEMA / SEMI SMT-ELS handshaking means our THT cells bolt onto Panasonic, JUKI, YAMAHA, Mirae or any brand line without custom control cabinets.
+                </p>
+            </div>
+            <div class="glass-panel p-6 rounded-xl border border-slate-800 glass-card-hover">
+                <div class="text-purple-400 text-xl mb-3"><i class="fa-solid fa-file-shield"></i></div>
+                <h3 class="text-base font-bold text-white mb-2">Process Guides Included</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    DFM guideline with the minimum hole-pitch formula (body length &times; 1.109 + 1.40 mm &minus; lead &Oslash;), THT-to-SMD clearance rules and insertion-order sequencing for maximum FPY.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Hub Section -->
+<section id="video-hub" class="py-20 bg-slate-950 border-t border-b border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold">Live Factory Action</span>
+                <h2 class="text-3xl font-extrabold text-white mt-1">Watch the Machines Run Real Boards</h2>
+                <p class="text-slate-400 text-sm mt-2 max-w-2xl">
+                    Every machine on this page, filmed in production &mdash; from 0.55s terminal cycles to feeder changeovers on third-party mounters.
+                </p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 rounded-lg bg-red-600/20 border border-red-500/40 text-red-300 text-xs font-semibold hover:bg-red-600/30 transition">
+                    <i class="fa-brands fa-youtube mr-2 text-base text-red-500"></i> Open Video Board (1,200+) <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- V1: S7020T odd form -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('0ivNvJMlJrQ', 'S7020T Odd Form Insertion Machine - Reel Terminal and Radial Taped')">
+                    <img src="https://img.youtube.com/vi/0ivNvJMlJrQ/hqdefault.jpg" alt="S7020T reel terminal and radial taped insertion" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/10b981?text=S7020T+Odd+Form';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S7020T</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">Reel Terminal + Radial Taped Odd-Form Insertion</h4>
+                    <p class="text-xs text-slate-400 mt-2">The flagship odd-form cell feeding mixed reel terminals and taped radial parts.</p>
+                    <button onclick="openVideoModal('0ivNvJMlJrQ', 'S7020T Odd Form Insertion Machine - Reel Terminal and Radial Taped')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V2: S3010A + S7000T -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('xSHWpqCgaoQ', 'S3010A Radial Insertion with S7000T Pin Terminal Insertion')">
+                    <img src="https://img.youtube.com/vi/xSHWpqCgaoQ/hqdefault.jpg" alt="S3010A radial and S7000T terminal insertion" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/06b6d4?text=S3010A+Radial';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S3010A + S7000T</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">Radial + Pin-Terminal Insertion Running Inline</h4>
+                    <p class="text-xs text-slate-400 mt-2">S3010A radial machine paired with S7000T pin terminal insertion.</p>
+                    <button onclick="openVideoModal('xSHWpqCgaoQ', 'S3010A Radial Insertion with S7000T Pin Terminal Insertion')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V3: S4000 axial -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('xlvFwNTf4_8', 'S4000 Axial Insertion - Dual Jumper Wire and 360 Rotary Table')">
+                    <img src="https://img.youtube.com/vi/xlvFwNTf4_8/hqdefault.jpg" alt="S4000 axial insertion dual jumper wire rotary table" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/3b82f6?text=S4000+Axial';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S4000</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">Dual Jumper Wire + 360&deg; Rotary Table Efficiency</h4>
+                    <p class="text-xs text-slate-400 mt-2">How the S4000 axial inserter doubles jumper throughput with dual feeders.</p>
+                    <button onclick="openVideoModal('xlvFwNTf4_8', 'S4000 Axial Insertion - Dual Jumper Wire and 360 Rotary Table')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V4: S7900 NEV -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('GQcnWn7h3jg', 'S7900 Series Odd Form Insertion - New Energy Vehicle PCB Case Study')">
+                    <img src="https://img.youtube.com/vi/GQcnWn7h3jg/hqdefault.jpg" alt="S7900 odd form insertion new energy vehicle PCB" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/f59e0b?text=S7900+NEV+Case';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S7900 NEV</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">Odd-Form Insertion for EV / New-Energy PCBs</h4>
+                    <p class="text-xs text-slate-400 mt-2">Real production case: high-power connectors on automotive-grade boards.</p>
+                    <button onclick="openVideoModal('GQcnWn7h3jg', 'S7900 Series Odd Form Insertion - New Energy Vehicle PCB Case Study')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V5: S-7000T -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('DnEYiLC77Hw', 'S-7000T Terminal Insertion Machine in Production')">
+                    <img src="https://img.youtube.com/vi/DnEYiLC77Hw/hqdefault.jpg" alt="S-7000T terminal insertion machine" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/10b981?text=S-7000T+Terminal';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S-7000T</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">S-7000T Terminal Inserter &mdash; Production Run</h4>
+                    <p class="text-xs text-slate-400 mt-2">Terminal insertion that replaces an entire manual bench crew.</p>
+                    <button onclick="openVideoModal('DnEYiLC77Hw', 'S-7000T Terminal Insertion Machine in Production')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V6: ATF-1002 feeder -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('JmYHPfN69yY', 'ATF-1002 Axial Tape Feeder on JUKI, Panasonic, Yamaha, FUJI, UIC')">
+                    <img src="https://img.youtube.com/vi/JmYHPfN69yY/hqdefault.jpg" alt="ATF-1002 axial tape feeder" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/06b6d4?text=ATF-1002+Feeder';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">ATF-1002</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">Axial Tape Feeder on 3rd-Party Mounters</h4>
+                    <p class="text-xs text-slate-400 mt-2">Feeding axial taped parts into JUKI, Panasonic, YAMAHA, FUJI and UIC platforms.</p>
+                    <button onclick="openVideoModal('JmYHPfN69yY', 'ATF-1002 Axial Tape Feeder on JUKI, Panasonic, Yamaha, FUJI, UIC')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V7: bowl vs belt -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('mtQX516P1ZA', 'Bowl Feeder vs S-MVF01 Belt Feeder - Bulk Component Handling')">
+                    <img src="https://img.youtube.com/vi/mtQX516P1ZA/hqdefault.jpg" alt="Bowl feeder vs belt feeder comparison" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/84cc16?text=Bowl+vs+Belt';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S-MVF01</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">Bowl Feeder vs Belt Feeder &mdash; Bulk Handling</h4>
+                    <p class="text-xs text-slate-400 mt-2">Choosing the right bulk feeding mode for loose odd-form components.</p>
+                    <button onclick="openVideoModal('mtQX516P1ZA', 'Bowl Feeder vs S-MVF01 Belt Feeder - Bulk Component Handling')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+            <!-- V8: S3010A full array -->
+            <div class="glass-panel rounded-xl overflow-hidden border border-slate-800 flex flex-col">
+                <div class="relative aspect-video bg-black cursor-pointer group" onclick="openVideoModal('jI5O2w86n1A', 'S3010A Radial Inserter - Full Array of Taped Radial Components')">
+                    <img src="https://img.youtube.com/vi/jI5O2w86n1A/hqdefault.jpg" alt="S3010A radial inserter full array" class="w-full h-full object-cover group-hover:scale-105 transition duration-300 opacity-90" onerror="this.src='https://placehold.co/600x338/060b14/10b981?text=S3010A+Array';">
+                    <div class="absolute inset-0 bg-slate-950/40 group-hover:bg-transparent transition flex items-center justify-center">
+                        <div class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition"><i class="fa-solid fa-play ml-0.5"></i></div>
+                    </div>
+                    <span class="absolute bottom-2 right-2 bg-black/80 font-mono text-[10px] text-white px-2 py-0.5 rounded">S3010A</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between">
+                    <h4 class="font-bold text-white text-sm line-clamp-2">S3010A Inserting a Full Radial Array</h4>
+                    <p class="text-xs text-slate-400 mt-2">Tape-packaged radial lead components placed continuously at speed.</p>
+                    <button onclick="openVideoModal('jI5O2w86n1A', 'S3010A Radial Inserter - Full Array of Taped Radial Components')" class="mt-3 text-xs text-emerald-400 hover:text-emerald-300 font-semibold flex items-center">Watch Full Video <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Specifications Section -->
+<section id="specifications" class="py-20 bg-slate-900/60 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold">Factory Technical Data</span>
+            <h2 class="text-3xl font-extrabold text-white mt-2">Engineering Parameters at a Glance</h2>
+            <p class="text-slate-400 text-sm mt-2">
+                Consolidated from the official product catalogs in this library. Detailed PDFs are linked in the Catalogs section below.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8">
+            <!-- Main Spec Table -->
+            <div class="lg:col-span-8 glass-panel rounded-2xl overflow-hidden border border-slate-800">
+                <div class="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+                    <span class="font-bold text-white text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-table-list text-emerald-400"></i> THT Automation Specification Matrix
+                    </span>
+                    <span class="text-xs font-mono text-emerald-300 bg-emerald-950/70 px-2.5 py-1 rounded border border-emerald-800">Verified Catalog Data</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-mono">
+                        <tbody class="divide-y divide-slate-800 text-slate-300">
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40 w-1/3">S3010A / S3000 Radial</td><td class="py-3 px-4 text-emerald-300 font-bold">22,000 CPH class &middot; &lt;500 PPM &middot; spans 2.5&ndash;10 mm &middot; PCB up to 400&times;300 mm</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S4000 Axial</td><td class="py-3 px-4 text-white">20,000 CPH class &middot; wire &Oslash;0.3&ndash;0.8 mm &middot; feeders 5&ndash;60 stations &middot; Windows + EtherCAT</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S-2000 Jumper Wire</td><td class="py-3 px-4 text-white">22,000 CPH &middot; wire 0.5&ndash;0.7 mm &middot; span 5&ndash;20 mm &middot; 4-direction &middot; UPS 15 min</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S7020T Terminal</td><td class="py-3 px-4 text-emerald-300 font-bold">12,000 CPH (0.55 s/pt) &middot; 360&deg; insertion &middot; PCB 80&times;80&ndash;380&times;280 mm &middot; SMEMA + ELS</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S7020 Series (T/E/P/S/F)</td><td class="py-3 px-4 text-white">12,000 CPH (odd-form 5,000) &middot; swap feeder + gripper for 5 machine types &middot; terminal 0.5&ndash;1.2 mm thick</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S7900 Odd-Form</td><td class="py-3 px-4 text-white">Clinch &lt;1.0 mm lead &Oslash; &middot; outward/inward/loop/double-loop &middot; JUKI/Panasonic/FUJI/SIPLACE feeders</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S-70LD Power Odd-Form</td><td class="py-3 px-4 text-cyan-300 font-bold">4,000 CPH &middot; &plusmn;0.05 mm &middot; PCB 0.8&ndash;5.0 mm thick &middot; parts 3&times;3&ndash;30&times;30 mm &middot; 0.8 KVA</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">Feeder Platform (9 lines)</td><td class="py-3 px-4 text-lime-400 font-bold">Cycles 0.8&ndash;3 s &middot; precision &plusmn;0.2&ndash;1 mm &middot; cutter 5M cycles &middot; unified 8-pin interface</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">SWS350 Wave Soldering</td><td class="py-3 px-4 text-white">1,500&ndash;1,800 mm/min &middot; dual wave &middot; 4 preheat zones (250&deg;C max, &plusmn;1&ndash;2&deg;C) &middot; ~450 kg solder</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">S-430AC Lead Cutter</td><td class="py-3 px-4 text-white">7,200 CPH &middot; X400/Y280/Z100 mm + 360&deg; R axis &middot; cuts to &Oslash;3.0 mm &middot; $18K class investment</td></tr>
+                            <tr class="hover:bg-slate-900/50"><td class="py-3 px-4 font-semibold text-slate-400 bg-slate-900/40">Power &amp; Air (typical)</td><td class="py-3 px-4 text-white">AC 220V single phase 0.8&ndash;2.0 KVA &middot; air 0.4&ndash;0.6 MPa &middot; Machinery Directive 2006/42/EC</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Ecosystem Sidebar -->
+            <div class="lg:col-span-4 space-y-4">
+                <div class="glass-panel p-6 rounded-2xl border border-emerald-500/40 bg-gradient-to-b from-emerald-950/20 to-slate-900">
+                    <h4 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-emerald-400"></i> Why EMS Factories Choose Us
+                    </h4>
+                    <div class="space-y-2 text-xs font-mono">
+                        <div class="p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-emerald-300 font-bold">&bull; ~1/3 of Universal-class machine pricing</div>
+                        <div class="p-2.5 rounded-lg bg-slate-950/70 border border-slate-800 text-slate-300">&bull; Universal-compatible wear parts &middot; &lt;$100/month</div>
+                        <div class="p-2.5 rounded-lg bg-slate-950/70 border border-slate-800 text-slate-300">&bull; 1 machine replaces 10+ manual stations</div>
+                        <div class="p-2.5 rounded-lg bg-slate-950/70 border border-slate-800 text-slate-300">&bull; Custom design in 5 days &middot; spares in 1 day</div>
+                        <div class="p-2.5 rounded-lg bg-slate-950/70 border border-slate-800 text-slate-300">&bull; Free 24 h sampling + live machine verification</div>
+                        <div class="p-2.5 rounded-lg bg-slate-950/70 border border-slate-800 text-slate-300">&bull; Full turnkey line proposal in 1 month</div>
+                    </div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800">
+                    <h4 class="text-sm font-bold text-white mb-3 flex items-center gap-2"><i class="fa-solid fa-users text-cyan-400"></i> Trusted By Production Lines At</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed font-sans">237+ EMS partners &mdash; including lines operated for GE, Bosch, Philips, Flex, Jabil, Signify, TDK/EPCOS, JUKI, Panasonic, Mirae and YAMAHA ecosystems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Catalogs & Resources Section -->
+<section id="resources" class="py-20 bg-[#060b14] border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold">Engineering Docs &amp; Portals</span>
+            <h2 class="text-3xl font-extrabold text-white mt-2">Product Catalogs &amp; Documentation</h2>
+            <p class="text-slate-400 text-sm mt-2">
+                Download the full PDF catalogs behind every machine on this page, or browse the complete catalog and video boards.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/S3010A%20Radial%20Inserter.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-wider block font-semibold">Catalog PDF</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-cyan-300 transition">S3010A Radial Inserter</h3>
+                <p class="text-xs text-slate-400 mt-2">Full specification catalog for the radial auto insertion platform.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-cyan-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/AXIAL%20INSERTER%20S4000.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-blue-400 uppercase tracking-wider block font-semibold">Catalog PDF</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-blue-300 transition">Axial Inserter S4000</h3>
+                <p class="text-xs text-slate-400 mt-2">Axial &amp; jumper-wire insertion with modular 5&ndash;60 station feeders.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-blue-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/S-2000%20Jumper%20Wire%20Auto%20Insertion.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-lime-500/10 text-lime-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-lime-400 uppercase tracking-wider block font-semibold">Catalog PDF</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-lime-300 transition">S-2000 Jumper Wire Inserter</h3>
+                <p class="text-xs text-slate-400 mt-2">22,000 CPH four-direction bare-wire jumper insertion.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-lime-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/S-70LD%20LED%20Driver%20Odd%20Form%20Auto%20Insertion.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-purple-400 uppercase tracking-wider block font-semibold">Solution PDF</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-purple-300 transition">S-70LD Power Odd-Form</h3>
+                <p class="text-xs text-slate-400 mt-2">LED-driver &amp; power-board solution with per-product recipes.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-purple-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/S-7000E%20Eyelet%20insertion%20solutions.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-teal-400 uppercase tracking-wider block font-semibold">Solution PDF</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-teal-300 transition">S-7000E Eyelet / PIN Insertion</h3>
+                <p class="text-xs text-slate-400 mt-2">4,000 CPH eyelet riveting with flowering-clinch process.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-teal-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/Southern%20Machinery%20Customized%20Feeder%20Nozzle%20Catalog%20V03.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-amber-400 uppercase tracking-wider block font-semibold">Master Catalog V03</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-amber-300 transition">Feeder &amp; Nozzle Catalog</h3>
+                <p class="text-xs text-slate-400 mt-2">All 9 feeder lines, gripper nozzles and SIS smart rack options.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-amber-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/S-WS350%20%20wave%20soldering%20machine.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-file-pdf"></i></div>
+                <span class="text-[10px] font-mono text-red-400 uppercase tracking-wider block font-semibold">Catalog PDF</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-red-300 transition">S-WS350 Wave Soldering</h3>
+                <p class="text-xs text-slate-400 mt-2">Dual-wave lead-free machine, 4 preheat zones, SMEMA line ready.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-red-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+
+            <a href="https://file.autoinsertion.com/public/Blog%20file/auto-insertion-readiness-checklist.pdf" target="_blank" rel="noopener" class="glass-panel p-6 rounded-2xl border border-slate-800 glass-card-hover block group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition"><i class="fa-solid fa-list-check"></i></div>
+                <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-wider block font-semibold">Planning Tool</span>
+                <h3 class="font-bold text-white text-base mt-1 group-hover:text-emerald-300 transition">Insertion Readiness Checklist</h3>
+                <p class="text-xs text-slate-400 mt-2">Audit your boards and BOM before automating through-hole assembly.</p>
+                <span class="mt-4 inline-flex items-center text-xs text-emerald-400 font-semibold">Download PDF <i class="fa-solid fa-arrow-down ml-1.5 text-[10px]"></i></span>
+            </a>
+        </div>
+
+        <!-- Board links row -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" class="glass-panel p-5 rounded-2xl border border-emerald-500/30 glass-card-hover flex items-center gap-4 group">
+                <div class="w-11 h-11 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl"><i class="fa-solid fa-folder-open"></i></div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-white text-sm group-hover:text-emerald-300 transition">Southern Machinery Product Catalog Board</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">460+ catalogs, manuals and solution PDFs across the full SMT + THT portfolio.</p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-emerald-400 text-xs"></i>
+            </a>
+            <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" class="glass-panel p-5 rounded-2xl border border-red-500/30 glass-card-hover flex items-center gap-4 group">
+                <div class="w-11 h-11 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl"><i class="fa-brands fa-youtube"></i></div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-white text-sm group-hover:text-red-300 transition">YouTube Video Board &mdash; 1,248 Factory Videos</h3>
+                    <p class="text-[11px] text-slate-400 mt-0.5">Every machine category, application case and training session, filterable by model.</p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square text-red-400 text-xs"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Blog / Insights Section -->
+<section id="insights" class="py-20 bg-slate-900/60 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-semibold">Field Notes for EMS Decision-Makers</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">Engineering Notes on THT Automation Economics</h2>
+            <p class="text-slate-400 mt-3 text-sm sm:text-base">
+                Three working papers from our Shenzhen engineering team &mdash; the math, the method and the machines behind profitable through-hole automation.
+            </p>
+        </div>
+
+        <div class="space-y-6">
+
+            <!-- Article 1 -->
+            <details class="blog-article glass-panel rounded-2xl border border-slate-800 overflow-hidden" open>
+                <summary class="p-6 sm:p-8 flex items-start justify-between gap-4 hover:bg-slate-900/60 transition">
+                    <div>
+                        <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest font-semibold">Field Note 01 &middot; Manual-to-Auto Economics</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-2 leading-snug">The Hidden Cost of Hand-Placing Through-Hole Components: Why Your SMT Line Outruns Your THT Bench</h3>
+                        <p class="text-sm text-slate-400 mt-2">The 3-second story every EMS plant manager recognizes &mdash; and the three-gate check that tells you exactly when to automate.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down blog-chevron text-slate-500 mt-2 transition-transform duration-300 flex-shrink-0"></i>
+                </summary>
+                <div class="px-6 sm:px-8 pb-8 pt-0 text-slate-300 space-y-5 text-sm leading-relaxed border-t border-slate-800/60">
+                    <div class="pt-6">
+                        <p class="font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-2">The 3-Second Reality Check</p>
+                        <p>Your pick-and-place machine places 50,000 components an hour. Twenty meters down the line, a row of operators hand-inserts capacitors and connectors at a few hundred per hour each &mdash; and your output ledger pretends nothing is wrong. In most high-mix EMS plants, the SMT side is not the constraint. <strong class="text-white">The through-hole bench is.</strong></p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-cyan-300 text-xs uppercase tracking-wider mb-2">Where the Money Actually Leaks</p>
+                        <p>Manual THT insertion quietly bills you four times: rework from bent leads and reversed polarity; scrap from parts pressed into misaligned holes; training cost as labor churns through a 30&ndash;60% annual rotation; and the audit risk of an untraceable process when an automotive or medical customer walks the floor. A single escaped wrong-polarity electrolytic can cost more than a month of an operator&rsquo;s wage &mdash; in customer penalties alone.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-teal-300 text-xs uppercase tracking-wider mb-2">The Three-Gate Automation Check</p>
+                        <p>Before buying any inserter, run your product through three gates. <strong class="text-white">Gate 1 &mdash; Product audit:</strong> list every THT part by package type (radial, axial, terminal, odd-form) and pitch. <strong class="text-white">Gate 2 &mdash; Process audit:</strong> measure your true cost-per-point using the CPI formula (depreciation + spares + labor + maintenance &divide; inserted points), not the marketing brochure&rsquo;s CPH. <strong class="text-white">Gate 3 &mdash; Volume gate:</strong> if a board family stays above roughly 500 boards a day for 6+ months, automation pays; below that, our smart feeders on your existing mounter often beat a dedicated inserter. Boards that pass all three gates are your automation candidates.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-lime-300 text-xs uppercase tracking-wider mb-2">The Machines That Do It</p>
+                        <p>For boards that pass the gates, the vehicle is the S3010A radial / S4000 axial pair plus the S-2000 jumper inserter: under 500 PPM insertion defects, vision-corrected placement, and &mdash; the part your CFO cares about &mdash; <strong class="text-white">100% compatibility with Universal-class wear parts at under $100 a month</strong>, with ROI typically inside 12 months at modest loading.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-amber-300 text-xs uppercase tracking-wider mb-2">Keeping It Profitable Year After Year</p>
+                        <p>Automation is not a one-and-done purchase. The loop that keeps it profitable: free 24-hour sampling before you commit; live video verification of your actual boards running on the actual machine; one-day spares delivery so a worn cutter never stops the line; and a platform that grows with you &mdash; start with one radial head, add axial and odd-form cells as volume climbs, all on the same Windows software your operators already learned.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-purple-300 text-xs uppercase tracking-wider mb-2">Your Next Step</p>
+                        <p>Send us your Gerber and BOM. Within 24 hours you get a free sample video of your board running on the recommended configuration &mdash; then a line consultation with the engineers who built it. <a href="#consultation" class="text-emerald-400 font-semibold hover:text-emerald-300 underline underline-offset-4">Request the free sample run &rarr;</a></p>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Article 2 -->
+            <details class="blog-article glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                <summary class="p-6 sm:p-8 flex items-start justify-between gap-4 hover:bg-slate-900/60 transition">
+                    <div>
+                        <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-semibold">Field Note 02 &middot; Terminal &amp; Odd-Form Strategy</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-2 leading-snug">One Inserter, Ten Bench Workers: The Real Math Behind Terminal and Odd-Form Automation</h3>
+                        <p class="text-sm text-slate-400 mt-2">Terminals, eyelets, transformers and connectors are where THT automation usually dies. Here is the platform rule that keeps it alive.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down blog-chevron text-slate-500 mt-2 transition-transform duration-300 flex-shrink-0"></i>
+                </summary>
+                <div class="px-6 sm:px-8 pb-8 pt-0 text-slate-300 space-y-5 text-sm leading-relaxed border-t border-slate-800/60">
+                    <div class="pt-6">
+                        <p class="font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-2">The Power-Board Problem</p>
+                        <p>Every power-supply, charger and appliance board carries the same crew: reel terminals, eyelets, header pins, tactile switches, relays, transformers. Mixed geometries, mixed packaging, mixed hole patterns. Most plants solve it with a bench of ten hand-loaders &mdash; and lose the same quality lottery every single shift.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-cyan-300 text-xs uppercase tracking-wider mb-2">Why Standard Inserters Fail Here</p>
+                        <p>Radial and axial machines eat taped components happily &mdash; then you hand them a bulk FASTON terminal or a 25 mm transformer and everything stops. That is the real reason &ldquo;automation doesn&rsquo;t work for our products&rdquo; spreads through EMS procurement teams: not because automation cannot place the part, but because nobody built a <strong class="text-white">changeable feeding-and-gripping front end</strong> for it.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-teal-300 text-xs uppercase tracking-wider mb-2">The 5-in-1 Platform Rule</p>
+                        <p>The fix is architectural, not heroic: keep one rigid machine base (X/Y servo table, CCD vision, clinch anvil, Windows control) and treat the feeder stack and gripper head as swappable modules. Feed terminals from reels, eyelets from vibratory bowls, switches from tubes, odd parts from trays. Changeover becomes a <strong class="text-white">feeder-and-gripper swap in under an hour</strong> instead of a new machine purchase.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-lime-300 text-xs uppercase tracking-wider mb-2">The Working Horses</p>
+                        <p>That rule is exactly how our S7020 series is built: one base, five personalities &mdash; <strong class="text-white">S7020T</strong> reel/bulk terminals at 12,000 CPH with 0.55 s cycles, <strong class="text-white">S7020E</strong> eyelets with rivet flowering, <strong class="text-white">S7020P</strong> header pins, <strong class="text-white">S7020S</strong> tactile switches, <strong class="text-white">S7020F</strong> odd-form &mdash; and the S7900 extends the same philosophy to large connectors with four automatic clinch modes that prevent post-wave floating. Priced at roughly one third of Universal-class machines, one cell typically displaces a ten-worker bench.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-amber-300 text-xs uppercase tracking-wider mb-2">The Compounding Loop</p>
+                        <p>Because every variant shares one software and one parts library, each new product family costs you a recipe &mdash; not a machine. Spares stay under $100 a month, MES hooks (QR verification, miss-insertion detection with auto-patch, telemetry export) carry straight across the family, and your second cell installs in days because your operators already run the first.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-purple-300 text-xs uppercase tracking-wider mb-2">Your Next Step</p>
+                        <p>Ship us five sample boards from your worst product family. We return a video of them running on the configured S7020/S7900 cell &mdash; with a cycle-time and head-count analysis. <a href="#consultation" class="text-emerald-400 font-semibold hover:text-emerald-300 underline underline-offset-4">Book the engineering review &rarr;</a></p>
+                    </div>
+                </div>
+            </details>
+
+            <!-- Article 3 -->
+            <details class="blog-article glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                <summary class="p-6 sm:p-8 flex items-start justify-between gap-4 hover:bg-slate-900/60 transition">
+                    <div>
+                        <span class="text-[10px] font-mono text-purple-400 uppercase tracking-widest font-semibold">Field Note 03 &middot; Low-Capex Feeding Route</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-white mt-2 leading-snug">Automate THT Feeding Without Buying a New Inserter: The $6K Feeder That Unlocks Your Idle Mounter</h3>
+                        <p class="text-sm text-slate-400 mt-2">Your SMT machine already has the precision. It is just starving. Nine feeding modes, one interface &mdash; and no new inserter required.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down blog-chevron text-slate-500 mt-2 transition-transform duration-300 flex-shrink-0"></i>
+                </summary>
+                <div class="px-6 sm:px-8 pb-8 pt-0 text-slate-300 space-y-5 text-sm leading-relaxed border-t border-slate-800/60">
+                    <div class="pt-6">
+                        <p class="font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-2">The Idle-Machine Paradox</p>
+                        <p>Walk most EMS floors at 2 a.m. and you will find a $200K mounter waiting for a feeder change while a night-shift worker hand-inserts bulk connectors two benches away. The placement accuracy you need &mdash; &plusmn;0.05 mm at speed &mdash; already exists on your SMT line. What is missing is <strong class="text-white">feeding</strong>: nobody taught your mounter to eat radial tape, tubes, bowls or bulk parts.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-cyan-300 text-xs uppercase tracking-wider mb-2">The Multi-Vendor Trap</p>
+                        <p>The traditional fix is ugly: one vendor&rsquo;s tube feeder, another&rsquo;s bowl, a third&rsquo;s label feeder &mdash; each with its own connector, its own 2&ndash;4 week integration, its own 3&ndash;5 day operator training, and a spare-parts directory nobody can maintain. Mid-volume plants end up with five feeding islands and a changeover process measured in shifts. That is why the automation budget dies in committee, every year.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-teal-300 text-xs uppercase tracking-wider mb-2">One Supplier, Seven Feeding Modes</p>
+                        <p>The framework that fixes it: standardize the <strong class="text-white">interface, not the vendor list</strong>. Every feeder in our platform speaks the same 8-core &Phi;16 mm aviation plug, takes 24V or 220V, runs on 0.4&ndash;0.6 MPa shop air, and switches between IO mode and full self-control. That means a radial-tape feeder, an axial-tape feeder, a dual-rail tube feeder, a double-deck bowl, a bulk belt, a label feeder and a tray feeder all bolt to the same mounter slot &mdash; changeover in minutes, one training day for the whole family, and one spares list.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-lime-300 text-xs uppercase tracking-wider mb-2">The $6K Escape Hatch</p>
+                        <p>Here is the number that rewrites the business case: a dedicated THT inserter runs <strong class="text-white">$50&ndash;70K</strong>. A smart feeder that gives the mounter you already own the same through-hole capability runs <strong class="text-white">$5&ndash;8K</strong> &mdash; cycles of 0.8&ndash;3 seconds, &plusmn;0.2&ndash;1 mm precision, 5-million-cycle cutter life, proven on Panasonic, JUKI, YAMAHA, Mirae, FUJI and SIPLACE platforms. For mid-volume, high-mix boards, that is the entire decision.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-amber-300 text-xs uppercase tracking-wider mb-2">From One Feeder to Smart Material Flow</p>
+                        <p>The platform scales past the machine: SIS7000A / SIS4000A smart racks hold 1,400 / 400 reels and talk MQTT to your MES/ERP via EMQX &mdash; kitting drops to ~15 minutes, and every part is traceable from stores to placement. Start with one feeder on one product; grow into a fully logged, lights-out material flow without ever re-integrating a vendor.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-purple-300 text-xs uppercase tracking-wider mb-2">Your Next Step</p>
+                        <p>Send your component list (or a photo of the bench bins). We reply with the exact feeding-mode map for each part and a bolt-on quote for your mounter brand. <a href="https://wa.me/8613602562576" target="_blank" rel="noopener" class="text-emerald-400 font-semibold hover:text-emerald-300 underline underline-offset-4">Message us the list on WhatsApp &rarr;</a></p>
+                    </div>
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- Consultation Form Section -->
+<section id="consultation" class="py-20 bg-gradient-to-b from-[#060b14] to-slate-950 border-t border-slate-800 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-emerald-500/40 shadow-2xl relative overflow-hidden">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold px-3 py-1 bg-emerald-950/80 rounded-full border border-emerald-800">
+                    Free Engineering Consultation
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-3">
+                    Get Your Boards Running on the Right Machines
+                </h2>
+                <p class="text-slate-400 text-sm mt-2">
+                    Send your PCB size, component mix and daily volume. Within 24 hours our Shenzhen engineering team responds with a machine configuration, cycle-time estimate and a free sampling plan &mdash; no obligation.
+                </p>
+            </div>
+
+            <form id="solutionForm" onsubmit="handleSolutionSubmit(event)" class="space-y-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Your Name *</label>
+                        <input type="text" id="sf-name" required placeholder="e.g. Robert Chen (Production Director)" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Work Email *</label>
+                        <input type="email" id="sf-email" required placeholder="robert@smart-ems.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400 transition">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Company &amp; Location *</label>
+                        <input type="text" id="sf-company" required placeholder="e.g. Flex Plant (Vietnam / Mexico / Poland)" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Phone / WhatsApp *</label>
+                        <input type="text" id="sf-phone" required placeholder="+1 555-0199 or WhatsApp number" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none focus:ring-1 focus:ring-emerald-400 transition">
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Project Scope</label>
+                        <select id="sf-scope" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none transition">
+                            <option value="Complete THT + Wave Soldering Turnkey Line">Complete THT + Wave Turnkey Line</option>
+                            <option value="Single Auto Insertion Machine" selected>Single Insertion Machine</option>
+                            <option value="Smart Feeders for Existing SMT Mounter">Smart Feeders for My Mounter</option>
+                            <option value="Lead Cutting / Forming Automation">Lead Cutting &amp; Forming</option>
+                            <option value="Not sure - need engineering advice">Not Sure &mdash; Need Advice</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Target PCB Size</label>
+                        <input type="text" id="sf-pcb" placeholder="e.g. 280 x 200 mm" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Daily Volume</label>
+                        <select id="sf-volume" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none transition">
+                            <option value="Under 500 boards/day">Under 500 boards / day</option>
+                            <option value="500-2000 boards/day" selected>500&ndash;2,000 boards / day</option>
+                            <option value="2000+ boards/day">2,000+ boards / day</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 uppercase tracking-wider mb-2 font-mono">Component Mix &amp; Current Process</label>
+                    <textarea id="sf-notes" rows="3" placeholder="Tell us your THT component mix (terminals, electrolytics, transformers, connectors...), current manual headcount, and target cycle time..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-400 focus:outline-none transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl text-base font-extrabold text-white bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 hover:opacity-95 shadow-xl shadow-emerald-500/30 transition transform active:scale-95 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Get My Free Configuration &amp; Sampling Plan
+                </button>
+            </form>
+
+            <div class="mt-8 grid sm:grid-cols-3 gap-4 text-center text-xs font-mono">
+                <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+                    <i class="fa-solid fa-clock text-emerald-400 mb-1 block"></i>
+                    <span class="text-slate-300">24 h response with config + video</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+                    <i class="fa-solid fa-gift text-cyan-400 mb-1 block"></i>
+                    <span class="text-slate-300">Free sampling on your real boards</span>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+                    <i class="fa-solid fa-shield-halved text-purple-400 mb-1 block"></i>
+                    <span class="text-slate-300">No obligation, NDA on request</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-12 font-mono">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-3">
+                <span class="text-lg font-bold text-white tracking-wider flex items-center gap-2">
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery" class="h-9 w-auto object-contain" onerror="this.onerror=null; this.style.display='none';">
+                </span>
+                <p class="text-xs text-slate-400 leading-relaxed font-sans">
+                    Shenzhen Southern Machinery Sales And Service Co., Ltd. &mdash; Automation Partner for high-mix EMS factories: THT auto insertion, smart feeding, wave soldering and complete turnkey PCB assembly lines since 2011.
+                </p>
+                <div class="flex space-x-4 text-slate-400 text-base pt-2">
+                    <a href="https://www.linkedin.com/company/smtmachine" target="_blank" rel="noopener" class="hover:text-emerald-400 transition" aria-label="LinkedIn Company Page"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" rel="noopener" class="hover:text-cyan-400 transition" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/smtspecialist" target="_blank" rel="noopener" class="hover:text-sky-400 transition" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/autoinsertion" target="_blank" rel="noopener" class="hover:text-blue-400 transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/c/Smthelping" target="_blank" rel="noopener" class="hover:text-red-500 transition" aria-label="YouTube Channel"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="font-bold text-white uppercase tracking-wider mb-3">Machine Lines</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#machines" class="hover:text-emerald-400 transition">S3010A / S3000 Radial Insertion</a></li>
+                    <li><a href="#machines" class="hover:text-emerald-400 transition">S4000 Axial &amp; Jumper Insertion</a></li>
+                    <li><a href="#machines" class="hover:text-emerald-400 transition">S7020T Terminal Insertion</a></li>
+                    <li><a href="#machines" class="hover:text-emerald-400 transition">S7900 Odd-Form Assembly Cell</a></li>
+                    <li><a href="#feeders" class="hover:text-emerald-400 transition">9-Mode Smart Feeder Platform</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="font-bold text-white uppercase tracking-wider mb-3">Documentation</h5>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" class="hover:text-emerald-400 transition flex items-center gap-1"><i class="fa-solid fa-folder-open"></i> Full Catalog Board</a></li>
+                    <li><a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" class="hover:text-red-400 transition flex items-center gap-1"><i class="fa-brands fa-youtube"></i> YouTube Video Board</a></li>
+                    <li><a href="https://ph.smthelp.com" target="_blank" rel="noopener" class="hover:text-cyan-400 transition flex items-center gap-1"><i class="fa-solid fa-images"></i> Machine Photo Gallery</a></li>
+                    <li><a href="#resources" class="hover:text-amber-400 transition flex items-center gap-1"><i class="fa-solid fa-file-pdf"></i> Product Catalog PDFs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="font-bold text-white uppercase tracking-wider mb-3">Contact Us</h5>
+                <p class="text-xs text-slate-400 leading-relaxed font-sans">
+                    <strong>Email:</strong> <a href="mailto:info@smthelp.com" class="text-emerald-400 hover:text-emerald-300">info@smthelp.com</a><br>
+                    <strong>Phone / WhatsApp:</strong> <a href="https://wa.me/8613602562576" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300">+86 136 0256 2576</a><br>
+                    <strong>Address:</strong> Bao&rsquo;an District, Shenzhen, Guangdong, China<br>
+                    <strong>Website:</strong> <a href="https://www.smthelp.com" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300">www.smthelp.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 gap-2">
+            <span>&copy; 2026 Shenzhen Southern Machinery Sales And Service Co., Ltd. All rights reserved.</span>
+            <span class="text-slate-400">Browse our machine catalog at <a href="https://file.autoinsertion.com" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300">file.autoinsertion.com</a> and find machine photos at <a href="https://ph.smthelp.com" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300">ph.smthelp.com</a>.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- Video Modal Lightbox -->
+<div id="videoModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative w-full max-w-4xl bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+        <div class="p-4 bg-slate-950 border-b border-slate-800 flex justify-between items-center">
+            <span class="font-bold text-white text-sm flex items-center gap-2">
+                <i class="fa-brands fa-youtube text-red-500"></i> <span id="modalVideoTitle">Southern Machinery Factory Video</span>
+            </span>
+            <button onclick="closeVideoModal()" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="relative aspect-video w-full bg-black">
+            <iframe id="videoModalFrame" class="w-full h-full" title="Southern Machinery Machine Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="toastNotification" class="fixed bottom-6 right-24 z-50 hidden max-w-md bg-slate-900 border border-emerald-500/70 p-4 rounded-2xl shadow-2xl text-white transform transition-all duration-300">
+    <div class="flex items-start gap-3">
+        <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg flex-shrink-0">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+            <h5 class="font-bold text-sm text-emerald-400" id="toastTitle">Request Received</h5>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed" id="toastMessage">Thank you! Our engineering team will contact you within 24 hours.</p>
+        </div>
+        <button onclick="hideToast()" class="text-slate-400 hover:text-white text-xs ml-2">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Chatwoot Live Chat (fixed bottom-right) -->
+<script>
+  window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":"Southern Machinery Global Support"};
+  (function(d,t) {
+    var BASE_URL="http://chat.smthelp.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'saMcpgSupcmd1VQwytgPLfbK',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
+<script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    }
+
+    // Video Modal Controller
+    function openVideoModal(videoId, title) {
+        const modal = document.getElementById('videoModal');
+        const frame = document.getElementById('videoModalFrame');
+        const titleElem = document.getElementById('modalVideoTitle');
+
+        if (title) titleElem.innerText = title;
+        frame.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0';
+        modal.classList.remove('hidden');
+    }
+
+    function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const frame = document.getElementById('videoModalFrame');
+        frame.src = '';
+        modal.classList.add('hidden');
+    }
+
+    window.addEventListener('click', (e) => {
+        const modal = document.getElementById('videoModal');
+        if (e.target === modal) closeVideoModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeVideoModal();
+    });
+
+    // Toast
+    function showToast(title, message) {
+        const toast = document.getElementById('toastNotification');
+        document.getElementById('toastTitle').innerText = title;
+        document.getElementById('toastMessage').innerText = message;
+        toast.classList.remove('hidden');
+        setTimeout(() => hideToast(), 7000);
+    }
+
+    function hideToast() {
+        document.getElementById('toastNotification').classList.add('hidden');
+    }
+
+    function handleSolutionSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('sf-name').value;
+        const company = document.getElementById('sf-company').value;
+        const scope = document.getElementById('sf-scope').value;
+
+        showToast(
+            "Free Consultation Booked!",
+            "Thank you, " + name + " from " + company + ". Our Shenzhen engineering team is reviewing your \"" + scope + "\" request and will reply within 24 hours with a machine configuration and free sampling plan. Prefer instant contact? WhatsApp +86 136 0256 2576."
+        );
+        document.getElementById('solutionForm').reset();
+    }
+
+    // 5-Image Hero Carousel Logic
+    let currentSlide = 0;
+    const totalSlides = 5;
+    let heroCarouselTimer = null;
+
+    function updateHeroSlideDisplay() {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        slides.forEach((slide, idx) => {
+            if (idx === currentSlide) {
+                slide.classList.remove('opacity-0', 'z-0');
+                slide.classList.add('opacity-100', 'z-10');
+            } else {
+                slide.classList.remove('opacity-100', 'z-10');
+                slide.classList.add('opacity-0', 'z-0');
+            }
+        });
+
+        dots.forEach((dot, idx) => {
+            if (idx === currentSlide) {
+                dot.className = 'carousel-dot w-2 h-2 rounded-full bg-emerald-400 transition';
+            } else {
+                dot.className = 'carousel-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition';
+            }
+        });
+    }
+
+    function nextHeroSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateHeroSlideDisplay();
+    }
+
+    function prevHeroSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateHeroSlideDisplay();
+    }
+
+    function goToHeroSlide(index) {
+        currentSlide = index;
+        updateHeroSlideDisplay();
+        restartHeroTimer();
+    }
+
+    function initHeroCarousel() {
+        updateHeroSlideDisplay();
+        startHeroTimer();
+    }
+
+    function startHeroTimer() {
+        if (!heroCarouselTimer) {
+            heroCarouselTimer = setInterval(nextHeroSlide, 3500);
+        }
+    }
+
+    function pauseHeroCarousel() {
+        if (heroCarouselTimer) {
+            clearInterval(heroCarouselTimer);
+            heroCarouselTimer = null;
+        }
+    }
+
+    function resumeHeroCarousel() {
+        startHeroTimer();
+    }
+
+    function restartHeroTimer() {
+        pauseHeroCarousel();
+        resumeHeroCarousel();
+    }
+
+    window.addEventListener('load', function() {
+        initHeroCarousel();
+    });
+</script>
+</body>
+</html>

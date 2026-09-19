@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Machinery | SMT Customized Nozzle & Gripper Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Style Configuration */
+        :root {
+            --bg-light: #FFFFFF;
+            --text-light: #111827;
+            --bg-dark: #0D1117; /* GitHub Dark */
+            --text-dark: #F3F4F6;
+            --primary-blue: #1C64F2;
+            --primary-blue-darker: #1A56CC;
+            --secondary-gray-light: #F9FAFB;
+            --secondary-gray-dark: #161B22;
+            --border-light: #E5E7EB;
+            --border-dark: #30363d;
+        }
+
+        html.light {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        html.dark {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Chatbot styling */
+        #dify-chatbot-bubble-button {
+            background-color: #1C64F2 !important;
+        }
+        #dify-chatbot-bubble-window {
+            width: 24rem !important;
+            height: 40rem !important;
+        }
+
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .accordion-button[aria-expanded="true"] + .accordion-content {
+            max-height: 500px; /* Adjust as needed */
+        }
+        .accordion-button[aria-expanded="true"] .accordion-arrow {
+            transform: rotate(180deg);
+        }
+        .accordion-arrow {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-10">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Features</a>
+                    <a href="#solutions" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Solutions</a>
+                    <a href="#faq" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">FAQ</a>
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg transition duration-300">Contact Us</a>
+                </nav>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center">
+                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none">
+                        <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <button id="mobile-menu-button" class="md:hidden ml-4 p-2 rounded-md text-gray-500 dark:text-gray-400">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <a href="#features" class="block py-3 px-4 text-base text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">Features</a>
+            <a href="#solutions" class="block py-3 px-4 text-base text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">Solutions</a>
+            <a href="#faq" class="block py-3 px-4 text-base text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">FAQ</a>
+            <a href="#contact" class="block py-3 px-4 text-base text-blue-600 dark:text-blue-400 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section v4 -->
+        <section class="bg-gray-50 dark:bg-secondary-gray-dark">
+            <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center py-20 lg:py-28">
+                <div class="text-center lg:text-left">
+                    <span class="text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider">SMT CUSTOMIZED SOLUTIONS</span>
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mt-3 mb-6 leading-tight">Stop Adapting to Standard Parts. Get Parts That Adapt to You.</h1>
+                    <p class="text-lg lg:text-xl font-light mb-8 text-gray-600 dark:text-gray-300">We engineer and manufacture high-precision SMT nozzles and grippers tailored to your exact specifications, eliminating production errors and maximizing throughput.</p>
+                    <div class="flex justify-center lg:justify-start">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 text-lg shadow-lg hover:shadow-xl">Start Your Custom Project</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://ph.smthelp.com/images/2024/03/03/SMT-nozzle-Customized-21.jpg" alt="Custom SMT Nozzle" class="rounded-2xl shadow-2xl w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section id="features" class="py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">The Southern Machinery Advantage</h2>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Engineered for performance, built for reliability. Discover the features that set our solutions apart.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start space-x-4 p-2">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Total Customization</h3>
+                            <p class="mt-1 text-gray-600 dark:text-gray-400">From concept to creation, we tailor every aspect of the nozzle or gripper to your specific component and machine.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex items-start space-x-4 p-2">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V4m0 16v-2M8 9l2-2 2 2m-4 6l2 2 2-2"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Premium Materials</h3>
+                            <p class="mt-1 text-gray-600 dark:text-gray-400">Utilizing diamond steel, ceramic, and other high-grade materials for maximum durability and wear resistance.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="flex items-start space-x-4 p-2">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Reduced Downtime</h3>
+                            <p class="mt-1 text-gray-600 dark:text-gray-400">Advanced designs, including self-cleaning mechanisms, minimize clogging and maintenance interruptions.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="flex items-start space-x-4 p-2">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                           <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Guaranteed Compatibility</h3>
+                            <p class="mt-1 text-gray-600 dark:text-gray-400">We ensure seamless integration with your existing SMT machines from JUKI, Fuji, Panasonic, Yamaha, and more.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="flex items-start space-x-4 p-2">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Expert Global Support</h3>
+                            <p class="mt-1 text-gray-600 dark:text-gray-400">Our team offers 24/7 worldwide support, training, and installation to ensure your success.</p>
+                        </div>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="flex items-start space-x-4 p-2">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-900 dark:text-white">Proven ROI</h3>
+                            <p class="mt-1 text-gray-600 dark:text-gray-400">Improve yield, increase throughput, and reduce waste. Our solutions provide a clear and rapid return on investment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="solutions" class="py-20 bg-secondary-gray-light dark:bg-secondary-gray-dark">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Nozzle Card -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://ph.smthelp.com/images/2024/03/03/Customized-Oddform-Nozzle-17.jpg" class="w-full h-64 object-cover" alt="Custom SMT Nozzles">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Custom Nozzles</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">The ultimate solution for precise pick-and-place of any component. We design for specific shapes, sizes, and materials, ensuring a perfect vacuum seal and placement accuracy every time.</p>
+                            <a href="#contact" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Design a Nozzle</a>
+                        </div>
+                    </div>
+                    <!-- Gripper Card -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://ph.smthelp.com/images/2024/03/06/JUKI-Nozzle-Customized-for-Jumper-Wire-Designed-by-SMThelp-2.jpg" class="w-full h-64 object-cover" alt="Custom SMT Grippers">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Mechanical Grippers</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">For components where vacuum is not an option, our mechanical grippers provide a robust and reliable alternative. Ideal for THT parts, large connectors, and heavy components.</p>
+                            <a href="#contact" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Configure a Gripper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Have questions? We have answers. If you don't see your question here, feel free to reach out.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-gray-800 dark:text-gray-200" aria-expanded="false">
+                            What is the lead time for a custom order?
+                            <svg class="accordion-arrow w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 dark:text-gray-400">
+                            <p>Typical lead times for custom nozzle and gripper orders range from 2 to 4 weeks, depending on the complexity of the design. We provide a more precise timeline with your formal quotation.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-gray-800 dark:text-gray-200" aria-expanded="false">
+                            Which SMT machine brands are you compatible with?
+                            <svg class="accordion-arrow w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 dark:text-gray-400">
+                            <p>Our solutions are compatible with all major SMT machine brands, including JUKI, Fuji, Panasonic, Yamaha, Samsung, ASM (Assembleon), and many more. We design the mounting interface to match your specific machine model for seamless plug-and-play integration.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-gray-800 dark:text-gray-200" aria-expanded="false">
+                            What information do you need to start a custom design?
+                            <svg class="accordion-arrow w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 dark:text-gray-400">
+                            <p>To start, we typically need the component's datasheet or a 3D model, the make and model of your SMT machine, and a description of any specific challenges you're facing (e.g., sticking, misalignment). The more information you can provide, the better!</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-button w-full flex justify-between items-center text-left p-5 font-semibold text-gray-800 dark:text-gray-200" aria-expanded="false">
+                            Can you handle very small or delicate components?
+                            <svg class="accordion-arrow w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="accordion-content px-5 pb-5 text-gray-600 dark:text-gray-400">
+                            <p>Absolutely. We specialize in designing nozzles for micro-components like 01005 chips and delicate parts such as LEDs or bare dies. We can use materials like ceramic or PEEK and fine-tune the vacuum port design to ensure gentle yet secure handling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Showcase -->
+        <section id="videos" class="py-20 bg-secondary-gray-light dark:bg-secondary-gray-dark">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">See Our Solutions in Action</h2>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Watch how our customized nozzles and grippers perform in real-world applications.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/ndC_zzfrVZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/mZXI-CS2y4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/HcUFBN4O-Ys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Your Trusted Partner for SMT & THT Solutions</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Established in the bustling tech hub of Shenzhen in 2011, Southern Machinery stands as a testament to innovation, quality, and efficiency in the electronics manufacturing industry. With a keen focus on the Surface Mount Technology (SMT) and Through-Hole Technology (THT) sectors, our company specializes in the design and manufacture of state-of-the-art machinery and equipment aimed at revolutionizing PCB assembly automation processes.</p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Our commitment to enhancing assembly automation extends beyond our machinery. We are pioneers in incorporating the rich manufacturing experience of Shenzhen—a city renowned for its electronics production prowess—into our operations, products, and services. By doing so, we not only offer top-tier equipment but also a wealth of knowledge and best practices to our clients worldwide.</p>
+                        <a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/SMT%20Nozzle%20Supplier%20-Southern%20Machinery.pdf" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                            Download Catalog
+                        </a>
+                    </div>
+                    <div>
+                        <img src="https://ph.smthelp.com/images/2024/03/02/SMT-Customized-Nozzle---Designed-by-Southern-Machinery.png" alt="About Southern Machinery" class="rounded-xl shadow-2xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 dark:bg-black text-gray-300">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-12 mb-4">
+                    <p class="max-w-md">Southern Machinery – Shaping the Future of Electronics Manufacturing. Your trusted partner in delivering excellence and efficiency to your PCB assembly line.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="hover:text-blue-400 transition">Features</a></li>
+                        <li><a href="#solutions" class="hover:text-blue-400 transition">Solutions</a></li>
+                        <li><a href="#about" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/SMT%20Nozzle%20Supplier%20-Southern%20Machinery.pdf" target="_blank" class="hover:text-blue-400 transition">Machine Catalog</a></li>
+                        <li><a href="https://ph.smthelp.com" target="_blank" class="hover:text-blue-400 transition">Photo Gallery</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>+86 136 0256 2576</span>
+                        </li>
+                         <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            <span>info@SMThelp.com</span>
+                        </li>
+                    </ul>
+                    <!-- Social Media -->
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://www.linkedin.com/company/smtmachine" target="_blank" class="text-gray-400 hover:text-white transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg></a>
+                        <a href="https://twitter.com/smtspecialist" target="_blank" class="text-gray-400 hover:text-white transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg></a>
+                        <a href="https://www.facebook.com/autoinsertion" target="_blank" class="text-gray-400 hover:text-white transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg></a>
+                        <a href="https://www.youtube.com/c/Smthelping" target="_blank" class="text-gray-400 hover:text-white transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 0 1-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 0 1-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 0 1 1.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.418zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" clip-rule="evenodd"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Southern Machinery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Dify Chatbot Script -->
+    <script>
+        window.difyChatbotConfig = {
+            token: 'j4mQvbGSBSlvQcv5',
+            baseUrl: 'https://ai.smthelp.com'
+        }
+    </script>
+    <script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer></script>
+    
+    <!-- Page Interaction Script -->
+    <script>
+        // Theme toggle logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const htmlElement = document.documentElement;
+
+        const setTheme = (theme) => {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                htmlElement.classList.remove('light');
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light');
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+                localStorage.setItem('theme', 'light');
+            }
+        };
+
+        const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        setTheme(currentTheme);
+
+        themeToggleBtn.addEventListener('click', () => {
+            setTheme(htmlElement.classList.contains('dark') ? 'light' : 'dark');
+        });
+
+        // Mobile menu logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Accordion logic
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !isExpanded);
+            });
+        });
+
+    </script>
+</body>
+</html>

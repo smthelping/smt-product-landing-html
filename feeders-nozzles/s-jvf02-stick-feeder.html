@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S-JVF02 Vibration Stick Feeder (RS-1) | For JUKI RS-1 | Southern Machinery</title>
+  <meta name="description" content="S-JVF02 Vibration Stick Feeder (RS-1) for JUKI RS-1. 4 input channels. 24V DC, 15W. Designed for stick/tube packaged components feeding in EMS/PCBA lines." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a2e;
+      --text:#e8eefc;
+      --muted:#b8c4e6;
+      --line:rgba(232,238,252,.12);
+      --brand:#58a6ff;
+      --brand2:#7c3aed;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1120px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(88,166,255,.22), transparent 60%),
+        radial-gradient(900px 500px at 80% 0%, rgba(124,58,237,.18), transparent 60%),
+        radial-gradient(1200px 700px at 50% 110%, rgba(34,197,94,.10), transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .brand strong{font-size:14px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{font-size:13px; color:var(--muted)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      border:1px solid var(--line);
+      padding:10px 14px;
+      border-radius:12px;
+      color:var(--text);
+      background: rgba(255,255,255,.02);
+      text-decoration:none;
+      cursor:pointer;
+      transition: transform .08s ease, border-color .15s ease, background .15s ease;
+      font-weight:600;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .btn:hover{border-color:rgba(232,238,252,.22); background:rgba(255,255,255,.04); text-decoration:none}
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{
+      border-color: rgba(88,166,255,.35);
+      background: linear-gradient(135deg, rgba(88,166,255,.22), rgba(124,58,237,.16));
+    }
+    .hero{
+      padding:42px 0 18px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    .hcard, .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hcard{padding:26px}
+    h1{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.15;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      color:var(--muted);
+      margin:0 0 18px;
+      font-size:15px;
+      max-width:62ch;
+    }
+    .badges{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:var(--mono);
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      color: var(--text);
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:var(--brand)}
+    .dot.ok{background:var(--ok)}
+    .dot.warn{background:var(--warn)}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .smallNote{margin-top:10px; font-size:12px; color:var(--muted)}
+    .aside{padding:18px}
+    .aside h3{margin:6px 0 8px; font-size:14px}
+    .kv{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+    .kvItem{
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(15,26,46,.55);
+    }
+    .kvItem .k{font-size:12px; color:var(--muted)}
+    .kvItem .v{font-family:var(--mono); font-size:13px; margin-top:4px}
+    section{padding:18px 0}
+    .sectionTitle{
+      font-size:13px;
+      color:var(--muted);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      margin:0 0 10px;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 900px){ .grid2{grid-template-columns:1fr} }
+    .card{padding:18px}
+    .card h2{margin:0 0 8px; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .list{
+      margin:12px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .list li{
+      padding:12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background: rgba(15,26,46,.50);
+    }
+    .list strong{display:block; font-size:13px; margin-bottom:4px}
+    .list span{display:block; color:var(--muted); font-size:13px}
+    .tableWrap{
+      overflow:auto;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(15,26,46,.55);
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width: 640px;
+    }
+    th, td{
+      padding:12px 14px;
+      border-bottom:1px solid var(--line);
+      vertical-align:top;
+      text-align:left;
+      font-size:13px;
+    }
+    th{
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      font-size:11px;
+      background: rgba(255,255,255,.02);
+    }
+    tr:last-child td{border-bottom:none}
+    .mono{font-family:var(--mono)}
+    .callout{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:16px;
+      border-radius:14px;
+      border:1px solid rgba(88,166,255,.28);
+      background: linear-gradient(135deg, rgba(88,166,255,.12), rgba(124,58,237,.08));
+    }
+    .callout .icon{
+      width:34px; height:34px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-family:var(--mono);
+      font-weight:800;
+      color:var(--text);
+    }
+    .callout .txt strong{display:block; margin-bottom:2px}
+    .callout .txt span{color:var(--muted); font-size:13px}
+    .form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+    @media (max-width: 760px){ .form{grid-template-columns:1fr} }
+    label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+    input, textarea, select{
+      width:100%;
+      padding:11px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(11,18,32,.55);
+      color:var(--text);
+      outline:none;
+      font-size:13px;
+    }
+    textarea{min-height:92px; resize:vertical}
+    .formActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    footer{
+      padding:26px 0 34px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:18px;
+    }
+    .footGrid{
+      display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      align-items:center;
+    }
+    .tiny{font-size:12px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      font-size:12px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <strong>Southern Machinery</strong>
+          <span>Dedicated SMT / THT Feeder Manufacturer</span>
+        </div>
+
+        <nav class="navlinks" aria-label="Page navigation">
+          <a href="#overview">Overview</a>
+          <a href="#specs">Specifications</a>
+          <a href="#integration">Integration</a>
+          <a href="#resources">Resources</a>
+          <a href="#quote">Request Quote</a>
+        </nav>
+
+        <a class="btn btn-primary" href="#quote">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="hcard">
+            <div class="sectionTitle">Technical Landing Page</div>
+            <h1>S-JVF02 Vibration Stick Feeder (RS-1)</h1>
+            <p class="sub">
+              A vibration-based stick/tube feeder designed for feeding <strong>stick tube packaged components</strong>
+              on <strong>JUKI RS-1</strong> placement lines. Built for EMS/PCBA environments where stable feeding and
+              reduced operator intervention directly support uptime.
+            </p>
+
+            <div class="badges" aria-label="Key specs badges">
+              <div class="badge"><span class="dot ok"></span><span class="mono">4 Input Channels</span></div>
+              <div class="badge"><span class="dot"></span><span class="mono">Tube: 33–3010 mm</span></div>
+              <div class="badge"><span class="dot"></span><span class="mono">Stick Width: 66 mm</span></div>
+              <div class="badge"><span class="dot warn"></span><span class="mono">24V DC / 15W</span></div>
+              <div class="badge"><span class="dot"></span><span class="mono">365×66×125 mm</span></div>
+              <div class="badge"><span class="dot"></span><span class="mono">6.5 kg</span></div>
+            </div>
+
+            <div class="ctaRow">
+              <a class="btn btn-primary" href="#quote">Get Quotation & Lead Time</a>
+              <a class="btn" href="https://youtu.be/_uk3LCJXSJM?si=jzHZ3RWOUmDHugdr" target="_blank" rel="noopener">Watch Demo Video</a>
+              <a class="btn" href="https://file.autoinsertion.com/SMT%20machine%203D%20Drawing%20in%20Html/JUKI%20RS-1%20Vibration%20Feeder%2024VDC%20connecter%20V2.html" target="_blank" rel="noopener">Open Catalog / Drawing</a>
+            </div>
+
+            <div class="smallNote">
+              Designed for: <span class="mono">JUKI RS-1</span> | Power: <span class="mono">24V DC</span>
+            </div>
+          </div>
+
+          <aside class="card aside" aria-label="At-a-glance summary">
+            <div class="sectionTitle">At a glance</div>
+            <h3>What it is</h3>
+            <p>A dedicated vibration stick feeder for handling tube/stick packaged components on RS-1 lines.</p>
+
+            <div class="kv">
+              <div class="kvItem">
+                <div class="k">Compatibility</div>
+                <div class="v">JUKI RS-1</div>
+              </div>
+              <div class="kvItem">
+                <div class="k">Electrical</div>
+                <div class="v">24V DC / 15W</div>
+              </div>
+              <div class="kvItem">
+                <div class="k">Mechanical</div>
+                <div class="v">365 × 66 × 125 mm / 6.5 kg</div>
+              </div>
+              <div class="kvItem">
+                <div class="k">Feeding</div>
+                <div class="v">4 Channels / 33–3010 mm tubes</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="wrap">
+        <div class="grid2">
+          <div class="card">
+            <div class="sectionTitle">Overview</div>
+            <h2>Designed for EMS production realities</h2>
+            <p>
+              In EMS environments, tube/stick components can create interruptions due to reloading, handling, and
+              feeding instability. S-JVF02 targets stable feeding behavior using a vibration-based mechanism and
+              provides <strong>4 input channels</strong> to reduce reload frequency.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="sectionTitle">Typical Objectives</div>
+            <h2>Operational outcomes</h2>
+            <ul class="list">
+              <li>
+                <strong>Reduce line interruptions</strong>
+                <span>Minimize stop-and-reload events associated with tube components.</span>
+              </li>
+              <li>
+                <strong>Support high-mix workflows</strong>
+                <span>Shorter recovery and smoother operation during frequent changeovers.</span>
+              </li>
+              <li>
+                <strong>Lower manual handling risk</strong>
+                <span>Less repeated handling during feeding and reloading cycles.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="callout">
+          <div class="icon">RS-1</div>
+          <div class="txt">
+            <strong>Compatibility</strong>
+            <span>S-JVF02 is specified as compatible with <span class="mono">JUKI RS-1</span>. For other machine platforms, share your interface requirements for evaluation.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs">
+      <div class="wrap">
+        <div class="sectionTitle">Technical</div>
+        <h2 style="margin:0 0 10px; font-size:20px;">Specifications</h2>
+
+        <div class="tableWrap" role="region" aria-label="Specifications table">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Specification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Model</td>
+                <td class="mono">S-JVF02 Vibration Stick Feeder (RS-1)</td>
+              </tr>
+              <tr>
+                <td>Input channel</td>
+                <td class="mono">4 Input Channels</td>
+              </tr>
+              <tr>
+                <td>Tube component range</td>
+                <td class="mono">33 mm – 3010 mm</td>
+              </tr>
+              <tr>
+                <td>Stick width</td>
+                <td class="mono">66 mm</td>
+              </tr>
+              <tr>
+                <td>Overall size (L × W × H)</td>
+                <td class="mono">365 × 66 × 125 mm</td>
+              </tr>
+              <tr>
+                <td>Voltage</td>
+                <td class="mono">24V DC</td>
+              </tr>
+              <tr>
+                <td>Power</td>
+                <td class="mono">15W</td>
+              </tr>
+              <tr>
+                <td>Weight</td>
+                <td class="mono">6.5 kg</td>
+              </tr>
+              <tr>
+                <td>Model compatible</td>
+                <td class="mono">JUKI RS-1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="tiny" style="margin:10px 2px 0; color:var(--muted);">
+          Notes: Specifications are taken from the product info provided. If you need connector type, mounting interface, or signal/control details, add them to this section as an “Interface” table.
+        </p>
+      </div>
+    </section>
+
+    <section id="integration">
+      <div class="wrap">
+        <div class="grid2">
+          <div class="card">
+            <div class="sectionTitle">Integration</div>
+            <h2>Line-side requirements</h2>
+            <ul class="list">
+              <li>
+                <strong>Power</strong>
+                <span>Provide <span class="mono">24V DC</span> supply. Power consumption: <span class="mono">15W</span>.</span>
+              </li>
+              <li>
+                <strong>Mechanical space planning</strong>
+                <span>Allocate space per envelope: <span class="mono">365 × 66 × 125 mm</span>; weight: <span class="mono">6.5 kg</span>.</span>
+              </li>
+              <li>
+                <strong>Process planning</strong>
+                <span>Define operator workflow for tube loading and channel usage for your product mix.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="sectionTitle">Use Cases</div>
+            <h2>Suitable applications</h2>
+            <p>
+              Designed for EMS/PCBA production where tube/stick packaged components are used, including:
+            </p>
+            <ul class="list">
+              <li><strong>High-mix, low-volume EMS</strong><span>Frequent changeovers and diverse BOMs.</span></li>
+              <li><strong>Consumer / Industrial electronics</strong><span>Operational stability requirements.</span></li>
+              <li><strong>Automotive / Medical EMS</strong><span>Process discipline and handling control (application dependent).</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="wrap">
+        <div class="grid2">
+          <div class="card">
+            <div class="sectionTitle">Resources</div>
+            <h2>Engineering references</h2>
+            <ul class="list">
+              <li>
+                <strong>Product Overview Page</strong>
+                <span><a href="https://www.smthelp.com/stick-feeder-for-jukisamsungyamahafuji-smt-chip-mounter.html" target="_blank" rel="noopener">https://www.smthelp.com/stick-feeder-for-jukisamsungyamahafuji-smt-chip-mounter.html</a></span>
+              </li>
+              <li>
+                <strong>Catalog / 3D Drawing</strong>
+                <span><a href="https://file.autoinsertion.com/SMT%20machine%203D%20Drawing%20in%20Html/JUKI%20RS-1%20Vibration%20Feeder%2024VDC%20connecter%20V2.html" target="_blank" rel="noopener">Open drawing link</a></span>
+              </li>
+              <li>
+                <strong>Demo Video</strong>
+                <span><a href="https://youtu.be/_uk3LCJXSJM?si=jzHZ3RWOUmDHugdr" target="_blank" rel="noopener">https://youtu.be/_uk3LCJXSJM?si=jzHZ3RWOUmDHugdr</a></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card" id="quote">
+            <div class="sectionTitle">Request Quote</div>
+            <h2>Quotation & technical confirmation</h2>
+            <p>
+              Provide the details below and your team can confirm configuration and lead time.
+              (This form is front-end only; connect to your CRM/email endpoint as needed.)
+            </p>
+
+            <form class="form" onsubmit="return false;">
+              <div>
+                <label for="company">Company</label>
+                <input id="company" name="company" placeholder="EMS Factory / Company Name" />
+              </div>
+              <div>
+                <label for="name">Contact Name</label>
+                <input id="name" name="name" placeholder="Full Name" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@company.com" />
+              </div>
+              <div>
+                <label for="country">Country / City</label>
+                <input id="country" name="country" placeholder="e.g., Malaysia / Penang" />
+              </div>
+
+              <div>
+                <label for="machine">Machine Model</label>
+                <input id="machine" name="machine" value="JUKI RS-1" />
+              </div>
+              <div>
+                <label for="qty">Quantity</label>
+                <input id="qty" name="qty" placeholder="e.g., 1 / 2 / 5" />
+              </div>
+
+              <div style="grid-column: 1 / -1;">
+                <label for="tube">Tube Component Range Used (min/max)</label>
+                <input id="tube" name="tube" placeholder="e.g., 80 mm – 240 mm (tube length)" />
+              </div>
+
+              <div style="grid-column: 1 / -1;">
+                <label for="msg">Notes</label>
+                <textarea id="msg" name="msg" placeholder="Add any requirements: connector preference, mounting constraints, target delivery date, etc."></textarea>
+              </div>
+
+              <div style="grid-column: 1 / -1;">
+                <div class="formActions">
+                  <button class="btn btn-primary" type="button" onclick="copyInquiry()">Copy Inquiry Text</button>
+                  <a class="btn" href="https://www.smthelp.com/" target="_blank" rel="noopener">Visit smthelp.com</a>
+                </div>
+                <div class="smallNote">
+                  Tip: Use “Copy Inquiry Text” and paste into email/WhatsApp to speed up RFQ.
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="card">
+          <div class="sectionTitle">FAQ</div>
+          <h2>Common technical questions</h2>
+          <ul class="list">
+            <li>
+              <strong>Is S-JVF02 compatible with machines other than JUKI RS-1?</strong>
+              <span>This model is specified for <span class="mono">JUKI RS-1</span>. If you need other platforms (JUKI/Yamaha/FUJI/Panasonic/ASM/Mirae, etc.), provide machine model and interface requirements for evaluation.</span>
+            </li>
+            <li>
+              <strong>What components is it intended for?</strong>
+              <span>Stick/tube packaged components (tube components). Supported tube length range: <span class="mono">33–3010 mm</span>.</span>
+            </li>
+            <li>
+              <strong>What electrical power is required?</strong>
+              <span><span class="mono">24V DC</span> input, <span class="mono">15W</span> power consumption.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footGrid">
+        <div>
+          <div style="font-weight:700; color:var(--text);">Southern Machinery</div>
+          <div class="tiny">Dedicated SMT / THT feeder manufacturer | <a href="https://www.smthelp.com/" target="_blank" rel="noopener">www.smthelp.com</a></div>
+        </div>
+        <div class="pill"><span class="dot"></span><span>Product: <span class="mono">S-JVF02 (RS-1)</span></span></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function copyInquiry(){
+      const company = document.getElementById('company').value || '[Company]';
+      const name = document.getElementById('name').value || '[Name]';
+      const email = document.getElementById('email').value || '[Email]';
+      const country = document.getElementById('country').value || '[Country/City]';
+      const machine = document.getElementById('machine').value || 'JUKI RS-1';
+      const qty = document.getElementById('qty').value || '[Qty]';
+      const tube = document.getElementById('tube').value || '[Tube length range used]';
+      const msg = document.getElementById('msg').value || '[Notes]';
+
+      const text =
+`RFQ / Technical Confirmation - S-JVF02 Vibration Stick Feeder (RS-1)
+
+Company: ${company}
+Contact: ${name}
+Email: ${email}
+Country/City: ${country}
+
+Machine model: ${machine}
+Required quantity: ${qty}
+Tube component range used (min/max): ${tube}
+
+Notes:
+${msg}
+
+Links:
+Product page: https://www.smthelp.com/stick-feeder-for-jukisamsungyamahafuji-smt-chip-mounter.html
+Catalog/Drawing: https://file.autoinsertion.com/SMT%20machine%203D%20Drawing%20in%20Html/JUKI%20RS-1%20Vibration%20Feeder%2024VDC%20connecter%20V2.html
+Demo video: https://youtu.be/_uk3LCJXSJM?si=jzHZ3RWOUmDHugdr
+`;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Inquiry text copied to clipboard.');
+      }).catch(() => {
+        alert('Could not access clipboard. Please copy manually from the text in your browser console.');
+        console.log(text);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMT Odd Form Automation | Strategic Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- 
+        PALETTE: "Vibrant Tech"
+        Based on "Professional & Stylish" requirements:
+        - Primary Blue: #2563EB (Electric Blue)
+        - Secondary Purple: #9333EA (Vibrant Purple)
+        - Accent Teal: #06B6D4 (Bright Teal)
+        - Dark Contrast: #0F172A (Slate 900)
+        - Background: #F8FAFC (Slate 50)
+    -->
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+        
+        /* CHART CONTAINER STYLING (MANDATORY) 
+           Ensures responsive behavior and strictly controls max dimensions.
+        */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Limits width on large screens */
+            margin: 0 auto;   /* Centers horizontally */
+            height: 350px;    /* Default Height */
+            max-height: 400px;
+        }
+
+        /* Responsive height adjustments */
+        @media (min-width: 768px) {
+            .chart-container { height: 400px; }
+        }
+
+        /* Flowchart CSS Connectors (NO SVG) */
+        .flow-line-vertical {
+            width: 2px;
+            background-color: #94A3B8;
+            margin: 0 auto;
+        }
+        .flow-line-horizontal {
+            height: 2px;
+            background-color: #94A3B8;
+            width: 100%;
+        }
+        
+        /* Card Hover Effects */
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <!-- 
+        NARRATIVE PLAN (SUMMARY):
+        1. Intro: Define the "Odd Form" bottleneck.
+        2. The Challenge: Visualizing the cost/failure impact (Donut Chart).
+        3. The Solution Logic: A CSS-based Decision Tree for Nozzle vs. Gripper.
+        4. Materials: Radar chart comparing PEEK, Steel, Aluminum.
+        5. Process: 6-Step Manufacturing Timeline (HTML Cards).
+        6. Impact: Quantifying efficiency gains (Bar Chart).
+        
+        CONFIRMATION: NO SVG USED. NO MERMAID USED.
+    -->
+</head>
+<body class="antialiased">
+
+    <!-- HEADER SECTION -->
+    <header class="bg-slate-900 text-white pt-24 pb-12 px-4 shadow-2xl relative overflow-hidden">
+        
+        <!-- Logo (Top Left) -->
+        <a href="https://www.smthelp.com" target="_blank" class="absolute top-4 left-4 md:top-8 md:left-8 z-50 hover:opacity-90 transition-opacity">
+            <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-10 md:h-14 w-auto object-contain">
+        </a>
+
+        <!-- Abstract CSS Decoration (No SVG) -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase shadow-lg">
+                Southern Machinery Research
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight">
+                Mastering <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Odd Form</span><br>SMT Automation
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                A definitive guide to designing high-precision custom nozzles and grippers for irregular electronic components. Bridging the gap between manual insertion and full automation.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-16">
+
+        <!-- SECTION 1: THE BOTTLENECK -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <div class="border-l-4 border-blue-600 pl-6">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">The "Odd" Challenge</h2>
+                    <p class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Why automation fails here</p>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    Odd Form Components (connectors, relays, shields) represent the final frontier of SMT automation. While standard chips are placed at 50,000 CPH, these irregular parts cause <strong>disproportionate downtime</strong> due to center-of-gravity offsets and lack of flat suction surfaces.
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-slate-100">
+                    <h3 class="font-bold text-slate-700 mb-4">Production Line Impact</h3>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <div class="text-3xl font-extrabold text-blue-600">40%</div>
+                            <div class="text-xs text-slate-500 mt-1 uppercase font-bold">Of Line Stoppages</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <div class="text-3xl font-extrabold text-purple-600">3x</div>
+                            <div class="text-xs text-slate-500 mt-1 uppercase font-bold">Cost vs. Automation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border-t-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Defect Distribution in Assembly</h3>
+                    <p class="text-slate-500 text-sm mb-6">Analysis of assembly defects reveals that despite lower volume, Odd Form components drive the majority of placement errors.</p>
+                    
+                    <!-- CHART CONTAINER -->
+                    <div class="chart-container">
+                        <canvas id="challengeChart"></canvas>
+                    </div>
+                    
+                    <div class="mt-4 text-center text-sm text-slate-400 italic">
+                        Source: Internal Failure Analysis Data (2024)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DECISION LOGIC (FLOWCHART) -->
+        <section class="bg-slate-900 text-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden relative">
+            <!-- Background element -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-900 rounded-full filter blur-3xl opacity-20 -mr-20 -mt-20"></div>
+
+            <div class="relative z-10 text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Nozzle or Gripper?</h2>
+                <p class="text-slate-300 max-w-2xl mx-auto">
+                    The most critical engineering decision. We prioritize vacuum for speed, but mechanical gripping is mandatory for complex geometries. Use this logic gate to select your tooling.
+                </p>
+            </div>
+
+            <!-- HTML/CSS FLOWCHART (NO SVG) -->
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg border-2 border-blue-400 z-20">
+                        Start: Component Analysis
+                    </div>
+                    <div class="h-8 flow-line-vertical"></div>
+                    
+                    <!-- Decision 1 -->
+                    <div class="bg-slate-800 border-2 border-slate-600 text-slate-200 py-4 px-6 rounded-lg shadow-md z-20 max-w-xs text-center">
+                        Is there a flat top surface > 3mm²?
+                    </div>
+                    
+                    <!-- Branching Lines -->
+                    <div class="relative w-full max-w-lg h-8">
+                        <div class="absolute left-1/2 top-0 h-4 flow-line-vertical"></div> <!-- Vertical from Decision -->
+                        <div class="absolute top-4 left-0 right-0 flow-line-horizontal"></div> <!-- Horizontal Bar -->
+                        <div class="absolute left-0 top-4 h-8 flow-line-vertical"></div> <!-- Left Drop -->
+                        <div class="absolute right-0 top-4 h-8 flow-line-vertical"></div> <!-- Right Drop -->
+                    </div>
+
+                    <!-- Level 2 Containers -->
+                    <div class="grid grid-cols-2 w-full max-w-lg gap-8">
+                        
+                        <!-- Left Path (YES) -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded mb-2">YES</div>
+                            <div class="bg-slate-800 border border-slate-600 p-3 rounded text-sm text-center w-full">
+                                Check Center of Gravity
+                            </div>
+                            <div class="h-6 flow-line-vertical"></div>
+                            <div class="bg-white text-slate-900 p-4 rounded-lg shadow-xl w-full text-center border-b-4 border-blue-500 hover-lift">
+                                <div class="text-2xl mb-1">⚡</div>
+                                <div class="font-bold">Custom Nozzle</div>
+                                <div class="text-xs text-slate-500">Vacuum + Soft Pad</div>
+                            </div>
+                        </div>
+
+                        <!-- Right Path (NO) -->
+                        <div class="flex flex-col items-center">
+                            <div class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded mb-2">NO</div>
+                            <div class="bg-slate-800 border border-slate-600 p-3 rounded text-sm text-center w-full">
+                                Check Side Clearance
+                            </div>
+                            <div class="h-6 flow-line-vertical"></div>
+                            <div class="bg-white text-slate-900 p-4 rounded-lg shadow-xl w-full text-center border-b-4 border-purple-500 hover-lift">
+                                <div class="text-2xl mb-1">🔧</div>
+                                <div class="font-bold">Mech. Gripper</div>
+                                <div class="text-xs text-slate-500">Pneumatic Jaws</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MATERIAL SCIENCE (RADAR CHART) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="order-2 md:order-1 space-y-6">
+                <div class="border-l-4 border-purple-600 pl-6">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Material Engineering</h2>
+                    <p class="text-sm font-semibold text-purple-600 uppercase tracking-wide">Balancing ESD, Weight & Wear</p>
+                </div>
+                <p class="text-slate-600">
+                    We don't just use steel. The choice of material dictates the lifespan of the tool and the safety of the component. <strong>PEEK</strong> (Ceramic Filled) is our standard for ESD safety and low inertia, while <strong>Tool Steel</strong> is reserved for high-wear gripper jaws.
+                </p>
+                
+                <div class="space-y-4 mt-6">
+                    <!-- Legend Item 1 -->
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-slate-100">
+                        <div class="w-4 h-4 rounded-full bg-purple-500 mr-4"></div>
+                        <div>
+                            <span class="block font-bold text-slate-700">PEEK (ESD Safe)</span>
+                            <span class="text-xs text-slate-500">Best for: Nozzle Tips, Delicate Grippers</span>
+                        </div>
+                    </div>
+                    <!-- Legend Item 2 -->
+                    <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-slate-100">
+                        <div class="w-4 h-4 rounded-full bg-teal-400 mr-4"></div>
+                        <div>
+                            <span class="block font-bold text-slate-700">Stainless Steel (304)</span>
+                            <span class="text-xs text-slate-500">Best for: Rigid Body Structure, Cleanroom</span>
+                        </div>
+                    </div>
+                     <!-- Legend Item 3 -->
+                     <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-slate-100">
+                        <div class="w-4 h-4 rounded-full bg-blue-600 mr-4"></div>
+                        <div>
+                            <span class="block font-bold text-slate-700">Aluminum (7075)</span>
+                            <span class="text-xs text-slate-500">Best for: Moving Parts (Low Inertia)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualization -->
+            <div class="order-1 md:order-2 bg-white rounded-2xl shadow-xl p-6 border-t-4 border-purple-500">
+                <h3 class="text-xl font-bold text-center text-slate-800 mb-6">Performance Matrix</h3>
+                <div class="chart-container">
+                    <canvas id="materialRadar"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: MANUFACTURING TIMELINE -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-800">Manufacturing Lifecycle</h2>
+                <p class="text-slate-500 mt-2">From concept to 500-cycle validation test</p>
+            </div>
+
+            <!-- Grid Layout Timeline -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-blue-500 hover-lift relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
+                    <h4 class="text-lg font-bold text-blue-600 mb-2">3D Design</h4>
+                    <p class="text-sm text-slate-600">Interface matching for Fuji/Panasonic heads. Design for Manufacturing (DFM) check.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-blue-500 hover-lift relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</div>
+                    <h4 class="text-lg font-bold text-blue-600 mb-2">Simulation</h4>
+                    <p class="text-sm text-slate-600">Vacuum flow dynamics and stress analysis (FEA) to ensure grip reliability.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-purple-500 hover-lift relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</div>
+                    <h4 class="text-lg font-bold text-purple-600 mb-2">CNC Fab</h4>
+                    <p class="text-sm text-slate-600">Precision machining (+/- 0.01mm) of metallic bodies and PEEK tips.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-purple-500 hover-lift relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">4</div>
+                    <h4 class="text-lg font-bold text-purple-600 mb-2">Assembly</h4>
+                    <p class="text-sm text-slate-600">Installation of springs, filters, and bonding of soft contact pads.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-teal-500 hover-lift relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">5</div>
+                    <h4 class="text-lg font-bold text-teal-600 mb-2">QC Inspection</h4>
+                    <p class="text-sm text-slate-600">Microscope visual check and ESD resistance verification.</p>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-teal-500 hover-lift relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold shadow-lg">6</div>
+                    <h4 class="text-lg font-bold text-teal-600 mb-2">Validation</h4>
+                    <p class="text-sm text-slate-600">500-cycle dry run test on machine to verify Cpk and pickup rate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: IMPACT (BAR CHART) -->
+        <section class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6 text-teal-400">The Efficiency Gap</h2>
+                    <p class="text-slate-300 mb-8 leading-relaxed">
+                        Data from recent Automotive Relay Assembly lines proves the ROI of custom tooling. We achieve near-standard speeds with complex parts, drastically outperforming manual labor and universal nozzles.
+                    </p>
+                    <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm border border-white/10 mb-4">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">Target Cpk</div>
+                        <div class="text-3xl font-bold text-white">1.67</div>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm border border-white/10">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">Pickup Success</div>
+                        <div class="text-3xl font-bold text-green-400">99.98%</div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 bg-white rounded-xl p-6 shadow-inner">
+                    <h3 class="text-slate-800 font-bold mb-4">Cycle Time & Accuracy Comparison</h3>
+                    <!-- CHART CONTAINER -->
+                    <div class="chart-container">
+                        <canvas id="impactChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 mt-20">
+        <div class="max-w-7xl mx-auto py-12 px-4 text-center">
+            
+            <p class="font-bold text-slate-800 text-lg mb-2">Southern Machinery</p>
+            <p class="text-slate-500">Expert Engineering for SMT Automation</p>
+            
+            <div class="flex justify-center space-x-6 text-sm text-blue-600 font-semibold mt-4 mb-8">
+                <span>Design</span>
+                <span>Fabrication</span>
+                <span>Process Consultation</span>
+            </div>
+
+            <!-- Call to Action Section -->
+            <div class="border-t border-slate-100 pt-8">
+                <h4 class="text-slate-800 font-bold text-xl mb-6">Connect & Explore</h4>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <a href="https://www.linkedin.com/company/smtmachine" target="_blank" class="px-5 py-2.5 bg-blue-50 text-blue-700 font-medium rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">LinkedIn Company</a>
+                    <a href="https://cn.linkedin.com/in/smtsupplier" target="_blank" class="px-5 py-2.5 bg-blue-50 text-blue-700 font-medium rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300">LinkedIn Profile</a>
+                    <a href="https://twitter.com/smtspecialist" target="_blank" class="px-5 py-2.5 bg-sky-50 text-sky-600 font-medium rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300">Twitter</a>
+                    <a href="https://www.facebook.com/autoinsertion" target="_blank" class="px-5 py-2.5 bg-indigo-50 text-indigo-700 font-medium rounded-full hover:bg-indigo-600 hover:text-white transition-all duration-300">Facebook</a>
+                    <a href="https://www.youtube.com/c/Smthelping" target="_blank" class="px-5 py-2.5 bg-red-50 text-red-600 font-medium rounded-full hover:bg-red-600 hover:text-white transition-all duration-300">YouTube</a>
+                </div>
+
+                <div class="space-y-3 text-slate-600 text-base">
+                    <p>Browse our machine catalog at <a href="https://file.autoinsertion.com" target="_blank" class="text-blue-600 font-bold hover:underline">file.autoinsertion.com</a></p>
+                    <p>Find machine photos at <a href="https://ph.smthelp.com" target="_blank" class="text-blue-600 font-bold hover:underline">ph.smthelp.com</a></p>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-400 mt-12">© 2024 Southern Machinery. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- CHART.JS CONFIGURATION -->
+    <script>
+        // --------------------------------------------------------
+        // UTILITY FUNCTIONS (MANDATORY LABEL WRAPPING)
+        // --------------------------------------------------------
+        
+        // Function to split long labels into arrays for multiline support
+        const splitLabel = (label) => {
+            const MAX_LENGTH = 16;
+            if (label.length <= MAX_LENGTH) return label;
+            
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= MAX_LENGTH) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        // Standardized Tooltip Callback (MANDATORY)
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    const label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    }
+                    return label;
+                }
+            }
+        };
+
+        // Global Chart Defaults for "Inter" font and Colors
+        Chart.defaults.font.family = 'Inter';
+        Chart.defaults.color = '#64748B';
+        Chart.defaults.borderColor = '#E2E8F0';
+
+        // --------------------------------------------------------
+        // CHART 1: CHALLENGE (DOUGHNUT)
+        // --------------------------------------------------------
+        const ctxChallenge = document.getElementById('challengeChart').getContext('2d');
+        const challengeLabels = ['Odd Form Misalignment', 'Drop/Pickup Failure', 'Standard Solder Defects', 'Other'];
+        
+        new Chart(ctxChallenge, {
+            type: 'doughnut',
+            data: {
+                labels: challengeLabels.map(splitLabel),
+                datasets: [{
+                    data: [35, 25, 30, 10],
+                    backgroundColor: [
+                        '#2563EB', // Blue (Focus)
+                        '#9333EA', // Purple (Focus)
+                        '#CBD5E1', // Gray (Context)
+                        '#F1F5F9'  // Light Gray
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 15
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { boxWidth: 12, padding: 20 }
+                    },
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+
+        // --------------------------------------------------------
+        // CHART 2: MATERIALS (RADAR)
+        // --------------------------------------------------------
+        const ctxRadar = document.getElementById('materialRadar').getContext('2d');
+        const radarLabels = ['ESD Protection', 'Wear Resistance', 'Weight (Inertia)', 'Cost Efficiency', 'Vacuum Seal', 'Machinability'];
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: radarLabels.map(splitLabel),
+                datasets: [
+                    {
+                        label: 'PEEK (Plastic)',
+                        data: [10, 6, 10, 5, 9, 8],
+                        fill: true,
+                        backgroundColor: 'rgba(147, 51, 234, 0.2)', // Purple
+                        borderColor: '#9333EA',
+                        pointBackgroundColor: '#9333EA',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#9333EA'
+                    },
+                    {
+                        label: 'Stainless Steel',
+                        data: [4, 9, 3, 8, 7, 5],
+                        fill: true,
+                        backgroundColor: 'rgba(6, 182, 212, 0.2)', // Teal
+                        borderColor: '#06B6D4',
+                        pointBackgroundColor: '#06B6D4',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#06B6D4'
+                    },
+                    {
+                        label: 'Aluminum',
+                        data: [5, 7, 8, 7, 6, 9],
+                        fill: true,
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)', // Blue
+                        borderColor: '#2563EB',
+                        pointBackgroundColor: '#2563EB',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#2563EB'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: '#E2E8F0' },
+                        grid: { color: '#F1F5F9' },
+                        pointLabels: {
+                            font: { size: 11, weight: 'bold' },
+                            color: '#475569'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+
+        // --------------------------------------------------------
+        // CHART 3: IMPACT (HORIZONTAL BAR)
+        // --------------------------------------------------------
+        const ctxImpact = document.getElementById('impactChart').getContext('2d');
+        const impactLabels = ['Manual Insertion', 'Universal Nozzle', 'Custom Odd-Form Tooling'];
+
+        new Chart(ctxImpact, {
+            type: 'bar',
+            data: {
+                labels: impactLabels.map(splitLabel),
+                datasets: [
+                    {
+                        label: 'Cycle Time (sec) [Lower is Better]',
+                        data: [5.5, 2.8, 0.9],
+                        backgroundColor: '#06B6D4', // Teal
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    },
+                    {
+                        label: 'Placement Accuracy (%) [Higher is Better]',
+                        data: [92, 95, 99.9],
+                        backgroundColor: '#2563EB', // Blue
+                        barPercentage: 0.6,
+                        categoryPercentage: 0.8
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal Bar
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        grid: { color: '#F1F5F9' },
+                        beginAtZero: true
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { font: { weight: 'bold' } }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: tooltipConfig
+                }
+            }
+        });
+    </script>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SMT customized gripper nozzle design and manufacturing for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/cbvWhqnld2M" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SMT customized gripper nozzle design and manufacturing for Smart EMS factory PCB assembly</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="You Won't Believe How Tiny Chips Are Placed on a Phone Motherboard" src="https://www.youtube-nocookie.com/embed/3s6KiD2_pBA" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">You Won't Believe How Tiny Chips Are Placed on a Phone Motherboard</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="Systemic Synergy Architecting the Zero-Lag SMT Line" src="https://www.youtube-nocookie.com/embed/gChOlz5eOxY" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">Systemic Synergy Architecting the Zero-Lag SMT Line</figcaption></figure></div><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Analysis of Radial Tape Feeders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony -->
+    <!-- Application Structure Plan: A non-linear, tabbed SPA design was chosen to allow users (engineers, managers) to directly access information relevant to their immediate needs, rather than scrolling through a long linear report. The structure is task-oriented: 'Overview' for a quick summary, 'Technology' for operational details, 'Market' for competitive analysis, and 'Future & ROI' for strategic planning. This thematic grouping enhances usability and allows for targeted exploration of the complex report content. Key interactions include a dynamic manufacturer comparison tool, interactive market data charts, and a live ROI calculator, turning passive data consumption into an active, tool-based experience. -->
+    <!-- Visualization & Content Choices: Report Info -> Goal -> Viz/Presentation -> Interaction -> Justification. 1. Executive Summary/KPIs -> Inform -> Text block & Stat Cards -> Static -> Quick high-level understanding. 2. Mechanical Process -> Organize/Inform -> HTML/CSS Diagram -> Hover/Click to highlight stage -> More engaging than static image, clarifies process flow. 3. Manufacturer Comparison -> Compare -> Dynamic Content Cards -> Click manufacturer button to update card -> Avoids a large, unwieldy table; facilitates direct comparison. 4. Market Growth Data -> Change/Compare -> Bar & Doughnut Charts (Chart.js) -> Click to switch between regional data sets -> Visualizes trends effectively; interaction allows layered data exploration. 5. ROI Formula -> Inform/Engage -> Interactive Form -> User input updates results in real-time -> Transforms a static formula into a practical decision-making tool. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .process-step {
+            transition: all 0.3s ease-in-out;
+        }
+        .process-step.active {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border-color: #3b82f6;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Interactive Analysis: Radial Tape Feeders</h1>
+            <p class="text-slate-600 mt-2 max-w-3xl mx-auto">An interactive dashboard exploring the technology, market landscape, and investment potential of radial tape feeders in automated electronics assembly.</p>
+        </header>
+
+        <nav class="mb-8 border-b border-slate-200">
+            <ul id="nav-tabs" class="flex flex-wrap -mb-px text-sm font-medium text-center justify-center">
+                <li class="mr-2">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg tab-active" data-tab="overview">Overview</button>
+                </li>
+                <li class="mr-2">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg tab-inactive" data-tab="technology">Technology Deep Dive</button>
+                </li>
+                <li class="mr-2">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg tab-inactive" data-tab="market">Market Landscape</button>
+                </li>
+                <li>
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg tab-inactive" data-tab="future_roi">Future & ROI</button>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="tab-content">
+            <!-- Overview Tab -->
+            <section id="overview" class="fade-in">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold mb-4 text-slate-900">Executive Summary</h2>
+                        <p class="text-slate-600 space-y-4">
+                            This analysis finds that the radial tape feeder has evolved from a simple mechanical device into a sophisticated component preparation system, integrating functions like lead cutting, bending, and forming. This evolution is essential for enabling standard SMT lines to perform automated through-hole insertion for "odd-form" components like capacitors and LEDs.
+                            <br><br>
+                            The market is driven by demands for higher precision, reliability, and efficiency, with emerging "smart feeder" technologies and IoT integration transforming them into intelligent nodes within the Industry 4.0 framework. The global market shows robust growth, led by the Asia-Pacific region and fueled by the automotive and consumer electronics sectors. Ultimately, investing in modern radial feeder technology presents a compelling Return on Investment (ROI) through significant labor savings, increased throughput, and improved product quality.
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-bold text-center text-slate-900">Key Performance Indicators</h3>
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <span class="text-4xl font-bold text-blue-600">±0.2 mm</span>
+                            <p class="text-slate-500 mt-2">Feeding Accuracy</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <span class="text-4xl font-bold text-blue-600">&lt; 1 sec</span>
+                            <p class="text-slate-500 mt-2">Cycle Time per Component</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <span class="text-4xl font-bold text-blue-600">~6.5%</span>
+                            <p class="text-slate-500 mt-2">Projected Market CAGR (2024-2031)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Tab -->
+            <section id="technology" class="hidden fade-in">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold mb-2 text-slate-900">Core Technology & Maintenance</h2>
+                    <p class="text-slate-600 max-w-3xl mx-auto">Explore the inner workings of a radial tape feeder, from its mechanical process flow to common failure modes and best practices for preventative maintenance.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">Interactive Mechanical Process Flow</h3>
+                    <div id="process-diagram" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center text-center">
+                        <div class="process-step p-4 border-2 border-slate-200 rounded-lg" data-step="1">
+                            <div class="text-3xl">📥</div>
+                            <p class="font-semibold mt-2 text-sm">Tape Loading</p>
+                        </div>
+                        <div class="text-2xl text-slate-400 font-mono hidden lg:block">→</div>
+                        <div class="process-step p-4 border-2 border-slate-200 rounded-lg" data-step="2">
+                            <div class="text-3xl">⚙️</div>
+                            <p class="font-semibold mt-2 text-sm">Tape Advance</p>
+                        </div>
+                        <div class="text-2xl text-slate-400 font-mono hidden md:block">→</div>
+                        <div class="process-step p-4 border-2 border-slate-200 rounded-lg" data-step="3">
+                            <div class="text-3xl">✂️</div>
+                            <p class="font-semibold mt-2 text-sm">Lead Prep</p>
+                        </div>
+                        <div class="text-2xl text-slate-400 font-mono hidden lg:block">→</div>
+                        <div class="process-step p-4 border-2 border-slate-200 rounded-lg" data-step="4">
+                            <div class="text-3xl">🎯</div>
+                            <p class="font-semibold mt-2 text-sm">Positioning</p>
+                        </div>
+                        <div class="text-2xl text-slate-400 font-mono hidden md:block">→</div>
+                        <div class="process-step p-4 border-2 border-slate-200 rounded-lg" data-step="5">
+                            <div class="text-3xl">🤖</div>
+                            <p class="font-semibold mt-2 text-sm">Pick-Up</p>
+                        </div>
+                    </div>
+                    <div id="process-description" class="mt-6 p-4 bg-slate-100 rounded-md text-slate-700">
+                        Hover over or tap a step above to see a description.
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-slate-900">Technical Specifications</h3>
+                        <ul class="space-y-3 text-slate-600">
+                            <li><strong class="text-slate-800">Component Range:</strong> Capacitors, varistors, LEDs, connectors.</li>
+                            <li><strong class="text-slate-800">Body Size:</strong> From 2x2x2 mm to 15x15x30 mm.</li>
+                            <li><strong class="text-slate-800">Lead Diameter:</strong> 0.3 mm to 1.0 mm.</li>
+                            <li><strong class="text-slate-800">Tape Pitch:</strong> Standardized at 12.7 mm or 15 mm (not interchangeable).</li>
+                            <li><strong class="text-slate-800">Power/Pneumatics:</strong> 24V DC and 0.4-0.6 MPa compressed air.</li>
+                        </ul>
+                    </div>
+                    <div id="maintenance-accordion" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-slate-900">Common Failures & Maintenance</h3>
+                        <div class="space-y-2">
+                            <div class="border-b border-slate-200 pb-2">
+                                <button class="accordion-toggle flex justify-between items-center w-full font-semibold text-left">
+                                    <span>Tape Transport & Feeding Issues</span>
+                                    <span class="transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content pt-2 text-slate-600">
+                                    <strong>Causes:</strong> Improper tape loading, debris in tape path, incorrect pitch setting.
+                                    <br><strong>Solution:</strong> Ensure correct loading, regularly clean the path, and verify pitch settings match the tape.
+                                </div>
+                            </div>
+                            <div class="border-b border-slate-200 pb-2">
+                                <button class="accordion-toggle flex justify-between items-center w-full font-semibold text-left">
+                                    <span>Component Processing Errors</span>
+                                    <span class="transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content pt-2 text-slate-600">
+                                    <strong>Causes:</strong> Worn/dull cutter blades, misaligned forming dies, unstable air pressure.
+                                    <br><strong>Solution:</strong> Replace wear parts on a schedule, ensure stable and filtered air supply.
+                                </div>
+                            </div>
+                            <div>
+                                <button class="accordion-toggle flex justify-between items-center w-full font-semibold text-left">
+                                    <span>Electrical & Pneumatic Faults</span>
+                                    <span class="transform transition-transform duration-300">▼</span>
+                                </button>
+                                <div class="accordion-content pt-2 text-slate-600">
+                                    <strong>Causes:</strong> Worn pneumatic seals, loose electrical connectors, mechanical jams causing motor overcurrent.
+                                    <br><strong>Solution:</strong> Inspect tubing and seals, secure all connectors, troubleshoot error codes via manual.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Tab -->
+            <section id="market" class="hidden fade-in">
+                 <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold mb-2 text-slate-900">Competitive & Market Landscape</h2>
+                    <p class="text-slate-600 max-w-3xl mx-auto">Compare leading manufacturers and explore global market trends, including regional growth projections and market size.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">Manufacturer Comparison</h3>
+                    <div id="manufacturer-selector" class="flex flex-wrap gap-2 mb-6 justify-center">
+                        <!-- Buttons will be injected by JS -->
+                    </div>
+                    <div id="manufacturer-display" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 bg-slate-100 rounded-lg min-h-[200px]">
+                       <!-- Content will be injected by JS -->
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-slate-900">Global Market Growth (USD Billions)</h3>
+                        <div class="chart-container">
+                            <canvas id="marketGrowthChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-slate-900">Regional Market Analysis (2024)</h3>
+                        <div id="regional-selector" class="text-center mb-4">
+                            <button class="py-1 px-3 text-sm rounded-full bg-blue-500 text-white" data-metric="share">Market Share</button>
+                            <button class="py-1 px-3 text-sm rounded-full bg-slate-200 text-slate-700" data-metric="cagr">Projected CAGR</button>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="regionalMarketChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future & ROI Tab -->
+            <section id="future_roi" class="hidden fade-in">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold mb-2 text-slate-900">Future Technologies & Investment ROI</h2>
+                    <p class="text-slate-600 max-w-3xl mx-auto">Look ahead at emerging trends like smart feeders and use the interactive calculator to model the potential return on investment for new feeder technology.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-slate-900">Emerging Technologies</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 text-3xl">🧠</div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-800">Smart Feeders</h4>
+                                    <p class="text-slate-600 mt-1">Intelligent feeders with onboard data storage for part numbers, quantity, and lot codes. They enable automatic recognition and setup, preventing operator errors and providing real-time component counting.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 text-3xl">🌐</div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-800">IoT & Industry 4.0 Integration</h4>
+                                    <p class="text-slate-600 mt-1">Feeders connect to factory MES/ERP systems for full traceability. This enables predictive maintenance by analyzing operational data and allows for closed-loop feedback from inspection systems to auto-correct placement errors.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-slate-900">ROI Calculator</h3>
+                        <form id="roi-form" class="space-y-4">
+                            <div>
+                                <label class="text-sm font-medium text-slate-700">Total Cost of Investment ($)</label>
+                                <input type="number" id="roi-investment" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="e.g., 55000" value="55000">
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-slate-700">Annual Financial Gain ($)</label>
+                                <input type="number" id="roi-gain" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="e.g., 80000" value="80000">
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-slate-700">Annual Operating Cost ($)</label>
+                                <input type="number" id="roi-cost" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="e.g., 5000" value="5000">
+                            </div>
+                        </form>
+                        <div class="mt-6 pt-6 border-t border-slate-200 text-center grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-slate-500 text-sm">Calculated ROI</p>
+                                <span id="roi-result" class="text-3xl font-bold text-green-600">136.4%</span>
+                            </div>
+                            <div>
+                                <p class="text-slate-500 text-sm">Payback Period</p>
+                                <span id="payback-result" class="text-3xl font-bold text-green-600">0.73 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('#nav-tabs button');
+    const tabContents = document.querySelectorAll('#tab-content section');
+    let marketGrowthChartInstance, regionalMarketChartInstance;
+
+    const processData = {
+        1: "The component tape (bandoleer) is loaded onto the feeder. Modern systems often auto-thread the tape leader.",
+        2: "A drive system, often a sprocket or friction drive, advances the tape intermittently, moving one component at a time.",
+        3: "At the preparation station, the component's leads are precisely cut to a specified length and can be optionally bent or formed.",
+        4: "The prepared component is securely clamped and positioned at a precise, repeatable coordinate for pick-up.",
+        5: "The placement machine's nozzle or a robotic arm retrieves the component for insertion onto the PCB."
+    };
+
+    const manufacturerData = {
+        'Fuji': {
+            focus: 'Integrated Odd-Form/THT Insertion Platform',
+            innovation: 'Part lead chucks for stable handling of large/heavy parts.',
+            icon: '🏭'
+        },
+        'Panasonic': {
+            focus: 'High-Speed Insertion & Automated Loading',
+            innovation: 'Auto Setting Feeder (ASF) for fully automated, operator-free tape loading.',
+            icon: '⚡️'
+        },
+        'Yamaha': {
+            focus: 'Operator Efficiency & Uptime',
+            innovation: 'Auto Loading Feeder (ALF) enables automatic, splice-less reel changeovers to minimize downtime.',
+            icon: '🔄'
+        },
+        'Juki': {
+            focus: 'Cost-Effective, Reliable Feeder Modules',
+            innovation: 'Electric feeders (EF series) with motor-driven advancement and LED status indicators.',
+            icon: '💡'
+        },
+        'Universal Instruments': {
+            focus: 'Flexible, High-Precision Feeder Modules',
+            innovation: 'RadionX feeder with multi-pitch indexing for enhanced component compatibility.',
+            icon: '🔧'
+        },
+        'ASM (Siplace)': {
+            focus: 'OEM Feeder Module for Siplace Ecosystem',
+            innovation: 'Seamless plug-and-play integration with Siplace X interface via partnerships.',
+            icon: '🤝'
+        }
+    };
+
+    const regionalMarketData = {
+        share: {
+            labels: ['Asia-Pacific', 'North America', 'Europe'],
+            data: [55, 25, 20],
+            title: 'Market Share (%)'
+        },
+        cagr: {
+            labels: ['Asia-Pacific', 'North America', 'Europe'],
+            data: [8.4, 6.2, 8.8],
+            title: 'Projected CAGR (%)'
+        }
+    };
+
+    function switchTab(tabName) {
+        tabs.forEach(tab => {
+            const isSelected = tab.dataset.tab === tabName;
+            tab.classList.toggle('tab-active', isSelected);
+            tab.classList.toggle('tab-inactive', !isSelected);
+        });
+        tabContents.forEach(content => {
+            content.classList.toggle('hidden', content.id !== tabName);
+        });
+
+        if (tabName === 'market') {
+            initMarketCharts();
+        }
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+    });
+
+    function initProcessDiagram() {
+        const steps = document.querySelectorAll('.process-step');
+        const description = document.getElementById('process-description');
+        steps.forEach(step => {
+            step.addEventListener('mouseenter', () => {
+                steps.forEach(s => s.classList.remove('active'));
+                step.classList.add('active');
+                description.textContent = processData[step.dataset.step];
+            });
+             step.addEventListener('mouseleave', () => {
+                step.classList.remove('active');
+                description.textContent = "Hover over or tap a step above to see a description.";
+            });
+        });
+    }
+
+    function initManufacturerSelector() {
+        const selector = document.getElementById('manufacturer-selector');
+        const display = document.getElementById('manufacturer-display');
+        
+        Object.keys(manufacturerData).forEach((name, index) => {
+            const button = document.createElement('button');
+            button.textContent = name;
+            button.className = `py-2 px-4 text-sm rounded-full transition ${index === 0 ? 'bg-blue-500 text-white' : 'bg-slate-200 text-slate-700 hover:bg-slate-300'}`;
+            button.dataset.manufacturer = name;
+            selector.appendChild(button);
+        });
+
+        selector.addEventListener('click', e => {
+            if (e.target.tagName === 'BUTTON') {
+                const name = e.target.dataset.manufacturer;
+                updateManufacturerDisplay(name);
+                selector.querySelectorAll('button').forEach(btn => {
+                    btn.className = 'py-2 px-4 text-sm rounded-full transition bg-slate-200 text-slate-700 hover:bg-slate-300';
+                });
+                e.target.className = 'py-2 px-4 text-sm rounded-full transition bg-blue-500 text-white';
+            }
+        });
+        
+        updateManufacturerDisplay(Object.keys(manufacturerData)[0]);
+    }
+
+    function updateManufacturerDisplay(name) {
+        const data = manufacturerData[name];
+        const display = document.getElementById('manufacturer-display');
+        display.innerHTML = `
+            <div class="flex flex-col items-center justify-center text-center">
+                <div class="text-6xl mb-4">${data.icon}</div>
+                <h4 class="text-2xl font-bold text-slate-900">${name}</h4>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <div>
+                    <h5 class="font-semibold text-slate-500 text-sm">Primary Focus</h5>
+                    <p class="text-slate-800">${data.focus}</p>
+                </div>
+                <div>
+                    <h5 class="font-semibold text-slate-500 text-sm">Key Innovation</h5>
+                    <p class="text-slate-800">${data.innovation}</p>
+                </div>
+            </div>
+        `;
+    }
+    
+    function initAccordions() {
+        const accordions = document.querySelectorAll('.accordion-toggle');
+        accordions.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('span:last-child');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    }
+
+    function initMarketCharts() {
+        if (!marketGrowthChartInstance) {
+            const ctxGrowth = document.getElementById('marketGrowthChart').getContext('2d');
+            const marketValueData = {
+                startYear: 2024,
+                startValue: 1.5,
+                cagr: 0.065,
+                years: 8
+            };
+            const labels = Array.from({ length: marketValueData.years }, (_, i) => marketValueData.startYear + i);
+            const data = labels.map((_, i) => marketValueData.startValue * Math.pow(1 + marketValueData.cagr, i));
+
+            marketGrowthChartInstance = new Chart(ctxGrowth, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Market Value (USD Billions)',
+                        data: data.map(d => d.toFixed(2)),
+                        backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: 'USD Billions' } }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+        if (!regionalMarketChartInstance) {
+            const ctxRegional = document.getElementById('regionalMarketChart').getContext('2d');
+            regionalMarketChartInstance = new Chart(ctxRegional, {
+                type: 'doughnut',
+                data: {
+                    labels: regionalMarketData.share.labels,
+                    datasets: [{
+                        label: regionalMarketData.share.title,
+                        data: regionalMarketData.share.data,
+                        backgroundColor: ['rgba(59, 130, 246, 0.7)', 'rgba(239, 68, 68, 0.7)', 'rgba(22, 163, 74, 0.7)'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: true, text: regionalMarketData.share.title }
+                    }
+                }
+            });
+        }
+    }
+
+    function updateRegionalChart(metric) {
+        if (regionalMarketChartInstance) {
+            const chartData = regionalMarketData[metric];
+            regionalMarketChartInstance.data.labels = chartData.labels;
+            regionalMarketChartInstance.data.datasets[0].data = chartData.data;
+            regionalMarketChartInstance.data.datasets[0].label = chartData.title;
+            regionalMarketChartInstance.options.plugins.title.text = chartData.title;
+            regionalMarketChartInstance.update();
+        }
+    }
+
+    document.getElementById('regional-selector').addEventListener('click', e => {
+        if (e.target.tagName === 'BUTTON') {
+            const metric = e.target.dataset.metric;
+            updateRegionalChart(metric);
+            document.querySelectorAll('#regional-selector button').forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.add('bg-slate-200', 'text-slate-700');
+            });
+            e.target.classList.add('bg-blue-500', 'text-white');
+            e.target.classList.remove('bg-slate-200', 'text-slate-700');
+        }
+    });
+
+    function calculateROI() {
+        const investment = parseFloat(document.getElementById('roi-investment').value) || 0;
+        const gain = parseFloat(document.getElementById('roi-gain').value) || 0;
+        const cost = parseFloat(document.getElementById('roi-cost').value) || 0;
+
+        if (investment === 0) {
+            document.getElementById('roi-result').textContent = 'N/A';
+            document.getElementById('payback-result').textContent = 'N/A';
+            return;
+        }
+
+        const netGain = gain - cost;
+        const roi = (netGain / investment) * 100;
+        const payback = netGain > 0 ? investment / netGain : Infinity;
+
+        document.getElementById('roi-result').textContent = `${roi.toFixed(1)}%`;
+        document.getElementById('payback-result').textContent = payback === Infinity ? 'Never' : `${payback.toFixed(2)} Years`;
+    }
+
+    document.getElementById('roi-form').addEventListener('input', calculateROI);
+
+    initProcessDiagram();
+    initManufacturerSelector();
+    initAccordions();
+    calculateROI();
+});
+</script>
+
+<!-- Matched resources: Southern Machinery YouTube video board + product catalog board --><section id="smth-matched-resources" style="padding:48px 16px;background:#f7f9fb;border-top:1px solid #e3e8ee;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2a37;"><div style="max-width:1100px;margin:0 auto;"><h2 style="font-size:26px;margin:0 0 6px;font-weight:700;">Watch it running</h2><p style="margin:0 0 20px;color:#5b6775;font-size:15px;">Machine footage from our YouTube channel, matched to this page.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;"><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="SMT THT Radial Feeder Automate Radial Component Insertion" src="https://www.youtube-nocookie.com/embed/pzNoUquFH30" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">SMT THT Radial Feeder Automate Radial Component Insertion</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="This SMT Feeder Passed Factory Testing — Fast Setup, Stable Feeding" src="https://www.youtube-nocookie.com/embed/ynzSdVSD2FE" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">This SMT Feeder Passed Factory Testing — Fast Setup, Stable Feeding</figcaption></figure><figure style="margin:0;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;"><div style="position:relative;padding-top:56.25%;"><iframe loading="lazy" title="10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly" src="https://www.youtube-nocookie.com/embed/P0rfpkHpPxg" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption style="padding:10px 12px;font-size:13px;line-height:1.45;color:#3c4856;">10x labor cost saving Odd Form Insertion Machine for Smart EMS factory PCB assembly</figcaption></figure></div><h2 style="font-size:26px;margin:34px 0 6px;font-weight:700;">Product documentation</h2><p style="margin:0 0 14px;color:#5b6775;font-size:15px;">Catalogues, manuals and ROI sheets from the product catalog board.</p><ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:10px;"><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Product%20landing%20Page/THT-Auto-Insertion-Machine-Solution-Landing.html" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT Auto Insertion Machine Solution (HTML) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Product%20landing%20Page/S7900-Odd-Form-Insertion-Machine-Landing.html" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">S7900 Odd Form Insertion Machine Landing (HTML) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Southern%20Machinery%20Product/ProSMD_Storage_System_Solution_Southern_Machinery.pdf" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">ProSMD Storage System Solution (PDF) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/SMThelp%20Machine%20Presentation/Belt%20feeder.pdf" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">Belt Feeder (PDF) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Blog%20file/tht-staffing-audit-calculator.xlsx" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT Staffing Audit Calculator (XLSX) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Blog%20file/THT-Insertion-ROI-Calculator.xlsx" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">THT-Insertion ROI Calculator (XLSX) &#8595;</a></li><li style="background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:11px 14px;font-size:14px;"><a href="https://file.autoinsertion.com/public/Blog%20file/auto-insertion-readiness-checklist.pdf" target="_blank" rel="noopener" style="color:#0c665c;text-decoration:none;font-weight:600;">Auto Insertion Readiness Checklist (PDF) &#8595;</a></li></ul><p style="margin:26px 0 0;font-size:12.5px;color:#6b7785;">Sources: <a href="https://file.autoinsertion.com/public/Southern-Machinery-YouTube-Video-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">YouTube video board</a> · <a href="https://file.autoinsertion.com/public/Southern-Machinery-Product-Catalog-Board.html" target="_blank" rel="noopener" style="color:#0c665c;">product catalog board</a> · <a href="https://ph.smthelp.com" target="_blank" rel="noopener" style="color:#0c665c;">machine photo library</a></p></div></section>
+</body>
+</html>

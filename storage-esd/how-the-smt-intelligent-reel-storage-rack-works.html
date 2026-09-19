@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works: SMT Intelligent Reel Storage Rack | Southern Machinery</title>
+    <meta name="description" content="A step-by-step guide on how the SMT Intelligent Reel Storage Rack automates material handling for unparalleled efficiency and accuracy.">
+    <meta name="keywords" content="How SMT Rack Works, SMT Automation, Intelligent Storage Workflow, PCB Assembly, Southern Machinery">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles & Dark Mode Logic -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            --color-primary: #1C64F2;
+            --color-secondary: #0E3A8F;
+            --color-dark-bg: #030712;
+            --color-dark-card: #111827;
+            --color-light-bg: #F9FAFB;
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .border-primary { border-color: var(--color-primary); }
+        .hover\:bg-secondary:hover { background-color: var(--color-secondary); }
+
+        .dark body { background-color: var(--color-dark-bg); }
+        .dark .dark\:bg-dark-card { background-color: var(--color-dark-card); }
+        .dark .dark\:text-gray-200 { color: #E5E7EB; }
+        .dark .dark\:border-gray-700 { border-color: #374151; }
+        .dark .dark\:text-primary { color: #3b82f6; }
+
+        .step-connector::before {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: calc(100% - 2.5rem);
+            background-color: #D1D5DB;
+        }
+        .dark .step-connector::before {
+            background-color: #4B5563;
+        }
+        .step-card:last-child .step-connector::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-light-bg dark:bg-dark-bg text-gray-900 dark:text-gray-200 antialiased">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-dark-card shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-10 w-auto">
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="bg-primary text-white font-semibold py-2 px-5 rounded-lg hover:bg-secondary transition-colors">Contact Us</a>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l-.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Title Section -->
+        <section class="py-20 text-center bg-white dark:bg-dark-card">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold">How the Intelligent Reel Rack Works</h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto text-gray-600 dark:text-gray-400">A simple, powerful workflow that transforms your SMT material handling from a manual chore into a streamlined, automated process.</p>
+            </div>
+        </section>
+
+        <!-- Workflow Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Step 1: Register -->
+                    <div class="step-card grid md:grid-cols-2 gap-10 items-center mb-16 relative">
+                        <div class="step-connector"></div>
+                        <div class="text-center md:text-right">
+                            <div class="inline-block w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold text-2xl mb-4 md:ml-auto">1</div>
+                            <h3 class="text-2xl font-bold mb-2">Register Reels</h3>
+                            <p class="text-gray-600 dark:text-gray-400">The process begins at receiving. Simply scan the manufacturer's barcode on the component reel. The system automatically captures all relevant data (Part Number, Quantity, Lot Code) and assigns a unique internal ID for 100% traceability.</p>
+                        </div>
+                        <div>
+                            <img src="https://ph.smthelp.com/images/2023/04/10/SMT-Intelligent-Reel-Shelf-Solution--Operation-Process.png" alt="Scanning a reel barcode" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Store -->
+                    <div class="step-card grid md:grid-cols-2 gap-10 items-center mb-16 relative">
+                         <div class="step-connector"></div>
+                        <div class="md:order-2 text-center md:text-left">
+                            <div class="inline-block w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold text-2xl mb-4 md:mr-auto">2</div>
+                            <h3 class="text-2xl font-bold mb-2">Guided Storing</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Once a reel is registered, the rack's multi-color LEDs light up, indicating all available empty slots. The operator can place the reel in any lit position. A sensor confirms the placement, and the inventory database is updated in real-time with the reel's exact location.</p>
+                        </div>
+                        <div class="md:order-1">
+                            <img src="https://ph.smthelp.com/images/2024/03/18/SMT-Intelligent-Reel-Storage-System-2024_07.jpg" alt="LED lights guiding reel placement" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Request & Pick -->
+                    <div class="step-card grid md:grid-cols-2 gap-10 items-center mb-16 relative">
+                         <div class="step-connector"></div>
+                        <div class="text-center md:text-right">
+                            <div class="inline-block w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold text-2xl mb-4 md:ml-auto">3</div>
+                            <h3 class="text-2xl font-bold mb-2">Request & Pick</h3>
+                            <p class="text-gray-600 dark:text-gray-400">When a job is started, the required Bill of Materials (BOM) is imported from your MES/ERP. The system instantly verifies component availability and then illuminates the LEDs for every required reel. Operators can quickly and accurately pick all parts for a kit in minutes, not hours.</p>
+                        </div>
+                        <div>
+                            <img src="https://ph.smthelp.com/images/2023/04/10/SMT-Intelligent-Material-Rack-----Product-use-cases.png" alt="Operator picking reels guided by light" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Analyze -->
+                    <div class="step-card grid md:grid-cols-2 gap-10 items-center relative">
+                        <div class="md:order-2 text-center md:text-left">
+                            <div class="inline-block w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center font-bold text-2xl mb-4 md:mr-auto">4</div>
+                            <h3 class="text-2xl font-bold mb-2">Analyze & Optimize</h3>
+                            <p class="text-gray-600 dark:text-gray-400">All transaction data is logged. This provides powerful insights into material consumption, inventory turnover, and operator efficiency. Use this data to optimize stock levels, manage FIFO/FEFO, and make informed decisions to continuously improve your production workflow.</p>
+                        </div>
+                        <div class="md:order-1">
+                            <img src="https://ph.smthelp.com/images/2023/04/10/SMT-Intelligent-Reel-Shelf-Material-Management-Software-1.png" alt="Software dashboard showing analytics" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Demo Section -->
+        <section class="py-24 bg-white dark:bg-dark-card">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Watch the Full Process</h2>
+                    <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-400">See how these steps come together in a seamless flow.</p>
+                </div>
+                <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl bg-black">
+                    <iframe src="https://www.youtube.com/embed/JMIusF7wENs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits Section -->
+        <section class="py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold">The Result: A Transformed Warehouse</h2>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="p-6">
+                        <h3 class="text-5xl font-extrabold text-primary">99.9%</h3>
+                        <p class="mt-2 text-lg font-semibold">Picking Accuracy</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-5xl font-extrabold text-primary">>75%</h3>
+                        <p class="mt-2 text-lg font-semibold">Faster Kitting Time</p>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-5xl font-extrabold text-primary">100%</h3>
+                        <p class="mt-2 text-lg font-semibold">Inventory Visibility</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 dark:bg-black text-gray-300">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://ph.smthelp.com/images/2024/06/26/Southern-Machinery-logo-300x83.png" alt="Southern Machinery Logo" class="h-10 mb-4">
+                    <p class="text-sm">Your trusted partner for SMT & THT solutions, delivering excellence and efficiency since 2011.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tel:+8613602562576" class="hover:text-white">Phone/WhatsApp: +86 136 0256 2576</a></li>
+                        <li><a href="mailto:info@SMThelp.com" class="hover:text-white">Email: info@SMThelp.com</a></li>
+                        <li><a href="https://www.smthelp.com" target="_blank" class="hover:text-white">Website: www.smthelp.com</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-semibold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="http://file.autoinsertion.com" target="_blank" class="hover:text-white">Machine Catalog</a></li>
+                        <li><a href="http://ph.smthelp.com" target="_blank" class="hover:text-white">Machine Photos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/smtmachine" target="_blank" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg></a>
+                        <a href="https://twitter.com/smtspecialist" target="_blank" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg></a>
+                        <a href="https://www.facebook.com/autoinsertion" target="_blank" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg></a>
+                        <a href="https://www.youtube.com/c/Smthelping" target="_blank" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 0 1-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 0 1-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 0 1 1.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.418ZM15.194 12 10 15.194V8.806L15.194 12Z" clip-rule="evenodd"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-sm">
+                <p>&copy; 2011-2024 Southern Machinery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+    
+    <!-- Dify Chatbot Embed -->
+    <script>
+        window.difyChatbotConfig = {
+            token: 'j4mQvbGSBSlvQcv5',
+            baseUrl: 'https://ai.smthelp.com'
+        }
+    </script>
+    <script src="https://ai.smthelp.com/embed.min.js" id="j4mQvbGSBSlvQcv5" defer></script>
+    <style>
+        #dify-chatbot-bubble-button {
+            background-color: #1C64F2 !important;
+        }
+        #dify-chatbot-bubble-window {
+            width: 24rem !important;
+            height: 40rem !important;
+        }
+    </style>
+
+</body>
+</html>
