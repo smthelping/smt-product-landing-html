@@ -973,8 +973,8 @@ function calc(){
   if(price<=0){ pb.textContent="\u2014"; pbu.textContent=T(lang,"calc_needprice"); }
   else if(months<=0){ pb.textContent="\u2014"; pbu.textContent=T(lang,"calc_needinput"); }
   else if(months<1){ pb.textContent="<1"; pbu.textContent=T(lang,"unit_month"); }
-  else if(months<24){ pb.textContent=months.toFixed(1); pbu.textContent=T(lang,"unit_month"); }
-  else { pb.textContent=(months/12).toFixed(1); pbu.textContent=T(lang,"unit_year"); }
+  else if(months<24){ pb.textContent=fmt1(months,lang); pbu.textContent=T(lang,"unit_month"); }
+  else { pb.textContent=fmt1(months/12,lang); pbu.textContent=T(lang,"unit_year"); }
 }
 
 function applyLang(lang,persist){
