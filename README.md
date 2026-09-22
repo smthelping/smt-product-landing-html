@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**9 pages in 2 product lines.**
+**10 pages in 3 product lines.**
 
 ## What every page carries
 
@@ -47,6 +47,20 @@ the downstream inserter is set for, checks polarity and electrical value, ejects
 delivers a sealed taped pack - boxed or reeled - at 180 +/- 20 components per minute. Its gallery
 labels photographs of other machines in the radial and axial family as such rather than presenting
 them as this model.
+
+### THT Auto Insertion - `tht-auto-insertion/`
+
+| Page | File | Size | Languages |
+|---|---|---|---|
+| S3000 Radial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s3000-radial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 424 KB | 7 + x-default |
+
+The S3000 inserts taped radial components into through-hole boards and cuts and clinches the leads
+in the same pass. Ten feeder stations as standard, fourteen optional; insertion at any angle from
+0 to 360 degrees in one-degree steps; machine-vision hole correction; boards from 50 x 50 mm to
+400 x 300 mm, 0.79 to 2.36 mm thick. The page prints both of the speed figures its own documents
+disagree on rather than choosing one, and it carries a wear-parts section built from the published
+spare parts list for the 2.5, 5.0, 7.5 and 10.0 mm standard frame. It links back to the S-300B
+page, which prepares the components this machine inserts.
 
 ## Conventions for new pages
 
