@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**10 pages in 3 product lines.**
+**11 pages in 3 product lines.**
 
 ## What every page carries
 
@@ -53,6 +53,7 @@ them as this model.
 | Page | File | Size | Languages |
 |---|---|---|---|
 | S3000 Radial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s3000-radial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 424 KB | 7 + x-default |
+| S4000 Axial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s4000-axial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 513 KB | 7 + x-default |
 
 The S3000 inserts taped radial components into through-hole boards and cuts and clinches the leads
 in the same pass. Ten feeder stations as standard, fourteen optional; insertion at any angle from
@@ -61,6 +62,16 @@ in the same pass. Ten feeder stations as standard, fourteen optional; insertion 
 disagree on rather than choosing one, and it carries a wear-parts section built from the published
 spare parts list for the 2.5, 5.0, 7.5 and 10.0 mm standard frame. It links back to the S-300B
 page, which prepares the components this machine inserts.
+
+The S4000 is the axial counterpart: it inserts taped axial components - diodes, resistors and
+jumper wire - at any angle on a servo rotary table, cuts and forms the leads and clinches them in
+one continuous cycle. The feeder bank is modular from 5 to 60 stations, dual jumper-wire feeders
+run two wire gauges without a changeover, and the software writes production data into an
+MES-compatible folder. The 2024 brochure prints both a 20,000 CPH top speed and a 10,000 CPH
+actual speed; the page keeps both and explains which one to plan a shift around. Seven figures
+differ between the brochure and the series manual, and all seven are printed side by side in a
+disclosure table with their sources named. It links back to the S3000 page, which handles the
+radial half of the same through-hole line.
 
 ## Conventions for new pages
 
