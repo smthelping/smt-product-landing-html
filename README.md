@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**12 pages in 3 product lines.**
+**13 pages in 4 product lines.**
 
 ## What every page carries
 
@@ -90,6 +90,31 @@ rather than averaged. Its gallery labels each photograph with what it actually s
 where a picture is of a different model in the family or of a line the S7900 runs in. The payback
 worksheet takes every money figure from the visitor and states no price of its own. It links to the
 S3000, the S4000 and the S-300B, the three machines that run alongside it on a through-hole line.
+
+### PCB Handling - `board-handling/`
+
+| Page | File | Size | Languages |
+|---|---|---|---|
+| ESD Tray with Grids for Smart EMS PCB Assembly | `board-handling/esd-tray-with-grids-for-smart-ems-tht-pcb-assembly.html` | 458 KB | 7 + x-default |
+
+The tray holds panels and loose parts in 20 cells on a fluted divider grid - 457 x 289 x 45 mm
+inside, cells at about 91 x 72 mm - with an anti-static EVA base pad and a cover that lets loaded
+trays stack. The dividers lift out, so one tray is re-pitched for a different part by moving a
+divider rather than by buying new tooling. Nine models are listed, standard range 290 x 260 to
+457 x 312 mm. Six points the documents do not settle - which tray is actually being quoted,
+surface resistivity against surface resistance, body construction, temperature grade, grid
+construction and cell count, and which standards were tested - are printed in a disclosure table
+with the source of each figure named, and the pages that state `To be confirmed` say so in their
+structured data as well. The gallery labels each photograph with what it shows, including the
+frames that are of other trays, racks and trolleys in the anti-static family rather than of this
+part number. No price appears anywhere on the page; the payback worksheet takes every money figure
+from the visitor.
+
+**No sibling band yet.** The other pages of the anti-static handling family - the PCB basket
+trolleys, the magazine racks, the separators - are not in this repository, so this page is the
+first and only one in `board-handling/`. Linking to files that do not exist here would put dead
+links on a page that is otherwise self-contained, so the band is left out until the family
+arrives. Add it then, in the same shape as the S4000's.
 
 ## Conventions for new pages
 
