@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**11 pages in 3 product lines.**
+**12 pages in 3 product lines.**
 
 ## What every page carries
 
@@ -54,6 +54,7 @@ them as this model.
 |---|---|---|---|
 | S3000 Radial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s3000-radial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 424 KB | 7 + x-default |
 | S4000 Axial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s4000-axial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 513 KB | 7 + x-default |
+| S7900 OddForm Insertion Machine Solution for Smart EMS THT PCB Assembly | `tht-auto-insertion/s7900-odd-form-insertion-machine-smart-ems-tht-pcb-assembly.html` | 627 KB | 7 + x-default |
 
 The S3000 inserts taped radial components into through-hole boards and cuts and clinches the leads
 in the same pass. Ten feeder stations as standard, fourteen optional; insertion at any angle from
@@ -73,6 +74,22 @@ differ between the brochure and the series manual, and all seven are printed sid
 disclosure table with their sources named. It links back to the S3000 page, which handles the
 radial half of the same through-hole line.
 
+The S7900 is the odd-form machine: connectors, relays, transformers, trimmers, bulk electrolytics,
+DIP ICs and spade terminals - the parts that arrive in bowls, tubes and trays and still get placed
+by hand. Two, four or six servo heads on one platform, 0.6 to 2 s per component depending on head
+count and clinching, insertion at any angle from 0 to 360 degrees, and bowl, tape, tube and tray
+feeders on the same base. What makes this page different from the S3000 and S4000 pages is its
+starting point: a real customer through-hole BOM of 36 lines, split line by line into the 26 that
+go on the odd-form head, the 9 ammo-pack axial lines that belong on an S4000 instead, and the one
+crimped ground harness that stays manual. Part numbers, reference designators beyond the generic
+class letters and the customer's identity are withheld, and the page says so. Three documents
+describe the platform - the 2025 catalog, a precision automation presentation and a customer
+solution document - and their 15 disagreements are printed side by side in a disclosure table
+rather than averaged. Its gallery labels each photograph with what it actually shows, including
+where a picture is of a different model in the family or of a line the S7900 runs in. The payback
+worksheet takes every money figure from the visitor and states no price of its own. It links to the
+S3000, the S4000 and the S-300B, the three machines that run alongside it on a through-hole line.
+
 ## Conventions for new pages
 
 - File by product line in a directory (`nozzle-and-gripper/` for this family), not the root.
@@ -87,4 +104,4 @@ radial half of the same through-hole line.
 
 ---
 
-Page list generated 2026-09-22 from the directory contents.
+Page list generated 2026-09-23 from the directory contents.
