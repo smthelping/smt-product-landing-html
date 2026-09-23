@@ -52,8 +52,8 @@ them as this model.
 
 | Page | File | Size | Languages |
 |---|---|---|---|
-| S3000 Radial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s3000-radial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 424 KB | 7 + x-default |
-| S4000 Axial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s4000-axial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 513 KB | 7 + x-default |
+| S3000 Radial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s3000-radial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 426 KB | 7 + x-default |
+| S4000 Axial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s4000-axial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 523 KB | 7 + x-default |
 | S7900 OddForm Insertion Machine Solution for Smart EMS THT PCB Assembly | `tht-auto-insertion/s7900-odd-form-insertion-machine-smart-ems-tht-pcb-assembly.html` | 627 KB | 7 + x-default |
 
 The S3000 inserts taped radial components into through-hole boards and cuts and clinches the leads
@@ -61,8 +61,9 @@ in the same pass. Ten feeder stations as standard, fourteen optional; insertion 
 0 to 360 degrees in one-degree steps; machine-vision hole correction; boards from 50 x 50 mm to
 400 x 300 mm, 0.79 to 2.36 mm thick. The page prints both of the speed figures its own documents
 disagree on rather than choosing one, and it carries a wear-parts section built from the published
-spare parts list for the 2.5, 5.0, 7.5 and 10.0 mm standard frame. It links back to the S-300B
-page, which prepares the components this machine inserts.
+spare parts list for the 2.5, 5.0, 7.5 and 10.0 mm standard frame. It links to the S-300B, which
+prepares the components this machine inserts, and to the S4000 and the S7900, the other two
+machines on the same through-hole line.
 
 The S4000 is the axial counterpart: it inserts taped axial components - diodes, resistors and
 jumper wire - at any angle on a servo rotary table, cuts and forms the leads and clinches them in
@@ -71,8 +72,8 @@ run two wire gauges without a changeover, and the software writes production dat
 MES-compatible folder. The 2024 brochure prints both a 20,000 CPH top speed and a 10,000 CPH
 actual speed; the page keeps both and explains which one to plan a shift around. Seven figures
 differ between the brochure and the series manual, and all seven are printed side by side in a
-disclosure table with their sources named. It links back to the S3000 page, which handles the
-radial half of the same through-hole line.
+disclosure table with their sources named. It links to the S3000, which handles the radial half of
+the same through-hole line, and to the S7900 and the S-300B alongside it.
 
 The S7900 is the odd-form machine: connectors, relays, transformers, trimmers, bulk electrolytics,
 DIP ICs and spade terminals - the parts that arrive in bowls, tubes and trays and still get placed
@@ -100,6 +101,12 @@ S3000, the S4000 and the S-300B, the three machines that run alongside it on a t
   makes the two pages fight over the same stored preference.
 - Where two of the documents we hold disagree, print both values side by side in a disclosure
   table. Never average them, never silently pick one, and say which source each figure came from.
+- Close the page with a same-family interlink band: `<section id="family">` holding one
+  `class="btn btn-o"` pill per sibling machine, each carrying a `data-i18n` key. The band's row
+  needs a bare `.acts{display:flex;gap:12px}` rule - the hero and CTA variants are scoped, so
+  without it the pills sit flush against each other.
+- Store translated strings in the dictionaries as text, not as HTML. The runtime writes them with
+  `textContent`, so an `&amp;` in a value shows up on screen as the five characters `&amp;`.
 - Check that the page count in this README matches the number of `.html` files before pushing.
 
 ---
