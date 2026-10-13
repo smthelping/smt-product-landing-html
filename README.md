@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**16 pages in 4 product lines.**
+**17 pages in 5 product lines.**
 
 ## What every page carries
 
@@ -73,6 +73,25 @@ the downstream inserter is set for, checks polarity and electrical value, ejects
 delivers a sealed taped pack - boxed or reeled - at 180 +/- 20 components per minute. Its gallery
 labels photographs of other machines in the radial and axial family as such rather than presenting
 them as this model.
+
+### Feeder & Nozzle Service Equipment - `feeders-nozzles/`
+
+| Page | File | Size | Languages |
+|---|---|---|---|
+| SMT Feeder Calibration Jig for FUJI NXT Feeders (S-FFCJ10) | `feeders-nozzles/smt-feeder-calibration-jig-fuji-nxt-southern-machinery.html` | 198 KB | 7 + x-default |
+
+The jig is a bench station for FUJI NXT feeders, model S-FFCJ10: mount a feeder on the fixture,
+watch its movement through a 50X CCD camera with ring LED lighting, adjust X/Y/H on the sub-base and
+verify the pick-up position against a monitor cross reference before the feeder returns to the line.
+The Taobao listing publishes an X-axis acceptance limit of +/-0.25 mm, a 350 x 500 x 550 mm body and
+a 45 kg weight, and compatibility across ten feeder families - CP-4, CP-6, IP and QP BFC sub-bases
+among them. Two values conflict across the sources: 45 kg against 35 kg, and the same machine
+dimensions written two ways, 350 x 500 x 550 mm against L500 x W350 x H550. The page prints both
+figures side by side with their sources named. Its product photographs are referenced from the
+company's own CDN rather than ph.smthelp.com, because the matching images are not yet on the public
+host; the logo is. **No sibling band yet** - this is the first page of the feeder service equipment
+family, so the same-family interlink band is left out until a second page joins it, in the same
+shape as the board-handling page.
 
 ### THT Auto Insertion - `tht-auto-insertion/`
 
@@ -162,4 +181,4 @@ arrives. Add it then, in the same shape as the S4000's.
 
 ---
 
-Page list generated 2026-10-13 from the directory contents.
+Page list generated 2026-10-14 from the directory contents.
