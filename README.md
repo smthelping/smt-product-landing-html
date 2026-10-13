@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**14 pages in 4 product lines.**
+**15 pages in 4 product lines.**
 
 ## What every page carries
 
@@ -42,6 +42,15 @@ The nozzle family is still sitting at the repository root. The convention below 
 |---|---|---|---|
 | S-300B Radial Lead Molding & Taping Machine for Smart EMS PCB Assembly | `materials-consumables/s-300b-radial-lead-molding-taping-machine-smart-ems-pcb-assembly.html` | 509 KB | 7 + x-default |
 | SMT Feeder Calibration Jig for Smart EMS PCB Assembly | `materials-consumables/smt-feeder-calibration-jig-smart-ems-pcb-assembly.html` | 518 KB | 7 + x-default |
+| AI Radial Splicing Tape 3/5/6-Hole & Splice Cutter | `materials-consumables/ai-radial-splicing-tape-3-5-6-hole-masking-kraft-paper-splice-cutter-southern-machinery.html` | 603 KB | 7 + x-default |
+
+The AI radial splicing tape page covers the consumable that keeps a radial inserter fed through a
+reel change: pre-cut 3-hole and 5-hole splices (6-hole, 2-hole and single-hole on request) in
+masking or kraft paper, die-cut on both faces with locating dots, and the hand splice cutter for
+12.7 mm and 15.0 mm radial tape. Four points where its sources disagree (pieces per roll, the
+3-hole splice width, the hole counts offered and what the cutter size refers to) are printed side
+by side. Its two tape photographs are embedded as small JPEGs because they are not yet on
+ph.smthelp.com; every other image is hosted there or on smthelp.com's own image store.
 
 The feeder calibration jig is a bench station rather than a placement machine: it mounts a feeder on
 a fixture so a maintenance technician can watch feeder movement, check the pick-up position against a
