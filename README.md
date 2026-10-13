@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**13 pages in 4 product lines.**
+**14 pages in 4 product lines.**
 
 ## What every page carries
 
@@ -41,6 +41,22 @@ The nozzle family is still sitting at the repository root. The convention below 
 | Page | File | Size | Languages |
 |---|---|---|---|
 | S-300B Radial Lead Molding & Taping Machine for Smart EMS PCB Assembly | `materials-consumables/s-300b-radial-lead-molding-taping-machine-smart-ems-pcb-assembly.html` | 509 KB | 7 + x-default |
+| SMT Feeder Calibration Jig for Smart EMS PCB Assembly | `materials-consumables/smt-feeder-calibration-jig-smart-ems-pcb-assembly.html` | 518 KB | 7 + x-default |
+
+The feeder calibration jig is a bench station rather than a placement machine: it mounts a feeder on
+a fixture so a maintenance technician can watch feeder movement, check the pick-up position against a
+monitor cross reference and confirm alignment before the feeder returns to the line. Published figures
+name a 50X CCD camera, ring LED lighting and X/Y/H three-axis adjustment; the page prints them with
+their source and adds an open-points section for the seven places the Southern Machinery documents do
+not agree - two different monitor sizes (7 inch in the operation manual, 12 inch on a product image),
+two voltage options, two orientations of the same machine dimensions, a machine weight of 45 kg
+against an export packing list of net 13 kg / gross 40 kg, the feeder control zones, the model code,
+and the fact that no calibration accuracy figure appears in any Southern Machinery document we hold.
+The payback worksheet takes every money figure from the visitor, counts maintenance labour only, and
+clamps released time at zero when the jig-assisted check would be slower than the manual one. Its
+gallery draws on eleven photographs from `ph.smthelp.com` plus the annotated component view, which
+is inlined because it has no equivalent on the public host. It links to the S-300B, the other page in
+this band.
 
 The S-300B page takes loose radial components out of a bulk bowl, forms the leads to the lead pitch
 the downstream inserter is set for, checks polarity and electrical value, ejects the failures, and
@@ -136,4 +152,4 @@ arrives. Add it then, in the same shape as the S4000's.
 
 ---
 
-Page list generated 2026-09-23 from the directory contents.
+Page list generated 2026-10-13 from the directory contents.
