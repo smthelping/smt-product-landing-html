@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**15 pages in 4 product lines.**
+**16 pages in 4 product lines.**
 
 ## What every page carries
 
@@ -43,6 +43,7 @@ The nozzle family is still sitting at the repository root. The convention below 
 | S-300B Radial Lead Molding & Taping Machine for Smart EMS PCB Assembly | `materials-consumables/s-300b-radial-lead-molding-taping-machine-smart-ems-pcb-assembly.html` | 509 KB | 7 + x-default |
 | SMT Feeder Calibration Jig for Smart EMS PCB Assembly | `materials-consumables/smt-feeder-calibration-jig-smart-ems-pcb-assembly.html` | 518 KB | 7 + x-default |
 | AI Radial Splicing Tape 3/5/6-Hole & Splice Cutter | `materials-consumables/ai-radial-splicing-tape-3-5-6-hole-masking-kraft-paper-splice-cutter-southern-machinery.html` | 603 KB | 7 + x-default |
+| THT Auto Insertion Radial Components Splicing Tape | `materials-consumables/tht-radial-components-splicing-tape-smart-ems-pcb-assembly.html` | 243 KB | 7 + x-default |
 
 The AI radial splicing tape page covers the consumable that keeps a radial inserter fed through a
 reel change: pre-cut 3-hole and 5-hole splices (6-hole, 2-hole and single-hole on request) in
