@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**17 pages in 5 product lines.**
+**18 pages in 5 product lines.**
 
 ## What every page carries
 
@@ -79,6 +79,7 @@ them as this model.
 | Page | File | Size | Languages |
 |---|---|---|---|
 | SMT Feeder Calibration Jig for FUJI NXT Feeders (S-FFCJ10) | `feeders-nozzles/smt-feeder-calibration-jig-fuji-nxt-southern-machinery.html` | 198 KB | 7 + x-default |
+| SBF1001 Vibratory Bowl Feeder for Smart EMS PCB Assembly | `feeders-nozzles/sbf1001-vibratory-bowl-feeder-odd-form-auto-insertion-smart-ems.html` | 524 KB | 7 + x-default |
 
 The jig is a bench station for FUJI NXT feeders, model S-FFCJ10: mount a feeder on the fixture,
 watch its movement through a 50X CCD camera with ring LED lighting, adjust X/Y/H on the sub-base and
@@ -89,9 +90,26 @@ among them. Two values conflict across the sources: 45 kg against 35 kg, and the
 dimensions written two ways, 350 x 500 x 550 mm against L500 x W350 x H550. The page prints both
 figures side by side with their sources named. Its product photographs are referenced from the
 company's own CDN rather than ph.smthelp.com, because the matching images are not yet on the public
-host; the logo is. **No sibling band yet** - this is the first page of the feeder service equipment
-family, so the same-family interlink band is left out until a second page joins it, in the same
-shape as the board-handling page.
+host; the logo is. **Sibling band due** - this page predates the bowl feeder below, so it carries no
+interlink band of its own. Add one pointing at `sbf1001-...html` in the same shape as the S4000's
+when the page is next touched.
+
+The SBF1001 is the bulk-feeding half of an odd-form cell: a vibratory bowl indexes loose connectors,
+LED lenses, terminals, hardware and plastic parts, a helical sort track brings them into one attitude,
+polarity screening and lead cutting are options selected with the part in hand, and an optical fibre
+sensor confirms a part is at the pick point before the head is released. The specification is taken
+from the Southern Machinery Customized Feeder Nozzle Catalog V03 (page 5) and cross-checked line by
+line against the internal SBF1001 parameter sheet, which agree on every published figure: 3 x 3 mm to
+50 x 50 mm at 10 g to 300 g, 0.8 s per feed, +/-0.5 mm feeding precision, 220 V at 3 A average and
+5 A peak, 0.4-0.6 MPa working air, and either a 760 x 460 x 910 mm single bowl at 150 kg or a
+1120 x 460 x 910 mm front-and-rear two-bowl frame at 190 kg. Two supporting documents describe
+neighbouring machines rather than this model - the BF200L four-track double-layer bowl and the MBF-L
+bowl feeder manual - and the page labels every figure taken from them as belonging to that machine,
+not to the SBF1001. Commissioning evidence is quoted as published: a 2-hour continuous feeding test
+and a 48-hour ageing test. Every money figure in the payback calculator comes from the visitor; the
+page states no price of its own. Its gallery draws on twelve photographs from ph.smthelp.com, and it
+embeds nine working videos from the company YouTube board. It links to the FUJI NXT calibration jig
+in the same band, and to the S7900, the S4000 and the S-300B - the machines its output feeds.
 
 ### THT Auto Insertion - `tht-auto-insertion/`
 
@@ -181,4 +199,4 @@ arrives. Add it then, in the same shape as the S4000's.
 
 ---
 
-Page list generated 2026-10-14 from the directory contents.
+Page list generated 2026-10-15 from the directory contents.
