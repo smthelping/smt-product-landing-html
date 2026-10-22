@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**18 pages in 5 product lines.**
+**19 pages in 5 product lines.**
 
 ## What every page carries
 
@@ -80,6 +80,7 @@ them as this model.
 |---|---|---|---|
 | SMT Feeder Calibration Jig for FUJI NXT Feeders (S-FFCJ10) | `feeders-nozzles/smt-feeder-calibration-jig-fuji-nxt-southern-machinery.html` | 198 KB | 7 + x-default |
 | SBF1001 Vibratory Bowl Feeder for Smart EMS PCB Assembly | `feeders-nozzles/sbf1001-vibratory-bowl-feeder-odd-form-auto-insertion-smart-ems.html` | 524 KB | 7 + x-default |
+| Odd-Form Feeder & Nozzle Matcher - Customized Feeder Nozzle Catalog V03 | `feeders-nozzles/odd-form-insertion-customized-feeder-nozzle-catalog-v03-component-matcher-southern-machinery.html` | 785 KB | 7 + x-default |
 
 The jig is a bench station for FUJI NXT feeders, model S-FFCJ10: mount a feeder on the fixture,
 watch its movement through a 50X CCD camera with ring LED lighting, adjust X/Y/H on the sub-base and
@@ -110,6 +111,25 @@ and a 48-hour ageing test. Every money figure in the payback calculator comes fr
 page states no price of its own. Its gallery draws on twelve photographs from ph.smthelp.com, and it
 embeds nine working videos from the company YouTube board. It links to the FUJI NXT calibration jig
 in the same band, and to the S7900, the S4000 and the S-300B - the machines its output feeds.
+
+The odd-form feeder matcher answers the NPI engineer's first question - which feeder and which nozzle for
+this part - with an interactive quick-match table: 76 component lines, each mapped to a Southern
+Machinery feeder model and nozzle type, filterable by category, packaging, lead pitch, body L/W/H,
+lead count and lead diameter, with free-text search, a result count, reset, and a card view on phones.
+A row opens the feeder description and a WhatsApp or email feasibility request pre-filled with the
+component's dimensions; a check-your-part box compares the visitor's own numbers with each model's
+published envelope. The lines come from four anonymised odd-form evaluations and BOM lists plus the
+bulk-feeder qualification template - customer names, part numbers, supplier names and prices are
+withheld - and the ten feeder models (SAF1001, SRF1001, STF1003, SBF1001, SBF2002, SLF1001, SJF1001,
+STP1001, SSPC101, SRT7001) with their size, weight, lead-diameter and accuracy figures are taken from
+the Customized Feeder Nozzle Catalog V03. Embossed-tape parts map to the host machine's own 32 mm
+tape feeder with a Southern Machinery nozzle, and that row says so; lead time is not a catalog figure
+and is shown as to be confirmed. A five-step NPI stepper (packaging, measure, match, free sample test,
+trial and payback) carries a checklist and feeds the HowTo JSON-LD. The table, its filters and every
+label switch with the language selector. Six source conflicts are printed side by side, among them
+the belt feeder's two names (SBF2002 in V03, S-MVF01 in older material) and three radial lines whose
+lead-width column holds the body width. It embeds 23 videos and 12 catalog PDFs, and its sibling band
+links to the S7900, the SBF1001 bowl feeder, the S3000, the S4000 and the FUJI NXT calibration jig.
 
 ### THT Auto Insertion - `tht-auto-insertion/`
 
