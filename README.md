@@ -80,7 +80,7 @@ them as this model.
 |---|---|---|---|
 | SMT Feeder Calibration Jig for FUJI NXT Feeders (S-FFCJ10) | `feeders-nozzles/smt-feeder-calibration-jig-fuji-nxt-southern-machinery.html` | 198 KB | 7 + x-default |
 | SBF1001 Vibratory Bowl Feeder for Smart EMS PCB Assembly | `feeders-nozzles/sbf1001-vibratory-bowl-feeder-odd-form-auto-insertion-smart-ems.html` | 524 KB | 7 + x-default |
-| Odd-Form Feeder & Nozzle Matcher - Customized Feeder Nozzle Catalog V03 | `feeders-nozzles/odd-form-insertion-customized-feeder-nozzle-catalog-v03-component-matcher-southern-machinery.html` | 785 KB | 7 + x-default |
+| Odd-Form Feeder & Nozzle Matcher - Customized Feeder Nozzle Catalog V03 | `feeders-nozzles/odd-form-insertion-customized-feeder-nozzle-catalog-v03-component-matcher-southern-machinery.html` | 802 KB | 7 + x-default |
 
 The jig is a bench station for FUJI NXT feeders, model S-FFCJ10: mount a feeder on the fixture,
 watch its movement through a 50X CCD camera with ring LED lighting, adjust X/Y/H on the sub-base and
@@ -122,14 +122,18 @@ published envelope. The lines come from four anonymised odd-form evaluations and
 bulk-feeder qualification template - customer names, part numbers, supplier names and prices are
 withheld - and the ten feeder models (SAF1001, SRF1001, STF1003, SBF1001, SBF2002, SLF1001, SJF1001,
 STP1001, SSPC101, SRT7001) with their size, weight, lead-diameter and accuracy figures are taken from
-the Customized Feeder Nozzle Catalog V03. Embossed-tape parts map to the host machine's own 32 mm
-tape feeder with a Southern Machinery nozzle, and that row says so; lead time is not a catalog figure
-and is shown as to be confirmed. A five-step NPI stepper (packaging, measure, match, free sample test,
+the Customized Feeder Nozzle Catalog V03. The S-MVF01 reciprocating belt feeder is a separate model
+from the catalog's SBF2002 and is listed as its own entry: the four connector lines from its
+qualification template name it, and its own landing page is linked. Parts on 32 mm carrier tape are a
+confirmed mapping - the host machine's own 32 mm tape feeder with a Southern Machinery nozzle - and the
+table gives such rows a "Confirmed mapping" status; lead time is not a catalog figure and is shown as to
+be confirmed. A five-step NPI stepper (packaging, measure, match, free sample test,
 trial and payback) carries a checklist and feeds the HowTo JSON-LD. The table, its filters and every
-label switch with the language selector. Six source conflicts are printed side by side, among them
-the belt feeder's two names (SBF2002 in V03, S-MVF01 in older material) and three radial lines whose
-lead-width column holds the body width. It embeds 23 videos and 12 catalog PDFs, and its sibling band
-links to the S7900, the SBF1001 bowl feeder, the S3000, the S4000 and the FUJI NXT calibration jig.
+label switch with the language selector. Five source conflicts are printed side by side, among them
+three radial lines whose lead-width column holds the body width. Eight articles of 370 to 490 words
+each cover packaging, measurement, nozzles, oversized parts, bulk feeding, the feasibility check and the
+trial. It embeds 23 videos and 12 catalog PDFs, and its sibling band links to the S7900, the SBF1001
+bowl feeder, the S-MVF01 belt feeder, the S3000, the S4000 and the FUJI NXT calibration jig.
 
 ### THT Auto Insertion - `tht-auto-insertion/`
 
