@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**19 pages in 5 product lines.**
+**20 pages in 5 product lines.**
 
 ## What every page carries
 
@@ -142,6 +142,7 @@ bowl feeder, the S-MVF01 belt feeder, the S3000, the S4000 and the FUJI NXT cali
 | S3000 Radial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s3000-radial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 426 KB | 7 + x-default |
 | S4000 Axial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s4000-axial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 523 KB | 7 + x-default |
 | S7900 OddForm Insertion Machine Solution for Smart EMS THT PCB Assembly | `tht-auto-insertion/s7900-odd-form-insertion-machine-smart-ems-tht-pcb-assembly.html` | 627 KB | 7 + x-default |
+| Mobile Charger THT Auto Insertion & Wave Soldering Line for Smart EMS PCB Assembly | `tht-auto-insertion/mobile-charger-tht-auto-insertion-wave-soldering-line-smart-ems-pcb-assembly.html` | 950 KB | 7 + x-default |
 
 The S3000 inserts taped radial components into through-hole boards and cuts and clinches the leads
 in the same pass. Ten feeder stations as standard, fourteen optional; insertion at any angle from
@@ -177,6 +178,16 @@ rather than averaged. Its gallery labels each photograph with what it actually s
 where a picture is of a different model in the family or of a line the S7900 runs in. The payback
 worksheet takes every money figure from the visitor and states no price of its own. It links to the
 S3000, the S4000 and the S-300B, the three machines that run alongside it on a through-hole line.
+
+The mobile charger line page is the first line-level page in this band: a seven-station reference
+layout (magazine loader, S3010A radial, S7020T terminal, S7020A odd-form, an S7040 four-head odd-form
+cell with bowl and S-MVF01 bulk feeders, S-WS350 wave soldering, outfeed) with an interactive Three.js
+model of the line, a charger BOM split by package and feeding method, per-machine specifications
+labelled with their source, and a ten-row disclosure table for the figures our documents disagree on
+(S3010A speed, span and feeder count; S7020T speed and footprint; odd-form speed; S-MVF01 cycle;
+S-WS350 preheat length and pot limit; model names on the drawings). Three line drawings that are not
+yet on ph.smthelp.com are inlined as small WebP files; every other image is hosted there. It links to
+the S3000, S4000 and S7900 pages.
 
 ### PCB Handling - `board-handling/`
 
@@ -223,4 +234,4 @@ arrives. Add it then, in the same shape as the S4000's.
 
 ---
 
-Page list generated 2026-10-15 from the directory contents.
+Page list generated 2026-10-24 from the directory contents.
