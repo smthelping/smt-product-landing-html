@@ -143,6 +143,7 @@ bowl feeder, the S-MVF01 belt feeder, the S3000, the S4000 and the FUJI NXT cali
 | S4000 Axial Insertion Machine for Smart EMS THT PCB Assembly | `tht-auto-insertion/s4000-axial-insertion-machine-smart-ems-tht-pcb-assembly.html` | 523 KB | 7 + x-default |
 | S7900 OddForm Insertion Machine Solution for Smart EMS THT PCB Assembly | `tht-auto-insertion/s7900-odd-form-insertion-machine-smart-ems-tht-pcb-assembly.html` | 627 KB | 7 + x-default |
 | Mobile Charger THT Auto Insertion & Wave Soldering Line for Smart EMS PCB Assembly | `tht-auto-insertion/mobile-charger-tht-auto-insertion-wave-soldering-line-smart-ems-pcb-assembly.html` | 950 KB | 7 + x-default |
+| S3300 Bulk LED Radial Insertion Machine, 15,000 CPH for LED Display PCB Assembly | `tht-auto-insertion/s3300-bulk-led-radial-insertion-machine-15000-cph-led-display-pcb-assembly.html` | 570 KB | 7 + x-default |
 
 The S3000 inserts taped radial components into through-hole boards and cuts and clinches the leads
 in the same pass. Ten feeder stations as standard, fourteen optional; insertion at any angle from
