@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**20 pages in 5 product lines.**
+**21 pages in 5 product lines.**
 
 ## What every page carries
 
