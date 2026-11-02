@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**22 pages in 6 product lines.**
+**23 pages in 6 product lines.**
 
 ## What every page carries
 
@@ -220,22 +220,35 @@ arrives. Add it then, in the same shape as the S4000's.
 | Page | File | Size | Languages |
 |---|---|---|---|
 | SIS7200A SMT Intelligent Reel Storage Rack with Pick-to-Light for Smart EMS Factories | `smart-storage/sis7200a-smt-intelligent-reel-storage-rack-pick-to-light-smart-ems-factory.html` | 530 KB | 7 + x-default |
+| SIS5210A 5-Layer Mobile SMT Smart Reel Rack for Mixed 7 and 13 Inch Reels | `smart-storage/sis5210a-5-layer-mobile-smt-smart-reel-rack-mixed-7-13-inch-reels-pick-to-light.html` | 446 KB | 7 + x-default |
 
 The SIS7200A is a pick-to-light reel rack: 1,400 seven-inch reels thinner than 17 mm on seven
 layers used from both faces, 2130 x 400 x 2000 mm, every slot with its own LED. Reels go into any
 free slot the rack lights, and work orders light their reels in separate colours, oldest date code
 first. The interactive 3D rack runs six warehouse tasks - put-away, a three-order kit, FIFO by date
 code, stocktake, a shortage call from the line and a wrong-slot alarm - and reports the slot address
-of any reel tapped. Specification cards cover the SIS7200A, the SIS5120A five-layer rack (7 and 13 inch reels mixed freely), the SIR7000B,
+of any reel tapped. Specification cards cover the SIS7200A, the SIS5210A five-layer rack (7 and 13 inch reels mixed freely), the SIR7000B,
 SIR5000B and SIR5000C, and the software and HTTP + JSON interface (API V3.1), each figure naming its
 source document. Seven places where the documents disagree are printed side by side: rack sizes and
 capacities across SIS7200A / SIS7000A / SIR7000B, the two SIS4000A designs, power, communication,
 the two efficiency case studies, the LED palette, and figures from an earlier landing page (720+ reels, 3-5 s retrieval, 99.9%, 3-12 month
 payback) that no datasheet supports and that are marked `To be confirmed`. The gallery uses eleven
 photographs and renderings from ph.smthelp.com plus one controller-box photo embedded as a small WebP
-because it is not on the public host. SIS5120A and SIR5000C are separate models (confirmed by
+because it is not on the public host. SIS5210A (printed SIS5120A on its product sheet) and SIR5000C are separate models (confirmed by
 Southern Machinery, 2026-11-02), not two versions of one trolley. Twelve YouTube videos come from the company board, and eight
 factory-floor clips play from a public Google Drive folder.
+
+The SIS5210A page covers the five-layer rack on casters: 1320 x 400 x 1630 mm, 60 kg, 600 seven-inch
+or 300 thirteen-inch reels with the two sizes mixed freely, DC 5 V battery inside and a Wi-Fi
+controller on top. Its 3D model is a mix planner: tap any half-layer to switch it between 7-inch and
+13-inch slots and the capacity updates live (five presets, from all 7-inch to half and half), then
+watch put-away by size, a three-order kit that rolls to a feeder bank and back, FIFO, a shortage call
+and a wrong-size alarm. Six open points are printed side by side: the model name (the product sheet
+says SIS5120A, confirmed as SIS5210A), 13-inch capacity against the drawn layer heights, stainless
+frame against the aluminium-profile rendering, battery runtime not stated, the sheet's 90% labour and
+6-month ROI claims (`To be confirmed`, no customer case held), and a 2019 smart cart whose figures
+belong to a different product. No dedicated SIS5210A video exists yet, so the video section says so
+and shows the sister racks.
 
 **No sibling band yet.** The other storage pages - the reel storage silo, the stencil storage
 cabinet, the X-ray counter - are not in this repository, so the band is left out until they arrive.
