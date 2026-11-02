@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**21 pages in 5 product lines.**
+**22 pages in 6 product lines.**
 
 ## What every page carries
 
@@ -215,6 +215,31 @@ first and only one in `board-handling/`. Linking to files that do not exist here
 links on a page that is otherwise self-contained, so the band is left out until the family
 arrives. Add it then, in the same shape as the S4000's.
 
+### Smart Storage - `smart-storage/`
+
+| Page | File | Size | Languages |
+|---|---|---|---|
+| SIS7200A SMT Intelligent Reel Storage Rack with Pick-to-Light for Smart EMS Factories | `smart-storage/sis7200a-smt-intelligent-reel-storage-rack-pick-to-light-smart-ems-factory.html` | 530 KB | 7 + x-default |
+
+The SIS7200A is a pick-to-light reel rack: 1,400 seven-inch reels thinner than 17 mm on seven
+layers used from both faces, 2130 x 400 x 2000 mm, every slot with its own LED. Reels go into any
+free slot the rack lights, and work orders light their reels in separate colours, oldest date code
+first. The interactive 3D rack runs six warehouse tasks - put-away, a three-order kit, FIFO by date
+code, stocktake, a shortage call from the line and a wrong-slot alarm - and reports the slot address
+of any reel tapped. Specification cards cover the SIS7200A, the SIS5120A trolley, the SIR7000B,
+SIR5000B and SIR5000C, and the software and HTTP + JSON interface (API V3.1), each figure naming its
+source document. Eight places where the documents disagree are printed side by side: rack sizes and
+capacities across SIS7200A / SIS7000A / SIR7000B, the two SIS4000A designs, power, communication,
+the trolley's model name (SIS5120A, SIS5210A, SIS5120Y), the two efficiency case studies, the LED
+palette, and figures from an earlier landing page (720+ reels, 3-5 s retrieval, 99.9%, 3-12 month
+payback) that no datasheet supports and that are marked `To be confirmed`. The gallery uses eleven
+photographs and renderings from ph.smthelp.com plus one controller-box photo embedded as a small WebP
+because it is not on the public host. Twelve YouTube videos come from the company board, and eight
+factory-floor clips play from a public Google Drive folder.
+
+**No sibling band yet.** The other storage pages - the reel storage silo, the stencil storage
+cabinet, the X-ray counter - are not in this repository, so the band is left out until they arrive.
+
 ## Conventions for new pages
 
 - File by product line in a directory (`nozzle-and-gripper/` for this family), not the root.
@@ -235,4 +260,4 @@ arrives. Add it then, in the same shape as the S4000's.
 
 ---
 
-Page list generated 2026-10-24 from the directory contents.
+Page list generated 2026-11-02 from the directory contents.
