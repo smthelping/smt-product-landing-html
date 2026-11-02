@@ -226,15 +226,15 @@ layers used from both faces, 2130 x 400 x 2000 mm, every slot with its own LED. 
 free slot the rack lights, and work orders light their reels in separate colours, oldest date code
 first. The interactive 3D rack runs six warehouse tasks - put-away, a three-order kit, FIFO by date
 code, stocktake, a shortage call from the line and a wrong-slot alarm - and reports the slot address
-of any reel tapped. Specification cards cover the SIS7200A, the SIS5120A trolley, the SIR7000B,
+of any reel tapped. Specification cards cover the SIS7200A, the SIS5120A five-layer rack (7 and 13 inch reels mixed freely), the SIR7000B,
 SIR5000B and SIR5000C, and the software and HTTP + JSON interface (API V3.1), each figure naming its
-source document. Eight places where the documents disagree are printed side by side: rack sizes and
+source document. Seven places where the documents disagree are printed side by side: rack sizes and
 capacities across SIS7200A / SIS7000A / SIR7000B, the two SIS4000A designs, power, communication,
-the trolley's model name (SIS5120A, SIS5210A, SIS5120Y), the two efficiency case studies, the LED
-palette, and figures from an earlier landing page (720+ reels, 3-5 s retrieval, 99.9%, 3-12 month
+the two efficiency case studies, the LED palette, and figures from an earlier landing page (720+ reels, 3-5 s retrieval, 99.9%, 3-12 month
 payback) that no datasheet supports and that are marked `To be confirmed`. The gallery uses eleven
 photographs and renderings from ph.smthelp.com plus one controller-box photo embedded as a small WebP
-because it is not on the public host. Twelve YouTube videos come from the company board, and eight
+because it is not on the public host. SIS5120A and SIR5000C are separate models (confirmed by
+Southern Machinery, 2026-11-02), not two versions of one trolley. Twelve YouTube videos come from the company board, and eight
 factory-floor clips play from a public Google Drive folder.
 
 **No sibling band yet.** The other storage pages - the reel storage silo, the stencil storage
