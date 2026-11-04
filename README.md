@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**23 pages in 6 product lines.**
+**24 pages in 7 product lines.**
 
 ## What every page carries
 
@@ -252,6 +252,30 @@ and shows the sister racks.
 
 **No sibling band yet.** The other storage pages - the reel storage silo, the stencil storage
 cabinet, the X-ray counter - are not in this repository, so the band is left out until they arrive.
+
+### SMT Lines - `smt-lines/`
+
+| Page | File | Size | Languages |
+|---|---|---|---|
+| LED T8 Tube 1.2 m Strip SMT Assembly Line with 16-Strip Carriers and ROI Calculator | `smt-lines/led-t8-tube-1-2m-strip-smt-assembly-line-16-strip-carrier-roi-smart-ems-factory.html` | 702 KB | 7 + x-default |
+
+A turnkey SMT line for 1170 mm LED T8 tube strips (8 or 10 mm wide, SMD2835, FR-4 or aluminium
+MCPCB, 96 or 120 LEDs): SVL-460L vacuum loader, SCL-1200 stencil printer, three S-350E conveyors,
+SM-MS20 20-head 82,000 CPH LED placement, SRF-1000L 10+10 zone long-board reflow, SM-CVB1200 buffer,
+SM-VL-800 inline AOI and SM-UL1200 unloader, with forty 1195 x 240 mm carriers that hold sixteen
+strips each. Design basis 481 good strips per hour, 3,848 per 8-hour shift, four operators, 24 x 5 m.
+The interactive 3D line follows the 24 x 5 m layout; carriers pick up LEDs at placement and turn green
+after AOI, and a 96 / 120 LED switch shows the bottleneck (76 / 86 s) and calculated output (557 / 492
+per hour). Facts come from the line's technical schedules (capacity, carrier concept, station matrix,
+FAT/SAT, utilities, packing). **Unit prices and the customer name are left out on purpose.** The ROI
+calculator fixes the investment at USD 392,750, the equipment total plus 25% for freight, duties,
+installation, utilities and contingency; all other inputs are editable placeholders, and a 1/2/3-shift
+table updates live. Seven open points are printed side by side, including the 1.71 s placement margin
+at 120 LEDs (`To be confirmed` in the sample run) and the earlier 1.2 million tubes a month concept page,
+whose basis differs. Machine photos are embedded once as small WebP (they are not on the public host)
+and reused through a single image map; twelve related YouTube videos come from the company board.
+
+**No sibling band yet.** Other complete-line pages are not in this repository yet.
 
 ## Conventions for new pages
 
