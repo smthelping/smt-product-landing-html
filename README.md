@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**24 pages in 7 product lines.**
+**25 pages in 7 product lines.**
 
 ## What every page carries
 
@@ -195,6 +195,7 @@ the S3000, S4000 and S7900 pages.
 | Page | File | Size | Languages |
 |---|---|---|---|
 | ESD Tray with Grids for Smart EMS PCB Assembly | `board-handling/esd-tray-with-grids-for-smart-ems-tht-pcb-assembly.html` | 458 KB | 7 + x-default |
+| SMT PCB Loader Solution: magazine, mini, L-type, destacker, vacuum, combo, 1.2 m LED, semiconductor and flexible-PCB loaders | `board-handling/smt-pcb-loader-solution-magazine-mini-l-type-destacker-vacuum-combo-led-loader-smart-ems-factory.html` | 737 KB | 7 + x-default |
 
 The tray holds panels and loose parts in 20 cells on a fluted divider grid - 457 x 289 x 45 mm
 inside, cells at about 91 x 72 mm - with an anti-static EVA base pad and a cover that lets loaded
@@ -214,6 +215,18 @@ trolleys, the magazine racks, the separators - are not in this repository, so th
 first and only one in `board-handling/`. Linking to files that do not exist here would put dead
 links on a page that is otherwise self-contained, so the band is left out until the family
 arrives. Add it then, in the same shape as the S4000's.
+
+**SMT PCB loader solution.** One page for the whole loader family, built from the loader catalogue,
+the product sheets and presentations of the S-MLD250, SL600A, SBU460, SFBL250, SLF330 and SLD350L.
+A Three.js scene shows nine loader mechanisms (magazine pusher, mini, L-type, bottom destacker,
+vacuum pick, combo, 1.2 m LED, three-magazine semiconductor, robot into pallet); a loader finder
+picks the model from board size, thickness and supply form. A model table lists 18 rows, and seven
+points where the documents disagree (two S-MLD250 spec sets, SLD250L used for three machines,
+SBU/SLC destacker names, SLF250/330 figures, SVL size order, air pressure, SL600A magazine height)
+are printed in a disclosure table. No price appears; the payback worksheet fields start empty.
+Presentation clips are on a public Google Drive folder.
+
+**Sibling band:** still none - the ESD tray and the loader page are different families.
 
 ### Smart Storage - `smart-storage/`
 
