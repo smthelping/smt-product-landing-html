@@ -4,7 +4,7 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**25 pages in 7 product lines.**
+**26 pages in 7 product lines.**
 
 ## What every page carries
 
@@ -81,6 +81,7 @@ them as this model.
 | SMT Feeder Calibration Jig for FUJI NXT Feeders (S-FFCJ10) | `feeders-nozzles/smt-feeder-calibration-jig-fuji-nxt-southern-machinery.html` | 198 KB | 7 + x-default |
 | SBF1001 Vibratory Bowl Feeder for Smart EMS PCB Assembly | `feeders-nozzles/sbf1001-vibratory-bowl-feeder-odd-form-auto-insertion-smart-ems.html` | 524 KB | 7 + x-default |
 | Odd-Form Feeder & Nozzle Matcher - Customized Feeder Nozzle Catalog V03 | `feeders-nozzles/odd-form-insertion-customized-feeder-nozzle-catalog-v03-component-matcher-southern-machinery.html` | 802 KB | 7 + x-default |
+| S-RF1001 Radial Taped Feeder for SMT Mounters: 90° bend and L-S capacitor versions | `feeders-nozzles/s-rf1001-radial-taped-feeder-smt-mounter-tht-radial-lead-insertion-90-bend-l-s-capacitor-smart-ems-factory.html` | 599 KB | 7 + x-default |
 
 The jig is a bench station for FUJI NXT feeders, model S-FFCJ10: mount a feeder on the fixture,
 watch its movement through a 50X CCD camera with ring LED lighting, adjust X/Y/H on the sub-base and
@@ -134,6 +135,17 @@ three radial lines whose lead-width column holds the body width. Eight articles 
 each cover packaging, measurement, nozzles, oversized parts, bulk feeding, the feasibility check and the
 trial. It embeds 23 videos and 12 catalog PDFs, and its sibling band links to the S7900, the SBF1001
 bowl feeder, the S-MVF01 belt feeder, the S3000, the S4000 and the FUJI NXT calibration jig.
+
+The S-RF1001 page covers the radial lead taped feeder that lets an SMT mounter pick and insert
+radial THT parts. Its figures come from the S-RF1001 brochure (550 x 110 x 130 mm, air-driven, DC 24 V
+input signal, the eleven-row tape table and the YAMAHA, JUKI and UNIVERSAL solutions); the 90° bend
+and L-S capacitor versions come from the two eDrawings 3D files, rendered to stills because the files
+hold no extractable GLB. The 3D stage is procedural (tape index, lead cut, 90° bend, gripper pick and
+insert) and a tape checker compares the visitor's P0, F, d, H, H1 and t with the brochure limits. The
+disclosure table lists seven open points, among them "RF 200 adjustable" in the tape table, 25 mm lead
+spacing against the 27.5 mm large-span video, eleven brand logos against three documented host
+solutions, and no published feeding speed. Built with the `product-3d-doc-html-landing` skill v1.0.1.
+**Sibling band due** - link the SBF1001 bowl feeder and S3000 radial insertion pages when next touched.
 
 ### THT Auto Insertion - `tht-auto-insertion/`
 
