@@ -4,7 +4,38 @@ Single-file marketing landing pages by Southern Machinery (smthelp.com). Each pa
 self-contained `.html` with its CSS and JS inline: no build step, no dependencies. Open it in a
 browser, or drop it on the web host as-is.
 
-**26 pages in 7 product lines.**
+**26 product pages in 7 product lines, plus one catalogue hub that indexes them all.**
+
+## The catalogue hub
+
+`smt-tht-machine-catalog-hub-smart-ems-factory-southern-machinery.html` is the entry point: a
+single self-contained page that classifies every product page in this repository, makes them
+searchable without a server, and embeds the matching photographs, working videos and catalogue
+documents.
+
+- Client-side search across every title, description, keyword, model code and file path, with
+  product-line filter chips, three sort orders and a `?q=` deep link
+- Photographs from `ph.smthelp.com`, videos from the company YouTube board and documents from the
+  catalogue board, interleaved so every product line has content under every filter
+- Eight marketing articles written to the six-step brief, in all seven languages
+- Same chrome as the product pages: dark/light toggle, 7-language switching with RTL Arabic,
+  Chatwoot bottom right, `hreflang` alternates, Open Graph and JSON-LD
+  (Organization, WebSite + SearchAction, ItemList, FAQPage, Blog, BreadcrumbList)
+
+It is **generated**, not hand-edited. Change `tools/i18n_ui.py` (interface strings),
+`tools/i18n_articles.py` (product lines and articles) or `tools/build_hub.py` (layout and
+extraction), then rebuild:
+
+```bash
+python3 tools/build_hub.py          # rebuild the hub
+python3 tools/build_hub.py --check  # exit 1 if it is out of date
+python3 tools/preview.py 8080       # serve the repository, hub on /
+```
+
+`.github/workflows/refresh-hub.yml` runs the builder at **00:00 UTC every day** and on any push
+that touches an `.html` file, so a new product page added to the repository joins the hub, its
+product line count and its search index automatically. Pages added in the previous 45 days get a
+"New" badge. Nothing is committed when the rebuild produces no change.
 
 ## What every page carries
 

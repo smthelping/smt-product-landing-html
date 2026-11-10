@@ -1,0 +1,50 @@
+name: Refresh catalogue hub
+
+# Requirement 10: rebuild once a day at 00:00 UTC so that any product page added
+# to the repository is picked up and added to the hub automatically.
+on:
+  schedule:
+    - cron: "0 0 * * *"        # 00:00 UTC, every day
+  workflow_dispatch:            # allow a manual rebuild
+  push:
+    branches: ["**"]
+    paths:
+      - "**/*.html"
+      - "tools/**"
+      - ".github/workflows/refresh-hub.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-hub-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0        # build_hub.py reads git history for "new" badges
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild the hub
+        run: python3 tools/build_hub.py
+
+      - name: Commit if the catalogue changed
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No catalogue change — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Refresh catalogue hub ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:${GITHUB_REF_NAME}
